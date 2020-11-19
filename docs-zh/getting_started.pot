@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/getting_started.md:2
+msgid "# Getting Started"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started.md:4
+msgid "In this chapter we'll discuss:"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started.md:13
+msgid ""
+"- [Installing Deno](./getting_started/installation.md)  - [Setting up your "
+"environment](./getting_started/setup_your_environment.md)  - [Running a "
+"`Hello World` script](./getting_started/first_steps.md)  - [Writing our own "
+"script](./getting_started/first_steps.md)  - [Command line "
+"interface](./getting_started/command_line_interface.md)  - [Understanding "
+"permissions](./getting_started/permissions.md)  - [Using Deno with "
+"TypeScript](./getting_started/typescript.md)  - [Using "
+"WebAssembly](./getting_started/webassembly.md)  - [Debugging your "
+"code](./getting_started/debugging_your_code.md)"
+msgstr ""

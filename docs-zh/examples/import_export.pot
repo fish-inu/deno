@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/examples/import_export.md:2
+msgid "# Import and export modules"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:4
+msgid "## Concepts"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/import_export.md:12
+msgid ""
+"[import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)  "
+"allows you to include and use modules held elsewhere, on your local file "
+"system or remotely."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/import_export.md:12
+msgid "Imports are URLs or file system paths."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/import_export.md:12
+msgid ""
+"[export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)  "
+"allows you to specify which parts of your module are accessible to users who "
+"import your module."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:14
+msgid "## Overview"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:17
+msgid ""
+"Deno by default standardizes the way modules are imported in both JavaScript "
+"and TypeScript using the ECMAScript 6 `import/export` standard."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:21
+msgid ""
+"It adopts browser-like module resolution, meaning that file names must be "
+"specified in full. You may not omit the file extension and there is no "
+"special handling of `index.js`."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:25
+msgid "```js import { add, multiply } from \"./arithmetic.ts\"; ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:30
+msgid ""
+"Dependencies are also imported directly, there is no package management "
+"overhead. Local modules are imported in exactly the same way as remote "
+"modules.  As the examples show below, the same functionality can be produced "
+"in the same way with local or remote modules."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:32
+msgid "## Local Import"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:35
+msgid ""
+"In this example the `add` and `multiply` functions are imported from a local "
+"`arithmetic.ts` module."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:37
+#, no-wrap
+msgid "**Command:** `deno run local.ts`\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:43
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * local.ts\n"
+" */\n"
+"import { add, multiply } from \"./arithmetic.ts\";\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:47 docs/examples/import_export.md:83
+#, no-wrap
+msgid ""
+"function totalCost(outbound: number, inbound: number, tax: number): number "
+"{\n"
+"  return multiply(add(outbound, inbound), tax);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:50 docs/examples/import_export.md:86
+msgid "console.log(totalCost(19, 31, 1.2)); console.log(totalCost(45, 27, 1.15));"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:58 docs/examples/import_export.md:94
+#, no-wrap
+msgid ""
+"/**\n"
+" * Output\n"
+" *\n"
+" * 60\n"
+" * 82.8\n"
+" */\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:60
+msgid "## Remote Import"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:64
+msgid ""
+"In the local import example above an `add` and `multiply` method are "
+"imported from a locally stored arithmetic module. The same functionality can "
+"be created by importing `add` and `multiply` methods from a remote module "
+"too."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:68
+msgid ""
+"In this case the Ramda module is referenced, including the version "
+"number. Also note a JavaScript module is imported directly into a TypeSript "
+"module, Deno has no problem handling this."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:70
+#, no-wrap
+msgid "**Command:** `deno run ./remote.ts`\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:79
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * remote.ts\n"
+" */\n"
+"import {\n"
+"  add,\n"
+"  multiply,\n"
+"} from \"https://x.nest.land/ramda@0.27.0/source/index.js\";\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:96
+msgid "## Export"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:100
+msgid ""
+"In the local import example above the `add` and `multiply` functions are "
+"imported from a locally stored arithmetic module. To make this possible the "
+"functions stored in the arithmetic module must be exported."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:103
+msgid ""
+"To do this just add the keyword `export` to the beginning of the function "
+"signature as is shown below."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:111
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * arithmetic.ts\n"
+" */\n"
+"export function add(a: number, b: number): number {\n"
+"  return a + b;\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:116
+#, no-wrap
+msgid ""
+"export function multiply(a: number, b: number): number {\n"
+"  return a * b;\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/import_export.md:120
+msgid ""
+"All functions, classes, constants and variables which need to be accessible "
+"inside external modules must be exported. Either by prepending them with the "
+"`export` keyword or including them in an export statement at the bottom of "
+"the file."
+msgstr ""

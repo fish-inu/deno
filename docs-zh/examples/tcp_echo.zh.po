@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:2
+msgid "# TCP echo server"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:4
+msgid "## Concepts"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/tcp_echo.md:9
+msgid ""
+"Listening for TCP port connections with "
+"[Deno.listen](https://doc.deno.land/builtin/stable#Deno.listen)."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/tcp_echo.md:9
+msgid ""
+"Use [Deno.copy](https://doc.deno.land/builtin/stable#Deno.copy) to take "
+"inbound data and redirect it to be outbound data."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:11
+msgid "## Example"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:14
+msgid ""
+"This is an example of a server which accepts connections on port 8080, and "
+"returns to the client anything it sends."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:25
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * echo_server.ts\n"
+" */\n"
+"const listener = Deno.listen({ port: 8080 });\n"
+"console.log(\"listening on 0.0.0.0:8080\");\n"
+"for await (const conn of listener) {\n"
+"  Deno.copy(conn, conn);\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:27
+msgid "Run with:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:31
+msgid "```shell deno run --allow-net echo_server.ts ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:36
+msgid ""
+"To test it, try sending data to it with "
+"[netcat](https://en.wikipedia.org/wiki/Netcat) (Linux/MacOS only). Below "
+"`'hello world'` is sent over the connection, which is then echoed back to "
+"the user:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:42
+msgid "```shell $ nc localhost 8080 hello world hello world ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/tcp_echo.md:45
+msgid ""
+"Like the [cat.ts example](./unix_cat.md), the `copy()` function here also "
+"does not make unnecessary memory copies. It receives a packet from the "
+"kernel and sends back, without further complexity."
+msgstr ""

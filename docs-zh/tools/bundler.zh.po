@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/tools/bundler.md:2
+msgid "## Bundling"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:5
+msgid ""
+"`deno bundle [URL]` will output a single JavaScript file, which includes all "
+"dependencies of the specified input. For example:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:13
+msgid ""
+"``` > deno bundle https://deno.land/std@$STD_VERSION/examples/colors.ts "
+"colors.bundle.js Bundle "
+"https://deno.land/std@$STD_VERSION/examples/colors.ts Download "
+"https://deno.land/std@$STD_VERSION/examples/colors.ts Download "
+"https://deno.land/std@$STD_VERSION/fmt/colors.ts Emit \"colors.bundle.js\" "
+"(9.83KB)  ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:15
+msgid "If you omit the out file, the bundle will be sent to `stdout`."
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:17
+msgid "The bundle can just be run as any other module in Deno would:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:21
+msgid "``` deno run colors.bundle.js ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:25
+msgid ""
+"The output is a self contained ES Module, where any exports from the main "
+"module supplied on the command line will be available. For example, if the "
+"main module looked something like this:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:28
+msgid "```ts export { foo } from \"./foo.js\";"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:31
+msgid "export const bar = \"bar\"; ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:33
+msgid "It could be imported like this:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:37
+msgid "```ts import { bar, foo } from \"./lib.bundle.js\"; ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:40
+msgid ""
+"Bundles can also be loaded in the web browser. The bundle is a "
+"self-contained ES module, and so the attribute of `type` must be set to "
+"`\"module\"`. For example:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:44
+msgid "```html <script type=\"module\" src=\"website.bundle.js\"></script> ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:46
+msgid "Or you could import it into another ES module to consume:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/bundler.md:51
+#, no-wrap
+msgid ""
+"```html\n"
+"<script type=\"module\">\n"
+"  import * as website from \"website.bundle.js\";\n"
+"</script>\n"
+"```\n"
+msgstr ""

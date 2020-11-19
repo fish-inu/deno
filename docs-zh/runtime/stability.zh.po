@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/runtime/stability.md:2
+msgid "## Stability"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/stability.md:5
+msgid ""
+"As of Deno 1.0.0, the `Deno` namespace APIs are stable. That means we will "
+"strive to make code working under 1.0.0 continue to work in future versions."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/stability.md:9
+msgid ""
+"However, not all of Deno's features are ready for production yet. Features "
+"which are not ready, because they are still in draft phase, are locked "
+"behind the `--unstable` command line flag."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/stability.md:13
+msgid "```shell deno run --unstable mod_which_uses_unstable_stuff.ts ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/stability.md:15
+msgid "Passing this flag does a few things:"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/runtime/stability.md:21
+msgid "It enables the use of unstable APIs during runtime."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/runtime/stability.md:21
+msgid ""
+"It adds the "
+"[`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.unstable.d.ts)  "
+"file to the list of TypeScript definitions that are used for type checking.  "
+"This includes the output of `deno types`."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/stability.md:25
+msgid ""
+"You should be aware that many unstable APIs have **not undergone a security "
+"review**, are likely to have **breaking API changes** in the future, and are "
+"**not ready for production**."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/stability.md:27
+msgid "### Standard modules"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/stability.md:32
+msgid ""
+"Deno's standard modules (https://deno.land/std/) are not yet stable. We "
+"currently version the standard modules differently from the CLI to reflect "
+"this.  Note that unlike the `Deno` namespace, the use of the standard "
+"modules do not require the `--unstable` flag (unless the standard module "
+"itself makes use of an unstable Deno feature)."
+msgstr ""

@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/tools/formatter.md:2
+msgid "## Code formatter"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/formatter.md:5
+msgid ""
+"Deno ships with a built in code formatter that auto-formats TypeScript and "
+"JavaScript code."
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/formatter.md:16
+msgid ""
+"```shell # format all JS/TS files in the current directory and "
+"subdirectories deno fmt # format specific files deno fmt myfile1.ts "
+"myfile2.ts # check if all the JS/TS files in the current directory and "
+"subdirectories are formatted deno fmt --check # format stdin and write to "
+"stdout cat file.ts | deno fmt - ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/formatter.md:18
+msgid "Ignore formatting code by preceding it with a `// deno-fmt-ignore` comment:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/formatter.md:27
+#, no-wrap
+msgid ""
+"```ts\n"
+"// deno-fmt-ignore\n"
+"export const identity = [\n"
+"    1, 0, 0,\n"
+"    0, 1, 0,\n"
+"    0, 0, 1,\n"
+"];\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/formatter.md:29
+msgid ""
+"Or ignore an entire file by adding a `// deno-fmt-ignore-file` comment at "
+"the top of the file."
+msgstr ""

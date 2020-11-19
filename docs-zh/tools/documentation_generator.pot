@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/tools/documentation_generator.md:2
+msgid "## Documentation Generator"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/documentation_generator.md:5
+msgid ""
+"`deno doc` followed by a list of one or more source files will print the "
+"JSDoc documentation for each of the module's **exported** members."
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/documentation_generator.md:7
+msgid "For example, given a file `add.ts` with the contents:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/documentation_generator.md:19
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * Adds x and y.\n"
+" * @param {number} x\n"
+" * @param {number} y\n"
+" * @returns {number} Sum of x and y\n"
+" */\n"
+"export function add(x: number, y: number): number {\n"
+"  return x + y;\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/documentation_generator.md:21
+msgid ""
+"Running the Deno `doc` command, prints the function's JSDoc comment to "
+"`stdout`:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/documentation_generator.md:27
+#, no-wrap
+msgid ""
+"```shell\n"
+"deno doc add.ts\n"
+"function add(x: number, y: number): number\n"
+"  Adds x and y. @param {number} x @param {number} y @returns {number} Sum of "
+"x and y\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/documentation_generator.md:31
+msgid ""
+"Use the `--json` flag to output the documentation in JSON format. This JSON "
+"format is consumed by the [deno doc "
+"website](https://github.com/denoland/doc_website) and is used to generate "
+"module documentation."
+msgstr ""

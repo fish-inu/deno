@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/tools/dependency_inspector.md:2
+msgid "## Dependency Inspector"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/dependency_inspector.md:4
+msgid "`deno info [URL]` will inspect ES module and all of its dependencies."
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/dependency_inspector.md:62
+#, no-wrap
+msgid ""
+"```shell\n"
+"deno info https://deno.land/std@0.67.0/http/file_server.ts\n"
+"Download https://deno.land/std@0.67.0/http/file_server.ts\n"
+"...\n"
+"local: "
+"/home/deno/.cache/deno/deps/https/deno.land/f57792e36f2dbf28b14a75e2372a479c6392780d4712d76698d5031f943c0020\n"
+"type: TypeScript\n"
+"compiled: "
+"/home/deno/.cache/deno/gen/https/deno.land/f57792e36f2dbf28b14a75e2372a479c6392780d4712d76698d5031f943c0020.js\n"
+"deps: 23 unique (total 139.89KB)\n"
+"https://deno.land/std@0.67.0/http/file_server.ts (10.49KB)\n"
+"├─┬ https://deno.land/std@0.67.0/path/mod.ts (717B)\n"
+"│ ├── https://deno.land/std@0.67.0/path/_constants.ts (2.35KB)\n"
+"│ ├─┬ https://deno.land/std@0.67.0/path/win32.ts (27.36KB)\n"
+"│ │ ├── https://deno.land/std@0.67.0/path/_interface.ts (657B)\n"
+"│ │ ├── https://deno.land/std@0.67.0/path/_constants.ts *\n"
+"│ │ ├─┬ https://deno.land/std@0.67.0/path/_util.ts (3.3KB)\n"
+"│ │ │ ├── https://deno.land/std@0.67.0/path/_interface.ts *\n"
+"│ │ │ └── https://deno.land/std@0.67.0/path/_constants.ts *\n"
+"│ │ └── https://deno.land/std@0.67.0/_util/assert.ts (405B)\n"
+"│ ├─┬ https://deno.land/std@0.67.0/path/posix.ts (12.67KB)\n"
+"│ │ ├── https://deno.land/std@0.67.0/path/_interface.ts *\n"
+"│ │ ├── https://deno.land/std@0.67.0/path/_constants.ts *\n"
+"│ │ └── https://deno.land/std@0.67.0/path/_util.ts *\n"
+"│ ├─┬ https://deno.land/std@0.67.0/path/common.ts (1.14KB)\n"
+"│ │ └─┬ https://deno.land/std@0.67.0/path/separator.ts (264B)\n"
+"│ │   └── https://deno.land/std@0.67.0/path/_constants.ts *\n"
+"│ ├── https://deno.land/std@0.67.0/path/separator.ts *\n"
+"│ ├── https://deno.land/std@0.67.0/path/_interface.ts *\n"
+"│ └─┬ https://deno.land/std@0.67.0/path/glob.ts (8.12KB)\n"
+"│   ├── https://deno.land/std@0.67.0/path/_constants.ts *\n"
+"│   ├── https://deno.land/std@0.67.0/path/mod.ts *\n"
+"│   └── https://deno.land/std@0.67.0/path/separator.ts *\n"
+"├─┬ https://deno.land/std@0.67.0/http/server.ts (10.23KB)\n"
+"│ ├── https://deno.land/std@0.67.0/encoding/utf8.ts (433B)\n"
+"│ ├─┬ https://deno.land/std@0.67.0/io/bufio.ts (21.15KB)\n"
+"│ │ ├── https://deno.land/std@0.67.0/bytes/mod.ts (4.34KB)\n"
+"│ │ └── https://deno.land/std@0.67.0/_util/assert.ts *\n"
+"│ ├── https://deno.land/std@0.67.0/_util/assert.ts *\n"
+"│ ├─┬ https://deno.land/std@0.67.0/async/mod.ts (202B)\n"
+"│ │ ├── https://deno.land/std@0.67.0/async/deferred.ts (1.03KB)\n"
+"│ │ ├── https://deno.land/std@0.67.0/async/delay.ts (279B)\n"
+"│ │ ├─┬ https://deno.land/std@0.67.0/async/mux_async_iterator.ts (1.98KB)\n"
+"│ │ │ └── https://deno.land/std@0.67.0/async/deferred.ts *\n"
+"│ │ └── https://deno.land/std@0.67.0/async/pool.ts (1.58KB)\n"
+"│ └─┬ https://deno.land/std@0.67.0/http/_io.ts (11.25KB)\n"
+"│   ├── https://deno.land/std@0.67.0/io/bufio.ts *\n"
+"│   ├─┬ https://deno.land/std@0.67.0/textproto/mod.ts (4.52KB)\n"
+"│   │ ├── https://deno.land/std@0.67.0/io/bufio.ts *\n"
+"│   │ ├── https://deno.land/std@0.67.0/bytes/mod.ts *\n"
+"│   │ └── https://deno.land/std@0.67.0/encoding/utf8.ts *\n"
+"│   ├── https://deno.land/std@0.67.0/_util/assert.ts *\n"
+"│   ├── https://deno.land/std@0.67.0/encoding/utf8.ts *\n"
+"│   ├── https://deno.land/std@0.67.0/http/server.ts *\n"
+"│   └── https://deno.land/std@0.67.0/http/http_status.ts (5.93KB)\n"
+"├─┬ https://deno.land/std@0.67.0/flags/mod.ts (9.54KB)\n"
+"│ └── https://deno.land/std@0.67.0/_util/assert.ts *\n"
+"└── https://deno.land/std@0.67.0/_util/assert.ts *\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/dependency_inspector.md:64
+msgid "Dependency inspector works with any local or remote ES modules."
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/dependency_inspector.md:66
+msgid "## Cache location"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/dependency_inspector.md:68
+msgid "`deno info` can be used to display information about cache location:"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/dependency_inspector.md:74
+msgid ""
+"```shell deno info DENO_DIR location: \"/Users/deno/Library/Caches/deno\" "
+"Remote modules cache: \"/Users/deno/Library/Caches/deno/deps\" TypeScript "
+"compiler cache: \"/Users/deno/Library/Caches/deno/gen\" ```"
+msgstr ""

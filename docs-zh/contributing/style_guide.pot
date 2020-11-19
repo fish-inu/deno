@@ -1,0 +1,735 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:2
+msgid "# Deno Style Guide"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:4
+msgid "## Copyright Headers"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:6
+msgid "Most modules in the repository should have the following copyright header:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:10
+msgid ""
+"```ts // Copyright 2018-2020 the Deno authors. All rights reserved. MIT "
+"license.  ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:13
+msgid ""
+"If the code originates elsewhere, ensure that the file has the proper "
+"copyright headers. We only allow MIT, BSD, and Apache licensed code."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:15
+msgid "## Use underscores, not dashes in filenames."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:17
+msgid "Example: Use `file_server.ts` instead of `file-server.ts`."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:19
+msgid "## Add tests for new features."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:22
+msgid ""
+"Each module should contain or be accompanied by tests for its public "
+"functionality."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:24
+msgid "## TODO Comments"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:27
+msgid ""
+"TODO comments should usually include an issue or the author's github "
+"username in parentheses. Example:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:33
+msgid ""
+"```ts // TODO(ry): Add tests.  // TODO(#123): Support Windows.  // "
+"FIXME(#349): Sometimes panics.  ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:35
+msgid "## Meta-programming is discouraged. Including the use of Proxy."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:37
+msgid "Be explicit even when it means more code."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:40
+msgid ""
+"There are some situations where it may make sense to use such techniques, "
+"but in the vast majority of cases it does not."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:42
+msgid "## Inclusive code"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:45
+msgid ""
+"Please follow the guidelines for inclusive code outlined at "
+"https://chromium.googlesource.com/chromium/src/+/master/styleguide/inclusive_code.md."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:47
+msgid "## Rust"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:49
+msgid "Follow Rust conventions and be consistent with existing code."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:51
+msgid "## TypeScript"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:54
+msgid ""
+"The TypeScript portions of the codebase include `cli/js` for the built-ins "
+"and the standard library `std`."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:56
+msgid "### Use TypeScript instead of JavaScript."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:58
+msgid "### Use the term \"module\" instead of \"library\" or \"package\"."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:62
+msgid ""
+"For clarity and consistency avoid the terms \"library\" and "
+"\"package\". Instead use \"module\" to refer to a single JS or TS file and "
+"also to refer to a directory of TS/JS code."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:64
+msgid "### Do not use the filename `index.ts`/`index.js`."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:68
+msgid ""
+"Deno does not treat \"index.js\" or \"index.ts\" in a special way. By using "
+"these filenames, it suggests that they can be left out of the module "
+"specifier when they cannot. This is confusing."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:72
+msgid ""
+"If a directory of code needs a default entry point, use the filename "
+"`mod.ts`.  The filename `mod.ts` follows Rust’s convention, is shorter than "
+"`index.ts`, and doesn’t come with any preconceived notions about how it "
+"might work."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:74
+msgid "### Exported functions: max 2 args, put the rest into an options object."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:76
+msgid "When designing function interfaces, stick to the following rules."
+msgstr ""
+
+#. type: Bullet: '1. '
+#: docs/contributing/style_guide.md:79
+msgid ""
+"A function that is part of the public API takes 0-2 required arguments, plus "
+"(if necessary) an options object (so max 3 total)."
+msgstr ""
+
+#. type: Bullet: '2. '
+#: docs/contributing/style_guide.md:81
+msgid "Optional parameters should generally go into the options object."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:85
+#, no-wrap
+msgid ""
+"   An optional parameter that's not in an options object might be acceptable "
+"if\n"
+"   there is only one, and it seems inconceivable that we would add more "
+"optional\n"
+"   parameters in the future.\n"
+msgstr ""
+
+#. type: Bullet: '3. '
+#: docs/contributing/style_guide.md:87
+msgid "The 'options' argument is the only argument that is a regular 'Object'."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:90
+#, no-wrap
+msgid ""
+"   Other arguments can be objects, but they must be distinguishable from a\n"
+"   'plain' Object runtime, by having either:\n"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/contributing/style_guide.md:93
+msgid "a distinguishing prototype (e.g. `Array`, `Map`, `Date`, `class MyThing`)."
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/contributing/style_guide.md:93
+msgid "a well-known symbol property (e.g. an iterable with `Symbol.iterator`)."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:96
+#, no-wrap
+msgid ""
+"   This allows the API to evolve in a backwards compatible way, even when "
+"the\n"
+"   position of the options object changes.\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:104
+#, no-wrap
+msgid ""
+"```ts\n"
+"// BAD: optional parameters not part of options object. (#2)\n"
+"export function resolve(\n"
+"  hostname: string,\n"
+"  family?: \"ipv4\" | \"ipv6\",\n"
+"  timeout?: number,\n"
+"): IPAddress[] {}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:115
+#, no-wrap
+msgid ""
+"// GOOD.\n"
+"export interface ResolveOptions {\n"
+"  family?: \"ipv4\" | \"ipv6\";\n"
+"  timeout?: number;\n"
+"}\n"
+"export function resolve(\n"
+"  hostname: string,\n"
+"  options: ResolveOptions = {},\n"
+"): IPAddress[] {}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:120
+#, no-wrap
+msgid ""
+"```ts\n"
+"export interface Environment {\n"
+"  [key: string]: string;\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:124
+msgid ""
+"// BAD: `env` could be a regular Object and is therefore indistinguishable "
+"// from an options object. (#3)  export function runShellWithEnv(cmdline: "
+"string, env: Environment): string {}"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:134
+#, no-wrap
+msgid ""
+"// GOOD.\n"
+"export interface RunShellOptions {\n"
+"  env: Environment;\n"
+"}\n"
+"export function runShellWithEnv(\n"
+"  cmdline: string,\n"
+"  options: RunShellOptions,\n"
+"): string {}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:143
+#, no-wrap
+msgid ""
+"```ts\n"
+"// BAD: more than 3 arguments (#1), multiple optional parameters (#2).\n"
+"export function renameSync(\n"
+"  oldname: string,\n"
+"  newname: string,\n"
+"  replaceExisting?: boolean,\n"
+"  followLinks?: boolean,\n"
+") {}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:155
+#, no-wrap
+msgid ""
+"// GOOD.\n"
+"interface RenameOptions {\n"
+"  replaceExisting?: boolean;\n"
+"  followLinks?: boolean;\n"
+"}\n"
+"export function renameSync(\n"
+"  oldname: string,\n"
+"  newname: string,\n"
+"  options: RenameOptions = {},\n"
+") {}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:165
+#, no-wrap
+msgid ""
+"```ts\n"
+"// BAD: too many arguments. (#1)\n"
+"export function pwrite(\n"
+"  fd: number,\n"
+"  buffer: TypedArray,\n"
+"  offset: number,\n"
+"  length: number,\n"
+"  position: number,\n"
+") {}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:176
+#, no-wrap
+msgid ""
+"// BETTER.\n"
+"export interface PWrite {\n"
+"  fd: number;\n"
+"  buffer: TypedArray;\n"
+"  offset: number;\n"
+"  length: number;\n"
+"  position: number;\n"
+"}\n"
+"export function pwrite(options: PWrite) {}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:178
+msgid "### Export all interfaces that are used as parameters to an exported member"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:182
+msgid ""
+"Whenever you are using interfaces that are included in the arguments of an "
+"exported member, you should export the interface that is used. Here is an "
+"example:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:189
+#, no-wrap
+msgid ""
+"```ts\n"
+"// my_file.ts\n"
+"export interface Person {\n"
+"  name: string;\n"
+"  age: number;\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:193
+#, no-wrap
+msgid ""
+"export function createPerson(name: string, age: number): Person {\n"
+"  return { name, age };\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:198
+msgid ""
+"// mod.ts export { createPerson } from \"./my_file.ts\"; export type { "
+"Person } from \"./my_file.ts\"; ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:200
+msgid "### Minimize dependencies; do not make circular imports."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:204
+msgid ""
+"Although `cli/js` and `std` have no external dependencies, we must still be "
+"careful to keep internal dependencies simple and manageable. In particular, "
+"be careful not to introduce circular imports."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:206
+msgid "### If a filename starts with an underscore: `_foo.ts`, do not link to it."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:210
+msgid ""
+"Sometimes there may be situations where an internal module is necessary but "
+"its API is not meant to be stable or linked to. In this case prefix it with "
+"an underscore. By convention, only files in its own directory should import "
+"it."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:212
+msgid "### Use JSDoc for exported symbols."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:215
+msgid ""
+"We strive for complete documentation. Every exported symbol ideally should "
+"have a documentation line."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:217
+msgid "If possible, use a single line for the JSDoc. Example:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:224
+#, no-wrap
+msgid ""
+"```ts\n"
+"/** foo does bar. */\n"
+"export function foo() {\n"
+"  // ...\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:229
+msgid ""
+"It is important that documentation is easily human readable, but there is "
+"also a need to provide additional styling information to ensure generated "
+"documentation is more rich text. Therefore JSDoc should generally follow "
+"markdown markup to enrich the text."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:231
+msgid "While markdown supports HTML tags, it is forbidden in JSDoc blocks."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:234
+msgid ""
+"Code string literals should be braced with the back-tick (\\`) instead of "
+"quotes.  For example:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:238
+msgid "```ts /** Import something from the `deno` module. */ ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:243
+msgid ""
+"Do not document function arguments unless they are non-obvious of their "
+"intent (though if they are non-obvious intent, the API should be considered "
+"anyways).  Therefore `@param` should generally not be used. If `@param` is "
+"used, it should not include the `type` as TypeScript is already strongly "
+"typed."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:250
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * Function with non obvious param.\n"
+" * @param foo Description of non obvious parameter.\n"
+" */\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:253
+msgid ""
+"Vertical spacing should be minimized whenever possible. Therefore single "
+"line comments should be written as:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:257
+msgid "```ts /** This is a good single line JSDoc. */ ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:259
+msgid "And not:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:265
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * This is a bad single line JSDoc.\n"
+" */\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:270
+msgid ""
+"Code examples should not utilise the triple-back tick (\\`\\`\\`) notation "
+"or tags.  They should just be marked by indentation, which requires a break "
+"before the block and 6 additional spaces for each line of the example. This "
+"is 4 more than the first column of the comment. For example:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:278
+#, no-wrap
+msgid ""
+"```ts\n"
+"/** A straight forward comment and an example:\n"
+" *\n"
+" *       import { foo } from \"deno\";\n"
+" *       foo(\"bar\");\n"
+" */\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:281
+msgid ""
+"Code examples should not contain additional comments. It is already inside a "
+"comment. If it needs further comments it is not a good example."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:283
+msgid "### Resolve linting problems using directives"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:287
+msgid ""
+"Currently, the building process uses `dlint` to validate linting problems in "
+"the code. If the task requires code that is non-conformant to linter use "
+"`deno-lint-ignore <code>` directive to supress the warning."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:292
+msgid "```typescript // deno-lint-ignore no-explicit-any let x: any; ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:295
+msgid ""
+"This ensures the continuous integration process doesn't fail due to linting "
+"problems, but it should be used scarcely."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:297
+msgid "### Each module should come with a test module."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:302
+msgid ""
+"Every module with public functionality `foo.ts` should come with a test "
+"module `foo_test.ts`. A test for a `cli/js` module should go in "
+"`cli/js/tests` due to their different contexts, otherwise it should just be "
+"a sibling to the tested module."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:304
+msgid "### Unit Tests should be explicit."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:307
+msgid ""
+"For a better understanding of the tests, function should be correctly named "
+"as its prompted throughout the test command. Like:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:311
+msgid "``` test myTestFunction ... ok ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:313
+msgid "Example of test:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:317
+msgid ""
+"```ts import { assertEquals } from "
+"\"https://deno.land/std@$STD_VERSION/testing/asserts.ts\"; import { foo } "
+"from \"./mod.ts\";"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:322
+#, no-wrap
+msgid ""
+"Deno.test(\"myTestFunction\", function () {\n"
+"  assertEquals(foo(), { bar: \"bar\" });\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:324
+msgid "### Top level functions should not use arrow syntax."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:327
+msgid ""
+"Top level functions should use the `function` keyword. Arrow syntax should "
+"be limited to closures."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:329
+msgid "Bad:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:335
+#, no-wrap
+msgid ""
+"```ts\n"
+"export const foo = (): string => {\n"
+"  return \"bar\";\n"
+"};\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:337
+msgid "Good:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:343
+#, no-wrap
+msgid ""
+"```ts\n"
+"export function foo(): string {\n"
+"  return \"bar\";\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:345
+msgid "### `std`"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:347
+msgid "#### Do not depend on external code."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:351
+msgid ""
+"`https://deno.land/std/` is intended to be baseline functionality that all "
+"Deno programs can rely on. We want to guarantee to users that this code does "
+"not include potentially unreviewed third party code."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:353
+msgid "#### Document and maintain browser compatiblity."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:356
+msgid ""
+"If a module is browser compatible, include the following in the JSDoc at the "
+"top of the module:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:360
+msgid "```ts /** This module is browser compatible. */ ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/style_guide.md:363
+msgid ""
+"Maintain browser compatibility for such a module by either not using the "
+"global `Deno` namespace or feature-testing for it. Make sure any new "
+"dependencies are also browser compatible."
+msgstr ""

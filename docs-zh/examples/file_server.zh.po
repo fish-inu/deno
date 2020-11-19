@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/examples/file_server.md:2
+msgid "# File server"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:4
+msgid "## Concepts"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/file_server.md:10
+msgid ""
+"Use the Deno standard library "
+"[file_server.ts](https://deno.land/std@$STD_VERSION/http/file_server.ts) to "
+"run your own file server and access your files from your web browser."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/file_server.md:10
+msgid ""
+"Run [Deno install](../tools/script_installer.md) to install the file server "
+"locally."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:12
+msgid "## Example"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:16
+msgid ""
+"Serve a local directory via HTTP. First install the remote script to your "
+"local file system. This will install the script to the Deno installation "
+"root's bin directory, e.g. `/home/alice/.deno/bin/file_server`."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:20
+msgid ""
+"```shell deno install --allow-net --allow-read "
+"https://deno.land/std@$STD_VERSION/http/file_server.ts ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:22
+msgid "You can now run the script with the simplified script name. Run it:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:29
+msgid ""
+"```shell $ file_server .  Downloading "
+"https://deno.land/std@$STD_VERSION/http/file_server.ts...  [...] HTTP server "
+"listening on http://0.0.0.0:4507/ ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:32
+msgid ""
+"Now go to [http://0.0.0.0:4507/](http://0.0.0.0:4507/) in your web browser "
+"to see your local directory contents."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:34
+msgid "## Help"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:36
+msgid "Help and a complete list of options are available via:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:40
+msgid "```shell file_server --help ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:42
+msgid "Example output:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:46
+#, no-wrap
+msgid ""
+"```\n"
+"Deno File Server\n"
+"    Serves a local directory in HTTP.\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:49
+#, no-wrap
+msgid ""
+"  INSTALL:\n"
+"    deno install --allow-net --allow-read "
+"https://deno.land/std/http/file_server.ts\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:52
+#, no-wrap
+msgid ""
+"  USAGE:\n"
+"    file_server [path] [options]\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:61
+#, no-wrap
+msgid ""
+"  OPTIONS:\n"
+"    -h, --help          Prints help information\n"
+"    -p, --port <PORT>   Set port\n"
+"    --cors              Enable CORS via the \"Access-Control-Allow-Origin\" "
+"header\n"
+"    --host     <HOST>   Hostname (default is 0.0.0.0)\n"
+"    -c, --cert <FILE>   TLS certificate file (enables TLS)\n"
+"    -k, --key  <FILE>   TLS key file (enables TLS)\n"
+"    --no-dir-listing    Disable directory listing\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/file_server.md:63
+#, no-wrap
+msgid ""
+"    All TLS options are required when one is provided.\n"
+"```\n"
+msgstr ""

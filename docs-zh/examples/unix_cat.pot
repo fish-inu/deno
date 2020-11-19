@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/examples/unix_cat.md:2
+msgid "# An implementation of the unix \"cat\" program"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/unix_cat.md:4
+msgid "## Concepts"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/unix_cat.md:14
+msgid "Use the Deno runtime API to output the contents of a file to the console."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/unix_cat.md:14
+msgid ""
+"[Deno.args](https://doc.deno.land/builtin/stable#Deno.args) accesses the "
+"command line arguments."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/unix_cat.md:14
+msgid ""
+"[Deno.open](https://doc.deno.land/builtin/stable#Deno.open) is used to get a "
+"handle to a file."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/unix_cat.md:14
+msgid ""
+"[Deno.copy](https://doc.deno.land/builtin/stable#Deno.copy) is used to "
+"transfer data from the file to the output stream."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/unix_cat.md:14
+msgid "Files should be closed when you are finished with them"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/unix_cat.md:14
+msgid "Modules can be run directly from remote URLs."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/unix_cat.md:16
+msgid "## Example"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/unix_cat.md:19
+msgid ""
+"In this program each command-line argument is assumed to be a filename, the "
+"file is opened, and printed to stdout (e.g. the console)."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/unix_cat.md:31
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * cat.ts\n"
+" */\n"
+"for (let i = 0; i < Deno.args.length; i++) {\n"
+"  const filename = Deno.args[i];\n"
+"  const file = await Deno.open(filename);\n"
+"  await Deno.copy(file, Deno.stdout);\n"
+"  file.close();\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/unix_cat.md:33
+msgid "To run the program:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/unix_cat.md:36
+msgid ""
+"```shell deno run --allow-read "
+"https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd ```"
+msgstr ""

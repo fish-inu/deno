@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/contributing.md:2
+msgid "# Contributing"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:4
+msgid "- Read the [style guide](./contributing/style_guide.md)."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:6
+msgid "- Please don't make [the benchmarks](https://deno.land/benchmarks) worse."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:8
+msgid "- Ask for help in the [community chat room](https://discord.gg/deno)."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/contributing.md:11
+msgid ""
+"If you are going to work on an issue, mention so in the issue comments "
+"_before_ you start working on the issue."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/contributing.md:14
+msgid ""
+"If you are going to work on a new feature, create an issue and discuss with "
+"other contributors _before_ you start working on the feature."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/contributing.md:18
+msgid ""
+"Please be professional in the forums. We follow [Rust's code of "
+"conduct](https://www.rust-lang.org/policies/code-of-conduct)  (CoC). Have a "
+"problem? Email ry@tinyclouds.org."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:20
+msgid "## Development"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:23
+msgid ""
+"Instructions on how to build from source can be found "
+"[here](./contributing/building_from_source.md)."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:25
+msgid "## Submitting a Pull Request"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:27
+msgid "Before submitting, please make sure the following is done:"
+msgstr ""
+
+#. type: Bullet: '1. '
+#: docs/contributing.md:29
+msgid "Give the PR a descriptive title."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:31
+msgid "Examples of good PR title:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:35
+msgid ""
+"- fix(std/http): Fix race condition in server - docs(console): Update "
+"docstrings - feat(doc): Handle nested re-exports"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:37
+msgid "Examples of bad PR title:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:41
+msgid "- fix #7123 - update docs - fix bugs"
+msgstr ""
+
+#. type: Bullet: '2. '
+#: docs/contributing.md:47
+msgid "Ensure there is a related issue and it is referenced in the PR text."
+msgstr ""
+
+#. type: Bullet: '3. '
+#: docs/contributing.md:47
+msgid "Ensure there are tests that cover the changes."
+msgstr ""
+
+#. type: Bullet: '4. '
+#: docs/contributing.md:47
+msgid "Ensure `cargo test` passes."
+msgstr ""
+
+#. type: Bullet: '5. '
+#: docs/contributing.md:47
+msgid "Ensure `./tools/format.js` passes without changing files."
+msgstr ""
+
+#. type: Bullet: '6. '
+#: docs/contributing.md:47
+msgid "Ensure `./tools/lint.js` passes."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:49
+msgid "## Changes to `third_party`"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:55
+msgid ""
+"[`deno_third_party`](https://github.com/denoland/deno_third_party) contains "
+"most of the external code that Deno depends on, so that we know exactly what "
+"we are executing at any given time. It is carefully maintained with a "
+"mixture of manual labor and private scripts. It's likely you will need help "
+"from @ry or @piscisaureus to make changes."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:57
+msgid "## Adding Ops (aka bindings)"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:61
+msgid ""
+"We are very concerned about making mistakes when adding new APIs. When "
+"adding an Op to Deno, the counterpart interfaces on other platforms should "
+"be researched.  Please list how this functionality is done in Go, Node, "
+"Rust, and Python."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:64
+msgid ""
+"As an example, see how `Deno.rename()` was proposed and added in [PR "
+"#671](https://github.com/denoland/deno/pull/671)."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:66
+msgid "## Releases"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:69
+msgid ""
+"Summary of the changes from previous releases can be found "
+"[here](https://github.com/denoland/deno/releases)."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:71
+msgid "## Documenting APIs"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:75
+msgid ""
+"It is important to document public APIs and we want to do that inline with "
+"the code. This helps ensure that code and documentation are tightly coupled "
+"together."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:77
+msgid "### Utilize JSDoc"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:83
+msgid ""
+"All publicly exposed APIs and types, both via the `deno` module as well as "
+"the global/`window` namespace should have JSDoc documentation. This "
+"documentation is parsed and available to the TypeScript compiler, and "
+"therefore easy to provide further downstream. JSDoc blocks come just prior "
+"to the statement they apply to and are denoted by a leading `/**` before "
+"terminating with a `*/`. For example:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:88
+msgid "```ts /** A simple JSDoc comment */ export const FOO = \"foo\"; ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing.md:89
+msgid "Find more at: https://jsdoc.app/"
+msgstr ""

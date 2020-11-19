@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:2
+msgid "## Import maps"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:5
+msgid ""
+"> This is an unstable feature. Learn more about > [unstable "
+"features](../runtime/stability.md)."
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:7
+msgid "Deno supports [import maps](https://github.com/WICG/import-maps)."
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:9
+msgid "You can use import maps with the `--import-map=<FILE>` CLI flag."
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:11
+msgid "Current limitations:"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:16
+msgid ""
+"- single import map.  - no fallback URLs.  - Deno does not support `std:` "
+"namespace.  - supports only `file:`, `http:` and `https:` schemes."
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:18
+msgid "Example:"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:20
+#, no-wrap
+msgid "**import_map.json**\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:28
+#, no-wrap
+msgid ""
+"```js\n"
+"{\n"
+"   \"imports\": {\n"
+"      \"fmt/\": \"https://deno.land/std@$STD_VERSION/fmt/\"\n"
+"   }\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:30
+#, no-wrap
+msgid "**color.ts**\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:33
+msgid "```ts import { red } from \"fmt/colors.ts\";"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:36
+msgid "console.log(red(\"hello world\")); ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:38
+msgid "Then:"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:42
+msgid "```shell $ deno run --import-map=import_map.json --unstable color.ts ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:44
+msgid "To use starting directory for absolute imports:"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:47 docs/linking_to_external_code/import_maps.md:65
+msgid "```json // import_map.json"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:54
+#, no-wrap
+msgid ""
+"{\n"
+"  \"imports\": {\n"
+"    \"/\": \"./\"\n"
+"  }\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:57
+msgid "```ts // main.ts"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:60
+msgid "import { MyUtil } from \"/util.ts\"; ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:62
+msgid "You may map a different directory: (eg. src)"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/import_maps.md:71
+#, no-wrap
+msgid ""
+"{\n"
+"  \"imports\": {\n"
+"    \"/\": \"./src\"\n"
+"  }\n"
+"}\n"
+"```\n"
+msgstr ""

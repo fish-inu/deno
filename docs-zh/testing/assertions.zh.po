@@ -1,0 +1,404 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/testing/assertions.md:2
+msgid "## Assertions"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:6
+msgid ""
+"To help developers write tests the Deno standard library comes with a built "
+"in [assertions "
+"module](https://deno.land/std@$STD_VERSION/testing/asserts.ts) which can be "
+"imported from `https://deno.land/std@$STD_VERSION/testing/asserts.ts`."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:9
+msgid ""
+"```js import { assert } from "
+"\"https://deno.land/std@$STD_VERSION/testing/asserts.ts\";"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:14
+#, no-wrap
+msgid ""
+"Deno.test(\"Hello Test\", () => {\n"
+"  assert(\"Hello\");\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:16
+msgid "The assertions module provides 10 assertions:"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:27
+msgid ""
+"- `assert(expr: unknown, msg = \"\"): asserts expr` - `assertEquals(actual: "
+"unknown, expected: unknown, msg?: string): void` - `assertNotEquals(actual: "
+"unknown, expected: unknown, msg?: string): void` - "
+"`assertStrictEquals(actual: unknown, expected: unknown, msg?: string): void` "
+"- `assertStringIncludes(actual: string, expected: string, msg?: string): "
+"void` - `assertArrayIncludes(actual: unknown[], expected: unknown[], msg?: "
+"string): void` - `assertMatch(actual: string, expected: RegExp, msg?: "
+"string): void` - `assertNotMatch(actual: string, expected: RegExp, msg?: "
+"string): void` - `assertThrows(fn: () => void, ErrorClass?: Constructor, "
+"msgIncludes = \"\", msg?: string): Error` - `assertThrowsAsync(fn: () => "
+"Promise<void>, ErrorClass?: Constructor, msgIncludes = \"\", msg?: string): "
+"Promise<Error>`"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:29
+msgid "### Assert"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:32
+msgid ""
+"The assert method is a simple 'truthy' assertion and can be used to assert "
+"any value which can be inferred as true."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:40
+#, no-wrap
+msgid ""
+"```js\n"
+"Deno.test(\"Test Assert\", () => {\n"
+"  assert(1);\n"
+"  assert(\"Hello\");\n"
+"  assert(true);\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:42
+msgid "### Equality"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:45
+msgid ""
+"There are three equality assertions available, `assertEquals()`, "
+"`assertNotEquals()` and `assertStrictEquals()`."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:48
+msgid ""
+"The `assertEquals()` and `assertNotEquals()` methods provide a general "
+"equality check and are capable of asserting equality between primitive types "
+"and objects."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:58
+#, no-wrap
+msgid ""
+"```js\n"
+"Deno.test(\"Test Assert Equals\", () => {\n"
+"  assertEquals(1, 1);\n"
+"  assertEquals(\"Hello\", \"Hello\");\n"
+"  assertEquals(true, true);\n"
+"  assertEquals(undefined, undefined);\n"
+"  assertEquals(null, null);\n"
+"  assertEquals(new Date(), new Date());\n"
+"  assertEquals(new RegExp(\"abc\"), new RegExp(\"abc\"));\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:62
+#, no-wrap
+msgid ""
+"  class Foo {}\n"
+"  const foo1 = new Foo();\n"
+"  const foo2 = new Foo();\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:65
+#, no-wrap
+msgid ""
+"  assertEquals(foo1, foo2);\n"
+"});\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:75
+#, no-wrap
+msgid ""
+"Deno.test(\"Test Assert Not Equals\", () => {\n"
+"  assertNotEquals(1, 2);\n"
+"  assertNotEquals(\"Hello\", \"World\");\n"
+"  assertNotEquals(true, false);\n"
+"  assertNotEquals(undefined, \"\");\n"
+"  assertNotEquals(new Date(), Date.now());\n"
+"  assertNotEquals(new RegExp(\"abc\"), new RegExp(\"def\"));\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:79
+msgid ""
+"By contrast `assertStrictEquals()` provides a simpler, stricter equality "
+"check based on the `===` operator. As a result it will not assert two "
+"instances of identical objects as they won't be referentially the same."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:88
+#, no-wrap
+msgid ""
+"```js\n"
+"Deno.test(\"Test Assert Strict Equals\", () => {\n"
+"  assertStrictEquals(1, 1);\n"
+"  assertStrictEquals(\"Hello\", \"Hello\");\n"
+"  assertStrictEquals(true, true);\n"
+"  assertStrictEquals(undefined, undefined);\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:91
+msgid ""
+"The `assertStrictEquals()` assertion is best used when you wish to make a "
+"precise check against two primitive types."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:93
+msgid "### Contains"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:96
+msgid ""
+"There are two methods available to assert a value contains a value, "
+"`assertStringIncludes()` and `assertArrayIncludes()`."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:99
+msgid ""
+"The `assertStringIncludes()` assertion does a simple includes check on a "
+"string to see if it contains the expected string."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:105
+#, no-wrap
+msgid ""
+"```js\n"
+"Deno.test(\"Test Assert String Contains\", () => {\n"
+"  assertStringIncludes(\"Hello World\", \"Hello\");\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:108
+msgid ""
+"The `assertArrayIncludes()` assertion is slightly more advanced and can find "
+"both a value within an array and an array of values within an array."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:116
+#, no-wrap
+msgid ""
+"```js\n"
+"Deno.test(\"Test Assert Array Contains\", () => {\n"
+"  assertArrayIncludes([1, 2, 3], [1]);\n"
+"  assertArrayIncludes([1, 2, 3], [1, 2]);\n"
+"  assertArrayIncludes(Array.from(\"Hello World\"), Array.from(\"Hello\"));\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:118
+msgid "### Regex"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:121
+msgid ""
+"You can assert regular expressions via `assertMatch()` and "
+"`assertNotMatch()` assertions."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:125
+#, no-wrap
+msgid ""
+"```js\n"
+"Deno.test(\"Test Assert Match\", () => {\n"
+"  assertMatch(\"abcdefghi\", new RegExp(\"def\"));\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:130
+#, no-wrap
+msgid ""
+"  const basicUrl = new RegExp(\"^https?://[a-z.]+.com$\");\n"
+"  assertMatch(\"https://www.google.com\", basicUrl);\n"
+"  assertMatch(\"http://facebook.com\", basicUrl);\n"
+"});\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:133
+#, no-wrap
+msgid ""
+"Deno.test(\"Test Assert Not Match\", () => {\n"
+"  assertNotMatch(\"abcdefghi\", new RegExp(\"jkl\"));\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:138
+#, no-wrap
+msgid ""
+"  const basicUrl = new RegExp(\"^https?://[a-z.]+.com$\");\n"
+"  assertNotMatch(\"https://deno.land/\", basicUrl);\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:140
+msgid "### Throws"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:146
+msgid ""
+"There are two ways to assert whether something throws an error in Deno, "
+"`assertThrows()` and `assertThrowsAsync()`. Both assertions allow you to "
+"check an "
+"[Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)  "
+"has been thrown, the type of error thrown and what the message was."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:150
+msgid ""
+"The difference between the two assertions is `assertThrows()` accepts a "
+"standard function and `assertThrowsAsync()` accepts a function which returns "
+"a "
+"[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:154
+msgid ""
+"The `assertThrows()` assertion will check an error has been thrown, and "
+"optionally will check the thrown error is of the correct type, and assert "
+"the error message is as expected."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:166
+#, no-wrap
+msgid ""
+"```js\n"
+"Deno.test(\"Test Assert Throws\", () => {\n"
+"  assertThrows(\n"
+"    () => {\n"
+"      throw new Error(\"Panic!\");\n"
+"    },\n"
+"    Error,\n"
+"    \"Panic!\",\n"
+"  );\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:170
+msgid ""
+"The `assertThrowsAsync()` assertion is a little more complicated, mainly "
+"because it deals with Promises. But basically it will catch thrown errors or "
+"rejections in Promises. You can also optionally check for the error type and "
+"error message."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:182
+#, no-wrap
+msgid ""
+"```js\n"
+"Deno.test(\"Test Assert Throws Async\", () => {\n"
+"  assertThrowsAsync(\n"
+"    () => {\n"
+"      return new Promise(() => {\n"
+"        throw new Error(\"Panic! Threw Error\");\n"
+"      });\n"
+"    },\n"
+"    Error,\n"
+"    \"Panic! Threw Error\",\n"
+"  );\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:192
+#, no-wrap
+msgid ""
+"  assertThrowsAsync(\n"
+"    () => {\n"
+"      return Promise.reject(new Error(\"Panic! Reject Error\"));\n"
+"    },\n"
+"    Error,\n"
+"    \"Panic! Reject Error\",\n"
+"  );\n"
+"});\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:194
+msgid "### Custom Messages"
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:198
+msgid ""
+"Each of Deno's built in assertions allow you to overwrite the standard CLI "
+"error message if you wish. For instance this example will output \"Values "
+"Don't Match!\" rather than the standard CLI error message."
+msgstr ""
+
+#. type: Plain text
+#: docs/testing/assertions.md:203
+#, no-wrap
+msgid ""
+"```js\n"
+"Deno.test(\"Test Assert Equal Fail Custom Message\", () => {\n"
+"  assertEquals(1, 2, \"Values Don't Match!\");\n"
+"});\n"
+"```\n"
+msgstr ""

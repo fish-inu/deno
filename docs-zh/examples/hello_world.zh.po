@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/examples/hello_world.md:2
+msgid "# Hello world"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:4
+msgid "## Concepts"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/hello_world.md:7
+msgid ""
+"Deno can run JavaScript or TypeScript out of the box with no additional "
+"tools or config required."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:9
+msgid "## Overview"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:13
+msgid ""
+"Deno is a secure runtime for both JavaScript and TypeScript. As the hello "
+"world examples below highlight the same functionality can be created in "
+"JavaScript or TypeScript, and Deno will execute both."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:15
+msgid "## JavaScript"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:18
+msgid ""
+"In this JavaScript example the message `Hello [name]` is printed to the "
+"console and the code ensures the name provided is capitalized."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:20
+#, no-wrap
+msgid "**Command:** `deno run hello-world.js`\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:28
+#, no-wrap
+msgid ""
+"```js\n"
+"/**\n"
+" * hello-world.js\n"
+" */\n"
+"function capitalize(word) {\n"
+"  return word.charAt(0).toUpperCase() + word.slice(1);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:32
+#, no-wrap
+msgid ""
+"function hello(name) {\n"
+"  return \"Hello \" + capitalize(name);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:36 docs/examples/hello_world.md:71
+msgid ""
+"console.log(hello(\"john\")); console.log(hello(\"Sarah\")); "
+"console.log(hello(\"kai\"));"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:45 docs/examples/hello_world.md:79
+#, no-wrap
+msgid ""
+"/**\n"
+" * Output:\n"
+" *\n"
+" * Hello John\n"
+" * Hello Sarah\n"
+" * Hello Kai\n"
+"**/\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:47
+msgid "## TypeScript"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:50
+msgid ""
+"This TypeScript example is exactly the same as the JavaScript example above, "
+"the code just has the additional type information which TypeScript supports."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:53
+msgid ""
+"The `deno run` command is exactly the same, it just references a `*.ts` file "
+"rather than a `*.js` file."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:55
+#, no-wrap
+msgid "**Command:** `deno run hello-world.ts`\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:63
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * hello-world.ts\n"
+" */\n"
+"function capitalize(word: string): string {\n"
+"  return word.charAt(0).toUpperCase() + word.slice(1);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/hello_world.md:67
+#, no-wrap
+msgid ""
+"function hello(name: string): string {\n"
+"  return \"Hello \" + capitalize(name);\n"
+"}\n"
+msgstr ""

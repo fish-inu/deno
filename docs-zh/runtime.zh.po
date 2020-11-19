@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/runtime.md:2
+msgid "# Runtime"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:6
+msgid ""
+"Documentation for all runtime functions (Web APIs + `Deno` global) can be "
+"found on "
+"[`doc.deno.land`](https://doc.deno.land/https/github.com/denoland/deno/releases/latest/download/lib.deno.d.ts)."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:8
+msgid "## Web APIs"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:11
+msgid ""
+"For APIs where a web standard already exists, like `fetch` for HTTP "
+"requests, Deno uses these rather than inventing a new proprietary API."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:17
+msgid ""
+"The detailed documentation for implemented Web APIs can be found on "
+"[doc.deno.land](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.shared_globals.d.ts).  "
+"Additionally, a full list of the Web APIs which Deno implements is also "
+"available [in the "
+"repository](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/rt/README.md)."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:23
+msgid ""
+"The TypeScript definitions for the implemented web APIs can be found in the "
+"[`lib.deno.shared_globals.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.shared_globals.d.ts)  "
+"and "
+"[`lib.deno.window.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.window.d.ts)  "
+"files."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:27
+msgid ""
+"Definitions that are specific to workers can be found in the "
+"[`lib.deno.worker.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.worker.d.ts)  "
+"file."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:29
+msgid "## `Deno` global"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:33
+msgid ""
+"All APIs that are not web standard are contained in the global `Deno` "
+"namespace.  It has the APIs for reading from files, opening TCP sockets, and "
+"executing subprocesses, etc."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:37
+msgid ""
+"The TypeScript definitions for the Deno namespaces can be found in the "
+"[`lib.deno.ns.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.ns.d.ts)  "
+"file."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime.md:39
+msgid ""
+"The documentation for all of the Deno specific APIs can be found on "
+"[doc.deno.land](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.ns.d.ts)."
+msgstr ""

@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:2
+msgid "## Reloading modules"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:8
+msgid ""
+"By default, a module in the cache will be reused without fetching or "
+"re-compiling it. Sometimes this is not desirable and you can force deno to "
+"refetch and recompile modules into the cache. You can invalidate your local "
+"`DENO_DIR` cache using the `--reload` flag of the `deno cache` "
+"subcommand. It's usage is described below:"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:10
+msgid "### To reload everything"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:14
+msgid "```ts deno cache --reload my_module.ts ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:16
+msgid "### To reload specific modules"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:19
+msgid ""
+"Sometimes we want to upgrade only some modules. You can control it by "
+"passing an argument to a `--reload` flag."
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:21
+msgid "To reload all \\$STD_VERSION standard modules:"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:25
+msgid ""
+"```ts deno cache --reload=https://deno.land/std@$STD_VERSION my_module.ts "
+"```"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:28
+msgid ""
+"To reload specific modules (in this example - colors and file system copy) "
+"use a comma to separate URLs."
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:32
+msgid ""
+"```ts deno cache "
+"--reload=https://deno.land/std@$STD_VERSION/fs/copy.ts,https://deno.land/std@$STD_VERSION/fmt/colors.ts "
+"my_module.ts ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/linking_to_external_code/reloading_modules.md:33
+msgid "<!-- Should this be part of examples? -->"
+msgstr ""

@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/runtime/workers.md:2
+msgid "## Workers"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:5
+msgid ""
+"Deno supports [`Web Worker "
+"API`](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker)."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:8
+msgid ""
+"Workers can be used to run code on multiple threads. Each instance of "
+"`Worker` is run on a separate thread, dedicated only to that worker."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:11
+msgid ""
+"Currently Deno supports only `module` type workers; thus it's essential to "
+"pass the `type: \"module\"` option when creating a new worker."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:16
+msgid ""
+"Relative module specifiers are [not "
+"supported](https://github.com/denoland/deno/issues/5216) at the moment. You "
+"can instead use the `URL` contructor and `import.meta.url` to easily create "
+"a specifier for some nearby script."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:20
+msgid ""
+"```ts // Good new Worker(new URL(\"worker.js\", import.meta.url).href, { "
+"type: \"module\" });"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:26
+msgid ""
+"// Bad new Worker(new URL(\"worker.js\", import.meta.url).href); new "
+"Worker(new URL(\"worker.js\", import.meta.url).href, { type: \"classic\" }); "
+"new Worker(\"./worker.js\", { type: \"module\" }); ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:28
+msgid "### Permissions"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:31
+msgid ""
+"Creating a new `Worker` instance is similar to a dynamic import; therefore "
+"Deno requires appropriate permission for this action."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:33
+msgid "For workers using local modules; `--allow-read` permission is required:"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:35 docs/runtime/workers.md:58
+#, no-wrap
+msgid "**main.ts**\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:39
+msgid ""
+"```ts new Worker(new URL(\"worker.ts\", import.meta.url).href, { type: "
+"\"module\" }); ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:41
+#, no-wrap
+msgid "**worker.ts**\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:46 docs/runtime/workers.md:69
+msgid "```ts console.log(\"hello world\"); self.close(); ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:50
+msgid ""
+"```shell $ deno run main.ts error: Uncaught PermissionDenied: read access to "
+"\"./worker.ts\", run again with the --allow-read flag"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:54
+msgid "$ deno run --allow-read main.ts hello world ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:56
+msgid "For workers using remote modules; `--allow-net` permission is required:"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:62
+msgid ""
+"```ts new Worker(\"https://example.com/worker.ts\", { type: \"module\" }); "
+"```"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:64
+#, no-wrap
+msgid "**worker.ts** (at https[]()://example.com/worker.ts)\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:73
+msgid ""
+"```shell $ deno run main.ts error: Uncaught PermissionDenied: net access to "
+"\"https://example.com/worker.ts\", run again with the --allow-net flag"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:77
+msgid "$ deno run --allow-net main.ts hello world ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:79
+msgid "### Using Deno in worker"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:82
+msgid ""
+"> This is an unstable Deno feature. Learn more about > [unstable "
+"features](./stability.md)."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:84
+msgid "By default the `Deno` namespace is not available in worker scope."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:86
+msgid ""
+"To add the `Deno` namespace pass `deno: true` option when creating new "
+"worker:"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:88
+#, no-wrap
+msgid "**main.js**\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:96
+#, no-wrap
+msgid ""
+"```ts\n"
+"const worker = new Worker(new URL(\"worker.js\", import.meta.url).href, {\n"
+"  type: \"module\",\n"
+"  deno: true,\n"
+"});\n"
+"worker.postMessage({ filename: \"./log.txt\" });\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:98
+#, no-wrap
+msgid "**worker.js**\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:107
+#, no-wrap
+msgid ""
+"```ts\n"
+"self.onmessage = async (e) => {\n"
+"  const { filename } = e.data;\n"
+"  const text = await Deno.readTextFile(filename);\n"
+"  console.log(text);\n"
+"  self.close();\n"
+"};\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:109
+#, no-wrap
+msgid "**log.txt**\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:113
+msgid "``` hello world ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:118
+msgid "```shell $ deno run --allow-read --unstable main.js hello world ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:121
+msgid ""
+"When the `Deno` namespace is available in worker scope, the worker inherits "
+"its parent process' permissions (the ones specified using `--allow-*` "
+"flags)."
+msgstr ""
+
+#. type: Plain text
+#: docs/runtime/workers.md:122
+msgid "We intend to make permissions configurable for workers."
+msgstr ""

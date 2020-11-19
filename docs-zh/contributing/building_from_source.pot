@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:2
+msgid "## Building from source"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:6
+msgid ""
+"Below are instructions on how to build Deno from source. If you just want to "
+"use Deno you can download a prebuilt executable (more information in the "
+"`Getting Started` chapter)."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:8
+msgid "### Cloning the Repository"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:10
+msgid "Clone on Linux or Mac:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:14
+msgid ""
+"```shell git clone --recurse-submodules https://github.com/denoland/deno.git "
+"```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:16
+msgid "Extra steps for Windows users:"
+msgstr ""
+
+#. type: Bullet: '1. '
+#: docs/contributing/building_from_source.md:25
+msgid ""
+"[Enable \"Developer "
+"Mode\"](https://www.google.com/search?q=windows+enable+developer+mode)  "
+"(otherwise symlinks would require administrator privileges)."
+msgstr ""
+
+#. type: Bullet: '2. '
+#: docs/contributing/building_from_source.md:25
+msgid "Make sure you are using git version 2.19.2.windows.1 or newer."
+msgstr ""
+
+#. type: Bullet: '3. '
+#: docs/contributing/building_from_source.md:25
+msgid ""
+"Set `core.symlinks=true` before the checkout: ```shell git config --global "
+"core.symlinks true git clone --recurse-submodules "
+"https://github.com/denoland/deno.git ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:27
+msgid "### Prerequisites"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:30
+msgid ""
+"> Deno requires the progressively latest stable release of Rust. Deno does "
+"not > support the Rust nightlies."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:33
+msgid ""
+"[Update or Install Rust](https://www.rust-lang.org/tools/install). Check "
+"that Rust installed/updated correctly:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:38
+msgid "``` rustc -V cargo -V ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:40
+msgid "### Setup rust targets and components"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:45
+msgid ""
+"```shell rustup target add wasm32-unknown-unknown rustup target add "
+"wasm32-wasi ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:47
+msgid "### Building Deno"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:49
+msgid "The easiest way to build Deno is by using a precompiled version of V8:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:53
+msgid "``` cargo build -vv ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:55
+msgid "However if you want to build Deno and V8 from source code:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:59
+msgid "``` V8_FROM_SOURCE=1 cargo build -vv ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:61
+msgid "When building V8 from source, there are more dependencies:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:65
+msgid ""
+"[Python 2](https://www.python.org/downloads). Ensure that a suffix-less "
+"`python`/`python.exe` exists in your `PATH` and it refers to Python 2, [not "
+"3](https://github.com/denoland/deno/issues/464#issuecomment-411795578)."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:68
+msgid ""
+"For Linux users glib-2.0 development files must also be installed. (On "
+"Ubuntu, run `apt install libglib2.0-dev`.)"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:72
+msgid ""
+"Mac users must have Command Line Tools installed.  "
+"([XCode](https://developer.apple.com/xcode/) already includes CLT. Run "
+"`xcode-select --install` to install it without XCode.)"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:74
+msgid "For Windows users:"
+msgstr ""
+
+#. type: Bullet: '1. '
+#: docs/contributing/building_from_source.md:78
+msgid ""
+"Get [VS Community 2019](https://www.visualstudio.com/downloads/) with "
+"\"Desktop development with C++\" toolkit and make sure to select the "
+"following required tools listed below along with all C++ tools."
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/contributing/building_from_source.md:86
+msgid "Visual C++ tools for CMake"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/contributing/building_from_source.md:86
+msgid "Windows 10 SDK (10.0.17763.0)"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/contributing/building_from_source.md:86
+msgid "Testing tools core features - Build Tools"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/contributing/building_from_source.md:86
+msgid "Visual C++ ATL for x86 and x64"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/contributing/building_from_source.md:86
+msgid "Visual C++ MFC for x86 and x64"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/contributing/building_from_source.md:86
+msgid "C++/CLI support"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/contributing/building_from_source.md:86
+msgid "VC++ 2015.3 v14.00 (v140) toolset for desktop"
+msgstr ""
+
+#. type: Bullet: '2. '
+#: docs/contributing/building_from_source.md:94
+msgid ""
+"Enable \"Debugging Tools for Windows\". Go to \"Control Panel\" → "
+"\"Programs\" → \"Programs and Features\" → Select \"Windows Software "
+"Development Kit - Windows 10\" → \"Change\" → \"Change\" → Check \"Debugging "
+"Tools For Windows\" → \"Change\" → \"Finish\". Or use: [Debugging Tools for "
+"Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/)  "
+"(Notice: it will download the files, you should install `X64 Debuggers And "
+"Tools-x64_en-us.msi` file manually.)"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:97
+msgid ""
+"See [rusty_v8's README](https://github.com/denoland/rusty_v8) for more "
+"details about the V8 build."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:99
+msgid "### Building"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:101
+msgid "Build with Cargo:"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:105
+msgid "```shell # Build: cargo build -vv"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:108
+msgid ""
+"# Build errors? Ensure you have latest master and try building again, or if "
+"that doesn't work try: cargo clean && cargo build -vv"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/building_from_source.md:111
+msgid "# Run: ./target/debug/deno run cli/tests/002_hello.ts ```"
+msgstr ""

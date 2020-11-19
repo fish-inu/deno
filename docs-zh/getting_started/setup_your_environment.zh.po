@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:2
+msgid "## Set up your environment"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:6
+msgid ""
+"To productively get going with Deno you should set up your environment. This "
+"means setting up shell autocomplete, environmental variables and your editor "
+"or IDE of choice."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:8
+msgid "### Environmental variables"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:10
+msgid "There are several env vars that control how Deno behaves:"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:13
+msgid ""
+"`DENO_DIR` defaults to `$HOME/.cache/deno` but can be set to any path to "
+"control where generated and cached source code is written and read to."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:17
+msgid ""
+"`NO_COLOR` will turn off color output if set. See "
+"https://no-color.org/. User code can test if `NO_COLOR` was set without "
+"having `--allow-env` by using the boolean constant `Deno.noColor`."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:19
+msgid "### Shell autocomplete"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:23
+msgid ""
+"You can generate completion script for your shell using the `deno "
+"completions <shell>` command. The command outputs to stdout so you should "
+"redirect it to an appropriate file."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:25
+msgid "The supported shells are:"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:31
+msgid "- zsh - bash - fish - powershell - elvish"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:33
+msgid "Example (bash):"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:38
+msgid ""
+"```shell deno completions bash > /usr/local/etc/bash_completion.d/deno.bash "
+"source /usr/local/etc/bash_completion.d/deno.bash ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:40
+msgid "Example (zsh without framework):"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:45
+msgid ""
+"```shell mkdir ~/.zsh # create a folder to save your completions. it can be "
+"anywhere deno completions zsh > ~/.zsh/_deno ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:47
+msgid "then add this to your `.zshrc`"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:53
+msgid "```shell fpath=(~/.zsh $fpath)  autoload -Uz compinit compinit -u ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:57
+msgid ""
+"and restart your terminal. note that if completions are still not loading, "
+"you may need to run `rm ~/.zcompdump/` to remove previously generated "
+"completions and then `compinit` to generate them again."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:59
+msgid "Example (zsh + oh-my-zsh) [recommended for zsh users] :"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:64
+msgid ""
+"```shell mkdir ~/.oh-my-zsh/custom/plugins/deno deno completions zsh > "
+"~/.oh-my-zsh/custom/plugins/deno/_deno ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:68
+msgid ""
+"After this add deno plugin under plugins tag in `~/.zshrc` file. for tools "
+"like `antigen` path will be "
+"`~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins` and command will be "
+"`antigen bundle deno` and so on."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:70
+msgid "Example (Powershell):"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:75
+msgid "```shel deno completions powershell > $profile .$profile ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:79
+msgid ""
+"This will be create a Powershell profile at "
+"`$HOME\\Documents\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1` by "
+"default, and it will be run whenever you launch the PowerShell."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:81
+msgid "### Editors and IDEs"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:86
+msgid ""
+"Because Deno requires the use of file extensions for module imports and "
+"allows http imports, and most editors and language servers do not natively "
+"support this at the moment, many editors will throw errors about being "
+"unable to find files or imports having unnecessary file extensions."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:88
+msgid ""
+"The community has developed extensions for some editors to solve these "
+"issues:"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:90
+msgid "#### VS Code"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:95
+msgid ""
+"The beta version of [vscode_deno](https://github.com/denoland/vscode_deno) "
+"is published on the [Visual Studio "
+"Marketplace](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).  "
+"Please report any issues."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:97
+msgid "#### JetBrains IDEs"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:100
+msgid ""
+"Support for JetBrains IDEs is available through [the Deno "
+"plugin](https://plugins.jetbrains.com/plugin/14382-deno)."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:104
+msgid ""
+"For more information on how to set-up your JetBrains IDE for Deno, read "
+"[this "
+"comment](https://youtrack.jetbrains.com/issue/WEB-41607#focus=streamItem-27-4160152.0-0)  "
+"on YouTrack."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:106
+msgid "#### Vim and NeoVim"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:110
+msgid ""
+"Vim works fairly well for Deno/TypeScript if you install "
+"[CoC](https://github.com/neoclide/coc.nvim) (intellisense engine and "
+"language server protocol)."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:116
+msgid ""
+"After CoC is installed, from inside Vim, run`:CocInstall coc-tsserver` and "
+"`:CocInstall coc-deno`. To get autocompletion working for Deno type "
+"definitions run `:CocCommand deno.types`. Optionally restart the CoC server "
+"`:CocRestart`.  From now on, things like `gd` (go to definition) and `gr` "
+"(goto/find references)  should work."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:118
+msgid "#### Emacs"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:125
+msgid ""
+"Emacs works pretty well for a TypeScript project targeted to Deno by using a "
+"combination of [tide](https://github.com/ananthakumaran/tide) which is the "
+"canonical way of using TypeScript within Emacs and "
+"[typescript-deno-plugin](https://github.com/justjavac/typescript-deno-plugin)  "
+"which is what is used by the [official VSCode extension for "
+"Deno](https://github.com/denoland/vscode_deno)."
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:132
+msgid ""
+"To use it, first make sure that `tide` is setup for your instance of Emacs.  "
+"Next, as instructed on the "
+"[typescript-deno-plugin](https://github.com/justjavac/typescript-deno-plugin)  "
+"page, first `npm install --save-dev typescript-deno-plugin typescript` in "
+"your project (`npm init -y` as necessary), then add the following block to "
+"your `tsconfig.json` and you are off to the races!"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:146
+#, no-wrap
+msgid ""
+"```json\n"
+"{\n"
+"  \"compilerOptions\": {\n"
+"    \"plugins\": [\n"
+"      {\n"
+"        \"name\": \"typescript-deno-plugin\",\n"
+"        \"enable\": true, // default is `true`\n"
+"        \"importmap\": \"import_map.json\"\n"
+"      }\n"
+"    ]\n"
+"  }\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/getting_started/setup_your_environment.md:149
+msgid ""
+"If you don't see your favorite IDE on this list, maybe you can develop an "
+"extension. Our [community Discord group](https://discord.gg/deno) can give "
+"you some pointers on where to get started."
+msgstr ""

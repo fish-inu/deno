@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:2
+msgid "# Module metadata"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:4
+msgid "## Concepts"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/module_metadata.md:16
+msgid ""
+"[import.meta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)  "
+"can provide information on the context of the module."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/module_metadata.md:16
+msgid ""
+"The boolean "
+"[import.meta.main](https://doc.deno.land/builtin/stable#ImportMeta) will let "
+"you know if the current module is the program entry point."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/module_metadata.md:16
+msgid ""
+"The string "
+"[import.meta.url](https://doc.deno.land/builtin/stable#ImportMeta)  will "
+"give you the URL of the current module."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/module_metadata.md:16
+msgid ""
+"The string "
+"[Deno.mainModule](https://doc.deno.land/builtin/stable#Deno.mainModule) will "
+"give you the URL of the main module entry point, i.e. the module invoked by "
+"the deno runtime."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:18
+msgid "## Example"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:22
+msgid ""
+"The example below uses two modules to show the difference between "
+"`import.meta.url`, `import.meta.main` and `Deno.mainModule`. In this "
+"example, `module_a.ts` is the main module entry point:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:36
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * module_b.ts\n"
+" */\n"
+"export function outputB() {\n"
+"  console.log(\"Module B's import.meta.url\", import.meta.url);\n"
+"  console.log(\"Module B's mainModule url\", Deno.mainModule);\n"
+"  console.log(\n"
+"    \"Is module B the main module via import.meta.main?\",\n"
+"    import.meta.main,\n"
+"  );\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:42
+#, no-wrap
+msgid ""
+"```ts\n"
+"/**\n"
+" * module_a.ts\n"
+" */\n"
+"import { outputB } from \"./module_b.ts\";\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:51
+#, no-wrap
+msgid ""
+"function outputA() {\n"
+"  console.log(\"Module A's import.meta.url\", import.meta.url);\n"
+"  console.log(\"Module A's mainModule url\", Deno.mainModule);\n"
+"  console.log(\n"
+"    \"Is module A the main module via import.meta.main?\",\n"
+"    import.meta.main,\n"
+"  );\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:56
+msgid "outputA(); console.log(\"\"); outputB(); ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:59
+msgid ""
+"If `module_a.ts` is located in `/home/alice/deno` then the output of `deno "
+"run --allow-read module_a.ts` is:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:64
+msgid ""
+"``` Module A's import.meta.url file:///home/alice/deno/module_a.ts Module "
+"A's mainModule url file:///home/alice/deno/module_a.ts Is module A the main "
+"module via import.meta.main? true"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/module_metadata.md:68
+msgid ""
+"Module B's import.meta.url file:///home/alice/deno/module_b.ts Module B's "
+"mainModule url file:///home/alice/deno/module_a.ts Is module B the main "
+"module via import.meta.main? false ```"
+msgstr ""

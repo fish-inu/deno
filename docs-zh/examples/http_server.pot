@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/examples/http_server.md:2
+msgid "# Simple HTTP web server"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:4
+msgid "## Concepts"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/examples/http_server.md:7
+msgid ""
+"Use the std library [http module](https://deno.land/std@$STD_VERSION/http) "
+"to run your own web server."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:9
+msgid "## Overview"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:12
+msgid ""
+"With just a few lines of code you can run your own http web server with "
+"control over the response status, request headers and more."
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:14
+msgid "## Sample web server"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:16
+msgid "In this example, the user-agent of the client is returned to the client:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:22
+#, no-wrap
+msgid ""
+"```typescript\n"
+"/**\n"
+" * webserver.ts\n"
+" */\n"
+"import { serve } from "
+"\"https://deno.land/std@$STD_VERSION/http/server.ts\";\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:25
+msgid ""
+"const server = serve({ hostname: \"0.0.0.0\", port: 8080 }); "
+"console.log(`HTTP webserver running.  Access it at: "
+"http://localhost:8080/`);"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:29
+#, no-wrap
+msgid ""
+"for await (const request of server) {\n"
+"  let bodyContent = \"Your user-agent is:\\n\\n\";\n"
+"  bodyContent += request.headers.get(\"user-agent\") || \"Unknown\";\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:33
+#, no-wrap
+msgid ""
+"  request.respond({ status: 200, body: bodyContent });\n"
+"}\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:35
+msgid "Run this with:"
+msgstr ""
+
+#. type: Plain text
+#: docs/examples/http_server.md:38
+msgid "```shell deno run --allow-net webserver.ts ```"
+msgstr ""

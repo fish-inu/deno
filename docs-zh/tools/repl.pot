@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/tools/repl.md:2
+msgid "# Read-eval-print-loop"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/repl.md:5
+msgid ""
+"`deno repl` starts an read-eval-print-loop, which lets you interactively "
+"build up program state in the global context."
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/repl.md:7
+msgid "## Keyboard shortcuts"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/repl.md:46
+#, no-wrap
+msgid ""
+"| Keystroke             | Action                                                                                           "
+"|\n"
+"| --------------------- | "
+"------------------------------------------------------------------------------------------------ "
+"|\n"
+"| Ctrl-A, Home          | Move cursor to the beginning of line                                                             "
+"|\n"
+"| Ctrl-B, Left          | Move cursor one character left                                                                   "
+"|\n"
+"| Ctrl-C                | Interrupt and cancel the current edit                                                            "
+"|\n"
+"| Ctrl-D                | If if line _is_ empty, signal end of line                                                        "
+"|\n"
+"| Ctrl-D, Del           | If line is _not_ empty, delete character under "
+"cursor                                            |\n"
+"| Ctrl-E, End           | Move cursor to end of line                                                                       "
+"|\n"
+"| Ctrl-F, Right         | Move cursor one character right                                                                  "
+"|\n"
+"| Ctrl-H, Backspace     | Delete character before cursor                                                                   "
+"|\n"
+"| Ctrl-I, Tab           | Next completion                                                                                  "
+"|\n"
+"| Ctrl-J, Ctrl-M, Enter | Finish the line entry                                                                            "
+"|\n"
+"| Ctrl-K                | Delete from cursor to end of line                                                                "
+"|\n"
+"| Ctrl-L                | Clear screen                                                                                     "
+"|\n"
+"| Ctrl-N, Down          | Next match from history                                                                          "
+"|\n"
+"| Ctrl-P, Up            | Previous match from history                                                                      "
+"|\n"
+"| Ctrl-R                | Reverse Search history (Ctrl-S forward, Ctrl-G "
+"cancel)                                           |\n"
+"| Ctrl-T                | Transpose previous character with current "
+"character                                              |\n"
+"| Ctrl-U                | Delete from start of line to cursor                                                              "
+"|\n"
+"| Ctrl-V                | Insert any special character without performing "
+"its associated action (#65)                      |\n"
+"| Ctrl-W                | Delete word leading up to cursor (using white "
+"space as a word boundary)                          |\n"
+"| Ctrl-X Ctrl-U         | Undo                                                                                             "
+"|\n"
+"| Ctrl-Y                | Paste from Yank buffer                                                                           "
+"|\n"
+"| Ctrl-Y                | Paste from Yank buffer (Meta-Y to paste next yank "
+"instead)                                       |\n"
+"| Ctrl-Z                | Suspend (Unix only)                                                                              "
+"|\n"
+"| Ctrl-_                | Undo                                                                                             "
+"|\n"
+"| Meta-0, 1, ..., -     | Specify the digit to the argument. `–` starts a "
+"negative argument.                               |\n"
+"| Meta-<                | Move to first entry in history                                                                   "
+"|\n"
+"| Meta->                | Move to last entry in history                                                                    "
+"|\n"
+"| Meta-B, Alt-Left      | Move cursor to previous word                                                                     "
+"|\n"
+"| Meta-Backspace        | Kill from the start of the current word, or, if "
+"between words, to the start of the previous word |\n"
+"| Meta-C                | Capitalize the current word                                                                      "
+"|\n"
+"| Meta-D                | Delete forwards one word                                                                         "
+"|\n"
+"| Meta-F, Alt-Right     | Move cursor to next word                                                                         "
+"|\n"
+"| Meta-L                | Lower-case the next word                                                                         "
+"|\n"
+"| Meta-T                | Transpose words                                                                                  "
+"|\n"
+"| Meta-U                | Upper-case the next word                                                                         "
+"|\n"
+"| Meta-Y                | See Ctrl-Y                                                                                       "
+"|\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/repl.md:48
+msgid "## Special variables"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/repl.md:52
+#, no-wrap
+msgid ""
+"| Identifier | Description                          |\n"
+"| ---------- | ------------------------------------ |\n"
+"| _          | Yields the last evaluated expression |\n"
+"| _error     | Yields the last thrown error         |\n"
+msgstr ""

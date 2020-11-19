@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: docs/contributing/architecture.md:2
+msgid "## Internal details"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:4
+msgid "### Deno and Linux analogy"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:14
+#, no-wrap
+msgid ""
+"|                       **Linux** | **Deno**                                     "
+"|\n"
+"| ------------------------------: | "
+":------------------------------------------- |\n"
+"|                       Processes | Web Workers                                  "
+"|\n"
+"|                        Syscalls | Ops                                          "
+"|\n"
+"|           File descriptors (fd) | [Resource ids "
+"(rid)](architecture#resources) |\n"
+"|                       Scheduler | Tokio                                        "
+"|\n"
+"| Userland: libc++ / glib / boost | https://deno.land/std/                       "
+"|\n"
+"|                 /proc/\\$\\$/stat | [Deno.metrics()](architecture#metrics)       "
+"|\n"
+"|                       man pages | deno types                                   "
+"|\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:16
+msgid "#### Resources"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:21
+msgid ""
+"Resources (AKA `rid`) are Deno's version of file descriptors. They are "
+"integer values used to refer to open files, sockets, and other concepts. For "
+"testing it would be good to be able to query the system for how many open "
+"resources there are."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:29
+msgid ""
+"```ts console.log(Deno.resources()); // { 0: \"stdin\", 1: \"stdout\", 2: "
+"\"stderr\" } Deno.close(0); console.log(Deno.resources()); // { 1: "
+"\"stdout\", 2: \"stderr\" } ```"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:31
+msgid "#### Metrics"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:33
+msgid "Metrics is Deno's internal counter for various statistics."
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:46
+#, no-wrap
+msgid ""
+"```shell\n"
+"> console.table(Deno.metrics())\n"
+"┌──────────────────┬────────┐\n"
+"│     (index)      │ Values │\n"
+"├──────────────────┼────────┤\n"
+"│  opsDispatched   │   9    │\n"
+"│   opsCompleted   │   9    │\n"
+"│ bytesSentControl │  504   │\n"
+"│  bytesSentData   │   0    │\n"
+"│  bytesReceived   │  856   │\n"
+"└──────────────────┴────────┘\n"
+"```\n"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:48
+msgid "### Schematic diagram"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:50
+msgid "![architectural schematic](https://deno.land/images/schematic_v0.2.png)"
+msgstr ""
+
+#. type: Plain text
+#: docs/contributing/architecture.md:52
+msgid "### Conference"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/contributing/architecture.md:58
+msgid ""
+"Ryan Dahl. (May 27, 2020).  [An interesting case with "
+"Deno](https://www.youtube.com/watch?v=1b7FoBwxc7E).  Deno Israel."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/contributing/architecture.md:58
+msgid ""
+"Bartek Iwańczuk. (Oct 6, 2020).  [Deno internals - how modern JS/TS runtime "
+"is built](https://www.youtube.com/watch?v=AOvg_GbnsbA&t=35m13s). Paris Deno."
+msgstr ""
