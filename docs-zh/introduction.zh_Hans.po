@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-19 16:18+0800\n"
-"PO-Revision-Date: 2020-11-20 02:47+0000\n"
+"PO-Revision-Date: 2020-11-22 13:07+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/introduction/zh_Hans/>\n"
@@ -28,24 +28,24 @@ msgstr "# 入门"
 msgid ""
 "Deno is a JavaScript/TypeScript runtime with secure defaults and a great "
 "developer experience."
-msgstr ""
+msgstr "Deno 是 JavaScript/TypeScript 的运行时，其默认设置的安全性高，提供了良好的开发者体验。"
 
 #. type: Plain text
 #: docs/introduction.md:7
 msgid "It's built on V8, Rust, and Tokio."
-msgstr ""
+msgstr "Deno 基于 V8，Rust 和 Tokio。"
 
 #. type: Plain text
 #: docs/introduction.md:9
 msgid "## Feature Highlights"
-msgstr ""
+msgstr "## 重要特性"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
 msgid ""
 "Secure by default. No file, network, or environment access (unless "
 "explicitly enabled)."
-msgstr ""
+msgstr "默认设置的安全性高。不允许访问文件、网络以及环境（除非你显式启用权限）。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
