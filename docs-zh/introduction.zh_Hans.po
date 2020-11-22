@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-19 16:18+0800\n"
-"PO-Revision-Date: 2020-11-22 13:07+0000\n"
+"PO-Revision-Date: 2020-11-23 05:24+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/introduction/zh_Hans/>\n"
@@ -50,19 +50,19 @@ msgstr "默认设置的安全性高。不允许访问文件、网络以及环境
 #. type: Bullet: '- '
 #: docs/introduction.md:21
 msgid "Supports TypeScript out of the box."
-msgstr ""
+msgstr "内置了对 TypeScript 的支持。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
 msgid "Ships a single executable (`deno`)."
-msgstr ""
+msgstr "自带单个可执行程序（`deno`）。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
 msgid ""
 "Has built-in utilities like a dependency inspector (`deno info`) and a code "
 "formatter (`deno fmt`)."
-msgstr ""
+msgstr "内置了实用工具，如依赖检查器（`deno info`）和代码格式化工具（`deno fmt`）。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
@@ -71,26 +71,29 @@ msgid ""
 "modules](https://github.com/denoland/deno/tree/master/std) that are "
 "guaranteed to work with Deno."
 msgstr ""
+"带有一些[标准模块](https://github.com/denoland/deno/tree/master/std)，这些模块经过了审核，已确保能和 "
+"Deno 搭配使用。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
 msgid "Scripts can be bundled into a single JavaScript file."
-msgstr ""
+msgstr "通过 Deno，你编写的脚本可以打包生成单个 JavaScript 文件。"
 
 #. type: Plain text
 #: docs/introduction.md:23
 msgid "## Philosophy"
-msgstr ""
+msgstr "## 理念"
 
 #. type: Plain text
 #: docs/introduction.md:26
 msgid ""
 "Deno aims to be a productive and secure scripting environment for the modern "
 "programmer."
-msgstr ""
+msgstr "Deno 是为现代程序员打造的脚本环境，目标是高效和安全。"
 
 #. type: Plain text
 #: docs/introduction.md:32
+#, fuzzy
 msgid ""
 "Deno will always be distributed as a single executable. Given a URL to a "
 "Deno program, it is runnable with nothing more than [the ~15 megabyte zipped "
@@ -98,23 +101,25 @@ msgid ""
 "takes on the role of both runtime and package manager. It uses a standard "
 "browser-compatible protocol for loading modules: URLs."
 msgstr ""
+"Deno 始终会以单个可执行程序的形式来发放。该程序仅仅约 15 兆即可运行。  Deno 既是运行时又是软件包管理器，使用了浏览器兼容的标准协议，"
+"用于加载 URL 模块。"
 
 #. type: Plain text
 #: docs/introduction.md:35
 msgid ""
 "Among other things, Deno is a great replacement for utility scripts that may "
 "have been historically written with bash or python."
-msgstr ""
+msgstr "除此之外，实用脚本之前或许是用 bash 或 python 编写的，而 Deno 是个不错的替代工具。"
 
 #. type: Plain text
 #: docs/introduction.md:37
 msgid "## Goals"
-msgstr ""
+msgstr "## 愿景"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
 msgid "Only ship a single executable (`deno`)."
-msgstr ""
+msgstr "自带单个可执行程序。"
 
 #. type: Plain text
 #: docs/introduction.md:49
@@ -136,6 +141,19 @@ msgid ""
 "- Does not leak V8 concepts into user land.\n"
 "- Be able to serve HTTP efficiently.\n"
 msgstr ""
+"- 默认设置的安全性高。\n"
+"  - 不允许脚本访问文件、网络以及环境（除非你显式启用权限）。\n"
+"- 与浏览器兼容：Deno 有一部分代码完全由 JavaScript 编写，这部分代码没有使用 `Deno` 命名空间，在现代浏览器内也能运行。The "
+"subset of Deno programs which are written completely\n"
+"  in JavaScript and do not use the global `Deno` namespace (or feature test "
+"for\n"
+"  it), ought to also be able to be run in a modern web browser without "
+"change.\n"
+"- Provide built-in tooling like unit testing, code formatting, and linting "
+"to\n"
+"  improve developer experience.\n"
+"- Does not leak V8 concepts into user land.\n"
+"- Be able to serve HTTP efficiently.\n"
 
 #. type: Plain text
 #: docs/introduction.md:51
