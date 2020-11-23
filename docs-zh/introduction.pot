@@ -7,13 +7,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Plain text
@@ -40,6 +40,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
+#, markdown-text
 msgid ""
 "Secure by default. No file, network, or environment access (unless "
 "explicitly enabled)."
@@ -47,16 +48,19 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
+#, markdown-text
 msgid "Supports TypeScript out of the box."
 msgstr ""
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
+#, markdown-text
 msgid "Ships a single executable (`deno`)."
 msgstr ""
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
+#, markdown-text
 msgid ""
 "Has built-in utilities like a dependency inspector (`deno info`) and a code "
 "formatter (`deno fmt`)."
@@ -64,6 +68,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
+#, markdown-text
 msgid ""
 "Has [a set of reviewed (audited) standard "
 "modules](https://github.com/denoland/deno/tree/master/std) that are "
@@ -72,6 +77,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
+#, markdown-text
 msgid "Scripts can be bundled into a single JavaScript file."
 msgstr ""
 
@@ -111,28 +117,52 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
+#, markdown-text
 msgid "Only ship a single executable (`deno`)."
 msgstr ""
 
-#. type: Plain text
+#. type: Bullet: '- '
 #: docs/introduction.md:49
-#, no-wrap
+#, markdown-text
+msgid "Provide Secure Defaults."
+msgstr ""
+
+#. type: Bullet: '  - '
+#: docs/introduction.md:49
+#, markdown-text
 msgid ""
-"- Provide Secure Defaults.\n"
-"  - Unless specifically allowed, scripts can't access files, the "
-"environment, or\n"
-"    the network.\n"
-"- Browser compatible: The subset of Deno programs which are written "
-"completely\n"
-"  in JavaScript and do not use the global `Deno` namespace (or feature test "
-"for\n"
-"  it), ought to also be able to be run in a modern web browser without "
-"change.\n"
-"- Provide built-in tooling like unit testing, code formatting, and linting "
-"to\n"
-"  improve developer experience.\n"
-"- Does not leak V8 concepts into user land.\n"
-"- Be able to serve HTTP efficiently.\n"
+"Unless specifically allowed, scripts can't access files, the environment, or "
+"the network."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:49
+#, markdown-text
+msgid ""
+"Browser compatible: The subset of Deno programs which are written completely "
+"in JavaScript and do not use the global `Deno` namespace (or feature test "
+"for it), ought to also be able to be run in a modern web browser without "
+"change."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:49
+#, markdown-text
+msgid ""
+"Provide built-in tooling like unit testing, code formatting, and linting to "
+"improve developer experience."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:49
+#, markdown-text
+msgid "Does not leak V8 concepts into user land."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:49
+#, markdown-text
+msgid "Be able to serve HTTP efficiently."
 msgstr ""
 
 #. type: Plain text
@@ -140,22 +170,52 @@ msgstr ""
 msgid "## Comparison to Node.js"
 msgstr ""
 
-#. type: Plain text
+#. type: Bullet: '- '
 #: docs/introduction.md:61
-#, no-wrap
+#, markdown-text
+msgid "Deno does not use `npm`."
+msgstr ""
+
+#. type: Bullet: '  - '
+#: docs/introduction.md:61
+#, markdown-text
+msgid "It uses modules referenced as URLs or file paths."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
+#, markdown-text
+msgid "Deno does not use `package.json` in its module resolution algorithm."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
+#, markdown-text
 msgid ""
-"- Deno does not use `npm`.\n"
-"  - It uses modules referenced as URLs or file paths.\n"
-"- Deno does not use `package.json` in its module resolution algorithm.\n"
-"- All async actions in Deno return a promise. Thus Deno provides different "
-"APIs\n"
-"  than Node.\n"
-"- Deno requires explicit permissions for file, network, and environment "
-"access.\n"
-"- Deno always dies on uncaught errors.\n"
-"- Uses \"ES Modules\" and does not support `require()`. Third party modules "
-"are\n"
-"  imported via URLs:\n"
+"All async actions in Deno return a promise. Thus Deno provides different "
+"APIs than Node."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
+#, markdown-text
+msgid ""
+"Deno requires explicit permissions for file, network, and environment "
+"access."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
+#, markdown-text
+msgid "Deno always dies on uncaught errors."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
+#, markdown-text
+msgid ""
+"Uses \"ES Modules\" and does not support `require()`. Third party modules "
+"are imported via URLs:"
 msgstr ""
 
 #. type: Plain text
@@ -174,6 +234,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/introduction.md:72
+#, markdown-text
 msgid ""
 "Remote code is fetched and cached on first execution, and never updated "
 "until the code is run with the `--reload` flag. (So, this will still work on "
@@ -182,6 +243,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/introduction.md:72
+#, markdown-text
 msgid ""
 "Modules/files loaded from remote URLs are intended to be immutable and "
 "cacheable."

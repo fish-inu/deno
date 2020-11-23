@@ -7,13 +7,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Plain text
@@ -153,22 +153,35 @@ msgstr ""
 msgid "However:"
 msgstr ""
 
-#. type: Plain text
+#. type: Bullet: '1. '
 #: docs/getting_started/command_line_interface.md:84
-#, no-wrap
+#, markdown-text
 msgid ""
-"1. This is the most logical way of distinguishing between runtime flags "
-"and\n"
-"   script arguments.\n"
-"2. This is the most ergonomic way of distinguishing between runtime flags "
-"and\n"
-"   script arguments.\n"
-"3. This is, in fact, the same behaviour as that of any other popular "
-"runtime.\n"
-"   - Try `node -c index.js` and `node index.js -c`. The first will only do "
-"a\n"
-"     syntax check on `index.js` as per Node's `-c` flag. The second will\n"
-"     _execute_ `index.js` with `-c` passed to `require(\"process\").argv`.\n"
+"This is the most logical way of distinguishing between runtime flags and "
+"script arguments."
+msgstr ""
+
+#. type: Bullet: '2. '
+#: docs/getting_started/command_line_interface.md:84
+#, markdown-text
+msgid ""
+"This is the most ergonomic way of distinguishing between runtime flags and "
+"script arguments."
+msgstr ""
+
+#. type: Bullet: '3. '
+#: docs/getting_started/command_line_interface.md:84
+#, markdown-text
+msgid "This is, in fact, the same behaviour as that of any other popular runtime."
+msgstr ""
+
+#. type: Bullet: '   - '
+#: docs/getting_started/command_line_interface.md:84
+#, markdown-text
+msgid ""
+"Try `node -c index.js` and `node index.js -c`. The first will only do a "
+"syntax check on `index.js` as per Node's `-c` flag. The second will "
+"_execute_ `index.js` with `-c` passed to `require(\"process\").argv`."
 msgstr ""
 
 #. type: Plain text

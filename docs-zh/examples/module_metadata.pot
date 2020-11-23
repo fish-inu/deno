@@ -7,13 +7,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Plain text
@@ -28,6 +28,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/examples/module_metadata.md:16
+#, markdown-text
 msgid ""
 "[import.meta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)  "
 "can provide information on the context of the module."
@@ -35,6 +36,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/examples/module_metadata.md:16
+#, markdown-text
 msgid ""
 "The boolean "
 "[import.meta.main](https://doc.deno.land/builtin/stable#ImportMeta) will let "
@@ -43,6 +45,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/examples/module_metadata.md:16
+#, markdown-text
 msgid ""
 "The string "
 "[import.meta.url](https://doc.deno.land/builtin/stable#ImportMeta)  will "
@@ -51,6 +54,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/examples/module_metadata.md:16
+#, markdown-text
 msgid ""
 "The string "
 "[Deno.mainModule](https://doc.deno.land/builtin/stable#Deno.mainModule) will "

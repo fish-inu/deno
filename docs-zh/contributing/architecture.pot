@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,6 +117,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/contributing/architecture.md:58
+#, markdown-text
 msgid ""
 "Ryan Dahl. (May 27, 2020).  [An interesting case with "
 "Deno](https://www.youtube.com/watch?v=1b7FoBwxc7E).  Deno Israel."
@@ -124,6 +125,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/contributing/architecture.md:58
+#, markdown-text
 msgid ""
 "Bartek Iwańczuk. (Oct 6, 2020).  [Deno internals - how modern JS/TS runtime "
 "is built](https://www.youtube.com/watch?v=AOvg_GbnsbA&t=35m13s). Paris Deno."

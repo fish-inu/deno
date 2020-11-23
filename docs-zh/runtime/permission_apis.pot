@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,7 +110,8 @@ msgid "Check, by descriptor, if a permission is granted or not."
 msgstr ""
 
 #. type: Plain text
-#: docs/runtime/permission_apis.md:47 docs/runtime/permission_apis.md:131 docs/runtime/permission_apis.md:142 docs/runtime/permission_apis.md:179
+#: docs/runtime/permission_apis.md:47 docs/runtime/permission_apis.md:131
+#: docs/runtime/permission_apis.md:142 docs/runtime/permission_apis.md:179
 msgid "```ts // deno run --unstable --allow-read=/foo main.ts"
 msgstr ""
 
@@ -176,11 +177,13 @@ msgstr ""
 
 #. type: Bullet: '1. '
 #: docs/runtime/permission_apis.md:81
+#, markdown-text
 msgid "If `desc1` queries to `{ state: \"granted\" }` then so must `desc2`."
 msgstr ""
 
 #. type: Bullet: '2. '
 #: docs/runtime/permission_apis.md:81
+#, markdown-text
 msgid "If `desc2` queries to `{ state: \"denied\" }` then so must `desc1`."
 msgstr ""
 

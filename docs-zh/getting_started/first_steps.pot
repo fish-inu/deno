@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,7 +63,8 @@ msgid "```ts console.log(\"Welcome to Deno 🦕\"); ```"
 msgstr ""
 
 #. type: Plain text
-#: docs/getting_started/first_steps.md:24 docs/getting_started/first_steps.md:103
+#: docs/getting_started/first_steps.md:24
+#: docs/getting_started/first_steps.md:103
 msgid "Try the program:"
 msgstr ""
 
@@ -112,6 +113,7 @@ msgstr ""
 
 #. type: Bullet: '1. '
 #: docs/getting_started/first_steps.md:58
+#, markdown-text
 msgid ""
 "We get the first argument passed to the application, and store it in the "
 "`url` constant."
@@ -119,6 +121,7 @@ msgstr ""
 
 #. type: Bullet: '2. '
 #: docs/getting_started/first_steps.md:58
+#, markdown-text
 msgid ""
 "We make a request to the url specified, await the response, and store it in "
 "the `res` constant."
@@ -126,6 +129,7 @@ msgstr ""
 
 #. type: Bullet: '3. '
 #: docs/getting_started/first_steps.md:58
+#, markdown-text
 msgid ""
 "We parse the response body as an "
 "[`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), "
@@ -136,6 +140,7 @@ msgstr ""
 
 #. type: Bullet: '4. '
 #: docs/getting_started/first_steps.md:58
+#, markdown-text
 msgid "We write the contents of the `body` constant to `stdout`."
 msgstr ""
 

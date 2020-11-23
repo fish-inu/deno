@@ -7,13 +7,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Plain text
@@ -329,11 +329,13 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/runtime/compiler_apis.md:182
+#, markdown-text
 msgid "`deno.ns` - Provides the `Deno` namespace."
 msgstr ""
 
 #. type: Bullet: '- '
 #: docs/runtime/compiler_apis.md:182
+#, markdown-text
 msgid ""
 "`deno.shared_globals` - Provides global interfaces and variables which Deno "
 "supports at runtime that are then exposed by the final runtime library."
@@ -341,6 +343,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/runtime/compiler_apis.md:182
+#, markdown-text
 msgid ""
 "`deno.window` - Exposes the global variables plus the Deno namespace that "
 "are available in the Deno main worker and is the default for the runtime "
@@ -349,6 +352,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/runtime/compiler_apis.md:182
+#, markdown-text
 msgid ""
 "`deno.worker` - Exposes the global variables that are available in workers "
 "under Deno."

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -189,6 +189,7 @@ msgstr ""
 
 #. type: Bullet: '1. '
 #: docs/contributing/style_guide.md:79
+#, markdown-text
 msgid ""
 "A function that is part of the public API takes 0-2 required arguments, plus "
 "(if necessary) an options object (so max 3 total)."
@@ -196,6 +197,7 @@ msgstr ""
 
 #. type: Bullet: '2. '
 #: docs/contributing/style_guide.md:81
+#, markdown-text
 msgid "Optional parameters should generally go into the options object."
 msgstr ""
 
@@ -212,6 +214,7 @@ msgstr ""
 
 #. type: Bullet: '3. '
 #: docs/contributing/style_guide.md:87
+#, markdown-text
 msgid "The 'options' argument is the only argument that is a regular 'Object'."
 msgstr ""
 
@@ -225,11 +228,13 @@ msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/style_guide.md:93
+#, markdown-text
 msgid "a distinguishing prototype (e.g. `Array`, `Map`, `Date`, `class MyThing`)."
 msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/style_guide.md:93
+#, markdown-text
 msgid "a well-known symbol property (e.g. an iterable with `Symbol.iterator`)."
 msgstr ""
 

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,6 +53,7 @@ msgstr ""
 
 #. type: Bullet: '1. '
 #: docs/contributing/building_from_source.md:25
+#, markdown-text
 msgid ""
 "[Enable \"Developer "
 "Mode\"](https://www.google.com/search?q=windows+enable+developer+mode)  "
@@ -61,11 +62,13 @@ msgstr ""
 
 #. type: Bullet: '2. '
 #: docs/contributing/building_from_source.md:25
+#, markdown-text
 msgid "Make sure you are using git version 2.19.2.windows.1 or newer."
 msgstr ""
 
 #. type: Bullet: '3. '
 #: docs/contributing/building_from_source.md:25
+#, markdown-text
 msgid ""
 "Set `core.symlinks=true` before the checkout: ```shell git config --global "
 "core.symlinks true git clone --recurse-submodules "
@@ -168,6 +171,7 @@ msgstr ""
 
 #. type: Bullet: '1. '
 #: docs/contributing/building_from_source.md:78
+#, markdown-text
 msgid ""
 "Get [VS Community 2019](https://www.visualstudio.com/downloads/) with "
 "\"Desktop development with C++\" toolkit and make sure to select the "
@@ -176,41 +180,49 @@ msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/building_from_source.md:86
+#, markdown-text
 msgid "Visual C++ tools for CMake"
 msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/building_from_source.md:86
+#, markdown-text
 msgid "Windows 10 SDK (10.0.17763.0)"
 msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/building_from_source.md:86
+#, markdown-text
 msgid "Testing tools core features - Build Tools"
 msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/building_from_source.md:86
+#, markdown-text
 msgid "Visual C++ ATL for x86 and x64"
 msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/building_from_source.md:86
+#, markdown-text
 msgid "Visual C++ MFC for x86 and x64"
 msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/building_from_source.md:86
+#, markdown-text
 msgid "C++/CLI support"
 msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/building_from_source.md:86
+#, markdown-text
 msgid "VC++ 2015.3 v14.00 (v140) toolset for desktop"
 msgstr ""
 
 #. type: Bullet: '2. '
 #: docs/contributing/building_from_source.md:94
+#, markdown-text
 msgid ""
 "Enable \"Debugging Tools for Windows\". Go to \"Control Panel\" → "
 "\"Programs\" → \"Programs and Features\" → Select \"Windows Software "

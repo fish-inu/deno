@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,6 +80,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/tools/script_installer.md:36
+#, markdown-text
 msgid ""
 "Attempt to take the file stem of the URL path. The above example would "
 "become 'file_server'."
@@ -87,6 +88,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/tools/script_installer.md:36
+#, markdown-text
 msgid ""
 "If the file stem is something generic like 'main', 'mod', 'index' or 'cli', "
 "and the path has no parent, take the file name of the parent path. Otherwise "
@@ -95,6 +97,7 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/tools/script_installer.md:36
+#, markdown-text
 msgid "If the resulting name has an '@...' suffix, strip it."
 msgstr ""
 
