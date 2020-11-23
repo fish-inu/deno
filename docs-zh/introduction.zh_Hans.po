@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-23 14:22+0800\n"
-"PO-Revision-Date: 2020-11-23 05:24+0000\n"
+"PO-Revision-Date: 2020-11-23 08:42+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/introduction/zh_Hans/>\n"
@@ -124,19 +124,19 @@ msgstr "## 愿景"
 #. type: Bullet: '- '
 #: docs/introduction.md:49
 msgid "Only ship a single executable (`deno`)."
-msgstr "自带单个可执行程序。"
+msgstr "自带单个可执行程序（`deno`）。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
 msgid "Provide Secure Defaults."
-msgstr ""
+msgstr "默认设置的安全性高。"
 
 #. type: Bullet: '  - '
 #: docs/introduction.md:49
 msgid ""
 "Unless specifically allowed, scripts can't access files, the environment, or "
 "the network."
-msgstr ""
+msgstr "不允许脚本访问文件、网络以及环境（除非你显式启用权限）。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
@@ -146,68 +146,70 @@ msgid ""
 "for it), ought to also be able to be run in a modern web browser without "
 "change."
 msgstr ""
+"与浏览器兼容：Deno 有一部分代码完全由 JavaScript 编写，这部分代码没有使用 `Deno` 命名空间，也没有对应的 feature "
+"test。它们在现代浏览器内也能运行。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
 msgid ""
 "Provide built-in tooling like unit testing, code formatting, and linting to "
 "improve developer experience."
-msgstr ""
+msgstr "内置工具包括单元测试、代码格式化和代码校验，用于改善开发者体验。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
 msgid "Does not leak V8 concepts into user land."
-msgstr ""
+msgstr "确保 V8 引擎的相关概念与 user land 分开。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
 msgid "Be able to serve HTTP efficiently."
-msgstr ""
+msgstr "能通过 HTTP 高效传送内容。"
 
 #. type: Plain text
 #: docs/introduction.md:51
 msgid "## Comparison to Node.js"
-msgstr ""
+msgstr "## 对比 Node.js"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:61
 msgid "Deno does not use `npm`."
-msgstr ""
+msgstr "Deno 不使用 `npm`。"
 
 #. type: Bullet: '  - '
 #: docs/introduction.md:61
 msgid "It uses modules referenced as URLs or file paths."
-msgstr ""
+msgstr "Deno 以 URL 或文件路径的形式来使用模块。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:61
 msgid "Deno does not use `package.json` in its module resolution algorithm."
-msgstr ""
+msgstr "Deno 的模块解析算法不使用 `package.json`。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:61
 msgid ""
 "All async actions in Deno return a promise. Thus Deno provides different "
 "APIs than Node."
-msgstr ""
+msgstr "Deno 的所有异步操作都返回 Promise，因此用的 API 与 Node 不同。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:61
 msgid ""
 "Deno requires explicit permissions for file, network, and environment access."
-msgstr ""
+msgstr "Deno 要求显式权限以访问文件、网络以及环境。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:61
 msgid "Deno always dies on uncaught errors."
-msgstr ""
+msgstr "Deno 在遇到未捕获错误的情况下会停止运行。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:61
 msgid ""
 "Uses \"ES Modules\" and does not support `require()`. Third party modules "
 "are imported via URLs:"
-msgstr ""
+msgstr "Deno 使用 ES Modules，不支持 `require()`。第三方模块以 URL 的形式导入："
 
 #. type: Plain text
 #: docs/introduction.md:65
@@ -217,11 +219,14 @@ msgid ""
 "  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
 "  ```\n"
 msgstr ""
+"  ```javascript\n"
+"  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
+"  ```\n"
 
 #. type: Plain text
 #: docs/introduction.md:67
 msgid "## Other key behaviors"
-msgstr ""
+msgstr "## 其它重点功能"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:72
@@ -230,13 +235,15 @@ msgid ""
 "until the code is run with the `--reload` flag. (So, this will still work on "
 "an airplane.)"
 msgstr ""
+"首次运行代码时，Deno 会下载并缓存云端代码。之后再次运行的话，如果没有 `--reload` "
+"选项，云端代码就不会更新。（因此，没有网络的情况下代码仍可运行。）"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:72
 msgid ""
 "Modules/files loaded from remote URLs are intended to be immutable and "
 "cacheable."
-msgstr ""
+msgstr "从云端 URL 载入的模块或文件不可变，可缓存。"
 
 #~ msgid ""
 #~ "- Provide Secure Defaults.\n"
