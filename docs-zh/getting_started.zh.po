@@ -3,28 +3,30 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-19 16:18+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-11-24 07:00+0000\n"
+"Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
+"Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
+"deno-docs/getting_started/zh_Hans/>\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. type: Plain text
 #: docs/getting_started.md:2
 msgid "# Getting Started"
-msgstr ""
+msgstr "# 入门"
 
 #. type: Plain text
 #: docs/getting_started.md:4
 msgid "In this chapter we'll discuss:"
-msgstr ""
+msgstr "在本章节，我们将讨论："
 
 #. type: Plain text
 #: docs/getting_started.md:13
@@ -39,3 +41,10 @@ msgid ""
 "WebAssembly](./getting_started/webassembly.md)  - [Debugging your "
 "code](./getting_started/debugging_your_code.md)"
 msgstr ""
+"- [安装 Deno](./getting_started/installation.md)  - [搭建环境](./getting_started/"
+"setup_your_environment.md)  - [运行 `Hello World` 脚本](./getting_started/"
+"first_steps.md)  - [编写脚本](./getting_started/first_steps.md)  - [学习命令行接口](./"
+"getting_started/command_line_interface.md)  - [理解权限](./getting_started/"
+"permissions.md)  - [整合 TypeScript](./getting_started/typescript.md)  - [使用 "
+"WebAssembly](./getting_started/webassembly.md)  - [调试代码](./getting_started/"
+"debugging_your_code.md)"
