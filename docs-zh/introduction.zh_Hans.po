@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: 2020-11-23 05:24+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
@@ -126,49 +126,87 @@ msgstr "## 愿景"
 msgid "Only ship a single executable (`deno`)."
 msgstr "自带单个可执行程序。"
 
-#. type: Plain text
+#. type: Bullet: '- '
 #: docs/introduction.md:49
-#, no-wrap
-msgid ""
-"- Provide Secure Defaults.\n"
-"  - Unless specifically allowed, scripts can't access files, the environment, or\n"
-"    the network.\n"
-"- Browser compatible: The subset of Deno programs which are written completely\n"
-"  in JavaScript and do not use the global `Deno` namespace (or feature test for\n"
-"  it), ought to also be able to be run in a modern web browser without change.\n"
-"- Provide built-in tooling like unit testing, code formatting, and linting to\n"
-"  improve developer experience.\n"
-"- Does not leak V8 concepts into user land.\n"
-"- Be able to serve HTTP efficiently.\n"
+msgid "Provide Secure Defaults."
 msgstr ""
-"- 默认设置的安全性高。\n"
-"  - 不允许脚本访问文件、网络以及环境（除非你显式启用权限）。\n"
-"- 与浏览器兼容：Deno 有一部分代码完全由 JavaScript 编写，这部分代码没有使用 `Deno` 命名空间，在现代浏览器内也能运行。The subset of Deno programs which are written completely\n"
-"  in JavaScript and do not use the global `Deno` namespace (or feature test for\n"
-"  it), ought to also be able to be run in a modern web browser without change.\n"
-"- Provide built-in tooling like unit testing, code formatting, and linting to\n"
-"  improve developer experience.\n"
-"- Does not leak V8 concepts into user land.\n"
-"- Be able to serve HTTP efficiently.\n"
+
+#. type: Bullet: '  - '
+#: docs/introduction.md:49
+msgid ""
+"Unless specifically allowed, scripts can't access files, the environment, or "
+"the network."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:49
+msgid ""
+"Browser compatible: The subset of Deno programs which are written completely "
+"in JavaScript and do not use the global `Deno` namespace (or feature test "
+"for it), ought to also be able to be run in a modern web browser without "
+"change."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:49
+msgid ""
+"Provide built-in tooling like unit testing, code formatting, and linting to "
+"improve developer experience."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:49
+msgid "Does not leak V8 concepts into user land."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:49
+msgid "Be able to serve HTTP efficiently."
+msgstr ""
 
 #. type: Plain text
 #: docs/introduction.md:51
 msgid "## Comparison to Node.js"
 msgstr ""
 
-#. type: Plain text
+#. type: Bullet: '- '
 #: docs/introduction.md:61
-#, no-wrap
+msgid "Deno does not use `npm`."
+msgstr ""
+
+#. type: Bullet: '  - '
+#: docs/introduction.md:61
+msgid "It uses modules referenced as URLs or file paths."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
+msgid "Deno does not use `package.json` in its module resolution algorithm."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
 msgid ""
-"- Deno does not use `npm`.\n"
-"  - It uses modules referenced as URLs or file paths.\n"
-"- Deno does not use `package.json` in its module resolution algorithm.\n"
-"- All async actions in Deno return a promise. Thus Deno provides different APIs\n"
-"  than Node.\n"
-"- Deno requires explicit permissions for file, network, and environment access.\n"
-"- Deno always dies on uncaught errors.\n"
-"- Uses \"ES Modules\" and does not support `require()`. Third party modules are\n"
-"  imported via URLs:\n"
+"All async actions in Deno return a promise. Thus Deno provides different "
+"APIs than Node."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
+msgid ""
+"Deno requires explicit permissions for file, network, and environment access."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
+msgid "Deno always dies on uncaught errors."
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/introduction.md:61
+msgid ""
+"Uses \"ES Modules\" and does not support `require()`. Third party modules "
+"are imported via URLs:"
 msgstr ""
 
 #. type: Plain text
@@ -199,3 +237,25 @@ msgid ""
 "Modules/files loaded from remote URLs are intended to be immutable and "
 "cacheable."
 msgstr ""
+
+#~ msgid ""
+#~ "- Provide Secure Defaults.\n"
+#~ "  - Unless specifically allowed, scripts can't access files, the environment, or\n"
+#~ "    the network.\n"
+#~ "- Browser compatible: The subset of Deno programs which are written completely\n"
+#~ "  in JavaScript and do not use the global `Deno` namespace (or feature test for\n"
+#~ "  it), ought to also be able to be run in a modern web browser without change.\n"
+#~ "- Provide built-in tooling like unit testing, code formatting, and linting to\n"
+#~ "  improve developer experience.\n"
+#~ "- Does not leak V8 concepts into user land.\n"
+#~ "- Be able to serve HTTP efficiently.\n"
+#~ msgstr ""
+#~ "- 默认设置的安全性高。\n"
+#~ "  - 不允许脚本访问文件、网络以及环境（除非你显式启用权限）。\n"
+#~ "- 与浏览器兼容：Deno 有一部分代码完全由 JavaScript 编写，这部分代码没有使用 `Deno` 命名空间，在现代浏览器内也能运行。The subset of Deno programs which are written completely\n"
+#~ "  in JavaScript and do not use the global `Deno` namespace (or feature test for\n"
+#~ "  it), ought to also be able to be run in a modern web browser without change.\n"
+#~ "- Provide built-in tooling like unit testing, code formatting, and linting to\n"
+#~ "  improve developer experience.\n"
+#~ "- Does not leak V8 concepts into user land.\n"
+#~ "- Be able to serve HTTP efficiently.\n"
