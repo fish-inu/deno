@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: 2020-11-25 08:30+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
@@ -18,9 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:2
-msgid "## Set up your environment"
+#. type: Title ##
+#: docs/getting_started/setup_your_environment.md:1
+#, fuzzy, no-wrap
+#| msgid "## Set up your environment"
+msgid "Set up your environment"
 msgstr "## 搭建环境"
 
 #. type: Plain text
@@ -29,11 +31,15 @@ msgid ""
 "To productively get going with Deno you should set up your environment. This "
 "means setting up shell autocomplete, environmental variables and your editor "
 "or IDE of choice."
-msgstr "如果想高效使用 Deno，就得搭建环境，包括配置 shell 自动补全和环境变量，选择并设置编辑器或 IDE（集成开发环境）。"
+msgstr ""
+"如果想高效使用 Deno，就得搭建环境，包括配置 shell 自动补全和环境变量，选择并"
+"设置编辑器或 IDE（集成开发环境）。"
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:8
-msgid "### Environmental variables"
+#. type: Title ###
+#: docs/getting_started/setup_your_environment.md:7
+#, fuzzy, no-wrap
+#| msgid "### Environmental variables"
+msgid "Environmental variables"
 msgstr "### 环境变量"
 
 #. type: Plain text
@@ -47,29 +53,35 @@ msgstr "以下环境变量用于设置 Deno："
 msgid ""
 "`DENO_DIR` defaults to `$HOME/.cache/deno` but can be set to any path to "
 "control where generated and cached source code is written and read to."
-msgstr "`DENO_DIR` 默认值为 `$HOME/.cache/deno`。你还可以设置其它路径来指定源码读取和写入的位置。"
+msgstr ""
+"`DENO_DIR` 默认值为 `$HOME/.cache/deno`。你还可以设置其它路径来指定源码读取和"
+"写入的位置。"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:17
 msgid ""
-"`NO_COLOR` will turn off color output if set. See "
-"https://no-color.org/. User code can test if `NO_COLOR` was set without "
-"having `--allow-env` by using the boolean constant `Deno.noColor`."
+"`NO_COLOR` will turn off color output if set. See https://no-color.org/. "
+"User code can test if `NO_COLOR` was set without having `--allow-env` by "
+"using the boolean constant `Deno.noColor`."
 msgstr ""
-"`NO_COLOR` 用于设置语法高亮，详情参见 https://no-color.org/。你可以访问 `Deno.noColor` 来检查是否设置 "
-"`NO_COLOR`。"
+"`NO_COLOR` 用于设置语法高亮，详情参见 https://no-color.org/。你可以访问 "
+"`Deno.noColor` 来检查是否设置 `NO_COLOR`。"
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:19
-msgid "### Shell autocomplete"
+#. type: Title ###
+#: docs/getting_started/setup_your_environment.md:18
+#, fuzzy, no-wrap
+#| msgid "### Shell autocomplete"
+msgid "Shell autocomplete"
 msgstr "### Shell 自动补全"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:23
+#, fuzzy, no-wrap
+#| msgid "You can generate completion script for your shell using the `deno completions <shell>` command. The command outputs to stdout so you should redirect it to an appropriate file."
 msgid ""
-"You can generate completion script for your shell using the `deno "
-"completions <shell>` command. The command outputs to stdout so you should "
-"redirect it to an appropriate file."
+"You can generate completion script for your shell using the\n"
+"`deno completions <shell>` command. The command outputs to stdout so you should\n"
+"redirect it to an appropriate file.\n"
 msgstr "输入指令 `deno completions <shell>`，生成自动补全脚本，不过该输出发送到了标准输出，需要重定向到文件中。"
 
 #. type: Plain text
@@ -87,37 +99,42 @@ msgstr "- zsh - bash - fish - powershell - elvish"
 msgid "Example (bash):"
 msgstr "示例（bash）："
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:38
+#. type: Fenced code block (shell)
+#: docs/getting_started/setup_your_environment.md:34
+#, fuzzy, no-wrap
+#| msgid "```shell deno completions bash > /usr/local/etc/bash_completion.d/deno.bash source /usr/local/etc/bash_completion.d/deno.bash ```"
 msgid ""
-"```shell deno completions bash > /usr/local/etc/bash_completion.d/deno.bash "
-"source /usr/local/etc/bash_completion.d/deno.bash ```"
-msgstr ""
-"```shell deno completions bash > /usr/local/etc/bash_completion.d/deno.bash "
-"source /usr/local/etc/bash_completion.d/deno.bash ```"
+"deno completions bash > /usr/local/etc/bash_completion.d/deno.bash\n"
+"source /usr/local/etc/bash_completion.d/deno.bash\n"
+msgstr "```shell deno completions bash > /usr/local/etc/bash_completion.d/deno.bash source /usr/local/etc/bash_completion.d/deno.bash ```"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:40
 msgid "Example (zsh without framework):"
 msgstr "示例（未使用框架的 zsh）："
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:45
+#. type: Fenced code block (shell)
+#: docs/getting_started/setup_your_environment.md:41
+#, fuzzy, no-wrap
+#| msgid "```shell mkdir ~/.zsh # create a folder to save your completions. it can be anywhere deno completions zsh > ~/.zsh/_deno ```"
 msgid ""
-"```shell mkdir ~/.zsh # create a folder to save your completions. it can be "
-"anywhere deno completions zsh > ~/.zsh/_deno ```"
-msgstr ""
-"```shell mkdir ~/.zsh # 创建文件夹用来存放自动补全脚本 deno completions zsh > ~/.zsh/_deno "
-"```"
+"mkdir ~/.zsh # create a folder to save your completions. it can be anywhere\n"
+"deno completions zsh > ~/.zsh/_deno\n"
+msgstr "```shell mkdir ~/.zsh # 创建文件夹用来存放自动补全脚本 deno completions zsh > ~/.zsh/_deno ```"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:47
 msgid "then add this to your `.zshrc`"
 msgstr "之后，添加如下代码到 `.zshrc`"
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:53
-msgid "```shell fpath=(~/.zsh $fpath)  autoload -Uz compinit compinit -u ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/setup_your_environment.md:48
+#, fuzzy, no-wrap
+#| msgid "```shell fpath=(~/.zsh $fpath)  autoload -Uz compinit compinit -u ```"
+msgid ""
+"fpath=(~/.zsh $fpath)\n"
+"autoload -Uz compinit\n"
+"compinit -u\n"
 msgstr "```shell fpath=(~/.zsh $fpath)  autoload -Uz compinit compinit -u ```"
 
 #. type: Plain text
@@ -127,58 +144,63 @@ msgid ""
 "you may need to run `rm ~/.zcompdump/` to remove previously generated "
 "completions and then `compinit` to generate them again."
 msgstr ""
-"最后，重启终端。注意，如果自动补全没有加载，你可能得运行 `rm ~/.zcompdump/` 来删除之前生成的自动补全脚本，再运行 `compinit`"
-" 来重新生成自动补全脚本。"
+"最后，重启终端。注意，如果自动补全没有加载，你可能得运行 `rm ~/.zcompdump/` "
+"来删除之前生成的自动补全脚本，再运行 `compinit` 来重新生成自动补全脚本。"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:59
 msgid "Example (zsh + oh-my-zsh) [recommended for zsh users] :"
 msgstr "示例（zsh + oh-my-zsh）[推荐 zsh 用户使用]："
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:64
+#. type: Fenced code block (shell)
+#: docs/getting_started/setup_your_environment.md:60
+#, fuzzy, no-wrap
+#| msgid "```shell mkdir ~/.oh-my-zsh/custom/plugins/deno deno completions zsh > ~/.oh-my-zsh/custom/plugins/deno/_deno ```"
 msgid ""
-"```shell mkdir ~/.oh-my-zsh/custom/plugins/deno deno completions zsh > "
-"~/.oh-my-zsh/custom/plugins/deno/_deno ```"
-msgstr ""
-"```shell mkdir ~/.oh-my-zsh/custom/plugins/deno deno completions zsh > ~/.oh-"
-"my-zsh/custom/plugins/deno/_deno ```"
+"mkdir ~/.oh-my-zsh/custom/plugins/deno\n"
+"deno completions zsh > ~/.oh-my-zsh/custom/plugins/deno/_deno\n"
+msgstr "```shell mkdir ~/.oh-my-zsh/custom/plugins/deno deno completions zsh > ~/.oh-my-zsh/custom/plugins/deno/_deno ```"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:68
 msgid ""
 "After this add deno plugin under plugins tag in `~/.zshrc` file. for tools "
-"like `antigen` path will be "
-"`~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins` and command will be "
-"`antigen bundle deno` and so on."
+"like `antigen` path will be `~/.antigen/bundles/robbyrussell/oh-my-zsh/"
+"plugins` and command will be `antigen bundle deno` and so on."
 msgstr ""
-"之后，添加 deno 到 `~/.zshrc` 的 plugins 数组内。如果你用的工具是 `antigen`，插件对应路径就是 `~/."
-"antigen/bundles/robbyrussell/oh-my-zsh/plugins`，之后运行的命令是 `antigen bundle "
-"deno`。"
+"之后，添加 deno 到 `~/.zshrc` 的 plugins 数组内。如果你用的工具是 `antigen`，"
+"插件对应路径就是 `~/.antigen/bundles/robbyrussell/oh-my-zsh/plugins`，之后运"
+"行的命令是 `antigen bundle deno`。"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:70
 msgid "Example (Powershell):"
 msgstr "示例（Powershell）："
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:75
-msgid "```shel deno completions powershell > $profile .$profile ```"
+#. type: Fenced code block (shel)
+#: docs/getting_started/setup_your_environment.md:71
+#, fuzzy, no-wrap
+#| msgid "```shel deno completions powershell > $profile .$profile ```"
+msgid ""
+"deno completions powershell > $profile\n"
+".$profile\n"
 msgstr "```shel deno completions powershell > $profile .$profile ```"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:79
 msgid ""
-"This will be create a Powershell profile at "
-"`$HOME\\Documents\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1` by "
-"default, and it will be run whenever you launch the PowerShell."
+"This will be create a Powershell profile at `$HOME\\Documents"
+"\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1` by default, and it "
+"will be run whenever you launch the PowerShell."
 msgstr ""
 "默认情况下，以上代码会生成 `$HOME\\Documents\\WindowsPowerShell\\Microsoft."
 "PowerShell_profile.ps1`。每次启动 PowerShell 时，该文件都会运行。"
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:81
-msgid "### Editors and IDEs"
+#. type: Title ###
+#: docs/getting_started/setup_your_environment.md:80
+#, fuzzy, no-wrap
+#| msgid "### Editors and IDEs"
+msgid "Editors and IDEs"
 msgstr "### 编辑器和 IDE"
 
 #. type: Plain text
@@ -189,8 +211,9 @@ msgid ""
 "support this at the moment, many editors will throw errors about being "
 "unable to find files or imports having unnecessary file extensions."
 msgstr ""
-"Deno 导入模块时，要求包括文件扩展名，同时还可以通过 http "
-"导入模块，然而大部分编辑器和语言服务器还没有原生支持这些功能，其中许多编辑器对此会抛出错误，称不能解析文件，或者称导入的模块有多余文件扩展名。"
+"Deno 导入模块时，要求包括文件扩展名，同时还可以通过 http 导入模块，然而大部分"
+"编辑器和语言服务器还没有原生支持这些功能，其中许多编辑器对此会抛出错误，称不"
+"能解析文件，或者称导入的模块有多余文件扩展名。"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:88
@@ -199,79 +222,87 @@ msgid ""
 "issues:"
 msgstr "针对一些编辑器，社区已开发出了扩展程序来解决这些问题："
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:90
-msgid "#### VS Code"
+#. type: Title ####
+#: docs/getting_started/setup_your_environment.md:89
+#, fuzzy, no-wrap
+#| msgid "#### VS Code"
+msgid "VS Code"
 msgstr "#### VS Code"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:95
 msgid ""
 "The beta version of [vscode_deno](https://github.com/denoland/vscode_deno) "
-"is published on the [Visual Studio "
-"Marketplace](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).  "
-"Please report any issues."
+"is published on the [Visual Studio Marketplace](https://marketplace."
+"visualstudio.com/items?itemName=denoland.vscode-deno).  Please report any "
+"issues."
 msgstr ""
-"[vscode_deno](https://github.com/denoland/vscode_deno) 的 beta 版本发布在了 [Visual "
-"Studio Marketplace](https://marketplace.visualstudio.com/"
-"items?itemName=denoland.vscode-deno)。如有问题，请提交 issue。"
+"[vscode_deno](https://github.com/denoland/vscode_deno) 的 beta 版本发布在了 "
+"[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?"
+"itemName=denoland.vscode-deno)。如有问题，请提交 issue。"
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:97
-msgid "#### JetBrains IDEs"
+#. type: Title ####
+#: docs/getting_started/setup_your_environment.md:96
+#, fuzzy, no-wrap
+#| msgid "#### JetBrains IDEs"
+msgid "JetBrains IDEs"
 msgstr "#### JetBrains IDEs"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:100
 msgid ""
-"Support for JetBrains IDEs is available through [the Deno "
-"plugin](https://plugins.jetbrains.com/plugin/14382-deno)."
+"Support for JetBrains IDEs is available through [the Deno plugin](https://"
+"plugins.jetbrains.com/plugin/14382-deno)."
 msgstr ""
-"[此插件](https://plugins.jetbrains.com/plugin/14382-deno) 支持 JetBrains IDE。"
+"[此插件](https://plugins.jetbrains.com/plugin/14382-deno) 支持 JetBrains "
+"IDE。"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:104
 msgid ""
 "For more information on how to set-up your JetBrains IDE for Deno, read "
-"[this "
-"comment](https://youtrack.jetbrains.com/issue/WEB-41607#focus=streamItem-27-4160152.0-0)  "
-"on YouTrack."
+"[this comment](https://youtrack.jetbrains.com/issue/"
+"WEB-41607#focus=streamItem-27-4160152.0-0)  on YouTrack."
 msgstr ""
 "详情参见 [此评论](https://youtrack.jetbrains.com/issue/"
 "WEB-41607#focus=streamItem-27-4160152.0-0) 来给 Deno 配置 JetBrains IDE。"
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:106
-msgid "#### Vim and NeoVim"
+#. type: Title ####
+#: docs/getting_started/setup_your_environment.md:105
+#, fuzzy, no-wrap
+#| msgid "#### Vim and NeoVim"
+msgid "Vim and NeoVim"
 msgstr "#### Vim 和 NeoVim"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:110
 msgid ""
-"Vim works fairly well for Deno/TypeScript if you install "
-"[CoC](https://github.com/neoclide/coc.nvim) (intellisense engine and "
-"language server protocol)."
+"Vim works fairly well for Deno/TypeScript if you install [CoC](https://"
+"github.com/neoclide/coc.nvim) (intellisense engine and language server "
+"protocol)."
 msgstr ""
-"[CoC](https://github.com/neoclide/coc.nvim) 应用了 intellisense 引擎和语言服务器协议，使 "
-"Vim 支持 Deno/TypeScript，效果还不错。"
+"[CoC](https://github.com/neoclide/coc.nvim) 应用了 intellisense 引擎和语言服"
+"务器协议，使 Vim 支持 Deno/TypeScript，效果还不错。"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:116
 msgid ""
-"After CoC is installed, from inside Vim, run`:CocInstall coc-tsserver` and "
-"`:CocInstall coc-deno`. To get autocompletion working for Deno type "
+"After CoC is installed, from inside Vim, run`:CocInstall coc-tsserver` and `:"
+"CocInstall coc-deno`. To get autocompletion working for Deno type "
 "definitions run `:CocCommand deno.types`. Optionally restart the CoC server "
 "`:CocRestart`.  From now on, things like `gd` (go to definition) and `gr` "
 "(goto/find references)  should work."
 msgstr ""
-"安装好 CoC 后，启动 Vim，运行 `:CocInstall coc-tsserver` 和 `:CocInstall coc-deno`。对于 "
-"Deno 类型定义的自动补全，运行 `:CocCommand deno.types` 来启动该功能。之后，你可以选择重启 Coc 服务器 "
-"`:CocRestart`。最后，比如 `gd`（go to definition）和 `gr`（goto/find references）"
-"的指令应该就对 Deno 有效了。"
+"安装好 CoC 后，启动 Vim，运行 `:CocInstall coc-tsserver` 和 `:CocInstall coc-"
+"deno`。对于 Deno 类型定义的自动补全，运行 `:CocCommand deno.types` 来启动该功"
+"能。之后，你可以选择重启 Coc 服务器 `:CocRestart`。最后，比如 `gd`（go to "
+"definition）和 `gr`（goto/find references）的指令应该就对 Deno 有效了。"
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:118
-msgid "#### Emacs"
+#. type: Title ####
+#: docs/getting_started/setup_your_environment.md:117
+#, fuzzy, no-wrap
+#| msgid "#### Emacs"
+msgid "Emacs"
 msgstr "#### Emacs"
 
 #. type: Plain text
@@ -279,36 +310,50 @@ msgstr "#### Emacs"
 msgid ""
 "Emacs works pretty well for a TypeScript project targeted to Deno by using a "
 "combination of [tide](https://github.com/ananthakumaran/tide) which is the "
-"canonical way of using TypeScript within Emacs and "
-"[typescript-deno-plugin](https://github.com/justjavac/typescript-deno-plugin)  "
-"which is what is used by the [official VSCode extension for "
-"Deno](https://github.com/denoland/vscode_deno)."
+"canonical way of using TypeScript within Emacs and [typescript-deno-plugin]"
+"(https://github.com/justjavac/typescript-deno-plugin)  which is what is used "
+"by the [official VSCode extension for Deno](https://github.com/denoland/"
+"vscode_deno)."
 msgstr ""
-"[tide](https://github.com/ananthakumaran/tide) 是用 Emacs 编写 TypeScript 代码的官方工具"
-"。[typescript-deno-plugin](https://github.com/justjavac/typescript-deno-"
-"plugin) 由[官方 VSCode Deno 扩展程序](https://github.com/denoland/vscode_deno)使用。"
-"Emacs 整合了这两个工具，在使用了 Deno 的 TypeScript 项目上表现不错。"
+"[tide](https://github.com/ananthakumaran/tide) 是用 Emacs 编写 TypeScript 代"
+"码的官方工具。[typescript-deno-plugin](https://github.com/justjavac/"
+"typescript-deno-plugin) 由[官方 VSCode Deno 扩展程序](https://github.com/"
+"denoland/vscode_deno)使用。Emacs 整合了这两个工具，在使用了 Deno 的 "
+"TypeScript 项目上表现不错。"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:132
 msgid ""
 "To use it, first make sure that `tide` is setup for your instance of Emacs.  "
-"Next, as instructed on the "
-"[typescript-deno-plugin](https://github.com/justjavac/typescript-deno-plugin)  "
-"page, first `npm install --save-dev typescript-deno-plugin typescript` in "
-"your project (`npm init -y` as necessary), then add the following block to "
-"your `tsconfig.json` and you are off to the races!"
+"Next, as instructed on the [typescript-deno-plugin](https://github.com/"
+"justjavac/typescript-deno-plugin)  page, first `npm install --save-dev "
+"typescript-deno-plugin typescript` in your project (`npm init -y` as "
+"necessary), then add the following block to your `tsconfig.json` and you are "
+"off to the races!"
 msgstr ""
-"首先确保已给 Emacs 配置好 `tide`。然后，运行 `npm init -y`来初始化项目，按照 [typescript-deno-"
-"plugin](https://github.com/justjavac/typescript-deno-plugin) 给的步骤，先运行 `npm "
-"install --save-dev typescript-deno-plugin typescript`，之后添加以下代码到 `tsconfig."
-"json`："
+"首先确保已给 Emacs 配置好 `tide`。然后，运行 `npm init -y`来初始化项目，按照 "
+"[typescript-deno-plugin](https://github.com/justjavac/typescript-deno-"
+"plugin) 给的步骤，先运行 `npm install --save-dev typescript-deno-plugin "
+"typescript`，之后添加以下代码到 `tsconfig.json`："
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:146
-#, no-wrap
+#. type: Fenced code block (json)
+#: docs/getting_started/setup_your_environment.md:133
+#, fuzzy, no-wrap
+#| msgid ""
+#| "```json\n"
+#| "{\n"
+#| "  \"compilerOptions\": {\n"
+#| "    \"plugins\": [\n"
+#| "      {\n"
+#| "        \"name\": \"typescript-deno-plugin\",\n"
+#| "        \"enable\": true, // default is `true`\n"
+#| "        \"importmap\": \"import_map.json\"\n"
+#| "      }\n"
+#| "    ]\n"
+#| "  }\n"
+#| "}\n"
+#| "```\n"
 msgid ""
-"```json\n"
 "{\n"
 "  \"compilerOptions\": {\n"
 "    \"plugins\": [\n"
@@ -320,7 +365,6 @@ msgid ""
 "    ]\n"
 "  }\n"
 "}\n"
-"```\n"
 msgstr ""
 "```json\n"
 "{\n"
@@ -343,5 +387,5 @@ msgid ""
 "extension. Our [community Discord group](https://discord.gg/deno) can give "
 "you some pointers on where to get started."
 msgstr ""
-"如果你钟爱的 IDE 没有出现在以上列表，或许你可以开发出对应扩展程序。我们在 [Discord](https://discord.gg/deno) "
-"上可以为你提供一些建议，提示你从哪开始。"
+"如果你钟爱的 IDE 没有出现在以上列表，或许你可以开发出对应扩展程序。我们在 "
+"[Discord](https://discord.gg/deno) 上可以为你提供一些建议，提示你从哪开始。"
