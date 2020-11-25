@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-24 07:00+0000\n"
+"PO-Revision-Date: 2020-11-25 14:08+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/getting_started/zh_Hans/>\n"
@@ -20,10 +20,9 @@ msgstr ""
 
 #. type: Title #
 #: docs/getting_started.md:1
-#, fuzzy, no-wrap
-#| msgid "# Getting Started"
+#, no-wrap
 msgid "Getting Started"
-msgstr "# 入门"
+msgstr "入门"
 
 #. type: Plain text
 #: docs/getting_started.md:4
