@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-23 14:22+0800\n"
 "PO-Revision-Date: 2020-11-24 07:00+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
@@ -26,9 +26,10 @@ msgstr "## 安装 Deno"
 #. type: Plain text
 #: docs/getting_started/installation.md:5
 msgid ""
-"Deno works on macOS, Linux, and Windows. Deno is a single binary "
-"executable. It has no external dependencies."
-msgstr "Deno 是单个可执行文件，没有外部依赖，在 macOS、Linux 和 Windows 上都能运行。"
+"Deno works on macOS, Linux, and Windows. Deno is a single binary executable. "
+"It has no external dependencies."
+msgstr ""
+"Deno 是单个可执行文件，没有外部依赖，在 macOS、Linux 和 Windows 上都能运行。"
 
 #. type: Plain text
 #: docs/getting_started/installation.md:7
@@ -41,7 +42,8 @@ msgid ""
 "[deno_install](https://github.com/denoland/deno_install) provides "
 "convenience scripts to download and install the binary."
 msgstr ""
-"[deno_install](https://github.com/denoland/deno_install) 提供了相关脚本用于下载和安装 Deno。"
+"[deno_install](https://github.com/denoland/deno_install) 提供了相关脚本用于下"
+"载和安装 Deno。"
 
 #. type: Plain text
 #: docs/getting_started/installation.md:12
@@ -96,7 +98,8 @@ msgstr "```shell brew install deno ```"
 #. type: Plain text
 #: docs/getting_started/installation.md:42
 msgid "Using [Cargo](https://crates.io/crates/deno) (Windows, macOS, Linux):"
-msgstr "使用 [Cargo](https://crates.io/crates/deno)（Windows、macOS 和 Linux）："
+msgstr ""
+"使用 [Cargo](https://crates.io/crates/deno)（Windows、macOS 和 Linux）："
 
 #. type: Plain text
 #: docs/getting_started/installation.md:46
@@ -107,13 +110,13 @@ msgstr "```shell cargo install deno ```"
 #: docs/getting_started/installation.md:51
 msgid ""
 "Deno binaries can also be installed manually, by downloading a zip file at "
-"[github.com/denoland/deno/releases](https://github.com/denoland/deno/releases).  "
-"These packages contain just a single executable file. You will have to set "
-"the executable bit on macOS and Linux."
+"[github.com/denoland/deno/releases](https://github.com/denoland/deno/"
+"releases).  These packages contain just a single executable file. You will "
+"have to set the executable bit on macOS and Linux."
 msgstr ""
-"你还可以在 [github.com/denoland/deno/releases](https://github.com/denoland/deno/"
-"releases) 下载相应的 zip 文件来手动安装 Deno，之后会生成单个可执行文件。如果操作系统是 macOS 或 Linux，你还得对 "
-"Deno 设置可执行权限。"
+"你还可以在 [github.com/denoland/deno/releases](https://github.com/denoland/"
+"deno/releases) 下载相应的 zip 文件来手动安装 Deno，之后会生成单个可执行文件。"
+"如果操作系统是 macOS 或 Linux，你还得对 Deno 设置可执行权限。"
 
 #. type: Plain text
 #: docs/getting_started/installation.md:53
@@ -125,7 +128,8 @@ msgstr "### 测试 Deno"
 msgid ""
 "To test your installation, run `deno --version`. If this prints the Deno "
 "version to the console the installation was successful."
-msgstr "运行 `deno --version`。如果控制台打印出了 Deno 的版本号，说明你已安装成功。"
+msgstr ""
+"运行 `deno --version`。如果控制台打印出了 Deno 的版本号，说明你已安装成功。"
 
 #. type: Plain text
 #: docs/getting_started/installation.md:59
@@ -133,8 +137,8 @@ msgid ""
 "Use `deno help` to see help text documenting Deno's flags and usage. Get a "
 "detailed guide on the CLI [here](./command_line_interface.md)."
 msgstr ""
-"输入 `deno help` 来查看帮助文档内关于 Deno 的标志和用法。你还可以从[这里](./command_line_interface.md)"
-"获取指南来详细了解 Deno CLI。"
+"输入 `deno help` 来查看帮助文档内关于 Deno 的标志和用法。你还可以从[这里](./"
+"command_line_interface.md)获取指南来详细了解 Deno CLI。"
 
 #. type: Plain text
 #: docs/getting_started/installation.md:61
@@ -154,12 +158,13 @@ msgstr "```shell deno upgrade ```"
 #. type: Plain text
 #: docs/getting_started/installation.md:71
 msgid ""
-"This will fetch the latest release from "
-"[github.com/denoland/deno/releases](https://github.com/denoland/deno/releases), "
-"unzip it, and replace your current executable with it."
+"This will fetch the latest release from [github.com/denoland/deno/releases]"
+"(https://github.com/denoland/deno/releases), unzip it, and replace your "
+"current executable with it."
 msgstr ""
-"该命令会从 [github.com/denoland/deno/releases](https://github.com/denoland/deno/"
-"releases) 下载 Deno 的最新版本，解压缩对应的 zip 文件，并替代当前的 Deno 可执行文件。"
+"该命令会从 [github.com/denoland/deno/releases](https://github.com/denoland/"
+"deno/releases) 下载 Deno 的最新版本，解压缩对应的 zip 文件，并替代当前的 "
+"Deno 可执行文件。"
 
 #. type: Plain text
 #: docs/getting_started/installation.md:73
