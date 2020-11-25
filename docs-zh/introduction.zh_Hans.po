@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-24 07:00+0000\n"
+"PO-Revision-Date: 2020-11-25 14:08+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/introduction/zh_Hans/>\n"
@@ -20,10 +20,9 @@ msgstr ""
 
 #. type: Title #
 #: docs/introduction.md:1
-#, fuzzy, no-wrap
-#| msgid "# Introduction"
+#, no-wrap
 msgid "Introduction"
-msgstr "# 简介"
+msgstr "简介"
 
 #. type: Plain text
 #: docs/introduction.md:5
@@ -41,10 +40,9 @@ msgstr "Deno 基于 V8，Rust 和 Tokio。"
 
 #. type: Title ##
 #: docs/introduction.md:8
-#, fuzzy, no-wrap
-#| msgid "## Feature Highlights"
+#, no-wrap
 msgid "Feature Highlights"
-msgstr "## 重要特性"
+msgstr "重要特性"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:21
@@ -88,10 +86,9 @@ msgstr "通过 Deno，你编写的脚本可以打包生成单个 JavaScript 文�
 
 #. type: Title ##
 #: docs/introduction.md:22
-#, fuzzy, no-wrap
-#| msgid "## Philosophy"
+#, no-wrap
 msgid "Philosophy"
-msgstr "## 理念"
+msgstr "理念"
 
 #. type: Plain text
 #: docs/introduction.md:26
@@ -124,10 +121,9 @@ msgstr ""
 
 #. type: Title ##
 #: docs/introduction.md:36
-#, fuzzy, no-wrap
-#| msgid "## Goals"
+#, no-wrap
 msgid "Goals"
-msgstr "## 愿景"
+msgstr "愿景"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
@@ -176,10 +172,9 @@ msgstr "能通过 HTTP 高效传送内容。"
 
 #. type: Title ##
 #: docs/introduction.md:50
-#, fuzzy, no-wrap
-#| msgid "## Comparison to Node.js"
+#, no-wrap
 msgid "Comparison to Node.js"
-msgstr "## 对比 Node.js"
+msgstr "对比 Node.js"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:61
@@ -224,23 +219,16 @@ msgstr ""
 
 #. type: Fenced code block (javascript)
 #: docs/introduction.md:62
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  ```javascript\n"
-#| "  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
-#| "  ```\n"
+#, no-wrap
 msgid "  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
 msgstr ""
-"  ```javascript\n"
 "  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
-"  ```\n"
 
 #. type: Title ##
 #: docs/introduction.md:66
-#, fuzzy, no-wrap
-#| msgid "## Other key behaviors"
+#, no-wrap
 msgid "Other key behaviors"
-msgstr "## 其它重点功能"
+msgstr "其它重点功能"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:72
