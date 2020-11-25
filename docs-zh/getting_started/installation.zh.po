@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: 2020-11-24 07:00+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
@@ -18,9 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#. type: Plain text
-#: docs/getting_started/installation.md:2
-msgid "## Installation"
+#. type: Title ##
+#: docs/getting_started/installation.md:1
+#, fuzzy, no-wrap
+#| msgid "## Installation"
+msgid "Installation"
 msgstr "## 安装 Deno"
 
 #. type: Plain text
@@ -31,9 +33,11 @@ msgid ""
 msgstr ""
 "Deno 是单个可执行文件，没有外部依赖，在 macOS、Linux 和 Windows 上都能运行。"
 
-#. type: Plain text
-#: docs/getting_started/installation.md:7
-msgid "### Download and install"
+#. type: Title ###
+#: docs/getting_started/installation.md:6
+#, fuzzy, no-wrap
+#| msgid "### Download and install"
+msgid "Download and install"
 msgstr "### 下载并安装 Deno"
 
 #. type: Plain text
@@ -50,9 +54,11 @@ msgstr ""
 msgid "Using Shell (macOS and Linux):"
 msgstr "使用 Shell（macOS 和 Linux）："
 
-#. type: Plain text
-#: docs/getting_started/installation.md:16
-msgid "```shell curl -fsSL https://deno.land/x/install/install.sh | sh ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/installation.md:13
+#, fuzzy, no-wrap
+#| msgid "```shell curl -fsSL https://deno.land/x/install/install.sh | sh ```"
+msgid "curl -fsSL https://deno.land/x/install/install.sh | sh\n"
 msgstr "```shell curl -fsSL https://deno.land/x/install/install.sh | sh ```"
 
 #. type: Plain text
@@ -60,9 +66,11 @@ msgstr "```shell curl -fsSL https://deno.land/x/install/install.sh | sh ```"
 msgid "Using PowerShell (Windows):"
 msgstr "使用 PowerShell（Windows）："
 
-#. type: Plain text
-#: docs/getting_started/installation.md:22
-msgid "```shell iwr https://deno.land/x/install/install.ps1 -useb | iex ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/installation.md:19
+#, fuzzy, no-wrap
+#| msgid "```shell iwr https://deno.land/x/install/install.ps1 -useb | iex ```"
+msgid "iwr https://deno.land/x/install/install.ps1 -useb | iex\n"
 msgstr "```shell iwr https://deno.land/x/install/install.ps1 -useb | iex ```"
 
 #. type: Plain text
@@ -70,9 +78,11 @@ msgstr "```shell iwr https://deno.land/x/install/install.ps1 -useb | iex ```"
 msgid "Using [Scoop](https://scoop.sh/) (Windows):"
 msgstr "使用 [Scoop](https://scoop.sh/)（Windows）："
 
-#. type: Plain text
-#: docs/getting_started/installation.md:28
-msgid "```shell scoop install deno ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/installation.md:25
+#, fuzzy, no-wrap
+#| msgid "```shell scoop install deno ```"
+msgid "scoop install deno\n"
 msgstr "```shell scoop install deno ```"
 
 #. type: Plain text
@@ -80,9 +90,11 @@ msgstr "```shell scoop install deno ```"
 msgid "Using [Chocolatey](https://chocolatey.org/packages/deno) (Windows):"
 msgstr "使用 [Chocolatey](https://chocolatey.org/packages/deno)（Windows）："
 
-#. type: Plain text
-#: docs/getting_started/installation.md:34
-msgid "```shell choco install deno ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/installation.md:31
+#, fuzzy, no-wrap
+#| msgid "```shell choco install deno ```"
+msgid "choco install deno\n"
 msgstr "```shell choco install deno ```"
 
 #. type: Plain text
@@ -90,9 +102,11 @@ msgstr "```shell choco install deno ```"
 msgid "Using [Homebrew](https://formulae.brew.sh/formula/deno) (macOS):"
 msgstr "使用 [Homebrew](https://formulae.brew.sh/formula/deno)（macOS）："
 
-#. type: Plain text
-#: docs/getting_started/installation.md:40
-msgid "```shell brew install deno ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/installation.md:37
+#, fuzzy, no-wrap
+#| msgid "```shell brew install deno ```"
+msgid "brew install deno\n"
 msgstr "```shell brew install deno ```"
 
 #. type: Plain text
@@ -101,9 +115,11 @@ msgid "Using [Cargo](https://crates.io/crates/deno) (Windows, macOS, Linux):"
 msgstr ""
 "使用 [Cargo](https://crates.io/crates/deno)（Windows、macOS 和 Linux）："
 
-#. type: Plain text
-#: docs/getting_started/installation.md:46
-msgid "```shell cargo install deno ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/installation.md:43
+#, fuzzy, no-wrap
+#| msgid "```shell cargo install deno ```"
+msgid "cargo install deno\n"
 msgstr "```shell cargo install deno ```"
 
 #. type: Plain text
@@ -118,9 +134,11 @@ msgstr ""
 "deno/releases) 下载相应的 zip 文件来手动安装 Deno，之后会生成单个可执行文件。"
 "如果操作系统是 macOS 或 Linux，你还得对 Deno 设置可执行权限。"
 
-#. type: Plain text
-#: docs/getting_started/installation.md:53
-msgid "### Testing your installation"
+#. type: Title ###
+#: docs/getting_started/installation.md:52
+#, fuzzy, no-wrap
+#| msgid "### Testing your installation"
+msgid "Testing your installation"
 msgstr "### 测试 Deno"
 
 #. type: Plain text
@@ -140,9 +158,11 @@ msgstr ""
 "输入 `deno help` 来查看帮助文档内关于 Deno 的标志和用法。你还可以从[这里](./"
 "command_line_interface.md)获取指南来详细了解 Deno CLI。"
 
-#. type: Plain text
-#: docs/getting_started/installation.md:61
-msgid "### Updating"
+#. type: Title ###
+#: docs/getting_started/installation.md:60
+#, fuzzy, no-wrap
+#| msgid "### Updating"
+msgid "Updating"
 msgstr "### 更新 Deno"
 
 #. type: Plain text
@@ -150,9 +170,11 @@ msgstr "### 更新 Deno"
 msgid "To update a previously installed version of Deno, you can run:"
 msgstr "你可以运行以下命令来更新 Deno："
 
-#. type: Plain text
-#: docs/getting_started/installation.md:67
-msgid "```shell deno upgrade ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/installation.md:64
+#, fuzzy, no-wrap
+#| msgid "```shell deno upgrade ```"
+msgid "deno upgrade\n"
 msgstr "```shell deno upgrade ```"
 
 #. type: Plain text
@@ -171,14 +193,18 @@ msgstr ""
 msgid "You can also use this utility to install a specific version of Deno:"
 msgstr "你还可以使用以下命令来安装 Deno 的指定版本："
 
-#. type: Plain text
-#: docs/getting_started/installation.md:77
-msgid "```shell deno upgrade --version 1.0.1 ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/installation.md:74
+#, fuzzy, no-wrap
+#| msgid "```shell deno upgrade --version 1.0.1 ```"
+msgid "deno upgrade --version 1.0.1\n"
 msgstr "```shell deno upgrade --version 1.0.1 ```"
 
-#. type: Plain text
-#: docs/getting_started/installation.md:79
-msgid "### Building from source"
+#. type: Title ###
+#: docs/getting_started/installation.md:78
+#, fuzzy, no-wrap
+#| msgid "### Building from source"
+msgid "Building from source"
 msgstr "### 从源码构建 Deno"
 
 #. type: Plain text
