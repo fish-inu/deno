@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-25 08:30+0000\n"
+"PO-Revision-Date: 2020-11-25 15:43+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/setup_your_environment/zh_Hans/>\n"
@@ -20,10 +20,9 @@ msgstr ""
 
 #. type: Title ##
 #: docs/getting_started/setup_your_environment.md:1
-#, fuzzy, no-wrap
-#| msgid "## Set up your environment"
+#, no-wrap
 msgid "Set up your environment"
-msgstr "## 搭建环境"
+msgstr "搭建环境"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:6
@@ -37,10 +36,9 @@ msgstr ""
 
 #. type: Title ###
 #: docs/getting_started/setup_your_environment.md:7
-#, fuzzy, no-wrap
-#| msgid "### Environmental variables"
+#, no-wrap
 msgid "Environmental variables"
-msgstr "### 环境变量"
+msgstr "环境变量"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:10
@@ -69,20 +67,18 @@ msgstr ""
 
 #. type: Title ###
 #: docs/getting_started/setup_your_environment.md:18
-#, fuzzy, no-wrap
-#| msgid "### Shell autocomplete"
+#, no-wrap
 msgid "Shell autocomplete"
-msgstr "### Shell 自动补全"
+msgstr "Shell 自动补全"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:23
-#, fuzzy, no-wrap
-#| msgid "You can generate completion script for your shell using the `deno completions <shell>` command. The command outputs to stdout so you should redirect it to an appropriate file."
+#, no-wrap
 msgid ""
 "You can generate completion script for your shell using the\n"
 "`deno completions <shell>` command. The command outputs to stdout so you should\n"
 "redirect it to an appropriate file.\n"
-msgstr "输入指令 `deno completions <shell>`，生成自动补全脚本，不过该输出发送到了标准输出，需要重定向到文件中。"
+msgstr "输入指令 `deno completions <shell>`，生成自动补全脚本，不过该输出发送到了标准输出，需要重定向到文件中。\n"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:25
@@ -101,12 +97,13 @@ msgstr "示例（bash）："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/setup_your_environment.md:34
-#, fuzzy, no-wrap
-#| msgid "```shell deno completions bash > /usr/local/etc/bash_completion.d/deno.bash source /usr/local/etc/bash_completion.d/deno.bash ```"
+#, no-wrap
 msgid ""
 "deno completions bash > /usr/local/etc/bash_completion.d/deno.bash\n"
 "source /usr/local/etc/bash_completion.d/deno.bash\n"
-msgstr "```shell deno completions bash > /usr/local/etc/bash_completion.d/deno.bash source /usr/local/etc/bash_completion.d/deno.bash ```"
+msgstr ""
+"deno completions bash > /usr/local/etc/bash_completion.d/deno.bash\n"
+"source /usr/local/etc/bash_completion.d/deno.bash\n"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:40
@@ -115,12 +112,13 @@ msgstr "示例（未使用框架的 zsh）："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/setup_your_environment.md:41
-#, fuzzy, no-wrap
-#| msgid "```shell mkdir ~/.zsh # create a folder to save your completions. it can be anywhere deno completions zsh > ~/.zsh/_deno ```"
+#, no-wrap
 msgid ""
 "mkdir ~/.zsh # create a folder to save your completions. it can be anywhere\n"
 "deno completions zsh > ~/.zsh/_deno\n"
-msgstr "```shell mkdir ~/.zsh # 创建文件夹用来存放自动补全脚本 deno completions zsh > ~/.zsh/_deno ```"
+msgstr ""
+"mkdir ~/.zsh # create a folder to save your completions. it can be anywhere\n"
+"deno completions zsh > ~/.zsh/_deno\n"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:47
@@ -129,13 +127,15 @@ msgstr "之后，添加如下代码到 `.zshrc`"
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/setup_your_environment.md:48
-#, fuzzy, no-wrap
-#| msgid "```shell fpath=(~/.zsh $fpath)  autoload -Uz compinit compinit -u ```"
+#, no-wrap
 msgid ""
 "fpath=(~/.zsh $fpath)\n"
 "autoload -Uz compinit\n"
 "compinit -u\n"
-msgstr "```shell fpath=(~/.zsh $fpath)  autoload -Uz compinit compinit -u ```"
+msgstr ""
+"fpath=(~/.zsh $fpath)\n"
+"autoload -Uz compinit\n"
+"compinit -u\n"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:57
@@ -154,12 +154,13 @@ msgstr "示例（zsh + oh-my-zsh）[推荐 zsh 用户使用]："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/setup_your_environment.md:60
-#, fuzzy, no-wrap
-#| msgid "```shell mkdir ~/.oh-my-zsh/custom/plugins/deno deno completions zsh > ~/.oh-my-zsh/custom/plugins/deno/_deno ```"
+#, no-wrap
 msgid ""
 "mkdir ~/.oh-my-zsh/custom/plugins/deno\n"
 "deno completions zsh > ~/.oh-my-zsh/custom/plugins/deno/_deno\n"
-msgstr "```shell mkdir ~/.oh-my-zsh/custom/plugins/deno deno completions zsh > ~/.oh-my-zsh/custom/plugins/deno/_deno ```"
+msgstr ""
+"mkdir ~/.oh-my-zsh/custom/plugins/deno\n"
+"deno completions zsh > ~/.oh-my-zsh/custom/plugins/deno/_deno\n"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:68
@@ -179,12 +180,13 @@ msgstr "示例（Powershell）："
 
 #. type: Fenced code block (shel)
 #: docs/getting_started/setup_your_environment.md:71
-#, fuzzy, no-wrap
-#| msgid "```shel deno completions powershell > $profile .$profile ```"
+#, no-wrap
 msgid ""
 "deno completions powershell > $profile\n"
 ".$profile\n"
-msgstr "```shel deno completions powershell > $profile .$profile ```"
+msgstr ""
+"deno completions powershell > $profile\n"
+".$profile\n"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:79
@@ -198,10 +200,9 @@ msgstr ""
 
 #. type: Title ###
 #: docs/getting_started/setup_your_environment.md:80
-#, fuzzy, no-wrap
-#| msgid "### Editors and IDEs"
+#, no-wrap
 msgid "Editors and IDEs"
-msgstr "### 编辑器和 IDE"
+msgstr "编辑器和 IDE"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:86
@@ -224,10 +225,9 @@ msgstr "针对一些编辑器，社区已开发出了扩展程序来解决这些
 
 #. type: Title ####
 #: docs/getting_started/setup_your_environment.md:89
-#, fuzzy, no-wrap
-#| msgid "#### VS Code"
+#, no-wrap
 msgid "VS Code"
-msgstr "#### VS Code"
+msgstr "VS Code"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:95
@@ -243,10 +243,9 @@ msgstr ""
 
 #. type: Title ####
 #: docs/getting_started/setup_your_environment.md:96
-#, fuzzy, no-wrap
-#| msgid "#### JetBrains IDEs"
+#, no-wrap
 msgid "JetBrains IDEs"
-msgstr "#### JetBrains IDEs"
+msgstr "JetBrains IDEs"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:100
@@ -269,10 +268,9 @@ msgstr ""
 
 #. type: Title ####
 #: docs/getting_started/setup_your_environment.md:105
-#, fuzzy, no-wrap
-#| msgid "#### Vim and NeoVim"
+#, no-wrap
 msgid "Vim and NeoVim"
-msgstr "#### Vim 和 NeoVim"
+msgstr "Vim 和 NeoVim"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:110
@@ -300,10 +298,9 @@ msgstr ""
 
 #. type: Title ####
 #: docs/getting_started/setup_your_environment.md:117
-#, fuzzy, no-wrap
-#| msgid "#### Emacs"
+#, no-wrap
 msgid "Emacs"
-msgstr "#### Emacs"
+msgstr "Emacs"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:125
@@ -338,21 +335,7 @@ msgstr ""
 
 #. type: Fenced code block (json)
 #: docs/getting_started/setup_your_environment.md:133
-#, fuzzy, no-wrap
-#| msgid ""
-#| "```json\n"
-#| "{\n"
-#| "  \"compilerOptions\": {\n"
-#| "    \"plugins\": [\n"
-#| "      {\n"
-#| "        \"name\": \"typescript-deno-plugin\",\n"
-#| "        \"enable\": true, // default is `true`\n"
-#| "        \"importmap\": \"import_map.json\"\n"
-#| "      }\n"
-#| "    ]\n"
-#| "  }\n"
-#| "}\n"
-#| "```\n"
+#, no-wrap
 msgid ""
 "{\n"
 "  \"compilerOptions\": {\n"
@@ -366,7 +349,6 @@ msgid ""
 "  }\n"
 "}\n"
 msgstr ""
-"```json\n"
 "{\n"
 "  \"compilerOptions\": {\n"
 "    \"plugins\": [\n"
@@ -378,7 +360,6 @@ msgstr ""
 "    ]\n"
 "  }\n"
 "}\n"
-"```\n"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:149
