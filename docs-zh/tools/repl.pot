@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,26 +16,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/tools/repl.md:2
-msgid "# Read-eval-print-loop"
+#. type: Title #
+#: docs/tools/repl.md:1
+#, markdown-text, no-wrap
+msgid "Read-eval-print-loop"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/repl.md:5
+#, markdown-text
 msgid ""
 "`deno repl` starts an read-eval-print-loop, which lets you interactively "
 "build up program state in the global context."
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/repl.md:7
-msgid "## Keyboard shortcuts"
+#. type: Title ##
+#: docs/tools/repl.md:6
+#, markdown-text, no-wrap
+msgid "Keyboard shortcuts"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/repl.md:46
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "| Keystroke             | Action                                                                                           "
 "|\n"
@@ -116,14 +119,15 @@ msgid ""
 "|\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/repl.md:48
-msgid "## Special variables"
+#. type: Title ##
+#: docs/tools/repl.md:47
+#, markdown-text, no-wrap
+msgid "Special variables"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/repl.md:52
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "| Identifier | Description                          |\n"
 "| ---------- | ------------------------------------ |\n"

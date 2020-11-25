@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,14 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/unix_cat.md:2
-msgid "# An implementation of the unix \"cat\" program"
+#. type: Title #
+#: docs/examples/unix_cat.md:1
+#, markdown-text, no-wrap
+msgid "An implementation of the unix \"cat\" program"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/unix_cat.md:4
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/unix_cat.md:3
+#, markdown-text, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -68,23 +70,24 @@ msgstr ""
 msgid "Modules can be run directly from remote URLs."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/unix_cat.md:16
-msgid "## Example"
+#. type: Title ##
+#: docs/examples/unix_cat.md:15
+#, markdown-text, no-wrap
+msgid "Example"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/unix_cat.md:19
+#, markdown-text
 msgid ""
 "In this program each command-line argument is assumed to be a filename, the "
 "file is opened, and printed to stdout (e.g. the console)."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/unix_cat.md:31
+#. type: Fenced code block (ts)
+#: docs/examples/unix_cat.md:20
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * cat.ts\n"
 " */\n"
@@ -94,17 +97,18 @@ msgid ""
 "  await Deno.copy(file, Deno.stdout);\n"
 "  file.close();\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/unix_cat.md:33
+#, markdown-text
 msgid "To run the program:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/unix_cat.md:36
+#. type: Fenced code block (shell)
+#: docs/examples/unix_cat.md:34
+#, no-wrap
 msgid ""
-"```shell deno run --allow-read "
-"https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd ```"
+"deno run --allow-read https://deno.land/std@$STD_VERSION/examples/cat.ts "
+"/etc/passwd\n"
 msgstr ""

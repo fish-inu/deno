@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,14 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/read_write_files.md:2
-msgid "# Read and write files"
+#. type: Title #
+#: docs/examples/read_write_files.md:1
+#, markdown-text, no-wrap
+msgid "Read and write files"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/read_write_files.md:4
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/read_write_files.md:3
+#, markdown-text, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -55,13 +57,15 @@ msgid ""
 "file system."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/read_write_files.md:18
-msgid "## Overview"
+#. type: Title ##
+#: docs/examples/read_write_files.md:17
+#, markdown-text, no-wrap
+msgid "Overview"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/read_write_files.md:23
+#, markdown-text
 msgid ""
 "Interacting with the filesystem to read and write files is a common "
 "requirement.  Deno provides a number of ways to do this via the [standard "
@@ -71,6 +75,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/examples/read_write_files.md:28
+#, markdown-text
 msgid ""
 "As highlighted in the [Fetch Data example](./fetch_data) Deno restricts "
 "access to Input / Output by default for security reasons. Therefore when "
@@ -78,13 +83,15 @@ msgid ""
 "must be used with the `deno run` command."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/read_write_files.md:30
-msgid "## Reading a text file"
+#. type: Title ##
+#: docs/examples/read_write_files.md:29
+#, markdown-text, no-wrap
+msgid "Reading a text file"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/read_write_files.md:34
+#, markdown-text
 msgid ""
 "The Deno runtime API makes it possible to read text files via the "
 "`Deno.readTextFile()` method, it just requires a path string or URL "
@@ -94,30 +101,21 @@ msgstr ""
 
 #. type: Plain text
 #: docs/examples/read_write_files.md:36
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**Command:** `deno run --allow-read read.ts`\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/read_write_files.md:42
+#. type: Fenced code block (typescript)
+#: docs/examples/read_write_files.md:37
 #, no-wrap
 msgid ""
-"```typescript\n"
 "/**\n"
 " * read.ts\n"
 " */\n"
 "const text = Deno.readTextFile(\"./people.json\");\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/read_write_files.md:44
-msgid "text.then((response) => console.log(response));"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/read_write_files.md:55
-#, no-wrap
-msgid ""
+"\n"
+"text.then((response) => console.log(response));\n"
+"\n"
 "/**\n"
 " * Output:\n"
 " *\n"
@@ -127,16 +125,17 @@ msgid ""
 " *   {\"id\": 5, \"name\": \"Devika\", \"age\": 11}\n"
 " * ]\n"
 " */\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/read_write_files.md:57
-msgid "## Writing a text file"
+#. type: Title ##
+#: docs/examples/read_write_files.md:56
+#, markdown-text, no-wrap
+msgid "Writing a text file"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/read_write_files.md:61
+#, markdown-text
 msgid ""
 "The Deno runtime API allows developers to write text to files via the "
 "`Deno.writeTextFile()` method. It just requires a file path and text "
@@ -146,6 +145,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/examples/read_write_files.md:64
+#, markdown-text
 msgid ""
 "To run the command the `--allow-write` flag must be supplied to the `deno "
 "run` command."
@@ -153,38 +153,29 @@ msgstr ""
 
 #. type: Plain text
 #: docs/examples/read_write_files.md:66 docs/examples/read_write_files.md:88
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**Command:** `deno run --allow-write write.ts`\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/read_write_files.md:72
+#. type: Fenced code block (typescript)
+#: docs/examples/read_write_files.md:67
 #, no-wrap
 msgid ""
-"```typescript\n"
 "/**\n"
 " * write.ts\n"
 " */\n"
 "const write = Deno.writeTextFile(\"./hello.txt\", \"Hello World!\");\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/read_write_files.md:74
-msgid "write.then(() => console.log(\"File written to ./hello.txt\"));"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/read_write_files.md:79
-#, no-wrap
-msgid ""
+"\n"
+"write.then(() => console.log(\"File written to ./hello.txt\"));\n"
+"\n"
 "/**\n"
 " * Output: File written to ./hello.txt\n"
 " */\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/read_write_files.md:84
+#, markdown-text
 msgid ""
 "By combining `Deno.writeTextFile` and `JSON.stringify` you can easially "
 "write serialized JSON objects to a file. This example uses synchronous "
@@ -194,44 +185,30 @@ msgstr ""
 
 #. type: Plain text
 #: docs/examples/read_write_files.md:86
+#, markdown-text
 msgid "To execute the code the `deno run` command needs the write flag."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/read_write_files.md:96
+#. type: Fenced code block (typescript)
+#: docs/examples/read_write_files.md:89
 #, no-wrap
 msgid ""
-"```typescript\n"
 "/**\n"
 " * write.ts\n"
 " */\n"
 "function writeJson(path: string, data: object): string {\n"
 "  try {\n"
 "    Deno.writeTextFileSync(path, JSON.stringify(data));\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/read_write_files.md:102
-#, no-wrap
-msgid ""
+"\n"
 "    return \"Written to \" + path;\n"
 "  } catch (e) {\n"
 "    return e.message;\n"
 "  }\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/read_write_files.md:104
-msgid "console.log(writeJson(\"./data.json\", { hello: \"World\" }));"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/read_write_files.md:108
-#, no-wrap
-msgid ""
+"\n"
+"console.log(writeJson(\"./data.json\", { hello: \"World\" }));\n"
+"\n"
 "/**\n"
 " * Output: Written to ./data.json\n"
 " */\n"
-"```\n"
 msgstr ""

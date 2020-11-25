@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:2
-msgid "## Permissions"
+#. type: Title ##
+#: docs/getting_started/permissions.md:1
+#, markdown-text, no-wrap
+msgid "Permissions"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:7
+#, markdown-text
 msgid ""
 "Deno is secure by default. Therefore, unless you specifically enable it, a "
 "deno module has no file, network, or environment access for example. Access "
@@ -32,24 +34,28 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:11
+#, markdown-text
 msgid ""
 "For the following example, `mod.ts` has been granted read-only access to the "
 "file system. It cannot write to it, or perform any other security-sensitive "
 "functions."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:15
-msgid "```shell deno run --allow-read mod.ts ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/permissions.md:12
+#, no-wrap
+msgid "deno run --allow-read mod.ts\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:17
-msgid "### Permissions list"
+#. type: Title ###
+#: docs/getting_started/permissions.md:16
+#, markdown-text, no-wrap
+msgid "Permissions list"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:19
+#, markdown-text
 msgid "The following permissions are available:"
 msgstr ""
 
@@ -119,13 +125,15 @@ msgid ""
 "a allow-list of allowed file system access."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:41
-msgid "### Permissions allow-list"
+#. type: Title ###
+#: docs/getting_started/permissions.md:40
+#, markdown-text, no-wrap
+msgid "Permissions allow-list"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:44
+#, markdown-text
 msgid ""
 "Deno also allows you to control the granularity of some permissions with "
 "allow-lists."
@@ -133,17 +141,17 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:48
+#, markdown-text
 msgid ""
 "This example restricts file system access by allow-listing only the `/usr` "
 "directory, however the execution fails as the process was attempting to "
 "access a file in the `/etc` directory:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:56
+#. type: Fenced code block (shell)
+#: docs/getting_started/permissions.md:49
 #, no-wrap
 msgid ""
-"```shell\n"
 "$ deno run --allow-read=/usr "
 "https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd\n"
 "error: Uncaught PermissionDenied: read access to \"/etc/passwd\", run again "
@@ -151,55 +159,63 @@ msgid ""
 "► $deno$/dispatch_json.ts:40:11\n"
 "    at DenoError ($deno$/errors.ts:20:5)\n"
 "    ...\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:58
+#, markdown-text
 msgid ""
 "Try it out again with the correct permissions by allow-listing `/etc` "
 "instead:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:62
+#. type: Fenced code block (shell)
+#: docs/getting_started/permissions.md:59
+#, no-wrap
 msgid ""
-"```shell deno run --allow-read=/etc "
-"https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd ```"
+"deno run --allow-read=/etc "
+"https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:64
+#, markdown-text
 msgid "`--allow-write` works the same as `--allow-read`."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:66
-msgid "### Network access:"
+#. type: Title ###
+#: docs/getting_started/permissions.md:65
+#, markdown-text, no-wrap
+msgid "Network access:"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:68
+#, markdown-text
 msgid "_fetch.ts_:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:72
-msgid "```ts const result = await fetch(\"https://deno.land/\"); ```"
+#. type: Fenced code block (ts)
+#: docs/getting_started/permissions.md:69
+#, no-wrap
+msgid "const result = await fetch(\"https://deno.land/\");\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:74
+#, markdown-text
 msgid "This is an example of how to allow-list hosts/urls:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:78
-msgid "```shell deno run --allow-net=github.com,deno.land fetch.ts ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/permissions.md:75
+#, no-wrap
+msgid "deno run --allow-net=github.com,deno.land fetch.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:81
+#, markdown-text
 msgid ""
 "If `fetch.ts` tries to establish network connections to any other domain, "
 "the process will fail."
@@ -207,21 +223,25 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:83
+#, markdown-text
 msgid "Allow net calls to any host/url:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:87
-msgid "```shell deno run --allow-net fetch.ts ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/permissions.md:84
+#, no-wrap
+msgid "deno run --allow-net fetch.ts\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/permissions.md:89
-msgid "### Conference"
+#. type: Title ###
+#: docs/getting_started/permissions.md:88
+#, markdown-text, no-wrap
+msgid "Conference"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:92
+#, markdown-text
 msgid ""
 "Ryan Dahl. (September 25, 2020).  [The Deno security "
 "model](https://www.youtube.com/watch?v=r5F6dekUmdE#t=34m57).  Speakeasy JS."

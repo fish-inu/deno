@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,14 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/subprocess.md:2
-msgid "# Creating a subprocess"
+#. type: Title #
+#: docs/examples/subprocess.md:1
+#, markdown-text, no-wrap
+msgid "Creating a subprocess"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/subprocess.md:4
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/subprocess.md:3
+#, markdown-text, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -64,60 +66,60 @@ msgid ""
 "e.g. `Deno.run({cmd: [\"bash\", \"-c\", '\"ls -la\"']});`"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/subprocess.md:17
-msgid "## Simple example"
+#. type: Title ##
+#: docs/examples/subprocess.md:16
+#, markdown-text, no-wrap
+msgid "Simple example"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/subprocess.md:19
+#, markdown-text
 msgid ""
 "This example is the equivalent of running `'echo hello'` from the command "
 "line."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/subprocess.md:24
+#. type: Fenced code block (ts)
+#: docs/examples/subprocess.md:20
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * subprocess_simple.ts\n"
 " */\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/subprocess.md:29
-#, no-wrap
-msgid ""
+"\n"
 "// create subprocess\n"
 "const p = Deno.run({\n"
 "  cmd: [\"echo\", \"hello\"],\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/subprocess.md:33
-msgid "// await its completion await p.status(); ```"
+"\n"
+"// await its completion\n"
+"await p.status();\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/subprocess.md:35
+#, markdown-text
 msgid "Run it:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/subprocess.md:40
-msgid "```shell $ deno run --allow-run ./subprocess_simple.ts hello ```"
+#. type: Fenced code block (shell)
+#: docs/examples/subprocess.md:36
+#, no-wrap
+msgid ""
+"$ deno run --allow-run ./subprocess_simple.ts\n"
+"hello\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/subprocess.md:42
-msgid "## Security"
+#. type: Title ##
+#: docs/examples/subprocess.md:41
+#, markdown-text, no-wrap
+msgid "Security"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/subprocess.md:46
+#, markdown-text
 msgid ""
 "The `--allow-run` permission is required for creation of a subprocess. Be "
 "aware that subprocesses are not run in a Deno sandbox and therefore have the "
@@ -125,34 +127,30 @@ msgid ""
 "yourself."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/subprocess.md:48
-msgid "## Communicating with subprocesses"
+#. type: Title ##
+#: docs/examples/subprocess.md:47
+#, markdown-text, no-wrap
+msgid "Communicating with subprocesses"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/subprocess.md:52
+#, markdown-text
 msgid ""
 "By default when you use `Deno.run()` the subprocess inherits `stdin`, "
 "`stdout` and `stderr` of the parent process. If you want to communicate with "
 "started subprocess you can use `\"piped\"` option."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/subprocess.md:58
+#. type: Fenced code block (ts)
+#: docs/examples/subprocess.md:53
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * subprocess.ts\n"
 " */\n"
 "const fileNames = Deno.args;\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/subprocess.md:70
-#, no-wrap
-msgid ""
+"\n"
 "const p = Deno.run({\n"
 "  cmd: [\n"
 "    \"deno\",\n"
@@ -164,17 +162,9 @@ msgid ""
 "  stdout: \"piped\",\n"
 "  stderr: \"piped\",\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/subprocess.md:72
-msgid "const { code } = await p.status();"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/subprocess.md:81
-#, no-wrap
-msgid ""
+"\n"
+"const { code } = await p.status();\n"
+"\n"
 "if (code === 0) {\n"
 "  const rawOutput = await p.output();\n"
 "  await Deno.stdout.write(rawOutput);\n"
@@ -183,35 +173,27 @@ msgid ""
 "  const errorString = new TextDecoder().decode(rawError);\n"
 "  console.log(errorString);\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/subprocess.md:84
-msgid "Deno.exit(code); ```"
+"\n"
+"Deno.exit(code);\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/subprocess.md:86
+#, markdown-text
 msgid "When you run it:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/subprocess.md:90
-msgid "```shell $ deno run --allow-run ./subprocess.ts <somefile> [file content]"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/subprocess.md:92
-msgid "$ deno run --allow-run ./subprocess.ts non_existent_file.md"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/subprocess.md:97
+#. type: Fenced code block (shell)
+#: docs/examples/subprocess.md:87
 #, no-wrap
 msgid ""
+"$ deno run --allow-run ./subprocess.ts <somefile>\n"
+"[file content]\n"
+"\n"
+"$ deno run --allow-run ./subprocess.ts non_existent_file.md\n"
+"\n"
 "Uncaught NotFound: No such file or directory (os error 2)\n"
 "    at DenoError (deno/js/errors.ts:22:5)\n"
 "    at maybeError (deno/js/errors.ts:41:12)\n"
 "    at handleAsyncMsgFromRust (deno/js/dispatch.ts:27:17)\n"
-"```\n"
 msgstr ""

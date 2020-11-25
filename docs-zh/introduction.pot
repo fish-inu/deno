@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/introduction.md:2
-msgid "# Introduction"
+#. type: Title #
+#: docs/introduction.md:1
+#, markdown-text, no-wrap
+msgid "Introduction"
 msgstr ""
 
 #. type: Plain text
 #: docs/introduction.md:5
+#, markdown-text
 msgid ""
 "Deno is a JavaScript/TypeScript runtime with secure defaults and a great "
 "developer experience."
@@ -30,12 +32,14 @@ msgstr ""
 
 #. type: Plain text
 #: docs/introduction.md:7
+#, markdown-text
 msgid "It's built on V8, Rust, and Tokio."
 msgstr ""
 
-#. type: Plain text
-#: docs/introduction.md:9
-msgid "## Feature Highlights"
+#. type: Title ##
+#: docs/introduction.md:8
+#, markdown-text, no-wrap
+msgid "Feature Highlights"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -81,13 +85,15 @@ msgstr ""
 msgid "Scripts can be bundled into a single JavaScript file."
 msgstr ""
 
-#. type: Plain text
-#: docs/introduction.md:23
-msgid "## Philosophy"
+#. type: Title ##
+#: docs/introduction.md:22
+#, markdown-text, no-wrap
+msgid "Philosophy"
 msgstr ""
 
 #. type: Plain text
 #: docs/introduction.md:26
+#, markdown-text
 msgid ""
 "Deno aims to be a productive and secure scripting environment for the modern "
 "programmer."
@@ -95,6 +101,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/introduction.md:32
+#, markdown-text
 msgid ""
 "Deno will always be distributed as a single executable. Given a URL to a "
 "Deno program, it is runnable with nothing more than [the ~15 megabyte zipped "
@@ -105,14 +112,16 @@ msgstr ""
 
 #. type: Plain text
 #: docs/introduction.md:35
+#, markdown-text
 msgid ""
 "Among other things, Deno is a great replacement for utility scripts that may "
 "have been historically written with bash or python."
 msgstr ""
 
-#. type: Plain text
-#: docs/introduction.md:37
-msgid "## Goals"
+#. type: Title ##
+#: docs/introduction.md:36
+#, markdown-text, no-wrap
+msgid "Goals"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -165,9 +174,10 @@ msgstr ""
 msgid "Be able to serve HTTP efficiently."
 msgstr ""
 
-#. type: Plain text
-#: docs/introduction.md:51
-msgid "## Comparison to Node.js"
+#. type: Title ##
+#: docs/introduction.md:50
+#, markdown-text, no-wrap
+msgid "Comparison to Node.js"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -218,18 +228,16 @@ msgid ""
 "are imported via URLs:"
 msgstr ""
 
-#. type: Plain text
-#: docs/introduction.md:65
+#. type: Fenced code block (javascript)
+#: docs/introduction.md:62
 #, no-wrap
-msgid ""
-"  ```javascript\n"
-"  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
-"  ```\n"
+msgid "  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/introduction.md:67
-msgid "## Other key behaviors"
+#. type: Title ##
+#: docs/introduction.md:66
+#, markdown-text, no-wrap
+msgid "Other key behaviors"
 msgstr ""
 
 #. type: Bullet: '- '

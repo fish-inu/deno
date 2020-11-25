@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/embedding_deno.md:2
-msgid "# Embedding Deno"
+#. type: Title #
+#: docs/embedding_deno.md:1
+#, markdown-text, no-wrap
+msgid "Embedding Deno"
 msgstr ""
 
 #. type: Plain text
 #: docs/embedding_deno.md:6
+#, markdown-text
 msgid ""
 "Deno consists of multiple parts, one of which is `deno_core`. This is a rust "
 "crate that can be used to embed a JavaScript runtime into your rust "
@@ -31,15 +33,18 @@ msgstr ""
 
 #. type: Plain text
 #: docs/embedding_deno.md:8
+#, markdown-text
 msgid "The Deno crate is hosted on [crates.io](https://crates.io/crates/deno_core)."
 msgstr ""
 
 #. type: Plain text
 #: docs/embedding_deno.md:10
+#, markdown-text
 msgid "You can view the API on [docs.rs](https://docs.rs/deno_core)."
 msgstr ""
 
 #. type: Plain text
 #: docs/embedding_deno.md:11
-msgid "<!-- TODO(lucacasonato): better docs -->"
+#, markdown-text, no-wrap
+msgid "<!-- TODO(lucacasonato): better docs -->\n"
 msgstr ""

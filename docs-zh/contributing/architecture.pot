@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,19 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/contributing/architecture.md:2
-msgid "## Internal details"
+#. type: Title ##
+#: docs/contributing/architecture.md:1
+#, markdown-text, no-wrap
+msgid "Internal details"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/architecture.md:4
-msgid "### Deno and Linux analogy"
+#. type: Title ###
+#: docs/contributing/architecture.md:3
+#, markdown-text, no-wrap
+msgid "Deno and Linux analogy"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/architecture.md:14
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "|                       **Linux** | **Deno**                                     "
 "|\n"
@@ -50,13 +52,15 @@ msgid ""
 "|\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/architecture.md:16
-msgid "#### Resources"
+#. type: Title ####
+#: docs/contributing/architecture.md:15
+#, markdown-text, no-wrap
+msgid "Resources"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/architecture.md:21
+#, markdown-text
 msgid ""
 "Resources (AKA `rid`) are Deno's version of file descriptors. They are "
 "integer values used to refer to open files, sockets, and other concepts. For "
@@ -64,29 +68,33 @@ msgid ""
 "resources there are."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/architecture.md:29
+#. type: Fenced code block (ts)
+#: docs/contributing/architecture.md:22
+#, no-wrap
 msgid ""
-"```ts console.log(Deno.resources()); // { 0: \"stdin\", 1: \"stdout\", 2: "
-"\"stderr\" } Deno.close(0); console.log(Deno.resources()); // { 1: "
-"\"stdout\", 2: \"stderr\" } ```"
+"console.log(Deno.resources());\n"
+"// { 0: \"stdin\", 1: \"stdout\", 2: \"stderr\" }\n"
+"Deno.close(0);\n"
+"console.log(Deno.resources());\n"
+"// { 1: \"stdout\", 2: \"stderr\" }\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/architecture.md:31
-msgid "#### Metrics"
+#. type: Title ####
+#: docs/contributing/architecture.md:30
+#, markdown-text, no-wrap
+msgid "Metrics"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/architecture.md:33
+#, markdown-text
 msgid "Metrics is Deno's internal counter for various statistics."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/architecture.md:46
+#. type: Fenced code block (shell)
+#: docs/contributing/architecture.md:34
 #, no-wrap
 msgid ""
-"```shell\n"
 "> console.table(Deno.metrics())\n"
 "┌──────────────────┬────────┐\n"
 "│     (index)      │ Values │\n"
@@ -97,22 +105,24 @@ msgid ""
 "│  bytesSentData   │   0    │\n"
 "│  bytesReceived   │  856   │\n"
 "└──────────────────┴────────┘\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/architecture.md:48
-msgid "### Schematic diagram"
+#. type: Title ###
+#: docs/contributing/architecture.md:47
+#, markdown-text, no-wrap
+msgid "Schematic diagram"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/architecture.md:50
+#, markdown-text
 msgid "![architectural schematic](https://deno.land/images/schematic_v0.2.png)"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/architecture.md:52
-msgid "### Conference"
+#. type: Title ###
+#: docs/contributing/architecture.md:51
+#, markdown-text, no-wrap
+msgid "Conference"
 msgstr ""
 
 #. type: Bullet: '- '

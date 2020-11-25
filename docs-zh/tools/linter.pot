@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,46 +16,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/tools/linter.md:2
-msgid "## Linter"
+#. type: Title ##
+#: docs/tools/linter.md:1
+#, markdown-text, no-wrap
+msgid "Linter"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/linter.md:4
+#, markdown-text
 msgid "Deno ships with a built in code linter for JavaScript and TypeScript."
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/linter.md:7
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "**Note: linter is a new feature and still unstable thus it requires "
 "`--unstable`\n"
 "flag**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/linter.md:18
+#. type: Fenced code block (shell)
+#: docs/tools/linter.md:8
+#, no-wrap
 msgid ""
-"```shell # lint all JS/TS files in the current directory and subdirectories "
-"deno lint --unstable # lint specific files deno lint --unstable myfile1.ts "
-"myfile2.ts # print result as JSON deno lint --unstable --json # read from "
-"stdin cat file.ts | deno lint --unstable - ```"
+"# lint all JS/TS files in the current directory and subdirectories\n"
+"deno lint --unstable\n"
+"# lint specific files\n"
+"deno lint --unstable myfile1.ts myfile2.ts\n"
+"# print result as JSON\n"
+"deno lint --unstable --json\n"
+"# read from stdin\n"
+"cat file.ts | deno lint --unstable -\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/linter.md:20
+#, markdown-text
 msgid "For more detail, run `deno lint --help`."
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/linter.md:22
-msgid "### Available rules"
+#. type: Title ###
+#: docs/tools/linter.md:21
+#, markdown-text, no-wrap
+msgid "Available rules"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/linter.md:88
+#, markdown-text
 msgid ""
 "- `adjacent-overload-signatures` - `ban-ts-comment` - `ban-types` - "
 "`ban-untagged-ignore` - `constructor-super` - `for-direction` - "
@@ -79,108 +89,105 @@ msgid ""
 "`triple-slash-reference` - `use-isnan` - `valid-typeof`"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/linter.md:90
-msgid "### Ignore directives"
+#. type: Title ###
+#: docs/tools/linter.md:89
+#, markdown-text, no-wrap
+msgid "Ignore directives"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/linter.md:92
-msgid "#### Files"
+#. type: Title ####
+#: docs/tools/linter.md:91
+#, markdown-text, no-wrap
+msgid "Files"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/linter.md:95
+#, markdown-text
 msgid ""
 "To ignore whole file `// deno-lint-ignore-file` directive should placed at "
 "the top of the file:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/linter.md:98
-msgid "```ts // deno-lint-ignore-file"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/linter.md:103 docs/tools/linter.md:121 docs/tools/linter.md:131
+#. type: Fenced code block (ts)
+#: docs/tools/linter.md:96
 #, no-wrap
 msgid ""
+"// deno-lint-ignore-file\n"
+"\n"
 "function foo(): any {\n"
 "  // ...\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/linter.md:105
+#, markdown-text
 msgid "Ignore directive must be placed before first stament or declaration:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/linter.md:108
-msgid "```ts // Copyright 2020 the Deno authors. All rights reserved. MIT license."
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/linter.md:112
+#. type: Fenced code block (ts)
+#: docs/tools/linter.md:106
 #, no-wrap
 msgid ""
+"// Copyright 2020 the Deno authors. All rights reserved. MIT license.\n"
+"\n"
 "/**\n"
 " * Some JS doc\n"
 " **/\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/linter.md:114
-msgid "// deno-lint-ignore-file"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/linter.md:116
-msgid "import { bar } from \"./bar.js\";"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/linter.md:123
-msgid "You can also ignore certain diagnostics in the whole file"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/linter.md:126
-msgid "```ts // deno-lint-ignore-file no-explicit-any no-empty"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/linter.md:133
-msgid "#### Diagnostics"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/linter.md:136
-msgid ""
-"To ignore certain diagnostic `// deno-lint-ignore <codes...>` directive "
-"should be placed before offending line. Specifying ignored rule name is "
-"required:"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/linter.md:142
-#, no-wrap
-msgid ""
-"```ts\n"
-"// deno-lint-ignore no-explicit-any\n"
+"\n"
+"// deno-lint-ignore-file\n"
+"\n"
+"import { bar } from \"./bar.js\";\n"
+"\n"
 "function foo(): any {\n"
 "  // ...\n"
 "}\n"
 msgstr ""
 
 #. type: Plain text
-#: docs/tools/linter.md:147
+#: docs/tools/linter.md:123
+#, markdown-text
+msgid "You can also ignore certain diagnostics in the whole file"
+msgstr ""
+
+#. type: Fenced code block (ts)
+#: docs/tools/linter.md:124
 #, no-wrap
 msgid ""
+"// deno-lint-ignore-file no-explicit-any no-empty\n"
+"\n"
+"function foo(): any {\n"
+"  // ...\n"
+"}\n"
+msgstr ""
+
+#. type: Title ####
+#: docs/tools/linter.md:132
+#, markdown-text, no-wrap
+msgid "Diagnostics"
+msgstr ""
+
+#. type: Plain text
+#: docs/tools/linter.md:136
+#, markdown-text, no-wrap
+msgid ""
+"To ignore certain diagnostic `// deno-lint-ignore <codes...>` directive "
+"should\n"
+"be placed before offending line. Specifying ignored rule name is required:\n"
+msgstr ""
+
+#. type: Fenced code block (ts)
+#: docs/tools/linter.md:137
+#, no-wrap
+msgid ""
+"// deno-lint-ignore no-explicit-any\n"
+"function foo(): any {\n"
+"  // ...\n"
+"}\n"
+"\n"
 "// deno-lint-ignore no-explicit-any explicit-function-return-type\n"
 "function bar(a: any) {\n"
 "  // ...\n"
 "}\n"
-"```\n"
 msgstr ""

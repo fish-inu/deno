@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,31 +16,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:2
-msgid "## Set up your environment"
+#. type: Title ##
+#: docs/getting_started/setup_your_environment.md:1
+#, markdown-text, no-wrap
+msgid "Set up your environment"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:6
+#, markdown-text
 msgid ""
 "To productively get going with Deno you should set up your environment. This "
 "means setting up shell autocomplete, environmental variables and your editor "
 "or IDE of choice."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:8
-msgid "### Environmental variables"
+#. type: Title ###
+#: docs/getting_started/setup_your_environment.md:7
+#, markdown-text, no-wrap
+msgid "Environmental variables"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:10
+#, markdown-text
 msgid "There are several env vars that control how Deno behaves:"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:13
+#, markdown-text
 msgid ""
 "`DENO_DIR` defaults to `$HOME/.cache/deno` but can be set to any path to "
 "control where generated and cached source code is written and read to."
@@ -48,71 +53,88 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:17
+#, markdown-text
 msgid ""
 "`NO_COLOR` will turn off color output if set. See "
 "https://no-color.org/. User code can test if `NO_COLOR` was set without "
 "having `--allow-env` by using the boolean constant `Deno.noColor`."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:19
-msgid "### Shell autocomplete"
+#. type: Title ###
+#: docs/getting_started/setup_your_environment.md:18
+#, markdown-text, no-wrap
+msgid "Shell autocomplete"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:23
+#, markdown-text, no-wrap
 msgid ""
-"You can generate completion script for your shell using the `deno "
-"completions <shell>` command. The command outputs to stdout so you should "
-"redirect it to an appropriate file."
+"You can generate completion script for your shell using the\n"
+"`deno completions <shell>` command. The command outputs to stdout so you "
+"should\n"
+"redirect it to an appropriate file.\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:25
+#, markdown-text
 msgid "The supported shells are:"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:31
+#, markdown-text
 msgid "- zsh - bash - fish - powershell - elvish"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:33
+#, markdown-text
 msgid "Example (bash):"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:38
+#. type: Fenced code block (shell)
+#: docs/getting_started/setup_your_environment.md:34
+#, no-wrap
 msgid ""
-"```shell deno completions bash > /usr/local/etc/bash_completion.d/deno.bash "
-"source /usr/local/etc/bash_completion.d/deno.bash ```"
+"deno completions bash > /usr/local/etc/bash_completion.d/deno.bash\n"
+"source /usr/local/etc/bash_completion.d/deno.bash\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:40
+#, markdown-text
 msgid "Example (zsh without framework):"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:45
+#. type: Fenced code block (shell)
+#: docs/getting_started/setup_your_environment.md:41
+#, no-wrap
 msgid ""
-"```shell mkdir ~/.zsh # create a folder to save your completions. it can be "
-"anywhere deno completions zsh > ~/.zsh/_deno ```"
+"mkdir ~/.zsh # create a folder to save your completions. it can be "
+"anywhere\n"
+"deno completions zsh > ~/.zsh/_deno\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:47
+#, markdown-text
 msgid "then add this to your `.zshrc`"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:53
-msgid "```shell fpath=(~/.zsh $fpath)  autoload -Uz compinit compinit -u ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/setup_your_environment.md:48
+#, no-wrap
+msgid ""
+"fpath=(~/.zsh $fpath)\n"
+"autoload -Uz compinit\n"
+"compinit -u\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:57
+#, markdown-text
 msgid ""
 "and restart your terminal. note that if completions are still not loading, "
 "you may need to run `rm ~/.zcompdump/` to remove previously generated "
@@ -121,18 +143,21 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:59
+#, markdown-text
 msgid "Example (zsh + oh-my-zsh) [recommended for zsh users] :"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:64
+#. type: Fenced code block (shell)
+#: docs/getting_started/setup_your_environment.md:60
+#, no-wrap
 msgid ""
-"```shell mkdir ~/.oh-my-zsh/custom/plugins/deno deno completions zsh > "
-"~/.oh-my-zsh/custom/plugins/deno/_deno ```"
+"mkdir ~/.oh-my-zsh/custom/plugins/deno\n"
+"deno completions zsh > ~/.oh-my-zsh/custom/plugins/deno/_deno\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:68
+#, markdown-text
 msgid ""
 "After this add deno plugin under plugins tag in `~/.zshrc` file. for tools "
 "like `antigen` path will be "
@@ -142,29 +167,36 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:70
+#, markdown-text
 msgid "Example (Powershell):"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:75
-msgid "```shel deno completions powershell > $profile .$profile ```"
+#. type: Fenced code block (shel)
+#: docs/getting_started/setup_your_environment.md:71
+#, no-wrap
+msgid ""
+"deno completions powershell > $profile\n"
+".$profile\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:79
+#, markdown-text
 msgid ""
 "This will be create a Powershell profile at "
 "`$HOME\\Documents\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1` by "
 "default, and it will be run whenever you launch the PowerShell."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:81
-msgid "### Editors and IDEs"
+#. type: Title ###
+#: docs/getting_started/setup_your_environment.md:80
+#, markdown-text, no-wrap
+msgid "Editors and IDEs"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:86
+#, markdown-text
 msgid ""
 "Because Deno requires the use of file extensions for module imports and "
 "allows http imports, and most editors and language servers do not natively "
@@ -174,18 +206,21 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:88
+#, markdown-text
 msgid ""
 "The community has developed extensions for some editors to solve these "
 "issues:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:90
-msgid "#### VS Code"
+#. type: Title ####
+#: docs/getting_started/setup_your_environment.md:89
+#, markdown-text, no-wrap
+msgid "VS Code"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:95
+#, markdown-text
 msgid ""
 "The beta version of [vscode_deno](https://github.com/denoland/vscode_deno) "
 "is published on the [Visual Studio "
@@ -193,13 +228,15 @@ msgid ""
 "Please report any issues."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:97
-msgid "#### JetBrains IDEs"
+#. type: Title ####
+#: docs/getting_started/setup_your_environment.md:96
+#, markdown-text, no-wrap
+msgid "JetBrains IDEs"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:100
+#, markdown-text
 msgid ""
 "Support for JetBrains IDEs is available through [the Deno "
 "plugin](https://plugins.jetbrains.com/plugin/14382-deno)."
@@ -207,6 +244,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:104
+#, markdown-text
 msgid ""
 "For more information on how to set-up your JetBrains IDE for Deno, read "
 "[this "
@@ -214,13 +252,15 @@ msgid ""
 "on YouTrack."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:106
-msgid "#### Vim and NeoVim"
+#. type: Title ####
+#: docs/getting_started/setup_your_environment.md:105
+#, markdown-text, no-wrap
+msgid "Vim and NeoVim"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:110
+#, markdown-text
 msgid ""
 "Vim works fairly well for Deno/TypeScript if you install "
 "[CoC](https://github.com/neoclide/coc.nvim) (intellisense engine and "
@@ -229,6 +269,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:116
+#, markdown-text
 msgid ""
 "After CoC is installed, from inside Vim, run`:CocInstall coc-tsserver` and "
 "`:CocInstall coc-deno`. To get autocompletion working for Deno type "
@@ -237,13 +278,15 @@ msgid ""
 "(goto/find references)  should work."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:118
-msgid "#### Emacs"
+#. type: Title ####
+#: docs/getting_started/setup_your_environment.md:117
+#, markdown-text, no-wrap
+msgid "Emacs"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:125
+#, markdown-text
 msgid ""
 "Emacs works pretty well for a TypeScript project targeted to Deno by using a "
 "combination of [tide](https://github.com/ananthakumaran/tide) which is the "
@@ -255,6 +298,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:132
+#, markdown-text
 msgid ""
 "To use it, first make sure that `tide` is setup for your instance of Emacs.  "
 "Next, as instructed on the "
@@ -264,11 +308,10 @@ msgid ""
 "your `tsconfig.json` and you are off to the races!"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/setup_your_environment.md:146
+#. type: Fenced code block (json)
+#: docs/getting_started/setup_your_environment.md:133
 #, no-wrap
 msgid ""
-"```json\n"
 "{\n"
 "  \"compilerOptions\": {\n"
 "    \"plugins\": [\n"
@@ -280,11 +323,11 @@ msgid ""
 "    ]\n"
 "  }\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:149
+#, markdown-text
 msgid ""
 "If you don't see your favorite IDE on this list, maybe you can develop an "
 "extension. Our [community Discord group](https://discord.gg/deno) can give "

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,97 +16,106 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/tools/bundler.md:2
-msgid "## Bundling"
+#. type: Title ##
+#: docs/tools/bundler.md:1
+#, markdown-text, no-wrap
+msgid "Bundling"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/bundler.md:5
+#, markdown-text
 msgid ""
 "`deno bundle [URL]` will output a single JavaScript file, which includes all "
 "dependencies of the specified input. For example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/bundler.md:13
+#. type: Fenced code block
+#: docs/tools/bundler.md:6
+#, no-wrap
 msgid ""
-"``` > deno bundle https://deno.land/std@$STD_VERSION/examples/colors.ts "
-"colors.bundle.js Bundle "
-"https://deno.land/std@$STD_VERSION/examples/colors.ts Download "
-"https://deno.land/std@$STD_VERSION/examples/colors.ts Download "
-"https://deno.land/std@$STD_VERSION/fmt/colors.ts Emit \"colors.bundle.js\" "
-"(9.83KB)  ```"
+"> deno bundle https://deno.land/std@$STD_VERSION/examples/colors.ts "
+"colors.bundle.js\n"
+"Bundle https://deno.land/std@$STD_VERSION/examples/colors.ts\n"
+"Download https://deno.land/std@$STD_VERSION/examples/colors.ts\n"
+"Download https://deno.land/std@$STD_VERSION/fmt/colors.ts\n"
+"Emit \"colors.bundle.js\" (9.83KB)\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/bundler.md:15
+#, markdown-text
 msgid "If you omit the out file, the bundle will be sent to `stdout`."
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/bundler.md:17
+#, markdown-text
 msgid "The bundle can just be run as any other module in Deno would:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/bundler.md:21
-msgid "``` deno run colors.bundle.js ```"
+#. type: Fenced code block
+#: docs/tools/bundler.md:18
+#, no-wrap
+msgid "deno run colors.bundle.js\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/bundler.md:25
+#, markdown-text
 msgid ""
 "The output is a self contained ES Module, where any exports from the main "
 "module supplied on the command line will be available. For example, if the "
 "main module looked something like this:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/bundler.md:28
-msgid "```ts export { foo } from \"./foo.js\";"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/bundler.md:31
-msgid "export const bar = \"bar\"; ```"
+#. type: Fenced code block (ts)
+#: docs/tools/bundler.md:26
+#, no-wrap
+msgid ""
+"export { foo } from \"./foo.js\";\n"
+"\n"
+"export const bar = \"bar\";\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/bundler.md:33
+#, markdown-text
 msgid "It could be imported like this:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/bundler.md:37
-msgid "```ts import { bar, foo } from \"./lib.bundle.js\"; ```"
+#. type: Fenced code block (ts)
+#: docs/tools/bundler.md:34
+#, no-wrap
+msgid "import { bar, foo } from \"./lib.bundle.js\";\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/bundler.md:40
+#, markdown-text
 msgid ""
 "Bundles can also be loaded in the web browser. The bundle is a "
 "self-contained ES module, and so the attribute of `type` must be set to "
 "`\"module\"`. For example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/bundler.md:44
-msgid "```html <script type=\"module\" src=\"website.bundle.js\"></script> ```"
+#. type: Fenced code block (html)
+#: docs/tools/bundler.md:41
+#, no-wrap
+msgid "<script type=\"module\" src=\"website.bundle.js\"></script>\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/bundler.md:46
+#, markdown-text
 msgid "Or you could import it into another ES module to consume:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/bundler.md:51
+#. type: Fenced code block (html)
+#: docs/tools/bundler.md:47
 #, no-wrap
 msgid ""
-"```html\n"
 "<script type=\"module\">\n"
 "  import * as website from \"website.bundle.js\";\n"
 "</script>\n"
-"```\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:2
-msgid "## Command line interface"
+#. type: Title ##
+#: docs/getting_started/command_line_interface.md:1
+#, markdown-text, no-wrap
+msgid "Command line interface"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:6
+#, markdown-text
 msgid ""
 "Deno is a command line program. You should be familiar with some simple "
 "commands having followed the examples thus far and already understand the "
@@ -31,91 +33,103 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:8
+#, markdown-text
 msgid "There are multiple ways of viewing the main help text:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:12
-msgid "```shell # Using the subcommand.  deno help"
-msgstr ""
-
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:15
-msgid "# Using the short flag -- outputs the same as above.  deno -h"
-msgstr ""
-
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:19
+#. type: Fenced code block (shell)
+#: docs/getting_started/command_line_interface.md:9
+#, no-wrap
 msgid ""
-"# Using the long flag -- outputs more detailed help text where available.  "
-"deno --help ```"
+"# Using the subcommand.\n"
+"deno help\n"
+"\n"
+"# Using the short flag -- outputs the same as above.\n"
+"deno -h\n"
+"\n"
+"# Using the long flag -- outputs more detailed help text where available.\n"
+"deno --help\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:23
+#, markdown-text
 msgid ""
 "Deno's CLI is subcommand-based. The above commands should show you a list of "
 "those supported, such as `deno bundle`. To see subcommand-specific help for "
 "`bundle`, you can similarly run one of:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:29
-msgid "```shell deno help bundle deno bundle -h deno bundle --help ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/command_line_interface.md:24
+#, no-wrap
+msgid ""
+"deno help bundle\n"
+"deno bundle -h\n"
+"deno bundle --help\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:31
+#, markdown-text
 msgid "Detailed guides to each subcommand can be found [here](../tools.md)."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:33
-msgid "### Script source"
+#. type: Title ###
+#: docs/getting_started/command_line_interface.md:32
+#, markdown-text, no-wrap
+msgid "Script source"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:37
+#, markdown-text
 msgid ""
 "Deno can grab the scripts from multiple sources, a filename, a url, and '-' "
 "to read the file from stdin. The last is useful for integration with other "
 "applications."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:43
+#. type: Fenced code block (shell)
+#: docs/getting_started/command_line_interface.md:38
+#, no-wrap
 msgid ""
-"```shell deno run main.ts deno run https://mydomain.com/main.ts cat main.ts "
-"| deno run - ```"
+"deno run main.ts\n"
+"deno run https://mydomain.com/main.ts\n"
+"cat main.ts | deno run -\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:45
-msgid "### Script arguments"
+#. type: Title ###
+#: docs/getting_started/command_line_interface.md:44
+#, markdown-text, no-wrap
+msgid "Script arguments"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:48
+#, markdown-text
 msgid ""
 "Separately from the Deno runtime flags, you can pass user-space arguments to "
 "the script you are running by specifying them after the script name:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:52
-msgid "```shell deno run main.ts a b -c --quiet ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/command_line_interface.md:49
+#, no-wrap
+msgid "deno run main.ts a b -c --quiet\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:57
+#. type: Fenced code block (ts)
+#: docs/getting_started/command_line_interface.md:53
+#, no-wrap
 msgid ""
-"```ts // main.ts console.log(Deno.args); // [ \"a\", \"b\", \"-c\", "
-"\"--quiet\" ] ```"
+"// main.ts\n"
+"console.log(Deno.args); // [ \"a\", \"b\", \"-c\", \"--quiet\" ]\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:61
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "**Note that anything passed after the script name will be passed as a "
 "script\n"
@@ -124,32 +138,32 @@ msgid ""
 "pitfall:\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:65
+#. type: Fenced code block (shell)
+#: docs/getting_started/command_line_interface.md:62
+#, no-wrap
 msgid ""
-"```shell # Good. We grant net permission to net_client.ts.  deno run "
-"--allow-net net_client.ts"
-msgstr ""
-
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:69
-msgid ""
-"# Bad! --allow-net was passed to Deno.args, throws a net permission error.  "
-"deno run net_client.ts --allow-net ```"
+"# Good. We grant net permission to net_client.ts.\n"
+"deno run --allow-net net_client.ts\n"
+"\n"
+"# Bad! --allow-net was passed to Deno.args, throws a net permission error.\n"
+"deno run net_client.ts --allow-net\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:71
+#, markdown-text
 msgid "Some see it as unconventional that:"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:73
-msgid "> a non-positional flag is parsed differently depending on its position."
+#, markdown-text, no-wrap
+msgid "> a non-positional flag is parsed differently depending on its position.\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:75
+#, markdown-text
 msgid "However:"
 msgstr ""
 
@@ -185,25 +199,22 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: docs/getting_started/command_line_interface.md:85
-#, no-wrap
-msgid "---\n"
-msgstr ""
-
-#. type: Plain text
 #: docs/getting_started/command_line_interface.md:89
+#, markdown-text
 msgid ""
 "There exist logical groups of flags that are shared between related "
 "subcommands.  We discuss these below."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:91
-msgid "### Watch mode"
+#. type: Title ###
+#: docs/getting_started/command_line_interface.md:90
+#, markdown-text, no-wrap
+msgid "Watch mode"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:96
+#, markdown-text
 msgid ""
 "You can supply the `--watch` flag to `deno run` to enable the built in file "
 "watcher. When Deno starts up with this flag it watches the entrypoint, and "
@@ -211,99 +222,105 @@ msgid ""
 "files is changed on disk, the program will automatically be restarted."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:98
-msgid "### Integrity flags"
+#. type: Title ###
+#: docs/getting_started/command_line_interface.md:97
+#, markdown-text, no-wrap
+msgid "Integrity flags"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:101
+#, markdown-text
 msgid ""
 "Affect commands which can download resources to the cache: `deno cache`, "
 "`deno run` and `deno test`."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:106
+#. type: Fenced code block
+#: docs/getting_started/command_line_interface.md:102
 #, no-wrap
 msgid ""
-"```\n"
 "--lock <FILE>    Check the specified lock file\n"
 "--lock-write     Write lock file. Use with --lock.\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:109
+#, markdown-text
 msgid ""
 "Find out more about these "
 "[here](../linking_to_external_code/integrity_checking.md)."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:111
-msgid "### Cache and compilation flags"
+#. type: Title ###
+#: docs/getting_started/command_line_interface.md:110
+#, markdown-text, no-wrap
+msgid "Cache and compilation flags"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:115
+#, markdown-text
 msgid ""
 "Affect commands which can populate the cache: `deno cache`, `deno run` and "
 "`deno test`. As well as the flags above this includes those which affect "
 "module resolution, compilation configuration etc."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:123
+#. type: Fenced code block
+#: docs/getting_started/command_line_interface.md:116
 #, no-wrap
 msgid ""
-"```\n"
 "--config <FILE>               Load tsconfig.json configuration file\n"
 "--import-map <FILE>           UNSTABLE: Load import map file\n"
 "--no-remote                   Do not resolve remote modules\n"
 "--reload=<CACHE_BLOCKLIST>    Reload source code cache (recompile "
 "TypeScript)\n"
 "--unstable                    Enable unstable APIs\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:125
-msgid "### Runtime flags"
+#. type: Title ###
+#: docs/getting_started/command_line_interface.md:124
+#, markdown-text, no-wrap
+msgid "Runtime flags"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:128
+#, markdown-text
 msgid ""
 "Affect commands which execute user code: `deno run` and `deno test`. These "
 "include all of the above as well as the following."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:130
-msgid "#### Permission flags"
+#. type: Title ####
+#: docs/getting_started/command_line_interface.md:129
+#, markdown-text, no-wrap
+msgid "Permission flags"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:132
+#, markdown-text
 msgid "These are listed [here](./permissions.md#permissions-list)."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:134
-msgid "#### Other runtime flags"
+#. type: Title ####
+#: docs/getting_started/command_line_interface.md:133
+#, markdown-text, no-wrap
+msgid "Other runtime flags"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:136
+#, markdown-text
 msgid "More flags which affect the execution environment."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/command_line_interface.md:143
+#. type: Fenced code block
+#: docs/getting_started/command_line_interface.md:137
 #, no-wrap
 msgid ""
-"```\n"
 "--cached-only                Require that remote dependencies are already "
 "cached\n"
 "--inspect=<HOST:PORT>        activate inspector on host:port ...\n"
@@ -311,5 +328,4 @@ msgid ""
 "...\n"
 "--seed <NUMBER>              Seed Math.random()\n"
 "--v8-flags=<v8-flags>        Set V8 command line options. For help: ...\n"
-"```\n"
 msgstr ""

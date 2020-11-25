@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,23 +16,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/contributing.md:2
-msgid "# Contributing"
+#. type: Title #
+#: docs/contributing.md:1
+#, markdown-text, no-wrap
+msgid "Contributing"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:4
+#, markdown-text
 msgid "- Read the [style guide](./contributing/style_guide.md)."
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:6
+#, markdown-text
 msgid "- Please don't make [the benchmarks](https://deno.land/benchmarks) worse."
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:8
+#, markdown-text
 msgid "- Ask for help in the [community chat room](https://discord.gg/deno)."
 msgstr ""
 
@@ -61,25 +65,29 @@ msgid ""
 "problem? Email ry@tinyclouds.org."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:20
-msgid "## Development"
+#. type: Title ##
+#: docs/contributing.md:19
+#, markdown-text, no-wrap
+msgid "Development"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:23
+#, markdown-text
 msgid ""
 "Instructions on how to build from source can be found "
 "[here](./contributing/building_from_source.md)."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:25
-msgid "## Submitting a Pull Request"
+#. type: Title ##
+#: docs/contributing.md:24
+#, markdown-text, no-wrap
+msgid "Submitting a Pull Request"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:27
+#, markdown-text
 msgid "Before submitting, please make sure the following is done:"
 msgstr ""
 
@@ -91,11 +99,13 @@ msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:31
+#, markdown-text
 msgid "Examples of good PR title:"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:35
+#, markdown-text
 msgid ""
 "- fix(std/http): Fix race condition in server - docs(console): Update "
 "docstrings - feat(doc): Handle nested re-exports"
@@ -103,11 +113,13 @@ msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:37
+#, markdown-text
 msgid "Examples of bad PR title:"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:41
+#, markdown-text
 msgid "- fix #7123 - update docs - fix bugs"
 msgstr ""
 
@@ -141,13 +153,15 @@ msgstr ""
 msgid "Ensure `./tools/lint.js` passes."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:49
-msgid "## Changes to `third_party`"
+#. type: Title ##
+#: docs/contributing.md:48
+#, markdown-text, no-wrap
+msgid "Changes to `third_party`"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:55
+#, markdown-text
 msgid ""
 "[`deno_third_party`](https://github.com/denoland/deno_third_party) contains "
 "most of the external code that Deno depends on, so that we know exactly what "
@@ -156,13 +170,15 @@ msgid ""
 "from @ry or @piscisaureus to make changes."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:57
-msgid "## Adding Ops (aka bindings)"
+#. type: Title ##
+#: docs/contributing.md:56
+#, markdown-text, no-wrap
+msgid "Adding Ops (aka bindings)"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:61
+#, markdown-text
 msgid ""
 "We are very concerned about making mistakes when adding new APIs. When "
 "adding an Op to Deno, the counterpart interfaces on other platforms should "
@@ -172,43 +188,50 @@ msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:64
+#, markdown-text
 msgid ""
 "As an example, see how `Deno.rename()` was proposed and added in [PR "
 "#671](https://github.com/denoland/deno/pull/671)."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:66
-msgid "## Releases"
+#. type: Title ##
+#: docs/contributing.md:65
+#, markdown-text, no-wrap
+msgid "Releases"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:69
+#, markdown-text
 msgid ""
 "Summary of the changes from previous releases can be found "
 "[here](https://github.com/denoland/deno/releases)."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:71
-msgid "## Documenting APIs"
+#. type: Title ##
+#: docs/contributing.md:70
+#, markdown-text, no-wrap
+msgid "Documenting APIs"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:75
+#, markdown-text
 msgid ""
 "It is important to document public APIs and we want to do that inline with "
 "the code. This helps ensure that code and documentation are tightly coupled "
 "together."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:77
-msgid "### Utilize JSDoc"
+#. type: Title ###
+#: docs/contributing.md:76
+#, markdown-text, no-wrap
+msgid "Utilize JSDoc"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:83
+#, markdown-text
 msgid ""
 "All publicly exposed APIs and types, both via the `deno` module as well as "
 "the global/`window` namespace should have JSDoc documentation. This "
@@ -218,12 +241,16 @@ msgid ""
 "terminating with a `*/`. For example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:88
-msgid "```ts /** A simple JSDoc comment */ export const FOO = \"foo\"; ```"
+#. type: Fenced code block (ts)
+#: docs/contributing.md:84
+#, no-wrap
+msgid ""
+"/** A simple JSDoc comment */\n"
+"export const FOO = \"foo\";\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:89
+#, markdown-text
 msgid "Find more at: https://jsdoc.app/"
 msgstr ""

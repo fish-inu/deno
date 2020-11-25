@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/runtime/workers.md:2
-msgid "## Workers"
+#. type: Title ##
+#: docs/runtime/workers.md:1
+#, markdown-text, no-wrap
+msgid "Workers"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:5
+#, markdown-text
 msgid ""
 "Deno supports [`Web Worker "
 "API`](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker)."
@@ -30,6 +32,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:8
+#, markdown-text
 msgid ""
 "Workers can be used to run code on multiple threads. Each instance of "
 "`Worker` is run on a separate thread, dedicated only to that worker."
@@ -37,6 +40,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:11
+#, markdown-text
 msgid ""
 "Currently Deno supports only `module` type workers; thus it's essential to "
 "pass the `type: \"module\"` option when creating a new worker."
@@ -44,6 +48,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:16
+#, markdown-text
 msgid ""
 "Relative module specifiers are [not "
 "supported](https://github.com/denoland/deno/issues/5216) at the moment. You "
@@ -51,28 +56,30 @@ msgid ""
 "a specifier for some nearby script."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:20
+#. type: Fenced code block (ts)
+#: docs/runtime/workers.md:17
+#, no-wrap
 msgid ""
-"```ts // Good new Worker(new URL(\"worker.js\", import.meta.url).href, { "
-"type: \"module\" });"
+"// Good\n"
+"new Worker(new URL(\"worker.js\", import.meta.url).href, { type: \"module\" "
+"});\n"
+"\n"
+"// Bad\n"
+"new Worker(new URL(\"worker.js\", import.meta.url).href);\n"
+"new Worker(new URL(\"worker.js\", import.meta.url).href, { type: \"classic\" "
+"});\n"
+"new Worker(\"./worker.js\", { type: \"module\" });\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:26
-msgid ""
-"// Bad new Worker(new URL(\"worker.js\", import.meta.url).href); new "
-"Worker(new URL(\"worker.js\", import.meta.url).href, { type: \"classic\" }); "
-"new Worker(\"./worker.js\", { type: \"module\" }); ```"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/workers.md:28
-msgid "### Permissions"
+#. type: Title ###
+#: docs/runtime/workers.md:27
+#, markdown-text, no-wrap
+msgid "Permissions"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:31
+#, markdown-text
 msgid ""
 "Creating a new `Worker` instance is similar to a dynamic import; therefore "
 "Deno requires appropriate permission for this action."
@@ -80,94 +87,103 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:33
+#, markdown-text
 msgid "For workers using local modules; `--allow-read` permission is required:"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:35 docs/runtime/workers.md:58
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**main.ts**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:39
+#. type: Fenced code block (ts)
+#: docs/runtime/workers.md:36
+#, no-wrap
 msgid ""
-"```ts new Worker(new URL(\"worker.ts\", import.meta.url).href, { type: "
-"\"module\" }); ```"
+"new Worker(new URL(\"worker.ts\", import.meta.url).href, { type: \"module\" "
+"});\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:41
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**worker.ts**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:46 docs/runtime/workers.md:69
-msgid "```ts console.log(\"hello world\"); self.close(); ```"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/workers.md:50
+#. type: Fenced code block (ts)
+#: docs/runtime/workers.md:42 docs/runtime/workers.md:65
+#, no-wrap
 msgid ""
-"```shell $ deno run main.ts error: Uncaught PermissionDenied: read access to "
-"\"./worker.ts\", run again with the --allow-read flag"
+"console.log(\"hello world\");\n"
+"self.close();\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:54
-msgid "$ deno run --allow-read main.ts hello world ```"
+#. type: Fenced code block (shell)
+#: docs/runtime/workers.md:47
+#, no-wrap
+msgid ""
+"$ deno run main.ts\n"
+"error: Uncaught PermissionDenied: read access to \"./worker.ts\", run again "
+"with the --allow-read flag\n"
+"\n"
+"$ deno run --allow-read main.ts\n"
+"hello world\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:56
+#, markdown-text
 msgid "For workers using remote modules; `--allow-net` permission is required:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:62
-msgid ""
-"```ts new Worker(\"https://example.com/worker.ts\", { type: \"module\" }); "
-"```"
+#. type: Fenced code block (ts)
+#: docs/runtime/workers.md:59
+#, no-wrap
+msgid "new Worker(\"https://example.com/worker.ts\", { type: \"module\" });\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:64
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**worker.ts** (at https[]()://example.com/worker.ts)\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:73
+#. type: Fenced code block (shell)
+#: docs/runtime/workers.md:70
+#, no-wrap
 msgid ""
-"```shell $ deno run main.ts error: Uncaught PermissionDenied: net access to "
-"\"https://example.com/worker.ts\", run again with the --allow-net flag"
+"$ deno run main.ts\n"
+"error: Uncaught PermissionDenied: net access to "
+"\"https://example.com/worker.ts\", run again with the --allow-net flag\n"
+"\n"
+"$ deno run --allow-net main.ts\n"
+"hello world\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:77
-msgid "$ deno run --allow-net main.ts hello world ```"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/workers.md:79
-msgid "### Using Deno in worker"
+#. type: Title ###
+#: docs/runtime/workers.md:78
+#, markdown-text, no-wrap
+msgid "Using Deno in worker"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:82
+#, markdown-text, no-wrap
 msgid ""
-"> This is an unstable Deno feature. Learn more about > [unstable "
-"features](./stability.md)."
+"> This is an unstable Deno feature. Learn more about\n"
+"> [unstable features](./stability.md).\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:84
+#, markdown-text
 msgid "By default the `Deno` namespace is not available in worker scope."
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:86
+#, markdown-text
 msgid ""
 "To add the `Deno` namespace pass `deno: true` option when creating new "
 "worker:"
@@ -175,61 +191,62 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:88
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**main.js**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:96
+#. type: Fenced code block (ts)
+#: docs/runtime/workers.md:89
 #, no-wrap
 msgid ""
-"```ts\n"
 "const worker = new Worker(new URL(\"worker.js\", import.meta.url).href, {\n"
 "  type: \"module\",\n"
 "  deno: true,\n"
 "});\n"
 "worker.postMessage({ filename: \"./log.txt\" });\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:98
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**worker.js**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:107
+#. type: Fenced code block (ts)
+#: docs/runtime/workers.md:99
 #, no-wrap
 msgid ""
-"```ts\n"
 "self.onmessage = async (e) => {\n"
 "  const { filename } = e.data;\n"
 "  const text = await Deno.readTextFile(filename);\n"
 "  console.log(text);\n"
 "  self.close();\n"
 "};\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:109
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**log.txt**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:113
-msgid "``` hello world ```"
+#. type: Fenced code block
+#: docs/runtime/workers.md:110
+#, no-wrap
+msgid "hello world\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/workers.md:118
-msgid "```shell $ deno run --allow-read --unstable main.js hello world ```"
+#. type: Fenced code block (shell)
+#: docs/runtime/workers.md:114
+#, no-wrap
+msgid ""
+"$ deno run --allow-read --unstable main.js\n"
+"hello world\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:121
+#, markdown-text
 msgid ""
 "When the `Deno` namespace is available in worker scope, the worker inherits "
 "its parent process' permissions (the ones specified using `--allow-*` "
@@ -238,5 +255,6 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/workers.md:122
+#, markdown-text
 msgid "We intend to make permissions configurable for workers."
 msgstr ""

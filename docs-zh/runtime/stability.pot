@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/runtime/stability.md:2
-msgid "## Stability"
+#. type: Title ##
+#: docs/runtime/stability.md:1
+#, markdown-text, no-wrap
+msgid "Stability"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/stability.md:5
+#, markdown-text
 msgid ""
 "As of Deno 1.0.0, the `Deno` namespace APIs are stable. That means we will "
 "strive to make code working under 1.0.0 continue to work in future versions."
@@ -30,19 +32,22 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/stability.md:9
+#, markdown-text
 msgid ""
 "However, not all of Deno's features are ready for production yet. Features "
 "which are not ready, because they are still in draft phase, are locked "
 "behind the `--unstable` command line flag."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/stability.md:13
-msgid "```shell deno run --unstable mod_which_uses_unstable_stuff.ts ```"
+#. type: Fenced code block (shell)
+#: docs/runtime/stability.md:10
+#, no-wrap
+msgid "deno run --unstable mod_which_uses_unstable_stuff.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/stability.md:15
+#, markdown-text
 msgid "Passing this flag does a few things:"
 msgstr ""
 
@@ -64,19 +69,22 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/stability.md:25
+#, markdown-text
 msgid ""
 "You should be aware that many unstable APIs have **not undergone a security "
 "review**, are likely to have **breaking API changes** in the future, and are "
 "**not ready for production**."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/stability.md:27
-msgid "### Standard modules"
+#. type: Title ###
+#: docs/runtime/stability.md:26
+#, markdown-text, no-wrap
+msgid "Standard modules"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/stability.md:32
+#, markdown-text
 msgid ""
 "Deno's standard modules (https://deno.land/std/) are not yet stable. We "
 "currently version the standard modules differently from the CLI to reflect "

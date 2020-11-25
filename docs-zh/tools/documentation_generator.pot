@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/tools/documentation_generator.md:2
-msgid "## Documentation Generator"
+#. type: Title ##
+#: docs/tools/documentation_generator.md:1
+#, markdown-text, no-wrap
+msgid "Documentation Generator"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/documentation_generator.md:5
+#, markdown-text
 msgid ""
 "`deno doc` followed by a list of one or more source files will print the "
 "JSDoc documentation for each of the module's **exported** members."
@@ -30,14 +32,14 @@ msgstr ""
 
 #. type: Plain text
 #: docs/tools/documentation_generator.md:7
+#, markdown-text
 msgid "For example, given a file `add.ts` with the contents:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/documentation_generator.md:19
+#. type: Fenced code block (ts)
+#: docs/tools/documentation_generator.md:8
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * Adds x and y.\n"
 " * @param {number} x\n"
@@ -47,30 +49,29 @@ msgid ""
 "export function add(x: number, y: number): number {\n"
 "  return x + y;\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/documentation_generator.md:21
+#, markdown-text
 msgid ""
 "Running the Deno `doc` command, prints the function's JSDoc comment to "
 "`stdout`:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/documentation_generator.md:27
+#. type: Fenced code block (shell)
+#: docs/tools/documentation_generator.md:22
 #, no-wrap
 msgid ""
-"```shell\n"
 "deno doc add.ts\n"
 "function add(x: number, y: number): number\n"
 "  Adds x and y. @param {number} x @param {number} y @returns {number} Sum of "
 "x and y\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/documentation_generator.md:31
+#, markdown-text
 msgid ""
 "Use the `--json` flag to output the documentation in JSON format. This JSON "
 "format is consumed by the [deno doc "

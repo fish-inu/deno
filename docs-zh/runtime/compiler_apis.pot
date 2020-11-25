@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,32 +16,37 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:2
-msgid "## Compiler APIs"
+#. type: Title ##
+#: docs/runtime/compiler_apis.md:1
+#, markdown-text, no-wrap
+msgid "Compiler APIs"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:5
+#, markdown-text, no-wrap
 msgid ""
-"> This API is unstable. Learn more about > [unstable "
-"features](../runtime/stability.md)."
+"> This API is unstable. Learn more about\n"
+"> [unstable features](../runtime/stability.md).\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:8
+#, markdown-text
 msgid ""
 "Deno supports runtime access to the built-in TypeScript compiler. There are "
 "three methods in the `Deno` namespace that provide this access."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:10
-msgid "### `Deno.compile()`"
+#. type: Title ###
+#: docs/runtime/compiler_apis.md:9
+#, markdown-text, no-wrap
+msgid "`Deno.compile()`"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:26
+#, markdown-text
 msgid ""
 "This works similar to `deno cache` in that it can fetch and cache the code, "
 "compile it, but not run it. It takes up to three arguments, the `rootName`, "
@@ -62,6 +67,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:30
+#, markdown-text
 msgid ""
 "The method resolves with a tuple. The first argument contains any "
 "diagnostics (syntax or type errors) related to the code. The second argument "
@@ -71,30 +77,27 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:32 docs/runtime/compiler_apis.md:79
+#, markdown-text
 msgid "An example of providing sources:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:38
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:33
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [diagnostics, emitMap] = await Deno.compile(\"/foo.ts\", {\n"
 "  \"/foo.ts\": `import * as bar from "
 "\"./bar.ts\";\\nconsole.log(bar);\\n`,\n"
 "  \"/bar.ts\": `export const bar = \"bar\";\\n`,\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:42
-msgid ""
-"assert(diagnostics == null); // ensuring no diagnostics are returned "
-"console.log(emitMap); ```"
+"\n"
+"assert(diagnostics == null); // ensuring no diagnostics are returned\n"
+"console.log(emitMap);\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:45
+#, markdown-text
 msgid ""
 "We would expect map to contain 4 \"files\", named `/foo.js.map`, `/foo.js`, "
 "`/bar.js.map`, and `/bar.js`."
@@ -102,34 +105,36 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:48 docs/runtime/compiler_apis.md:95
+#, markdown-text
 msgid ""
 "When not supplying resources, you can use local or remote modules, just like "
 "you could do on the command line. So you could do something like this:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:54
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:49
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [diagnostics, emitMap] = await Deno.compile(\n"
 "  \"https://deno.land/std@$STD_VERSION/examples/welcome.ts\",\n"
 ");\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:56
+#, markdown-text
 msgid "In this case `emitMap` will contain a `console.log()` statement."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:58
-msgid "### `Deno.bundle()`"
+#. type: Title ###
+#: docs/runtime/compiler_apis.md:57
+#, markdown-text, no-wrap
+msgid "`Deno.bundle()`"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:77
+#, markdown-text
 msgid ""
 "This works a lot like `deno bundle` does on the command line. It is also "
 "like `Deno.compile()`, except instead of returning a map of files, it "
@@ -152,58 +157,55 @@ msgid ""
 "Deno."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:85
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:80
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [diagnostics, emit] = await Deno.bundle(\"/foo.ts\", {\n"
 "  \"/foo.ts\": `import * as bar from "
 "\"./bar.ts\";\\nconsole.log(bar);\\n`,\n"
 "  \"/bar.ts\": `export const bar = \"bar\";\\n`,\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:89
-msgid ""
-"assert(diagnostics == null); // ensuring no diagnostics are returned "
-"console.log(emit); ```"
+"\n"
+"assert(diagnostics == null); // ensuring no diagnostics are returned\n"
+"console.log(emit);\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:92
+#, markdown-text
 msgid ""
 "We would expect `emit` to be the text for an ES module, which would contain "
 "the output sources for both modules."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:101
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:96
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [diagnostics, emit] = await Deno.bundle(\n"
 "  \"https://deno.land/std@$STD_VERSION/http/server.ts\",\n"
 ");\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:104
+#, markdown-text
 msgid ""
 "In this case `emit` will be a self contained JavaScript ES module with all "
 "of its dependencies resolved and exporting the same exports as the source "
 "module."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:106
-msgid "### `Deno.transpileOnly()`"
+#. type: Title ###
+#: docs/runtime/compiler_apis.md:105
+#, markdown-text, no-wrap
+msgid "`Deno.transpileOnly()`"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:118
+#, markdown-text
 msgid ""
 "This is based off of the TypeScript function `transpileModule()`. All this "
 "does is \"erase\" any types from the modules and emit JavaScript. There is "
@@ -221,40 +223,39 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:120
+#, markdown-text
 msgid "An example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:125
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:121
 #, no-wrap
 msgid ""
-"```ts\n"
 "const result = await Deno.transpileOnly({\n"
 "  \"/foo.ts\": `enum Foo { Foo, Bar, Baz };\\n`,\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:129
-msgid ""
-"console.log(result[\"/foo.ts\"].source); "
-"console.log(result[\"/foo.ts\"].map); ```"
+"\n"
+"console.log(result[\"/foo.ts\"].source);\n"
+"console.log(result[\"/foo.ts\"].map);\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:132
+#, markdown-text
 msgid ""
 "We would expect the `enum` would be rewritten to an IIFE which constructs "
 "the enumerable, and the map to be defined."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:134
-msgid "### Referencing TypeScript library files"
+#. type: Title ###
+#: docs/runtime/compiler_apis.md:133
+#, markdown-text, no-wrap
+msgid "Referencing TypeScript library files"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:139
+#, markdown-text
 msgid ""
 "When you use `deno run`, or other Deno commands which type check TypeScript, "
 "that code is evaluated against custom libraries which describe the "
@@ -265,6 +266,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:145
+#, markdown-text
 msgid ""
 "But if you want to compile or bundle TypeScript for some other runtime, you "
 "may want to override the default libraries. To do this, the runtime APIs "
@@ -273,11 +275,10 @@ msgid ""
 "TypeScript `\"dom\"` library:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:157
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:146
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [errors, emitted] = await Deno.compile(\n"
 "  \"main.ts\",\n"
 "  {\n"
@@ -287,11 +288,11 @@ msgid ""
 "    lib: [\"dom\", \"esnext\"],\n"
 "  },\n"
 ");\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:161
+#, markdown-text
 msgid ""
 "For a list of all the libraries that TypeScript supports, see the [`lib` "
 "compiler "
@@ -301,12 +302,13 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:163
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**Don't forget to include the JavaScript library**\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:168
+#, markdown-text
 msgid ""
 "Just like `tsc`, when you supply a `lib` compiler option, it overrides the "
 "default ones, which means that the basic JavaScript library won't be "
@@ -315,13 +317,15 @@ msgid ""
 "`es2020` or `esnext`)."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:170
-msgid "#### Including the `Deno` namespace"
+#. type: Title ####
+#: docs/runtime/compiler_apis.md:169
+#, markdown-text, no-wrap
+msgid "Including the `Deno` namespace"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:173
+#, markdown-text
 msgid ""
 "In addition to the libraries that are provided by TypeScript, there are four "
 "libraries that are built into Deno that can be referenced:"
@@ -360,16 +364,16 @@ msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:185
+#, markdown-text
 msgid ""
 "So to add the Deno namespace to a compilation, you would include the "
 "`deno.ns` lib in the array. For example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:197
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:186
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [errors, emitted] = await Deno.compile(\n"
 "  \"main.ts\",\n"
 "  {\n"
@@ -379,12 +383,11 @@ msgid ""
 "    lib: [\"dom\", \"esnext\", \"deno.ns\"],\n"
 "  },\n"
 ");\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:201
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "**Note** that the Deno namespace expects a runtime environment that is at "
 "least\n"
@@ -393,13 +396,15 @@ msgid ""
 "errors logged as part of the compilation.\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:203
-msgid "#### Using the triple slash reference"
+#. type: Title ####
+#: docs/runtime/compiler_apis.md:202
+#, markdown-text, no-wrap
+msgid "Using the triple slash reference"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:208
+#, markdown-text
 msgid ""
 "You do not have to specify the `lib` in the compiler options. Deno also "
 "supports [the triple-slash reference to a "
@@ -408,35 +413,33 @@ msgid ""
 "a `main.ts` like:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:211
-msgid "```ts /// <reference lib=\"dom\" />"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:214
-msgid "document.getElementById(\"foo\"); ```"
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:209
+#, no-wrap
+msgid ""
+"/// <reference lib=\"dom\" />\n"
+"\n"
+"document.getElementById(\"foo\");\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:216
+#, markdown-text
 msgid "It would compile without errors like this:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:222
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:217
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [errors, emitted] = await Deno.compile(\"./main.ts\", undefined, {\n"
 "  lib: [\"esnext\"],\n"
 "});\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:225
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "**Note** that the `dom` library conflicts with some of the default globals "
 "that\n"

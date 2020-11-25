@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,114 +16,126 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:2
-msgid "## Testing and Tools"
+#. type: Title ##
+#: docs/contributing/development_tools.md:1
+#, markdown-text, no-wrap
+msgid "Testing and Tools"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:4
-msgid "### Tests"
+#. type: Title ###
+#: docs/contributing/development_tools.md:3
+#, markdown-text, no-wrap
+msgid "Tests"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:6
+#, markdown-text
 msgid "Test `deno`:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:10
-msgid "```shell # Run the whole suite: cargo test"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/development_tools.md:14
-msgid "# Only test cli/tests/unit/: cargo test js_unit_tests ```"
+#. type: Fenced code block (shell)
+#: docs/contributing/development_tools.md:7
+#, no-wrap
+msgid ""
+"# Run the whole suite:\n"
+"cargo test\n"
+"\n"
+"# Only test cli/tests/unit/:\n"
+"cargo test js_unit_tests\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:16
+#, markdown-text
 msgid "Test `std/`:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:20
-msgid "```shell cargo test std_tests ```"
+#. type: Fenced code block (shell)
+#: docs/contributing/development_tools.md:17
+#, no-wrap
+msgid "cargo test std_tests\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:22
-msgid "### Lint and format"
+#. type: Title ###
+#: docs/contributing/development_tools.md:21
+#, markdown-text, no-wrap
+msgid "Lint and format"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:24
+#, markdown-text
 msgid "Lint the code:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:28
-msgid "```shell deno run -A --unstable ./tools/lint.js ```"
+#. type: Fenced code block (shell)
+#: docs/contributing/development_tools.md:25
+#, no-wrap
+msgid "deno run -A --unstable ./tools/lint.js\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:30
+#, markdown-text
 msgid "Format the code:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:34
-msgid "```shell deno run -A --unstable ./tools/format.js ```"
+#. type: Fenced code block (shell)
+#: docs/contributing/development_tools.md:31
+#, no-wrap
+msgid "deno run -A --unstable ./tools/format.js\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:36
-msgid "### Profiling"
+#. type: Title ###
+#: docs/contributing/development_tools.md:35
+#, markdown-text, no-wrap
+msgid "Profiling"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:38
+#, markdown-text
 msgid "To start profiling:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:43
+#. type: Fenced code block (sh)
+#: docs/contributing/development_tools.md:39
+#, no-wrap
 msgid ""
-"```sh # Make sure we're only building release.  # Build deno and V8's d8.  "
-"ninja -C target/release d8"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/development_tools.md:46
-msgid ""
-"# Start the program we want to benchmark with --prof ./target/release/deno "
-"run tests/http_bench.ts --allow-net --v8-flags=--prof &"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/development_tools.md:51
-msgid ""
-"# Exercise it.  third_party/wrk/linux/wrk http://localhost:4500/ kill `pgrep "
-"deno` ```"
+"# Make sure we're only building release.\n"
+"# Build deno and V8's d8.\n"
+"ninja -C target/release d8\n"
+"\n"
+"# Start the program we want to benchmark with --prof\n"
+"./target/release/deno run tests/http_bench.ts --allow-net --v8-flags=--prof "
+"&\n"
+"\n"
+"# Exercise it.\n"
+"third_party/wrk/linux/wrk http://localhost:4500/\n"
+"kill `pgrep deno`\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:54
+#, markdown-text
 msgid ""
 "V8 will write a file in the current directory that looks like this: "
 "`isolate-0x7fad98242400-v8.log`. To examine this file:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:60
+#. type: Fenced code block (sh)
+#: docs/contributing/development_tools.md:55
+#, no-wrap
 msgid ""
-"```sh D8_PATH=target/release/ ./third_party/v8/tools/linux-tick-processor "
-"isolate-0x7fad98242400-v8.log > prof.log # on macOS, use "
-"./third_party/v8/tools/mac-tick-processor instead ```"
+"D8_PATH=target/release/ ./third_party/v8/tools/linux-tick-processor\n"
+"isolate-0x7fad98242400-v8.log > prof.log\n"
+"# on macOS, use ./third_party/v8/tools/mac-tick-processor instead\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:62
+#, markdown-text
 msgid ""
 "`prof.log` will contain information about tick distribution of different "
 "calls."
@@ -131,18 +143,21 @@ msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:64
+#, markdown-text
 msgid "To view the log with Web UI, generate JSON file of the log:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:69
+#. type: Fenced code block (sh)
+#: docs/contributing/development_tools.md:65
+#, no-wrap
 msgid ""
-"```sh D8_PATH=target/release/ ./third_party/v8/tools/linux-tick-processor "
-"isolate-0x7fad98242400-v8.log --preprocess > prof.json ```"
+"D8_PATH=target/release/ ./third_party/v8/tools/linux-tick-processor\n"
+"isolate-0x7fad98242400-v8.log --preprocess > prof.json\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:72
+#, markdown-text
 msgid ""
 "Open `third_party/v8/tools/profview/index.html` in your browser, and select "
 "`prof.json` to view the distribution graphically."
@@ -150,11 +165,13 @@ msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:74
+#, markdown-text
 msgid "Useful V8 flags during profiling:"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:81
+#, markdown-text
 msgid ""
 "- --prof - --log-internal-timer-events - --log-timer-events - --track-gc - "
 "--log-source-code - --track-gc-object-stats"
@@ -162,99 +179,90 @@ msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:83
+#, markdown-text
 msgid "To learn more about `d8` and profiling, check out the following links:"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:86
+#, markdown-text
 msgid ""
 "- [https://v8.dev/docs/d8](https://v8.dev/docs/d8)  - "
 "[https://v8.dev/docs/profile](https://v8.dev/docs/profile)"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:88
-msgid "### Debugging with LLDB"
+#. type: Title ###
+#: docs/contributing/development_tools.md:87
+#, markdown-text, no-wrap
+msgid "Debugging with LLDB"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:91
+#, markdown-text
 msgid ""
 "To debug the deno binary, we can use `rust-lldb`. It should come with "
 "`rustc` and is a wrapper around LLDB."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:107
+#. type: Fenced code block (shell)
+#: docs/contributing/development_tools.md:92
+#, no-wrap
 msgid ""
-"```shell $ rust-lldb -- ./target/debug/deno run --allow-net "
-"tests/http_bench.ts # On macOS, you might get warnings like # `ImportError: "
-"cannot import name _remove_dead_weakref` # In that case, use system python "
-"by setting PATH, e.g.  # "
-"PATH=/System/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH "
+"$ rust-lldb -- ./target/debug/deno run --allow-net tests/http_bench.ts\n"
+"# On macOS, you might get warnings like\n"
+"# `ImportError: cannot import name _remove_dead_weakref`\n"
+"# In that case, use system python by setting PATH, e.g.\n"
+"# PATH=/System/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH\n"
 "(lldb) command script import "
-"\"/Users/kevinqian/.rustup/toolchains/1.36.0-x86_64-apple-darwin/lib/rustlib/etc/lldb_rust_formatters.py\" "
+"\"/Users/kevinqian/.rustup/toolchains/1.36.0-x86_64-apple-darwin/lib/rustlib/etc/lldb_rust_formatters.py\"\n"
 "(lldb) type summary add --no-value --python-function "
-"lldb_rust_formatters.print_val -x \".*\" --category Rust (lldb) type "
-"category enable Rust (lldb) target create \"../deno/target/debug/deno\" "
-"Current executable set to '../deno/target/debug/deno' (x86_64).  (lldb) "
-"settings set -- target.run-args \"tests/http_bench.ts\" \"--allow-net\" "
-"(lldb) b op_start (lldb) r ```"
+"lldb_rust_formatters.print_val -x \".*\" --category Rust\n"
+"(lldb) type category enable Rust\n"
+"(lldb) target create \"../deno/target/debug/deno\"\n"
+"Current executable set to '../deno/target/debug/deno' (x86_64).\n"
+"(lldb) settings set -- target.run-args  \"tests/http_bench.ts\" "
+"\"--allow-net\"\n"
+"(lldb) b op_start\n"
+"(lldb) r\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:109
-msgid "### V8 flags"
+#. type: Title ###
+#: docs/contributing/development_tools.md:108
+#, markdown-text, no-wrap
+msgid "V8 flags"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:111
+#, markdown-text
 msgid "V8 has many many internal command-line flags:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:118
+#. type: Fenced code block (shell)
+#: docs/contributing/development_tools.md:112
 #, no-wrap
 msgid ""
-"```shell\n"
 "$ deno run --v8-flags=--help _\n"
 "SSE3=1 SSSE3=1 SSE4_1=1 SSE4_2=1 SAHF=1 AVX=1 FMA3=1 BMI1=1 BMI2=1 LZCNT=1 "
 "POPCNT=1 ATOM=0\n"
 "Synopsis:\n"
 "  shell [options] [--shell] [<file>...]\n"
 "  d8 [options] [-e <string>] [--shell] [[--module] <file>...]\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/development_tools.md:122
-#, no-wrap
-msgid ""
+"\n"
 "  -e        execute a string in V8\n"
 "  --shell   run an interactive JavaScript shell\n"
 "  --module  execute a file as a JavaScript module\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/development_tools.md:124
-msgid "Note: the --module option is implicitly enabled for *.mjs files."
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/development_tools.md:131
-#, no-wrap
-msgid ""
+"\n"
+"Note: the --module option is implicitly enabled for *.mjs files.\n"
+"\n"
 "The following syntax for options is accepted (both '-' and '--' are ok):\n"
 "  --flag        (bool flags only)\n"
 "  --no-flag     (bool flags only)\n"
 "  --flag=value  (non-bool flags only, no spaces around '=')\n"
 "  --flag value  (non-bool flags only)\n"
 "  --            (captures all remaining args in JavaScript)\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/development_tools.md:1090
-#, no-wrap
-msgid ""
+"\n"
 "Options:\n"
 "  --use-strict (enforce strict mode)\n"
 "        type: bool  default: false\n"
@@ -1423,42 +1431,45 @@ msgid ""
 "        type: bool  default: false\n"
 "  --single-threaded-gc (disable the use of background gc tasks)\n"
 "        type: bool  default: false\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:1092
+#, markdown-text
 msgid "Particularly useful ones:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:1096
-msgid "``` --async-stack-trace ```"
+#. type: Fenced code block
+#: docs/contributing/development_tools.md:1093
+#, no-wrap
+msgid "--async-stack-trace\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:1098
-msgid "### Continuous Benchmarks"
+#. type: Title ###
+#: docs/contributing/development_tools.md:1097
+#, markdown-text, no-wrap
+msgid "Continuous Benchmarks"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:1100
+#, markdown-text
 msgid "See our benchmarks [over here](https://deno.land/benchmarks)"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/development_tools.md:1104
+#, markdown-text
 msgid ""
 "The benchmark chart supposes "
 "https://github.com/denoland/benchmark_data/blob/gh-pages/data.json has the "
 "type `BenchmarkData[]` where `BenchmarkData` is defined like the below:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/development_tools.md:1114
+#. type: Fenced code block (ts)
+#: docs/contributing/development_tools.md:1105
 #, no-wrap
 msgid ""
-"```ts\n"
 "interface ExecTimeData {\n"
 "  mean: number;\n"
 "  stddev: number;\n"
@@ -1467,12 +1478,7 @@ msgid ""
 "  min: number;\n"
 "  max: number;\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/development_tools.md:1131
-#, no-wrap
-msgid ""
+"\n"
 "interface BenchmarkData {\n"
 "  created_at: string;\n"
 "  sha1: string;\n"
@@ -1489,5 +1495,4 @@ msgid ""
 "    [key: string]: number;\n"
 "  };\n"
 "}\n"
-"```\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,18 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:2
-msgid "## Integrity checking & lock files"
+#. type: Title ##
+#: docs/linking_to_external_code/integrity_checking.md:1
+#, markdown-text, no-wrap
+msgid "Integrity checking & lock files"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:4
-msgid "### Introduction"
+#. type: Title ###
+#: docs/linking_to_external_code/integrity_checking.md:3
+#, markdown-text, no-wrap
+msgid "Introduction"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:13
+#, markdown-text
 msgid ""
 "Let's say your module depends on remote module `https://some.url/a.ts`. When "
 "you compile your module for the first time `a.ts` is retrieved, compiled and "
@@ -39,13 +42,15 @@ msgid ""
 "solution to avoid this is to use integrity checking and lock files."
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:15
-msgid "### Caching and lock files"
+#. type: Title ###
+#: docs/linking_to_external_code/integrity_checking.md:14
+#, markdown-text, no-wrap
+msgid "Caching and lock files"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:22
+#, markdown-text
 msgid ""
 "Deno can store and check subresource integrity for modules using a small "
 "JSON file. Use the `--lock=lock.json` to enable and specify lock file "
@@ -57,16 +62,16 @@ msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:25
+#, markdown-text
 msgid ""
 "A `lock.json` might look like this, storing a hash of the file against the "
 "dependency:"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:34
+#. type: Fenced code block (json)
+#: docs/linking_to_external_code/integrity_checking.md:26
 #, no-wrap
 msgid ""
-"```json\n"
 "{\n"
 "  \"https://deno.land/std@$STD_VERSION/textproto/mod.ts\": "
 "\"3118d7a42c03c242c5a49c2ad91c8396110e14acca1324e7aaefd31a999b71a4\",\n"
@@ -76,71 +81,74 @@ msgid ""
 "\"35957d585a6e3dd87706858fb1d6b551cb278271b03f52c5a2cb70e65e00c26a\",\n"
 "   ...\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:36
+#, markdown-text
 msgid "A typical workflow will look like this:"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:38
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**src/deps.ts**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:43
+#. type: Fenced code block (ts)
+#: docs/linking_to_external_code/integrity_checking.md:39
+#, no-wrap
 msgid ""
-"```ts // Add a new dependency to \"src/deps.ts\", used somewhere else.  "
-"export { xyz } from \"https://unpkg.com/xyz-lib@v0.9.0/lib.ts\"; ```"
+"// Add a new dependency to \"src/deps.ts\", used somewhere else.\n"
+"export { xyz } from \"https://unpkg.com/xyz-lib@v0.9.0/lib.ts\";\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:45
+#, markdown-text
 msgid "Then:"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:49
+#. type: Fenced code block (shell)
+#: docs/linking_to_external_code/integrity_checking.md:46
+#, no-wrap
 msgid ""
-"```shell # Create/update the lock file \"lock.json\".  deno cache "
-"--lock=lock.json --lock-write src/deps.ts"
-msgstr ""
-
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:55
-msgid ""
-"# Include it when committing to source control.  git add -u lock.json git "
-"commit -m \"feat: Add support for xyz using xyz-lib\" git push ```"
+"# Create/update the lock file \"lock.json\".\n"
+"deno cache --lock=lock.json --lock-write src/deps.ts\n"
+"\n"
+"# Include it when committing to source control.\n"
+"git add -u lock.json\n"
+"git commit -m \"feat: Add support for xyz using xyz-lib\"\n"
+"git push\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:57
+#, markdown-text
 msgid "Collaborator on another machine -- in a freshly cloned project tree:"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:62
+#. type: Fenced code block (shell)
+#: docs/linking_to_external_code/integrity_checking.md:58
+#, no-wrap
 msgid ""
-"```shell # Download the project's dependencies into the machine's cache, "
-"integrity # checking each resource.  deno cache --reload --lock=lock.json "
-"src/deps.ts"
+"# Download the project's dependencies into the machine's cache, integrity\n"
+"# checking each resource.\n"
+"deno cache --reload --lock=lock.json src/deps.ts\n"
+"\n"
+"# Done! You can proceed safely.\n"
+"deno test --allow-read src\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:66
-msgid "# Done! You can proceed safely.  deno test --allow-read src ```"
-msgstr ""
-
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:68
-msgid "### Runtime verification"
+#. type: Title ###
+#: docs/linking_to_external_code/integrity_checking.md:67
+#, markdown-text, no-wrap
+msgid "Runtime verification"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:74
+#, markdown-text
 msgid ""
 "Like caching above, you can also use the `--lock=lock.json` option during "
 "use of the `deno run` sub command, validating the integrity of any locked "
@@ -151,18 +159,21 @@ msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:77
+#, markdown-text
 msgid ""
 "You can take this a step further as well by using the `--cached-only` flag "
 "to require that remote dependencies are already cached."
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/integrity_checking.md:81
-msgid "```shell deno run --lock=lock.json --cached-only mod.ts ```"
+#. type: Fenced code block (shell)
+#: docs/linking_to_external_code/integrity_checking.md:78
+#, no-wrap
+msgid "deno run --lock=lock.json --cached-only mod.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:84
+#, markdown-text
 msgid ""
 "This will fail if there are any dependencies in the dependency tree for "
 "mod.ts which are not yet cached."
@@ -170,5 +181,6 @@ msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/integrity_checking.md:85
-msgid "<!-- TODO - Add detail on dynamic imports -->"
+#, markdown-text, no-wrap
+msgid "<!-- TODO - Add detail on dynamic imports -->\n"
 msgstr ""

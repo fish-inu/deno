@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:2
-msgid "## First steps"
+#. type: Title ##
+#: docs/getting_started/first_steps.md:1
+#, markdown-text, no-wrap
+msgid "First steps"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:4
+#, markdown-text
 msgid ""
 "This page contains some examples to teach you about the fundamentals of "
 "Deno."
@@ -30,6 +32,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:10
+#, markdown-text
 msgid ""
 "This document assumes that you have some prior knowledge of JavaScript, "
 "especially about `async`/`await`. If you have no prior knowledge of "
@@ -38,13 +41,15 @@ msgid ""
 "before attempting to start with Deno."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:12
-msgid "### Hello World"
+#. type: Title ###
+#: docs/getting_started/first_steps.md:11
+#, markdown-text, no-wrap
+msgid "Hello World"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:15
+#, markdown-text
 msgid ""
 "Deno is a runtime for JavaScript/TypeScript which tries to be web compatible "
 "and use modern features wherever possible."
@@ -52,34 +57,40 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:18
+#, markdown-text
 msgid ""
 "Browser compatibility means a `Hello World` program in Deno is the same as "
 "the one you can run in the browser:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:22
-msgid "```ts console.log(\"Welcome to Deno 🦕\"); ```"
+#. type: Fenced code block (ts)
+#: docs/getting_started/first_steps.md:19
+#, no-wrap
+msgid "console.log(\"Welcome to Deno 🦕\");\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:24
 #: docs/getting_started/first_steps.md:103
+#, markdown-text
 msgid "Try the program:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:28
-msgid "```shell deno run https://deno.land/std@$STD_VERSION/examples/welcome.ts ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/first_steps.md:25
+#, no-wrap
+msgid "deno run https://deno.land/std@$STD_VERSION/examples/welcome.ts\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:30
-msgid "### Making an HTTP request"
+#. type: Title ###
+#: docs/getting_started/first_steps.md:29
+#, markdown-text, no-wrap
+msgid "Making an HTTP request"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:33
+#, markdown-text
 msgid ""
 "Many programs use HTTP requests to fetch data from a webserver. Let's write "
 "a small program that fetches a file and prints its contents out to the "
@@ -88,26 +99,27 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:37
+#, markdown-text
 msgid ""
 "Just like in the browser you can use the web standard "
 "[`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API to "
 "make HTTP calls:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:41
-msgid "```ts const url = Deno.args[0]; const res = await fetch(url);"
-msgstr ""
-
-#. type: Plain text
-#: docs/getting_started/first_steps.md:45
+#. type: Fenced code block (ts)
+#: docs/getting_started/first_steps.md:38
+#, no-wrap
 msgid ""
-"const body = new Uint8Array(await res.arrayBuffer()); await "
-"Deno.stdout.write(body); ```"
+"const url = Deno.args[0];\n"
+"const res = await fetch(url);\n"
+"\n"
+"const body = new Uint8Array(await res.arrayBuffer());\n"
+"await Deno.stdout.write(body);\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:47
+#, markdown-text
 msgid "Let's walk through what this application does:"
 msgstr ""
 
@@ -146,18 +158,21 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:60
+#, markdown-text
 msgid "Try it out:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:64
+#. type: Fenced code block (shell)
+#: docs/getting_started/first_steps.md:61
+#, no-wrap
 msgid ""
-"```shell deno run https://deno.land/std@$STD_VERSION/examples/curl.ts "
-"https://example.com ```"
+"deno run https://deno.land/std@$STD_VERSION/examples/curl.ts "
+"https://example.com\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:69
+#, markdown-text
 msgid ""
 "You will see this program returns an error regarding network access, so what "
 "did we do wrong? You might remember from the introduction that Deno is a "
@@ -168,23 +183,27 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:71
+#, markdown-text
 msgid "Try it out again with the correct permission flag:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:75
+#. type: Fenced code block (shell)
+#: docs/getting_started/first_steps.md:72
+#, no-wrap
 msgid ""
-"```shell deno run --allow-net=example.com "
-"https://deno.land/std@$STD_VERSION/examples/curl.ts https://example.com ```"
+"deno run --allow-net=example.com "
+"https://deno.land/std@$STD_VERSION/examples/curl.ts https://example.com\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:77
-msgid "### Reading a file"
+#. type: Title ###
+#: docs/getting_started/first_steps.md:76
+#, markdown-text, no-wrap
+msgid "Reading a file"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:81
+#, markdown-text
 msgid ""
 "Deno also provides APIs which do not come from the web. These are all "
 "contained in the `Deno` global. You can find documentation for these APIs on "
@@ -193,6 +212,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:84
+#, markdown-text
 msgid ""
 "Filesystem APIs for example do not have a web standard form, so Deno "
 "provides its own API."
@@ -200,27 +220,27 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:87
+#, markdown-text
 msgid ""
 "In this program each command-line argument is assumed to be a filename, the "
 "file is opened, and printed to stdout."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:96
+#. type: Fenced code block (ts)
+#: docs/getting_started/first_steps.md:88
 #, no-wrap
 msgid ""
-"```ts\n"
 "const filenames = Deno.args;\n"
 "for (const filename of filenames) {\n"
 "  const file = await Deno.open(filename);\n"
 "  await Deno.copy(file, Deno.stdout);\n"
 "  file.close();\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:101
+#, markdown-text
 msgid ""
 "The `copy()` function here actually makes no more than the necessary "
 "kernel→userspace→kernel copies. That is, the same memory from which data is "
@@ -228,30 +248,32 @@ msgid ""
 "goal for I/O streams in Deno."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:107
+#. type: Fenced code block (shell)
+#: docs/getting_started/first_steps.md:104
+#, no-wrap
 msgid ""
-"```shell deno run --allow-read "
-"https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd ```"
+"deno run --allow-read https://deno.land/std@$STD_VERSION/examples/cat.ts "
+"/etc/passwd\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:109
-msgid "### TCP server"
+#. type: Title ###
+#: docs/getting_started/first_steps.md:108
+#, markdown-text, no-wrap
+msgid "TCP server"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:112
+#, markdown-text
 msgid ""
 "This is an example of a server which accepts connections on port 8080, and "
 "returns to the client anything it sends."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:122
+#. type: Fenced code block (ts)
+#: docs/getting_started/first_steps.md:113
 #, no-wrap
 msgid ""
-"```ts\n"
 "const hostname = \"0.0.0.0\";\n"
 "const port = 8080;\n"
 "const listener = Deno.listen({ hostname, port });\n"
@@ -259,49 +281,58 @@ msgid ""
 "for await (const conn of listener) {\n"
 "  Deno.copy(conn, conn);\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:125
+#, markdown-text
 msgid ""
 "For security reasons, Deno does not allow programs to access the network "
 "without explicit permission. To allow accessing the network, use a "
 "command-line flag:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:129
+#. type: Fenced code block (shell)
+#: docs/getting_started/first_steps.md:126
+#, no-wrap
 msgid ""
-"```shell deno run --allow-net "
-"https://deno.land/std@$STD_VERSION/examples/echo_server.ts ```"
+"deno run --allow-net "
+"https://deno.land/std@$STD_VERSION/examples/echo_server.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:131
+#, markdown-text
 msgid "To test it, try sending data to it with netcat:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:137
-msgid "```shell $ nc localhost 8080 hello world hello world ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/first_steps.md:132
+#, no-wrap
+msgid ""
+"$ nc localhost 8080\n"
+"hello world\n"
+"hello world\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:141
+#, markdown-text
 msgid ""
 "Like the `cat.ts` example, the `copy()` function here also does not make "
 "unnecessary memory copies. It receives a packet from the kernel and sends it "
 "back, without further complexity."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/first_steps.md:143
-msgid "### More examples"
+#. type: Title ###
+#: docs/getting_started/first_steps.md:142
+#, markdown-text, no-wrap
+msgid "More examples"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:144
+#, markdown-text
 msgid ""
 "You can find more examples, like an HTTP file server, in the `Examples` "
 "chapter."

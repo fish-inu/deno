@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,35 +16,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:2
-msgid "## Import maps"
+#. type: Title ##
+#: docs/linking_to_external_code/import_maps.md:1
+#, markdown-text, no-wrap
+msgid "Import maps"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:5
+#, markdown-text, no-wrap
 msgid ""
-"> This is an unstable feature. Learn more about > [unstable "
-"features](../runtime/stability.md)."
+"> This is an unstable feature. Learn more about\n"
+"> [unstable features](../runtime/stability.md).\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:7
+#, markdown-text
 msgid "Deno supports [import maps](https://github.com/WICG/import-maps)."
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:9
-msgid "You can use import maps with the `--import-map=<FILE>` CLI flag."
+#, markdown-text, no-wrap
+msgid "You can use import maps with the `--import-map=<FILE>` CLI flag.\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:11
+#, markdown-text
 msgid "Current limitations:"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:16
+#, markdown-text
 msgid ""
 "- single import map.  - no fallback URLs.  - Deno does not support `std:` "
 "namespace.  - supports only `file:`, `http:` and `https:` schemes."
@@ -52,100 +58,97 @@ msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:18
+#, markdown-text
 msgid "Example:"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:20
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**import_map.json**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:28
+#. type: Fenced code block (js)
+#: docs/linking_to_external_code/import_maps.md:21
 #, no-wrap
 msgid ""
-"```js\n"
 "{\n"
 "   \"imports\": {\n"
 "      \"fmt/\": \"https://deno.land/std@$STD_VERSION/fmt/\"\n"
 "   }\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:30
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**color.ts**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:33
-msgid "```ts import { red } from \"fmt/colors.ts\";"
-msgstr ""
-
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:36
-msgid "console.log(red(\"hello world\")); ```"
+#. type: Fenced code block (ts)
+#: docs/linking_to_external_code/import_maps.md:31
+#, no-wrap
+msgid ""
+"import { red } from \"fmt/colors.ts\";\n"
+"\n"
+"console.log(red(\"hello world\"));\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:38
+#, markdown-text
 msgid "Then:"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:42
-msgid "```shell $ deno run --import-map=import_map.json --unstable color.ts ```"
+#. type: Fenced code block (shell)
+#: docs/linking_to_external_code/import_maps.md:39
+#, no-wrap
+msgid "$ deno run --import-map=import_map.json --unstable color.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:44
+#, markdown-text
 msgid "To use starting directory for absolute imports:"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:47
-#: docs/linking_to_external_code/import_maps.md:65
-msgid "```json // import_map.json"
-msgstr ""
-
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:54
+#. type: Fenced code block (json)
+#: docs/linking_to_external_code/import_maps.md:45
 #, no-wrap
 msgid ""
+"// import_map.json\n"
+"\n"
 "{\n"
 "  \"imports\": {\n"
 "    \"/\": \"./\"\n"
 "  }\n"
 "}\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:57
-msgid "```ts // main.ts"
-msgstr ""
-
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:60
-msgid "import { MyUtil } from \"/util.ts\"; ```"
+#. type: Fenced code block (ts)
+#: docs/linking_to_external_code/import_maps.md:55
+#, no-wrap
+msgid ""
+"// main.ts\n"
+"\n"
+"import { MyUtil } from \"/util.ts\";\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/import_maps.md:62
+#, markdown-text
 msgid "You may map a different directory: (eg. src)"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/import_maps.md:71
+#. type: Fenced code block (json)
+#: docs/linking_to_external_code/import_maps.md:63
 #, no-wrap
 msgid ""
+"// import_map.json\n"
+"\n"
 "{\n"
 "  \"imports\": {\n"
 "    \"/\": \"./src\"\n"
 "  }\n"
 "}\n"
-"```\n"
 msgstr ""

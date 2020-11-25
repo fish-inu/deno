@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,18 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:2
-msgid "## Using TypeScript"
+#. type: Title ##
+#: docs/getting_started/typescript.md:1
+#, markdown-text, no-wrap
+msgid "Using TypeScript"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:4
-msgid "<!-- TODO(lucacasonato): text on 'just import .ts' -->"
+#, markdown-text, no-wrap
+msgid "<!-- TODO(lucacasonato): text on 'just import .ts' -->\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:11
+#, markdown-text
 msgid ""
 "Deno supports both JavaScript and TypeScript as first class languages at "
 "runtime. This means it requires fully qualified module names, including the "
@@ -37,21 +40,24 @@ msgid ""
 "imports. Typescript modules can be directly imported. E.g."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:16
+#. type: Fenced code block (ts)
+#: docs/getting_started/typescript.md:12
+#, no-wrap
 msgid ""
-"```ts import { Response } from "
-"\"https://deno.land/std@$STD_VERSION/http/server.ts\"; import { queue } from "
-"\"./collections.ts\"; ```"
+"import { Response } from "
+"\"https://deno.land/std@$STD_VERSION/http/server.ts\";\n"
+"import { queue } from \"./collections.ts\";\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:18
-msgid "### `--no-check` option"
+#. type: Title ###
+#: docs/getting_started/typescript.md:17
+#, markdown-text, no-wrap
+msgid "`--no-check` option"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:25
+#, markdown-text
 msgid ""
 "When using `deno run`, `deno test`, `deno cache`, or `deno bundle` you can "
 "specify the `--no-check` flag to disable TypeScript type checking. This can "
@@ -63,6 +69,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:39
+#, markdown-text
 msgid ""
 "Because `--no-check` does not do TypeScript type checking we can not "
 "automatically remove type only imports and exports as this would require "
@@ -82,19 +89,22 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:43
+#, markdown-text
 msgid ""
 "Because there is no type information when using `--no-check`, `const enum` "
 "is not supported because it is type-directed. `--no-check` also does not "
 "support the legacy `import =` and `export =` syntax."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:45
-msgid "### Using external type definitions"
+#. type: Title ###
+#: docs/getting_started/typescript.md:44
+#, markdown-text, no-wrap
+msgid "Using external type definitions"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:49
+#, markdown-text
 msgid ""
 "The out of the box TypeScript compiler though relies on both extension-less "
 "modules and the Node.js module resolution logic to apply types to JavaScript "
@@ -103,18 +113,21 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:52
+#, markdown-text
 msgid ""
 "In order to bridge this gap, Deno supports three ways of referencing type "
 "definition files without having to resort to \"magic\" resolution."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:54
-msgid "#### Compiler hint"
+#. type: Title ####
+#: docs/getting_started/typescript.md:53
+#, markdown-text, no-wrap
+msgid "Compiler hint"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:63
+#, markdown-text
 msgid ""
 "If you are importing a JavaScript module, and you know where the type "
 "definition for that module is located, you can specify the type definition "
@@ -126,13 +139,17 @@ msgid ""
 "was the types for the file, the code would look like this:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:68
-msgid "```ts // @deno-types=\"./foo.d.ts\" import * as foo from \"./foo.js\"; ```"
+#. type: Fenced code block (ts)
+#: docs/getting_started/typescript.md:64
+#, no-wrap
+msgid ""
+"// @deno-types=\"./foo.d.ts\"\n"
+"import * as foo from \"./foo.js\";\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:72
+#, markdown-text
 msgid ""
 "The value follows the same resolution logic as importing a module, meaning "
 "the file needs to have an extension and is relative to the current "
@@ -141,6 +158,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:78
+#, markdown-text
 msgid ""
 "The hint affects the next `import` statement (or `export ... from` "
 "statement)  where the value of the `@deno-types` will be substituted at "
@@ -149,13 +167,15 @@ msgid ""
 "load `./foo.js` when it runs the program."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:80
-msgid "#### Triple-slash reference directive in JavaScript files"
+#. type: Title ####
+#: docs/getting_started/typescript.md:79
+#, markdown-text, no-wrap
+msgid "Triple-slash reference directive in JavaScript files"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:87
+#, markdown-text
 msgid ""
 "If you are hosting modules which you want to be consumed by Deno, and you "
 "want to inform Deno about the location of the type definitions, you can "
@@ -165,13 +185,17 @@ msgid ""
 "your JavaScript module named `foo.js` might look like this:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:92
-msgid "```js /// <reference types=\"./foo.d.ts\" /> export const foo = \"foo\"; ```"
+#. type: Fenced code block (js)
+#: docs/getting_started/typescript.md:88
+#, no-wrap
+msgid ""
+"/// <reference types=\"./foo.d.ts\" />\n"
+"export const foo = \"foo\";\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:98
+#, markdown-text
 msgid ""
 "Deno will see this, and the compiler will use `foo.d.ts` when type checking "
 "the file, though `foo.js` will be loaded at runtime. The resolution of the "
@@ -180,13 +204,15 @@ msgid ""
 "current file. Remote specifiers are also allowed."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:100
-msgid "#### X-TypeScript-Types custom header"
+#. type: Title ####
+#: docs/getting_started/typescript.md:99
+#, markdown-text, no-wrap
+msgid "X-TypeScript-Types custom header"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:104
+#, markdown-text
 msgid ""
 "If you are hosting modules which you want to be consumed by Deno, and you "
 "want to inform Deno the location of the type definitions, you can use a "
@@ -196,6 +222,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:109
+#, markdown-text
 msgid ""
 "The header works in the same way as the triple-slash reference mentioned "
 "above, it just means that the content of the JavaScript file itself does not "
@@ -205,12 +232,13 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:111
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**Not all type definitions are supported.**\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:119
+#, markdown-text
 msgid ""
 "Deno will use the compiler hint to load the indicated `.d.ts` files, but "
 "some `.d.ts` files contain unsupported features. Specifically, some `.d.ts` "
@@ -223,12 +251,13 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:121
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**Why not use the triple-slash type reference in TypeScript files?**\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:126
+#, markdown-text
 msgid ""
 "The TypeScript compiler supports triple-slash directives, including a type "
 "reference directive. If Deno used this, it would interfere with the behavior "
@@ -236,13 +265,15 @@ msgid ""
 "(and JSX) files."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:128
-msgid "### Custom TypeScript Compiler Options"
+#. type: Title ###
+#: docs/getting_started/typescript.md:127
+#, markdown-text, no-wrap
+msgid "Custom TypeScript Compiler Options"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:133
+#, markdown-text
 msgid ""
 "In the Deno ecosystem, all strict flags are enabled in order to comply with "
 "TypeScript's ideal of being `strict` by default. However, in order to "
@@ -252,28 +283,30 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:136
+#, markdown-text
 msgid ""
 "You need to explicitly tell Deno where to look for this configuration by "
 "setting the `-c` (or `--config`) argument when executing your application."
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:140
-msgid "```shell deno run -c tsconfig.json mod.ts ```"
+#. type: Fenced code block (shell)
+#: docs/getting_started/typescript.md:137
+#, no-wrap
+msgid "deno run -c tsconfig.json mod.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:142
+#, markdown-text
 msgid ""
 "Following are the currently allowed settings and their default values in "
 "Deno:"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/typescript.md:181
+#. type: Fenced code block (json)
+#: docs/getting_started/typescript.md:143
 #, no-wrap
 msgid ""
-"```json\n"
 "{\n"
 "  \"compilerOptions\": {\n"
 "    \"allowJs\": false,\n"
@@ -310,11 +343,11 @@ msgid ""
 "    \"useDefineForClassFields\": false\n"
 "  }\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:184
+#, markdown-text
 msgid ""
 "For documentation on allowed values and use cases please visit the "
 "[typescript "
@@ -323,7 +356,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:186
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "**Note**: Any options not listed above are either not supported by Deno or "
 "are\n"

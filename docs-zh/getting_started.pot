@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,18 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/getting_started.md:2
-msgid "# Getting Started"
+#. type: Title #
+#: docs/getting_started.md:1
+#, markdown-text, no-wrap
+msgid "Getting Started"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started.md:4
+#, markdown-text
 msgid "In this chapter we'll discuss:"
 msgstr ""
 
 #. type: Plain text
 #: docs/getting_started.md:13
+#, markdown-text
 msgid ""
 "- [Installing Deno](./getting_started/installation.md)  - [Setting up your "
 "environment](./getting_started/setup_your_environment.md)  - [Running a "

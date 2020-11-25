@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,14 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:2
-msgid "# Managing dependencies"
+#. type: Title #
+#: docs/examples/manage_dependencies.md:1
+#, markdown-text, no-wrap
+msgid "Managing dependencies"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:4
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/manage_dependencies.md:3
+#, markdown-text, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -54,13 +56,15 @@ msgstr ""
 msgid "See also [Linking to external code](../linking_to_external_code.md)"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:13
-msgid "## Overview"
+#. type: Title ##
+#: docs/examples/manage_dependencies.md:12
+#, markdown-text, no-wrap
+msgid "Overview"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/manage_dependencies.md:19
+#, markdown-text
 msgid ""
 "In Deno there is no concept of a package manager as external modules are "
 "imported directly into local modules. This raises the question of how to "
@@ -71,6 +75,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/examples/manage_dependencies.md:27
+#, markdown-text
 msgid ""
 "The standard practice for solving this problem in Deno is to create a "
 "`deps.ts` file. All required remote dependencies are referenced in this file "
@@ -83,6 +88,7 @@ msgstr ""
 
 #. type: Plain text
 #: docs/examples/manage_dependencies.md:31
+#, markdown-text
 msgid ""
 "With all dependencies centralized in `deps.ts`, managing these becomes "
 "easier.  Dev dependencies can also be managed in a separate `dev_deps.ts` "
@@ -90,16 +96,16 @@ msgid ""
 "dependencies."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:33
-msgid "## Example"
+#. type: Title ##
+#: docs/examples/manage_dependencies.md:32
+#, markdown-text, no-wrap
+msgid "Example"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:45
+#. type: Fenced code block (ts)
+#: docs/examples/manage_dependencies.md:34
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * deps.ts\n"
 " *\n"
@@ -110,11 +116,11 @@ msgid ""
 "  add,\n"
 "  multiply,\n"
 "} from \"https://x.nest.land/ramda@0.27.0/source/index.js\";\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/manage_dependencies.md:50
+#, markdown-text
 msgid ""
 "In this example the same functionality is created as is the case in the "
 "[local and remote import examples](./import_export.md). But in this case "
@@ -124,49 +130,32 @@ msgstr ""
 
 #. type: Plain text
 #: docs/examples/manage_dependencies.md:52
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**Command:** `deno run example.ts`\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:57
+#. type: Fenced code block (ts)
+#: docs/examples/manage_dependencies.md:53
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * example.ts\n"
 " */\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:59
-msgid "import { add, multiply } from \"./deps.ts\";"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:63
-#, no-wrap
-msgid ""
+"\n"
+"import { add, multiply } from \"./deps.ts\";\n"
+"\n"
 "function totalCost(outbound: number, inbound: number, tax: number): number "
 "{\n"
 "  return multiply(add(outbound, inbound), tax);\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:66
-msgid "console.log(totalCost(19, 31, 1.2)); console.log(totalCost(45, 27, 1.15));"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/manage_dependencies.md:73
-#, no-wrap
-msgid ""
+"\n"
+"console.log(totalCost(19, 31, 1.2));\n"
+"console.log(totalCost(45, 27, 1.15));\n"
+"\n"
 "/**\n"
 " * Output\n"
 " *\n"
 " * 60\n"
 " * 82.8\n"
 " */\n"
-"```\n"
 msgstr ""

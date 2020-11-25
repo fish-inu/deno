@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,14 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/module_metadata.md:2
-msgid "# Module metadata"
+#. type: Title #
+#: docs/examples/module_metadata.md:1
+#, markdown-text, no-wrap
+msgid "Module metadata"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/module_metadata.md:4
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/module_metadata.md:3
+#, markdown-text, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -62,24 +64,25 @@ msgid ""
 "the deno runtime."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/module_metadata.md:18
-msgid "## Example"
+#. type: Title ##
+#: docs/examples/module_metadata.md:17
+#, markdown-text, no-wrap
+msgid "Example"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/module_metadata.md:22
+#, markdown-text
 msgid ""
 "The example below uses two modules to show the difference between "
 "`import.meta.url`, `import.meta.main` and `Deno.mainModule`. In this "
 "example, `module_a.ts` is the main module entry point:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/module_metadata.md:36
+#. type: Fenced code block (ts)
+#: docs/examples/module_metadata.md:23
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * module_b.ts\n"
 " */\n"
@@ -91,24 +94,17 @@ msgid ""
 "    import.meta.main,\n"
 "  );\n"
 "}\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/module_metadata.md:42
+#. type: Fenced code block (ts)
+#: docs/examples/module_metadata.md:37
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * module_a.ts\n"
 " */\n"
 "import { outputB } from \"./module_b.ts\";\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/module_metadata.md:51
-#, no-wrap
-msgid ""
+"\n"
 "function outputA() {\n"
 "  console.log(\"Module A's import.meta.url\", import.meta.url);\n"
 "  console.log(\"Module A's mainModule url\", Deno.mainModule);\n"
@@ -117,32 +113,29 @@ msgid ""
 "    import.meta.main,\n"
 "  );\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/module_metadata.md:56
-msgid "outputA(); console.log(\"\"); outputB(); ```"
+"\n"
+"outputA();\n"
+"console.log(\"\");\n"
+"outputB();\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/module_metadata.md:59
+#, markdown-text
 msgid ""
 "If `module_a.ts` is located in `/home/alice/deno` then the output of `deno "
 "run --allow-read module_a.ts` is:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/module_metadata.md:64
+#. type: Fenced code block
+#: docs/examples/module_metadata.md:60
+#, no-wrap
 msgid ""
-"``` Module A's import.meta.url file:///home/alice/deno/module_a.ts Module "
-"A's mainModule url file:///home/alice/deno/module_a.ts Is module A the main "
-"module via import.meta.main? true"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/module_metadata.md:68
-msgid ""
-"Module B's import.meta.url file:///home/alice/deno/module_b.ts Module B's "
-"mainModule url file:///home/alice/deno/module_a.ts Is module B the main "
-"module via import.meta.main? false ```"
+"Module A's import.meta.url file:///home/alice/deno/module_a.ts\n"
+"Module A's mainModule url file:///home/alice/deno/module_a.ts\n"
+"Is module A the main module via import.meta.main? true\n"
+"\n"
+"Module B's import.meta.url file:///home/alice/deno/module_b.ts\n"
+"Module B's mainModule url file:///home/alice/deno/module_a.ts\n"
+"Is module B the main module via import.meta.main? false\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/linking_to_external_code/reloading_modules.md:2
-msgid "## Reloading modules"
+#. type: Title ##
+#: docs/linking_to_external_code/reloading_modules.md:1
+#, markdown-text, no-wrap
+msgid "Reloading modules"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/reloading_modules.md:8
+#, markdown-text
 msgid ""
 "By default, a module in the cache will be reused without fetching or "
 "re-compiling it. Sometimes this is not desirable and you can force deno to "
@@ -31,23 +33,27 @@ msgid ""
 "subcommand. It's usage is described below:"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/reloading_modules.md:10
-msgid "### To reload everything"
+#. type: Title ###
+#: docs/linking_to_external_code/reloading_modules.md:9
+#, markdown-text, no-wrap
+msgid "To reload everything"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/reloading_modules.md:14
-msgid "```ts deno cache --reload my_module.ts ```"
+#. type: Fenced code block (ts)
+#: docs/linking_to_external_code/reloading_modules.md:11
+#, no-wrap
+msgid "deno cache --reload my_module.ts\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/reloading_modules.md:16
-msgid "### To reload specific modules"
+#. type: Title ###
+#: docs/linking_to_external_code/reloading_modules.md:15
+#, markdown-text, no-wrap
+msgid "To reload specific modules"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/reloading_modules.md:19
+#, markdown-text
 msgid ""
 "Sometimes we want to upgrade only some modules. You can control it by "
 "passing an argument to a `--reload` flag."
@@ -55,32 +61,35 @@ msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/reloading_modules.md:21
+#, markdown-text
 msgid "To reload all \\$STD_VERSION standard modules:"
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/reloading_modules.md:25
-msgid ""
-"```ts deno cache --reload=https://deno.land/std@$STD_VERSION my_module.ts "
-"```"
+#. type: Fenced code block (ts)
+#: docs/linking_to_external_code/reloading_modules.md:22
+#, no-wrap
+msgid "deno cache --reload=https://deno.land/std@$STD_VERSION my_module.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/reloading_modules.md:28
+#, markdown-text
 msgid ""
 "To reload specific modules (in this example - colors and file system copy) "
 "use a comma to separate URLs."
 msgstr ""
 
-#. type: Plain text
-#: docs/linking_to_external_code/reloading_modules.md:32
+#. type: Fenced code block (ts)
+#: docs/linking_to_external_code/reloading_modules.md:29
+#, no-wrap
 msgid ""
-"```ts deno cache "
+"deno cache "
 "--reload=https://deno.land/std@$STD_VERSION/fs/copy.ts,https://deno.land/std@$STD_VERSION/fmt/colors.ts "
-"my_module.ts ```"
+"my_module.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/reloading_modules.md:33
-msgid "<!-- Should this be part of examples? -->"
+#, markdown-text, no-wrap
+msgid "<!-- Should this be part of examples? -->\n"
 msgstr ""
