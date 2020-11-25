@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-23 14:22+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: 2020-11-24 07:00+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
@@ -18,9 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#. type: Plain text
-#: docs/introduction.md:2
-msgid "# Introduction"
+#. type: Title #
+#: docs/introduction.md:1
+#, fuzzy, no-wrap
+#| msgid "# Introduction"
+msgid "Introduction"
 msgstr "# 简介"
 
 #. type: Plain text
@@ -37,9 +39,11 @@ msgstr ""
 msgid "It's built on V8, Rust, and Tokio."
 msgstr "Deno 基于 V8，Rust 和 Tokio。"
 
-#. type: Plain text
-#: docs/introduction.md:9
-msgid "## Feature Highlights"
+#. type: Title ##
+#: docs/introduction.md:8
+#, fuzzy, no-wrap
+#| msgid "## Feature Highlights"
+msgid "Feature Highlights"
 msgstr "## 重要特性"
 
 #. type: Bullet: '- '
@@ -82,9 +86,11 @@ msgstr ""
 msgid "Scripts can be bundled into a single JavaScript file."
 msgstr "通过 Deno，你编写的脚本可以打包生成单个 JavaScript 文件。"
 
-#. type: Plain text
-#: docs/introduction.md:23
-msgid "## Philosophy"
+#. type: Title ##
+#: docs/introduction.md:22
+#, fuzzy, no-wrap
+#| msgid "## Philosophy"
+msgid "Philosophy"
 msgstr "## 理念"
 
 #. type: Plain text
@@ -116,9 +122,11 @@ msgstr ""
 "除此之外，实用脚本之前或许是用 bash 或 python 编写的，而 Deno 是个不错的替代"
 "工具。"
 
-#. type: Plain text
-#: docs/introduction.md:37
-msgid "## Goals"
+#. type: Title ##
+#: docs/introduction.md:36
+#, fuzzy, no-wrap
+#| msgid "## Goals"
+msgid "Goals"
 msgstr "## 愿景"
 
 #. type: Bullet: '- '
@@ -146,8 +154,8 @@ msgid ""
 "for it), ought to also be able to be run in a modern web browser without "
 "change."
 msgstr ""
-"与浏览器兼容：Deno 有一部分代码完全由 JavaScript 编写，这部分代码没有使用 `Deno` 命名空间，也没有对应的 feature "
-"test。它们在现代浏览器内也能运行。"
+"与浏览器兼容：Deno 有一部分代码完全由 JavaScript 编写，这部分代码没有使用 "
+"`Deno` 命名空间，也没有对应的 feature test。它们在现代浏览器内也能运行。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
@@ -166,9 +174,11 @@ msgstr "确保 V8 引擎的相关概念与 user land 分开。"
 msgid "Be able to serve HTTP efficiently."
 msgstr "能通过 HTTP 高效传送内容。"
 
-#. type: Plain text
-#: docs/introduction.md:51
-msgid "## Comparison to Node.js"
+#. type: Title ##
+#: docs/introduction.md:50
+#, fuzzy, no-wrap
+#| msgid "## Comparison to Node.js"
+msgid "Comparison to Node.js"
 msgstr "## 对比 Node.js"
 
 #. type: Bullet: '- '
@@ -209,23 +219,27 @@ msgstr "Deno 在遇到未捕获错误的情况下会停止运行。"
 msgid ""
 "Uses \"ES Modules\" and does not support `require()`. Third party modules "
 "are imported via URLs:"
-msgstr "Deno 使用 ES Modules，不支持 `require()`。第三方模块以 URL 的形式导入："
+msgstr ""
+"Deno 使用 ES Modules，不支持 `require()`。第三方模块以 URL 的形式导入："
 
-#. type: Plain text
-#: docs/introduction.md:65
-#, no-wrap
-msgid ""
-"  ```javascript\n"
-"  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
-"  ```\n"
+#. type: Fenced code block (javascript)
+#: docs/introduction.md:62
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  ```javascript\n"
+#| "  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
+#| "  ```\n"
+msgid "  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
 msgstr ""
 "  ```javascript\n"
 "  import * as log from \"https://deno.land/std@$STD_VERSION/log/mod.ts\";\n"
 "  ```\n"
 
-#. type: Plain text
-#: docs/introduction.md:67
-msgid "## Other key behaviors"
+#. type: Title ##
+#: docs/introduction.md:66
+#, fuzzy, no-wrap
+#| msgid "## Other key behaviors"
+msgid "Other key behaviors"
 msgstr "## 其它重点功能"
 
 #. type: Bullet: '- '
@@ -235,8 +249,8 @@ msgid ""
 "until the code is run with the `--reload` flag. (So, this will still work on "
 "an airplane.)"
 msgstr ""
-"首次运行代码时，Deno 会下载并缓存云端代码。之后再次运行的话，如果没有 `--reload` "
-"选项，云端代码就不会更新。（因此，没有网络的情况下代码仍可运行。）"
+"首次运行代码时，Deno 会下载并缓存云端代码。之后再次运行的话，如果没有 `--"
+"reload` 选项，云端代码就不会更新。（因此，没有网络的情况下代码仍可运行。）"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:72
@@ -247,22 +261,32 @@ msgstr "从云端 URL 载入的模块或文件不可变，可缓存。"
 
 #~ msgid ""
 #~ "- Provide Secure Defaults.\n"
-#~ "  - Unless specifically allowed, scripts can't access files, the environment, or\n"
+#~ "  - Unless specifically allowed, scripts can't access files, the "
+#~ "environment, or\n"
 #~ "    the network.\n"
-#~ "- Browser compatible: The subset of Deno programs which are written completely\n"
-#~ "  in JavaScript and do not use the global `Deno` namespace (or feature test for\n"
-#~ "  it), ought to also be able to be run in a modern web browser without change.\n"
-#~ "- Provide built-in tooling like unit testing, code formatting, and linting to\n"
+#~ "- Browser compatible: The subset of Deno programs which are written "
+#~ "completely\n"
+#~ "  in JavaScript and do not use the global `Deno` namespace (or feature "
+#~ "test for\n"
+#~ "  it), ought to also be able to be run in a modern web browser without "
+#~ "change.\n"
+#~ "- Provide built-in tooling like unit testing, code formatting, and "
+#~ "linting to\n"
 #~ "  improve developer experience.\n"
 #~ "- Does not leak V8 concepts into user land.\n"
 #~ "- Be able to serve HTTP efficiently.\n"
 #~ msgstr ""
 #~ "- 默认设置的安全性高。\n"
 #~ "  - 不允许脚本访问文件、网络以及环境（除非你显式启用权限）。\n"
-#~ "- 与浏览器兼容：Deno 有一部分代码完全由 JavaScript 编写，这部分代码没有使用 `Deno` 命名空间，在现代浏览器内也能运行。The subset of Deno programs which are written completely\n"
-#~ "  in JavaScript and do not use the global `Deno` namespace (or feature test for\n"
-#~ "  it), ought to also be able to be run in a modern web browser without change.\n"
-#~ "- Provide built-in tooling like unit testing, code formatting, and linting to\n"
+#~ "- 与浏览器兼容：Deno 有一部分代码完全由 JavaScript 编写，这部分代码没有使"
+#~ "用 `Deno` 命名空间，在现代浏览器内也能运行。The subset of Deno programs "
+#~ "which are written completely\n"
+#~ "  in JavaScript and do not use the global `Deno` namespace (or feature "
+#~ "test for\n"
+#~ "  it), ought to also be able to be run in a modern web browser without "
+#~ "change.\n"
+#~ "- Provide built-in tooling like unit testing, code formatting, and "
+#~ "linting to\n"
 #~ "  improve developer experience.\n"
 #~ "- Does not leak V8 concepts into user land.\n"
 #~ "- Be able to serve HTTP efficiently.\n"
