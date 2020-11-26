@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-26 08:31+0000\n"
+"PO-Revision-Date: 2020-11-27 08:30+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/first_steps/zh_Hans/>\n"
@@ -72,19 +72,19 @@ msgstr "console.log(\"Welcome to Deno 🦕\");\n"
 #: docs/getting_started/first_steps.md:24
 #: docs/getting_started/first_steps.md:103
 msgid "Try the program:"
-msgstr ""
+msgstr "运行下面的程序："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/first_steps.md:25
 #, no-wrap
 msgid "deno run https://deno.land/std@$STD_VERSION/examples/welcome.ts\n"
-msgstr ""
+msgstr "deno run https://deno.land/std@$STD_VERSION/examples/welcome.ts\n"
 
 #. type: Title ###
 #: docs/getting_started/first_steps.md:29
 #, no-wrap
 msgid "Making an HTTP request"
-msgstr ""
+msgstr "HTTP 请求"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:33
@@ -92,14 +92,17 @@ msgid ""
 "Many programs use HTTP requests to fetch data from a webserver. Let's write "
 "a small program that fetches a file and prints its contents out to the "
 "terminal."
-msgstr ""
+msgstr "许多程序使用 HTTP 请求来从服务器中获取数据。我们接下来将写个小程序，它会获取一个文件并将其内容打印到终端。"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:37
+#, fuzzy
 msgid ""
 "Just like in the browser you can use the web standard [`fetch`](https://"
 "developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API to make HTTP calls:"
 msgstr ""
+"和浏览器一样，你可以在 Deno 中使用 [`fetch`](https://developer.mozilla.org/en-US/docs/Web/"
+"API/Fetch_API) API 来调用 HTTP："
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/first_steps.md:38
@@ -111,25 +114,30 @@ msgid ""
 "const body = new Uint8Array(await res.arrayBuffer());\n"
 "await Deno.stdout.write(body);\n"
 msgstr ""
+"const url = Deno.args[0];\n"
+"const res = await fetch(url);\n"
+"\n"
+"const body = new Uint8Array(await res.arrayBuffer());\n"
+"await Deno.stdout.write(body);\n"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:47
 msgid "Let's walk through what this application does:"
-msgstr ""
+msgstr "我们来过一遍以上代码："
 
 #. type: Bullet: '1. '
 #: docs/getting_started/first_steps.md:58
 msgid ""
 "We get the first argument passed to the application, and store it in the "
 "`url` constant."
-msgstr ""
+msgstr "向程序传递的第一个参数赋值给常量 url。"
 
 #. type: Bullet: '2. '
 #: docs/getting_started/first_steps.md:58
 msgid ""
 "We make a request to the url specified, await the response, and store it in "
 "the `res` constant."
-msgstr ""
+msgstr "对该 url 发出请求，等待响应，并将结果赋值给常量 `res`。"
 
 #. type: Bullet: '3. '
 #: docs/getting_started/first_steps.md:58
@@ -140,22 +148,28 @@ msgid ""
 "org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)  to store "
 "in the `body` constant."
 msgstr ""
+"解析响应体为 [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/"
+"JavaScript/Reference/Global_Objects/ArrayBuffer)，等待响应，之后转换成 "
+"[`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
+"Reference/Global_Objects/Uint8Array)，赋值到常量 `body`。"
 
 #. type: Bullet: '4. '
 #: docs/getting_started/first_steps.md:58
 msgid "We write the contents of the `body` constant to `stdout`."
-msgstr ""
+msgstr "将常量 `body` 的内容写入到 `stdout`。"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:60
 msgid "Try it out:"
-msgstr ""
+msgstr "动手试试："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/first_steps.md:61
 #, no-wrap
 msgid "deno run https://deno.land/std@$STD_VERSION/examples/curl.ts https://example.com\n"
 msgstr ""
+"deno run https://deno.land/std@$STD_VERSION/examples/curl.ts https://example."
+"com\n"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:69
