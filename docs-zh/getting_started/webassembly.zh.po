@@ -7,18 +7,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/getting_started/webassembly.md:2
-msgid "## WebAssembly support"
+#. type: Title ##
+#: docs/getting_started/webassembly.md:1
+#, no-wrap
+msgid "WebAssembly support"
 msgstr ""
 
 #. type: Plain text
@@ -28,14 +29,14 @@ msgstr ""
 
 #. type: Plain text
 #: docs/getting_started/webassembly.md:6
-msgid "<!-- dprint-ignore -->"
+#, no-wrap
+msgid "<!-- dprint-ignore -->\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/getting_started/webassembly.md:20
+#. type: Fenced code block (ts)
+#: docs/getting_started/webassembly.md:7
 #, no-wrap
 msgid ""
-"```ts\n"
 "const wasmCode = new Uint8Array([\n"
 "  0, 97, 115, 109, 1, 0, 0, 0, 1, 133, 128, 128, 128, 0, 1, 96, 0, 1, 127,\n"
 "  3, 130, 128, 128, 128, 0, 1, 0, 4, 132, 128, 128, 128, 0, 1, 112, 0, 0,\n"
@@ -48,5 +49,4 @@ msgid ""
 "const wasmInstance = new WebAssembly.Instance(wasmModule);\n"
 "const main = wasmInstance.exports.main as CallableFunction\n"
 "console.log(main().toString());\n"
-"```\n"
 msgstr ""

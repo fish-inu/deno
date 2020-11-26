@@ -7,18 +7,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/contributing.md:2
-msgid "# Contributing"
+#. type: Title #
+#: docs/contributing.md:1
+#, no-wrap
+msgid "Contributing"
 msgstr ""
 
 #. type: Plain text
@@ -28,7 +29,8 @@ msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:6
-msgid "- Please don't make [the benchmarks](https://deno.land/benchmarks) worse."
+msgid ""
+"- Please don't make [the benchmarks](https://deno.land/benchmarks) worse."
 msgstr ""
 
 #. type: Plain text
@@ -53,26 +55,28 @@ msgstr ""
 #. type: Bullet: '- '
 #: docs/contributing.md:18
 msgid ""
-"Please be professional in the forums. We follow [Rust's code of "
-"conduct](https://www.rust-lang.org/policies/code-of-conduct)  (CoC). Have a "
-"problem? Email ry@tinyclouds.org."
+"Please be professional in the forums. We follow [Rust's code of conduct]"
+"(https://www.rust-lang.org/policies/code-of-conduct)  (CoC). Have a problem? "
+"Email ry@tinyclouds.org."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:20
-msgid "## Development"
+#. type: Title ##
+#: docs/contributing.md:19
+#, no-wrap
+msgid "Development"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:23
 msgid ""
-"Instructions on how to build from source can be found "
-"[here](./contributing/building_from_source.md)."
+"Instructions on how to build from source can be found [here](./contributing/"
+"building_from_source.md)."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:25
-msgid "## Submitting a Pull Request"
+#. type: Title ##
+#: docs/contributing.md:24
+#, no-wrap
+msgid "Submitting a Pull Request"
 msgstr ""
 
 #. type: Plain text
@@ -132,9 +136,10 @@ msgstr ""
 msgid "Ensure `./tools/lint.js` passes."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:49
-msgid "## Changes to `third_party`"
+#. type: Title ##
+#: docs/contributing.md:48
+#, no-wrap
+msgid "Changes to `third_party`"
 msgstr ""
 
 #. type: Plain text
@@ -147,9 +152,10 @@ msgid ""
 "from @ry or @piscisaureus to make changes."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:57
-msgid "## Adding Ops (aka bindings)"
+#. type: Title ##
+#: docs/contributing.md:56
+#, no-wrap
+msgid "Adding Ops (aka bindings)"
 msgstr ""
 
 #. type: Plain text
@@ -164,25 +170,27 @@ msgstr ""
 #. type: Plain text
 #: docs/contributing.md:64
 msgid ""
-"As an example, see how `Deno.rename()` was proposed and added in [PR "
-"#671](https://github.com/denoland/deno/pull/671)."
+"As an example, see how `Deno.rename()` was proposed and added in [PR #671]"
+"(https://github.com/denoland/deno/pull/671)."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:66
-msgid "## Releases"
+#. type: Title ##
+#: docs/contributing.md:65
+#, no-wrap
+msgid "Releases"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing.md:69
 msgid ""
-"Summary of the changes from previous releases can be found "
-"[here](https://github.com/denoland/deno/releases)."
+"Summary of the changes from previous releases can be found [here](https://"
+"github.com/denoland/deno/releases)."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:71
-msgid "## Documenting APIs"
+#. type: Title ##
+#: docs/contributing.md:70
+#, no-wrap
+msgid "Documenting APIs"
 msgstr ""
 
 #. type: Plain text
@@ -193,9 +201,10 @@ msgid ""
 "together."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:77
-msgid "### Utilize JSDoc"
+#. type: Title ###
+#: docs/contributing.md:76
+#, no-wrap
+msgid "Utilize JSDoc"
 msgstr ""
 
 #. type: Plain text
@@ -209,9 +218,12 @@ msgid ""
 "terminating with a `*/`. For example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing.md:88
-msgid "```ts /** A simple JSDoc comment */ export const FOO = \"foo\"; ```"
+#. type: Fenced code block (ts)
+#: docs/contributing.md:84
+#, no-wrap
+msgid ""
+"/** A simple JSDoc comment */\n"
+"export const FOO = \"foo\";\n"
 msgstr ""
 
 #. type: Plain text

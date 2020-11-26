@@ -7,18 +7,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/embedding_deno.md:2
-msgid "# Embedding Deno"
+#. type: Title #
+#: docs/embedding_deno.md:1
+#, no-wrap
+msgid "Embedding Deno"
 msgstr ""
 
 #. type: Plain text
@@ -31,7 +32,8 @@ msgstr ""
 
 #. type: Plain text
 #: docs/embedding_deno.md:8
-msgid "The Deno crate is hosted on [crates.io](https://crates.io/crates/deno_core)."
+msgid ""
+"The Deno crate is hosted on [crates.io](https://crates.io/crates/deno_core)."
 msgstr ""
 
 #. type: Plain text
@@ -41,5 +43,6 @@ msgstr ""
 
 #. type: Plain text
 #: docs/embedding_deno.md:11
-msgid "<!-- TODO(lucacasonato): better docs -->"
+#, no-wrap
+msgid "<!-- TODO(lucacasonato): better docs -->\n"
 msgstr ""

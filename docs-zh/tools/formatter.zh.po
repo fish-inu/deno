@@ -7,18 +7,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/tools/formatter.md:2
-msgid "## Code formatter"
+#. type: Title ##
+#: docs/tools/formatter.md:1
+#, no-wrap
+msgid "Code formatter"
 msgstr ""
 
 #. type: Plain text
@@ -28,33 +29,36 @@ msgid ""
 "JavaScript code."
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/formatter.md:16
+#. type: Fenced code block (shell)
+#: docs/tools/formatter.md:6
+#, no-wrap
 msgid ""
-"```shell # format all JS/TS files in the current directory and "
-"subdirectories deno fmt # format specific files deno fmt myfile1.ts "
-"myfile2.ts # check if all the JS/TS files in the current directory and "
-"subdirectories are formatted deno fmt --check # format stdin and write to "
-"stdout cat file.ts | deno fmt - ```"
+"# format all JS/TS files in the current directory and subdirectories\n"
+"deno fmt\n"
+"# format specific files\n"
+"deno fmt myfile1.ts myfile2.ts\n"
+"# check if all the JS/TS files in the current directory and subdirectories are formatted\n"
+"deno fmt --check\n"
+"# format stdin and write to stdout\n"
+"cat file.ts | deno fmt -\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/formatter.md:18
-msgid "Ignore formatting code by preceding it with a `// deno-fmt-ignore` comment:"
+msgid ""
+"Ignore formatting code by preceding it with a `// deno-fmt-ignore` comment:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/formatter.md:27
+#. type: Fenced code block (ts)
+#: docs/tools/formatter.md:19
 #, no-wrap
 msgid ""
-"```ts\n"
 "// deno-fmt-ignore\n"
 "export const identity = [\n"
 "    1, 0, 0,\n"
 "    0, 1, 0,\n"
 "    0, 0, 1,\n"
 "];\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text

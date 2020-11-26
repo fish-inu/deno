@@ -7,18 +7,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/standard_library.md:2
-msgid "# Standard library"
+#. type: Title #
+#: docs/standard_library.md:1
+#, no-wrap
+msgid "Standard library"
 msgstr ""
 
 #. type: Plain text
@@ -33,18 +34,19 @@ msgstr ""
 msgid "Standard library is available at: https://deno.land/std/"
 msgstr ""
 
-#. type: Plain text
-#: docs/standard_library.md:9
-msgid "## Versioning and stability"
+#. type: Title ##
+#: docs/standard_library.md:8
+#, no-wrap
+msgid "Versioning and stability"
 msgstr ""
 
 #. type: Plain text
 #: docs/standard_library.md:14
 msgid ""
 "Standard library is not yet stable and therefore it is versioned differently "
-"than Deno. For latest release consult https://deno.land/std/ or "
-"https://deno.land/std/version.ts. The standard library is released each time "
-"Deno is released."
+"than Deno. For latest release consult https://deno.land/std/ or https://deno."
+"land/std/version.ts. The standard library is released each time Deno is "
+"released."
 msgstr ""
 
 #. type: Plain text
@@ -56,11 +58,12 @@ msgid ""
 "compilation errors or unexpected behavior:"
 msgstr ""
 
-#. type: Plain text
-#: docs/standard_library.md:24
+#. type: Fenced code block (typescript)
+#: docs/standard_library.md:20
+#, no-wrap
 msgid ""
-"```typescript // imports from master, this should be avoided import { copy } "
-"from \"https://deno.land/std/fs/copy.ts\"; ```"
+"// imports from master, this should be avoided\n"
+"import { copy } from \"https://deno.land/std/fs/copy.ts\";\n"
 msgstr ""
 
 #. type: Plain text
@@ -70,21 +73,24 @@ msgid ""
 "change:"
 msgstr ""
 
-#. type: Plain text
-#: docs/standard_library.md:32
+#. type: Fenced code block (typescript)
+#: docs/standard_library.md:28
+#, no-wrap
 msgid ""
-"```typescript // imports from v$STD_VERSION of std, never changes import { "
-"copy } from \"https://deno.land/std@$STD_VERSION/fs/copy.ts\"; ```"
+"// imports from v$STD_VERSION of std, never changes\n"
+"import { copy } from \"https://deno.land/std@$STD_VERSION/fs/copy.ts\";\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/standard_library.md:34
-msgid "## Troubleshooting"
+#. type: Title ##
+#: docs/standard_library.md:33
+#, no-wrap
+msgid "Troubleshooting"
 msgstr ""
 
 #. type: Plain text
 #: docs/standard_library.md:36
-msgid "Some of the modules provided in standard library use unstable Deno APIs."
+msgid ""
+"Some of the modules provided in standard library use unstable Deno APIs."
 msgstr ""
 
 #. type: Plain text
@@ -95,47 +101,34 @@ msgid ""
 "not exist:"
 msgstr ""
 
-#. type: Plain text
-#: docs/standard_library.md:44
-msgid ""
-"```typescript // main.ts import { copy } from "
-"\"https://deno.land/std@$STD_VERSION/fs/copy.ts\";"
-msgstr ""
-
-#. type: Plain text
-#: docs/standard_library.md:47
-msgid "copy(\"log.txt\", \"log-old.txt\"); ```"
-msgstr ""
-
-#. type: Plain text
-#: docs/standard_library.md:58
+#. type: Fenced code block (typescript)
+#: docs/standard_library.md:41
 #, no-wrap
 msgid ""
-"```shell\n"
+"// main.ts\n"
+"import { copy } from \"https://deno.land/std@$STD_VERSION/fs/copy.ts\";\n"
+"\n"
+"copy(\"log.txt\", \"log-old.txt\");\n"
+msgstr ""
+
+#. type: Fenced code block (shell)
+#: docs/standard_library.md:48
+#, no-wrap
+msgid ""
 "$ deno run --allow-read --allow-write main.ts\n"
 "Compile file:///dev/deno/main.ts\n"
 "Download https://deno.land/std@$STD_VERSION/fs/copy.ts\n"
 "Download https://deno.land/std@$STD_VERSION/fs/ensure_dir.ts\n"
 "Download https://deno.land/std@$STD_VERSION/fs/_util.ts\n"
-"error: TS2339 [ERROR]: Property 'utime' does not exist on type 'typeof "
-"Deno'. 'Deno.utime' is an unstable API. Did you forget to run with the "
-"'--unstable' flag?\n"
+"error: TS2339 [ERROR]: Property 'utime' does not exist on type 'typeof Deno'. 'Deno.utime' is an unstable API. Did you forget to run with the '--unstable' flag?\n"
 "    await Deno.utime(dest, statInfo.atime, statInfo.mtime);\n"
 "               ~~~~~\n"
 "    at https://deno.land/std@$STD_VERSION/fs/copy.ts:92:16\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/standard_library.md:64
-#, no-wrap
-msgid ""
-"TS2339 [ERROR]: Property 'utimeSync' does not exist on type 'typeof "
-"Deno'. 'Deno.utimeSync' is an unstable API. Did you forget to run with the "
-"'--unstable' flag?\n"
+"\n"
+"TS2339 [ERROR]: Property 'utimeSync' does not exist on type 'typeof Deno'. 'Deno.utimeSync' is an unstable API. Did you forget to run with the '--unstable' flag?\n"
 "    Deno.utimeSync(dest, statInfo.atime, statInfo.mtime);\n"
 "         ~~~~~~~~~\n"
 "    at https://deno.land/std@$STD_VERSION/fs/copy.ts:103:10\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -143,17 +136,18 @@ msgstr ""
 msgid "Solution to that problem requires adding `--unstable` flag:"
 msgstr ""
 
-#. type: Plain text
-#: docs/standard_library.md:70
-msgid "```shell deno run --allow-read --allow-write --unstable main.ts ```"
+#. type: Fenced code block (shell)
+#: docs/standard_library.md:67
+#, no-wrap
+msgid "deno run --allow-read --allow-write --unstable main.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/standard_library.md:74
 msgid ""
-"To make sure that API producing error is unstable check "
-"[`lib.deno.unstable.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.unstable.d.ts)  "
-"declaration."
+"To make sure that API producing error is unstable check [`lib.deno.unstable."
+"d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno."
+"unstable.d.ts)  declaration."
 msgstr ""
 
 #. type: Plain text

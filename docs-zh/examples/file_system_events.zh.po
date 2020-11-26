@@ -7,23 +7,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/file_system_events.md:2
-msgid "# File system events"
+#. type: Title #
+#: docs/examples/file_system_events.md:1
+#, no-wrap
+msgid "File system events"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/file_system_events.md:4
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/file_system_events.md:3
+#, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -38,9 +40,10 @@ msgstr ""
 msgid "Results may vary between operating systems."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/file_system_events.md:10
-msgid "## Example"
+#. type: Title ##
+#: docs/examples/file_system_events.md:9
+#, no-wrap
+msgid "Example"
 msgstr ""
 
 #. type: Plain text
@@ -48,21 +51,18 @@ msgstr ""
 msgid "To poll for file system events in the current directory:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/file_system_events.md:23
+#. type: Fenced code block (ts)
+#: docs/examples/file_system_events.md:13
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * watcher.ts\n"
 " */\n"
 "const watcher = Deno.watchFs(\".\");\n"
 "for await (const event of watcher) {\n"
 "  console.log(\">>>> event\", event);\n"
-"  // Example event: { kind: \"create\", paths: [ "
-"\"/home/alice/deno/foo.txt\" ] }\n"
+"  // Example event: { kind: \"create\", paths: [ \"/home/alice/deno/foo.txt\" ] }\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -70,9 +70,10 @@ msgstr ""
 msgid "Run with:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/file_system_events.md:29
-msgid "```shell deno run --allow-read watcher.ts ```"
+#. type: Fenced code block (shell)
+#: docs/examples/file_system_events.md:26
+#, no-wrap
+msgid "deno run --allow-read watcher.ts\n"
 msgstr ""
 
 #. type: Plain text
@@ -97,13 +98,13 @@ msgstr ""
 #. type: Bullet: '- '
 #: docs/examples/file_system_events.md:40
 msgid ""
-"macOS: "
-"[FSEvents](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/FSEvents_ProgGuide/Introduction/Introduction.html)"
+"macOS: [FSEvents](https://developer.apple.com/library/archive/documentation/"
+"Darwin/Conceptual/FSEvents_ProgGuide/Introduction/Introduction.html)"
 msgstr ""
 
 #. type: Bullet: '- '
 #: docs/examples/file_system_events.md:40
 msgid ""
-"Windows: "
-"[ReadDirectoryChangesW](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-readdirectorychangesw)"
+"Windows: [ReadDirectoryChangesW](https://docs.microsoft.com/en-us/windows/"
+"win32/api/winbase/nf-winbase-readdirectorychangesw)"
 msgstr ""

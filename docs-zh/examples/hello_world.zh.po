@@ -7,23 +7,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/hello_world.md:2
-msgid "# Hello world"
+#. type: Title #
+#: docs/examples/hello_world.md:1
+#, no-wrap
+msgid "Hello world"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/hello_world.md:4
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/hello_world.md:3
+#, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -33,9 +35,10 @@ msgid ""
 "tools or config required."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/hello_world.md:9
-msgid "## Overview"
+#. type: Title ##
+#: docs/examples/hello_world.md:8
+#, no-wrap
+msgid "Overview"
 msgstr ""
 
 #. type: Plain text
@@ -46,9 +49,10 @@ msgid ""
 "JavaScript or TypeScript, and Deno will execute both."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/hello_world.md:15
-msgid "## JavaScript"
+#. type: Title ##
+#: docs/examples/hello_world.md:14
+#, no-wrap
+msgid "JavaScript"
 msgstr ""
 
 #. type: Plain text
@@ -64,39 +68,25 @@ msgstr ""
 msgid "**Command:** `deno run hello-world.js`\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/hello_world.md:28
+#. type: Fenced code block (js)
+#: docs/examples/hello_world.md:21
 #, no-wrap
 msgid ""
-"```js\n"
 "/**\n"
 " * hello-world.js\n"
 " */\n"
 "function capitalize(word) {\n"
 "  return word.charAt(0).toUpperCase() + word.slice(1);\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/hello_world.md:32
-#, no-wrap
-msgid ""
+"\n"
 "function hello(name) {\n"
 "  return \"Hello \" + capitalize(name);\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/hello_world.md:36 docs/examples/hello_world.md:71
-msgid ""
-"console.log(hello(\"john\")); console.log(hello(\"Sarah\")); "
-"console.log(hello(\"kai\"));"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/hello_world.md:45 docs/examples/hello_world.md:79
-#, no-wrap
-msgid ""
+"\n"
+"console.log(hello(\"john\"));\n"
+"console.log(hello(\"Sarah\"));\n"
+"console.log(hello(\"kai\"));\n"
+"\n"
 "/**\n"
 " * Output:\n"
 " *\n"
@@ -104,12 +94,12 @@ msgid ""
 " * Hello Sarah\n"
 " * Hello Kai\n"
 "**/\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/hello_world.md:47
-msgid "## TypeScript"
+#. type: Title ##
+#: docs/examples/hello_world.md:46
+#, no-wrap
+msgid "TypeScript"
 msgstr ""
 
 #. type: Plain text
@@ -132,24 +122,30 @@ msgstr ""
 msgid "**Command:** `deno run hello-world.ts`\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/hello_world.md:63
+#. type: Fenced code block (ts)
+#: docs/examples/hello_world.md:56
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * hello-world.ts\n"
 " */\n"
 "function capitalize(word: string): string {\n"
 "  return word.charAt(0).toUpperCase() + word.slice(1);\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/hello_world.md:67
-#, no-wrap
-msgid ""
+"\n"
 "function hello(name: string): string {\n"
 "  return \"Hello \" + capitalize(name);\n"
 "}\n"
+"\n"
+"console.log(hello(\"john\"));\n"
+"console.log(hello(\"Sarah\"));\n"
+"console.log(hello(\"kai\"));\n"
+"\n"
+"/**\n"
+" * Output:\n"
+" *\n"
+" * Hello John\n"
+" * Hello Sarah\n"
+" * Hello Kai\n"
+"**/\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:2
-msgid "## Building from source"
+#. type: Title ##
+#: docs/contributing/building_from_source.md:1
+#, no-wrap
+msgid "Building from source"
 msgstr ""
 
 #. type: Plain text
@@ -29,9 +30,10 @@ msgid ""
 "`Getting Started` chapter)."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:8
-msgid "### Cloning the Repository"
+#. type: Title ###
+#: docs/contributing/building_from_source.md:7
+#, no-wrap
+msgid "Cloning the Repository"
 msgstr ""
 
 #. type: Plain text
@@ -39,11 +41,10 @@ msgstr ""
 msgid "Clone on Linux or Mac:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:14
-msgid ""
-"```shell git clone --recurse-submodules https://github.com/denoland/deno.git "
-"```"
+#. type: Fenced code block (shell)
+#: docs/contributing/building_from_source.md:11
+#, no-wrap
+msgid "git clone --recurse-submodules https://github.com/denoland/deno.git\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,36 +53,43 @@ msgid "Extra steps for Windows users:"
 msgstr ""
 
 #. type: Bullet: '1. '
-#: docs/contributing/building_from_source.md:25
+#: docs/contributing/building_from_source.md:21
 msgid ""
-"[Enable \"Developer "
-"Mode\"](https://www.google.com/search?q=windows+enable+developer+mode)  "
-"(otherwise symlinks would require administrator privileges)."
+"[Enable \"Developer Mode\"](https://www.google.com/search?q=windows+enable"
+"+developer+mode)  (otherwise symlinks would require administrator "
+"privileges)."
 msgstr ""
 
 #. type: Bullet: '2. '
-#: docs/contributing/building_from_source.md:25
+#: docs/contributing/building_from_source.md:21
 msgid "Make sure you are using git version 2.19.2.windows.1 or newer."
 msgstr ""
 
 #. type: Bullet: '3. '
-#: docs/contributing/building_from_source.md:25
-msgid ""
-"Set `core.symlinks=true` before the checkout: ```shell git config --global "
-"core.symlinks true git clone --recurse-submodules "
-"https://github.com/denoland/deno.git ```"
+#: docs/contributing/building_from_source.md:21
+msgid "Set `core.symlinks=true` before the checkout:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:27
-msgid "### Prerequisites"
+#. type: Fenced code block (shell)
+#: docs/contributing/building_from_source.md:21
+#, no-wrap
+msgid ""
+"   git config --global core.symlinks true\n"
+"   git clone --recurse-submodules https://github.com/denoland/deno.git\n"
+msgstr ""
+
+#. type: Title ###
+#: docs/contributing/building_from_source.md:26
+#, no-wrap
+msgid "Prerequisites"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/building_from_source.md:30
+#, no-wrap
 msgid ""
-"> Deno requires the progressively latest stable release of Rust. Deno does "
-"not > support the Rust nightlies."
+"> Deno requires the progressively latest stable release of Rust. Deno does not\n"
+"> support the Rust nightlies.\n"
 msgstr ""
 
 #. type: Plain text
@@ -91,26 +99,32 @@ msgid ""
 "that Rust installed/updated correctly:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:38
-msgid "``` rustc -V cargo -V ```"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/building_from_source.md:40
-msgid "### Setup rust targets and components"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/building_from_source.md:45
+#. type: Fenced code block
+#: docs/contributing/building_from_source.md:34
+#, no-wrap
 msgid ""
-"```shell rustup target add wasm32-unknown-unknown rustup target add "
-"wasm32-wasi ```"
+"rustc -V\n"
+"cargo -V\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:47
-msgid "### Building Deno"
+#. type: Title ###
+#: docs/contributing/building_from_source.md:39
+#, no-wrap
+msgid "Setup rust targets and components"
+msgstr ""
+
+#. type: Fenced code block (shell)
+#: docs/contributing/building_from_source.md:41
+#, no-wrap
+msgid ""
+"rustup target add wasm32-unknown-unknown\n"
+"rustup target add wasm32-wasi\n"
+msgstr ""
+
+#. type: Title ###
+#: docs/contributing/building_from_source.md:46
+#, no-wrap
+msgid "Building Deno"
 msgstr ""
 
 #. type: Plain text
@@ -118,9 +132,10 @@ msgstr ""
 msgid "The easiest way to build Deno is by using a precompiled version of V8:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:53
-msgid "``` cargo build -vv ```"
+#. type: Fenced code block
+#: docs/contributing/building_from_source.md:50
+#, no-wrap
+msgid "cargo build -vv\n"
 msgstr ""
 
 #. type: Plain text
@@ -128,9 +143,10 @@ msgstr ""
 msgid "However if you want to build Deno and V8 from source code:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:59
-msgid "``` V8_FROM_SOURCE=1 cargo build -vv ```"
+#. type: Fenced code block
+#: docs/contributing/building_from_source.md:56
+#, no-wrap
+msgid "V8_FROM_SOURCE=1 cargo build -vv\n"
 msgstr ""
 
 #. type: Plain text
@@ -156,9 +172,9 @@ msgstr ""
 #. type: Plain text
 #: docs/contributing/building_from_source.md:72
 msgid ""
-"Mac users must have Command Line Tools installed.  "
-"([XCode](https://developer.apple.com/xcode/) already includes CLT. Run "
-"`xcode-select --install` to install it without XCode.)"
+"Mac users must have Command Line Tools installed.  ([XCode](https://"
+"developer.apple.com/xcode/) already includes CLT. Run `xcode-select --"
+"install` to install it without XCode.)"
 msgstr ""
 
 #. type: Plain text
@@ -212,13 +228,13 @@ msgstr ""
 #. type: Bullet: '2. '
 #: docs/contributing/building_from_source.md:94
 msgid ""
-"Enable \"Debugging Tools for Windows\". Go to \"Control Panel\" → "
-"\"Programs\" → \"Programs and Features\" → Select \"Windows Software "
-"Development Kit - Windows 10\" → \"Change\" → \"Change\" → Check \"Debugging "
-"Tools For Windows\" → \"Change\" → \"Finish\". Or use: [Debugging Tools for "
-"Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/)  "
-"(Notice: it will download the files, you should install `X64 Debuggers And "
-"Tools-x64_en-us.msi` file manually.)"
+"Enable \"Debugging Tools for Windows\". Go to \"Control Panel\" → \"Programs"
+"\" → \"Programs and Features\" → Select \"Windows Software Development Kit - "
+"Windows 10\" → \"Change\" → \"Change\" → Check \"Debugging Tools For Windows"
+"\" → \"Change\" → \"Finish\". Or use: [Debugging Tools for Windows](https://"
+"docs.microsoft.com/en-us/windows-hardware/drivers/debugger/)  (Notice: it "
+"will download the files, you should install `X64 Debuggers And Tools-x64_en-"
+"us.msi` file manually.)"
 msgstr ""
 
 #. type: Plain text
@@ -228,9 +244,10 @@ msgid ""
 "details about the V8 build."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:99
-msgid "### Building"
+#. type: Title ###
+#: docs/contributing/building_from_source.md:98
+#, no-wrap
+msgid "Building"
 msgstr ""
 
 #. type: Plain text
@@ -238,19 +255,16 @@ msgstr ""
 msgid "Build with Cargo:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/building_from_source.md:105
-msgid "```shell # Build: cargo build -vv"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/building_from_source.md:108
+#. type: Fenced code block (shell)
+#: docs/contributing/building_from_source.md:102
+#, no-wrap
 msgid ""
-"# Build errors? Ensure you have latest master and try building again, or if "
-"that doesn't work try: cargo clean && cargo build -vv"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/building_from_source.md:111
-msgid "# Run: ./target/debug/deno run cli/tests/002_hello.ts ```"
+"# Build:\n"
+"cargo build -vv\n"
+"\n"
+"# Build errors?  Ensure you have latest master and try building again, or if that doesn't work try:\n"
+"cargo clean && cargo build -vv\n"
+"\n"
+"# Run:\n"
+"./target/debug/deno run cli/tests/002_hello.ts\n"
 msgstr ""

@@ -7,44 +7,39 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/testing/assertions.md:2
-msgid "## Assertions"
+#. type: Title ##
+#: docs/testing/assertions.md:1
+#, no-wrap
+msgid "Assertions"
 msgstr ""
 
 #. type: Plain text
 #: docs/testing/assertions.md:6
 msgid ""
 "To help developers write tests the Deno standard library comes with a built "
-"in [assertions "
-"module](https://deno.land/std@$STD_VERSION/testing/asserts.ts) which can be "
-"imported from `https://deno.land/std@$STD_VERSION/testing/asserts.ts`."
+"in [assertions module](https://deno.land/std@$STD_VERSION/testing/asserts."
+"ts) which can be imported from `https://deno.land/std@$STD_VERSION/testing/"
+"asserts.ts`."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:9
-msgid ""
-"```js import { assert } from "
-"\"https://deno.land/std@$STD_VERSION/testing/asserts.ts\";"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing/assertions.md:14
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:7
 #, no-wrap
 msgid ""
+"import { assert } from \"https://deno.land/std@$STD_VERSION/testing/asserts.ts\";\n"
+"\n"
 "Deno.test(\"Hello Test\", () => {\n"
 "  assert(\"Hello\");\n"
 "});\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,26 +47,69 @@ msgstr ""
 msgid "The assertions module provides 10 assertions:"
 msgstr ""
 
-#. type: Plain text
+#. type: Bullet: '- '
 #: docs/testing/assertions.md:27
-msgid ""
-"- `assert(expr: unknown, msg = \"\"): asserts expr` - `assertEquals(actual: "
-"unknown, expected: unknown, msg?: string): void` - `assertNotEquals(actual: "
-"unknown, expected: unknown, msg?: string): void` - "
-"`assertStrictEquals(actual: unknown, expected: unknown, msg?: string): void` "
-"- `assertStringIncludes(actual: string, expected: string, msg?: string): "
-"void` - `assertArrayIncludes(actual: unknown[], expected: unknown[], msg?: "
-"string): void` - `assertMatch(actual: string, expected: RegExp, msg?: "
-"string): void` - `assertNotMatch(actual: string, expected: RegExp, msg?: "
-"string): void` - `assertThrows(fn: () => void, ErrorClass?: Constructor, "
-"msgIncludes = \"\", msg?: string): Error` - `assertThrowsAsync(fn: () => "
-"Promise<void>, ErrorClass?: Constructor, msgIncludes = \"\", msg?: string): "
-"Promise<Error>`"
+msgid "`assert(expr: unknown, msg = \"\"): asserts expr`"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:29
-msgid "### Assert"
+#. type: Bullet: '- '
+#: docs/testing/assertions.md:27
+msgid "`assertEquals(actual: unknown, expected: unknown, msg?: string): void`"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/testing/assertions.md:27
+msgid ""
+"`assertNotEquals(actual: unknown, expected: unknown, msg?: string): void`"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/testing/assertions.md:27
+msgid ""
+"`assertStrictEquals(actual: unknown, expected: unknown, msg?: string): void`"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/testing/assertions.md:27
+msgid ""
+"`assertStringIncludes(actual: string, expected: string, msg?: string): void`"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/testing/assertions.md:27
+msgid ""
+"`assertArrayIncludes(actual: unknown[], expected: unknown[], msg?: string): "
+"void`"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/testing/assertions.md:27
+msgid "`assertMatch(actual: string, expected: RegExp, msg?: string): void`"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/testing/assertions.md:27
+msgid "`assertNotMatch(actual: string, expected: RegExp, msg?: string): void`"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/testing/assertions.md:27
+msgid ""
+"`assertThrows(fn: () => void, ErrorClass?: Constructor, msgIncludes = \"\", "
+"msg?: string): Error`"
+msgstr ""
+
+#. type: Bullet: '- '
+#: docs/testing/assertions.md:27
+msgid ""
+"`assertThrowsAsync(fn: () => Promise<void>, ErrorClass?: Constructor, "
+"msgIncludes = \"\", msg?: string): Promise<Error>`"
+msgstr ""
+
+#. type: Title ###
+#: docs/testing/assertions.md:28
+#, no-wrap
+msgid "Assert"
 msgstr ""
 
 #. type: Plain text
@@ -81,22 +119,21 @@ msgid ""
 "any value which can be inferred as true."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:40
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:33
 #, no-wrap
 msgid ""
-"```js\n"
 "Deno.test(\"Test Assert\", () => {\n"
 "  assert(1);\n"
 "  assert(\"Hello\");\n"
 "  assert(true);\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:42
-msgid "### Equality"
+#. type: Title ###
+#: docs/testing/assertions.md:41
+#, no-wrap
+msgid "Equality"
 msgstr ""
 
 #. type: Plain text
@@ -114,11 +151,10 @@ msgid ""
 "and objects."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:58
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:49
 #, no-wrap
 msgid ""
-"```js\n"
 "Deno.test(\"Test Assert Equals\", () => {\n"
 "  assertEquals(1, 1);\n"
 "  assertEquals(\"Hello\", \"Hello\");\n"
@@ -127,29 +163,14 @@ msgid ""
 "  assertEquals(null, null);\n"
 "  assertEquals(new Date(), new Date());\n"
 "  assertEquals(new RegExp(\"abc\"), new RegExp(\"abc\"));\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing/assertions.md:62
-#, no-wrap
-msgid ""
+"\n"
 "  class Foo {}\n"
 "  const foo1 = new Foo();\n"
 "  const foo2 = new Foo();\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing/assertions.md:65
-#, no-wrap
-msgid ""
+"\n"
 "  assertEquals(foo1, foo2);\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing/assertions.md:75
-#, no-wrap
-msgid ""
+"\n"
 "Deno.test(\"Test Assert Not Equals\", () => {\n"
 "  assertNotEquals(1, 2);\n"
 "  assertNotEquals(\"Hello\", \"World\");\n"
@@ -158,7 +179,6 @@ msgid ""
 "  assertNotEquals(new Date(), Date.now());\n"
 "  assertNotEquals(new RegExp(\"abc\"), new RegExp(\"def\"));\n"
 "});\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -169,18 +189,16 @@ msgid ""
 "instances of identical objects as they won't be referentially the same."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:88
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:80
 #, no-wrap
 msgid ""
-"```js\n"
 "Deno.test(\"Test Assert Strict Equals\", () => {\n"
 "  assertStrictEquals(1, 1);\n"
 "  assertStrictEquals(\"Hello\", \"Hello\");\n"
 "  assertStrictEquals(true, true);\n"
 "  assertStrictEquals(undefined, undefined);\n"
 "});\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -190,9 +208,10 @@ msgid ""
 "precise check against two primitive types."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:93
-msgid "### Contains"
+#. type: Title ###
+#: docs/testing/assertions.md:92
+#, no-wrap
+msgid "Contains"
 msgstr ""
 
 #. type: Plain text
@@ -209,15 +228,13 @@ msgid ""
 "string to see if it contains the expected string."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:105
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:100
 #, no-wrap
 msgid ""
-"```js\n"
 "Deno.test(\"Test Assert String Contains\", () => {\n"
 "  assertStringIncludes(\"Hello World\", \"Hello\");\n"
 "});\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -227,22 +244,21 @@ msgid ""
 "both a value within an array and an array of values within an array."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:116
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:109
 #, no-wrap
 msgid ""
-"```js\n"
 "Deno.test(\"Test Assert Array Contains\", () => {\n"
 "  assertArrayIncludes([1, 2, 3], [1]);\n"
 "  assertArrayIncludes([1, 2, 3], [1, 2]);\n"
 "  assertArrayIncludes(Array.from(\"Hello World\"), Array.from(\"Hello\"));\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:118
-msgid "### Regex"
+#. type: Title ###
+#: docs/testing/assertions.md:117
+#, no-wrap
+msgid "Regex"
 msgstr ""
 
 #. type: Plain text
@@ -252,46 +268,30 @@ msgid ""
 "`assertNotMatch()` assertions."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:125
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:122
 #, no-wrap
 msgid ""
-"```js\n"
 "Deno.test(\"Test Assert Match\", () => {\n"
 "  assertMatch(\"abcdefghi\", new RegExp(\"def\"));\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing/assertions.md:130
-#, no-wrap
-msgid ""
+"\n"
 "  const basicUrl = new RegExp(\"^https?://[a-z.]+.com$\");\n"
 "  assertMatch(\"https://www.google.com\", basicUrl);\n"
 "  assertMatch(\"http://facebook.com\", basicUrl);\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing/assertions.md:133
-#, no-wrap
-msgid ""
+"\n"
 "Deno.test(\"Test Assert Not Match\", () => {\n"
 "  assertNotMatch(\"abcdefghi\", new RegExp(\"jkl\"));\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing/assertions.md:138
-#, no-wrap
-msgid ""
+"\n"
 "  const basicUrl = new RegExp(\"^https?://[a-z.]+.com$\");\n"
 "  assertNotMatch(\"https://deno.land/\", basicUrl);\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:140
-msgid "### Throws"
+#. type: Title ###
+#: docs/testing/assertions.md:139
+#, no-wrap
+msgid "Throws"
 msgstr ""
 
 #. type: Plain text
@@ -299,9 +299,9 @@ msgstr ""
 msgid ""
 "There are two ways to assert whether something throws an error in Deno, "
 "`assertThrows()` and `assertThrowsAsync()`. Both assertions allow you to "
-"check an "
-"[Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)  "
-"has been thrown, the type of error thrown and what the message was."
+"check an [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
+"Reference/Global_Objects/Error)  has been thrown, the type of error thrown "
+"and what the message was."
 msgstr ""
 
 #. type: Plain text
@@ -309,8 +309,8 @@ msgstr ""
 msgid ""
 "The difference between the two assertions is `assertThrows()` accepts a "
 "standard function and `assertThrowsAsync()` accepts a function which returns "
-"a "
-"[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)."
+"a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
+"Reference/Global_Objects/Promise)."
 msgstr ""
 
 #. type: Plain text
@@ -321,11 +321,10 @@ msgid ""
 "the error message is as expected."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:166
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:155
 #, no-wrap
 msgid ""
-"```js\n"
 "Deno.test(\"Test Assert Throws\", () => {\n"
 "  assertThrows(\n"
 "    () => {\n"
@@ -335,7 +334,6 @@ msgid ""
 "    \"Panic!\",\n"
 "  );\n"
 "});\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -347,11 +345,10 @@ msgid ""
 "error message."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:182
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:171
 #, no-wrap
 msgid ""
-"```js\n"
 "Deno.test(\"Test Assert Throws Async\", () => {\n"
 "  assertThrowsAsync(\n"
 "    () => {\n"
@@ -362,12 +359,7 @@ msgid ""
 "    Error,\n"
 "    \"Panic! Threw Error\",\n"
 "  );\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing/assertions.md:192
-#, no-wrap
-msgid ""
+"\n"
 "  assertThrowsAsync(\n"
 "    () => {\n"
 "      return Promise.reject(new Error(\"Panic! Reject Error\"));\n"
@@ -376,12 +368,12 @@ msgid ""
 "    \"Panic! Reject Error\",\n"
 "  );\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:194
-msgid "### Custom Messages"
+#. type: Title ###
+#: docs/testing/assertions.md:193
+#, no-wrap
+msgid "Custom Messages"
 msgstr ""
 
 #. type: Plain text
@@ -392,13 +384,11 @@ msgid ""
 "Don't Match!\" rather than the standard CLI error message."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing/assertions.md:203
+#. type: Fenced code block (js)
+#: docs/testing/assertions.md:199
 #, no-wrap
 msgid ""
-"```js\n"
 "Deno.test(\"Test Assert Equal Fail Custom Message\", () => {\n"
 "  assertEquals(1, 2, \"Values Don't Match!\");\n"
 "});\n"
-"```\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,26 +16,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:2
-msgid "# Deno Style Guide"
+#. type: Title #
+#: docs/contributing/style_guide.md:1
+#, no-wrap
+msgid "Deno Style Guide"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:4
-msgid "## Copyright Headers"
+#. type: Title ##
+#: docs/contributing/style_guide.md:3
+#, no-wrap
+msgid "Copyright Headers"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/style_guide.md:6
-msgid "Most modules in the repository should have the following copyright header:"
+msgid ""
+"Most modules in the repository should have the following copyright header:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:10
-msgid ""
-"```ts // Copyright 2018-2020 the Deno authors. All rights reserved. MIT "
-"license.  ```"
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:7
+#, no-wrap
+msgid "// Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.\n"
 msgstr ""
 
 #. type: Plain text
@@ -45,9 +47,10 @@ msgid ""
 "copyright headers. We only allow MIT, BSD, and Apache licensed code."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:15
-msgid "## Use underscores, not dashes in filenames."
+#. type: Title ##
+#: docs/contributing/style_guide.md:14
+#, no-wrap
+msgid "Use underscores, not dashes in filenames."
 msgstr ""
 
 #. type: Plain text
@@ -55,9 +58,10 @@ msgstr ""
 msgid "Example: Use `file_server.ts` instead of `file-server.ts`."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:19
-msgid "## Add tests for new features."
+#. type: Title ##
+#: docs/contributing/style_guide.md:18
+#, no-wrap
+msgid "Add tests for new features."
 msgstr ""
 
 #. type: Plain text
@@ -67,9 +71,10 @@ msgid ""
 "functionality."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:24
-msgid "## TODO Comments"
+#. type: Title ##
+#: docs/contributing/style_guide.md:23
+#, no-wrap
+msgid "TODO Comments"
 msgstr ""
 
 #. type: Plain text
@@ -79,16 +84,19 @@ msgid ""
 "username in parentheses. Example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:33
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:28
+#, no-wrap
 msgid ""
-"```ts // TODO(ry): Add tests.  // TODO(#123): Support Windows.  // "
-"FIXME(#349): Sometimes panics.  ```"
+"// TODO(ry): Add tests.\n"
+"// TODO(#123): Support Windows.\n"
+"// FIXME(#349): Sometimes panics.\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:35
-msgid "## Meta-programming is discouraged. Including the use of Proxy."
+#. type: Title ##
+#: docs/contributing/style_guide.md:34
+#, no-wrap
+msgid "Meta-programming is discouraged. Including the use of Proxy."
 msgstr ""
 
 #. type: Plain text
@@ -103,21 +111,23 @@ msgid ""
 "but in the vast majority of cases it does not."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:42
-msgid "## Inclusive code"
+#. type: Title ##
+#: docs/contributing/style_guide.md:41
+#, no-wrap
+msgid "Inclusive code"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/style_guide.md:45
 msgid ""
-"Please follow the guidelines for inclusive code outlined at "
-"https://chromium.googlesource.com/chromium/src/+/master/styleguide/inclusive_code.md."
+"Please follow the guidelines for inclusive code outlined at https://chromium."
+"googlesource.com/chromium/src/+/master/styleguide/inclusive_code.md."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:47
-msgid "## Rust"
+#. type: Title ##
+#: docs/contributing/style_guide.md:46
+#, no-wrap
+msgid "Rust"
 msgstr ""
 
 #. type: Plain text
@@ -125,9 +135,10 @@ msgstr ""
 msgid "Follow Rust conventions and be consistent with existing code."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:51
-msgid "## TypeScript"
+#. type: Title ##
+#: docs/contributing/style_guide.md:50
+#, no-wrap
+msgid "TypeScript"
 msgstr ""
 
 #. type: Plain text
@@ -137,27 +148,30 @@ msgid ""
 "and the standard library `std`."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:56
-msgid "### Use TypeScript instead of JavaScript."
+#. type: Title ###
+#: docs/contributing/style_guide.md:55
+#, no-wrap
+msgid "Use TypeScript instead of JavaScript."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:58
-msgid "### Use the term \"module\" instead of \"library\" or \"package\"."
+#. type: Title ###
+#: docs/contributing/style_guide.md:57
+#, no-wrap
+msgid "Use the term \"module\" instead of \"library\" or \"package\"."
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/style_guide.md:62
 msgid ""
-"For clarity and consistency avoid the terms \"library\" and "
-"\"package\". Instead use \"module\" to refer to a single JS or TS file and "
-"also to refer to a directory of TS/JS code."
+"For clarity and consistency avoid the terms \"library\" and \"package\". "
+"Instead use \"module\" to refer to a single JS or TS file and also to refer "
+"to a directory of TS/JS code."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:64
-msgid "### Do not use the filename `index.ts`/`index.js`."
+#. type: Title ###
+#: docs/contributing/style_guide.md:63
+#, no-wrap
+msgid "Do not use the filename `index.ts`/`index.js`."
 msgstr ""
 
 #. type: Plain text
@@ -171,15 +185,16 @@ msgstr ""
 #. type: Plain text
 #: docs/contributing/style_guide.md:72
 msgid ""
-"If a directory of code needs a default entry point, use the filename "
-"`mod.ts`.  The filename `mod.ts` follows Rust’s convention, is shorter than "
+"If a directory of code needs a default entry point, use the filename `mod."
+"ts`.  The filename `mod.ts` follows Rust’s convention, is shorter than "
 "`index.ts`, and doesn’t come with any preconceived notions about how it "
 "might work."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:74
-msgid "### Exported functions: max 2 args, put the rest into an options object."
+#. type: Title ###
+#: docs/contributing/style_guide.md:73
+#, no-wrap
+msgid "Exported functions: max 2 args, put the rest into an options object."
 msgstr ""
 
 #. type: Plain text
@@ -203,10 +218,8 @@ msgstr ""
 #: docs/contributing/style_guide.md:85
 #, no-wrap
 msgid ""
-"   An optional parameter that's not in an options object might be acceptable "
-"if\n"
-"   there is only one, and it seems inconceivable that we would add more "
-"optional\n"
+"   An optional parameter that's not in an options object might be acceptable if\n"
+"   there is only one, and it seems inconceivable that we would add more optional\n"
 "   parameters in the future.\n"
 msgstr ""
 
@@ -225,7 +238,8 @@ msgstr ""
 
 #. type: Bullet: '   - '
 #: docs/contributing/style_guide.md:93
-msgid "a distinguishing prototype (e.g. `Array`, `Map`, `Date`, `class MyThing`)."
+msgid ""
+"a distinguishing prototype (e.g. `Array`, `Map`, `Date`, `class MyThing`)."
 msgstr ""
 
 #. type: Bullet: '   - '
@@ -237,28 +251,21 @@ msgstr ""
 #: docs/contributing/style_guide.md:96
 #, no-wrap
 msgid ""
-"   This allows the API to evolve in a backwards compatible way, even when "
-"the\n"
+"   This allows the API to evolve in a backwards compatible way, even when the\n"
 "   position of the options object changes.\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:104
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:97
 #, no-wrap
 msgid ""
-"```ts\n"
 "// BAD: optional parameters not part of options object. (#2)\n"
 "export function resolve(\n"
 "  hostname: string,\n"
 "  family?: \"ipv4\" | \"ipv6\",\n"
 "  timeout?: number,\n"
 "): IPAddress[] {}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/style_guide.md:115
-#, no-wrap
-msgid ""
+"\n"
 "// GOOD.\n"
 "export interface ResolveOptions {\n"
 "  family?: \"ipv4\" | \"ipv6\";\n"
@@ -268,31 +275,20 @@ msgid ""
 "  hostname: string,\n"
 "  options: ResolveOptions = {},\n"
 "): IPAddress[] {}\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:120
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:116
 #, no-wrap
 msgid ""
-"```ts\n"
 "export interface Environment {\n"
 "  [key: string]: string;\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/style_guide.md:124
-msgid ""
-"// BAD: `env` could be a regular Object and is therefore indistinguishable "
-"// from an options object. (#3)  export function runShellWithEnv(cmdline: "
-"string, env: Environment): string {}"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/style_guide.md:134
-#, no-wrap
-msgid ""
+"\n"
+"// BAD: `env` could be a regular Object and is therefore indistinguishable\n"
+"// from an options object. (#3)\n"
+"export function runShellWithEnv(cmdline: string, env: Environment): string {}\n"
+"\n"
 "// GOOD.\n"
 "export interface RunShellOptions {\n"
 "  env: Environment;\n"
@@ -301,14 +297,12 @@ msgid ""
 "  cmdline: string,\n"
 "  options: RunShellOptions,\n"
 "): string {}\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:143
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:135
 #, no-wrap
 msgid ""
-"```ts\n"
 "// BAD: more than 3 arguments (#1), multiple optional parameters (#2).\n"
 "export function renameSync(\n"
 "  oldname: string,\n"
@@ -316,12 +310,7 @@ msgid ""
 "  replaceExisting?: boolean,\n"
 "  followLinks?: boolean,\n"
 ") {}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/style_guide.md:155
-#, no-wrap
-msgid ""
+"\n"
 "// GOOD.\n"
 "interface RenameOptions {\n"
 "  replaceExisting?: boolean;\n"
@@ -332,14 +321,12 @@ msgid ""
 "  newname: string,\n"
 "  options: RenameOptions = {},\n"
 ") {}\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:165
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:156
 #, no-wrap
 msgid ""
-"```ts\n"
 "// BAD: too many arguments. (#1)\n"
 "export function pwrite(\n"
 "  fd: number,\n"
@@ -348,12 +335,7 @@ msgid ""
 "  length: number,\n"
 "  position: number,\n"
 ") {}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/style_guide.md:176
-#, no-wrap
-msgid ""
+"\n"
 "// BETTER.\n"
 "export interface PWrite {\n"
 "  fd: number;\n"
@@ -363,12 +345,12 @@ msgid ""
 "  position: number;\n"
 "}\n"
 "export function pwrite(options: PWrite) {}\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:178
-msgid "### Export all interfaces that are used as parameters to an exported member"
+#. type: Title ###
+#: docs/contributing/style_guide.md:177
+#, no-wrap
+msgid "Export all interfaces that are used as parameters to an exported member"
 msgstr ""
 
 #. type: Plain text
@@ -379,37 +361,29 @@ msgid ""
 "example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:189
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:183
 #, no-wrap
 msgid ""
-"```ts\n"
 "// my_file.ts\n"
 "export interface Person {\n"
 "  name: string;\n"
 "  age: number;\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/style_guide.md:193
-#, no-wrap
-msgid ""
+"\n"
 "export function createPerson(name: string, age: number): Person {\n"
 "  return { name, age };\n"
 "}\n"
+"\n"
+"// mod.ts\n"
+"export { createPerson } from \"./my_file.ts\";\n"
+"export type { Person } from \"./my_file.ts\";\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:198
-msgid ""
-"// mod.ts export { createPerson } from \"./my_file.ts\"; export type { "
-"Person } from \"./my_file.ts\"; ```"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/style_guide.md:200
-msgid "### Minimize dependencies; do not make circular imports."
+#. type: Title ###
+#: docs/contributing/style_guide.md:199
+#, no-wrap
+msgid "Minimize dependencies; do not make circular imports."
 msgstr ""
 
 #. type: Plain text
@@ -420,9 +394,10 @@ msgid ""
 "be careful not to introduce circular imports."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:206
-msgid "### If a filename starts with an underscore: `_foo.ts`, do not link to it."
+#. type: Title ###
+#: docs/contributing/style_guide.md:205
+#, no-wrap
+msgid "If a filename starts with an underscore: `_foo.ts`, do not link to it."
 msgstr ""
 
 #. type: Plain text
@@ -434,9 +409,10 @@ msgid ""
 "it."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:212
-msgid "### Use JSDoc for exported symbols."
+#. type: Title ###
+#: docs/contributing/style_guide.md:211
+#, no-wrap
+msgid "Use JSDoc for exported symbols."
 msgstr ""
 
 #. type: Plain text
@@ -451,16 +427,14 @@ msgstr ""
 msgid "If possible, use a single line for the JSDoc. Example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:224
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:218
 #, no-wrap
 msgid ""
-"```ts\n"
 "/** foo does bar. */\n"
 "export function foo() {\n"
 "  // ...\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -484,9 +458,10 @@ msgid ""
 "quotes.  For example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:238
-msgid "```ts /** Import something from the `deno` module. */ ```"
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:235
+#, no-wrap
+msgid "/** Import something from the `deno` module. */\n"
 msgstr ""
 
 #. type: Plain text
@@ -499,16 +474,14 @@ msgid ""
 "typed."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:250
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:244
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * Function with non obvious param.\n"
 " * @param foo Description of non obvious parameter.\n"
 " */\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -518,9 +491,10 @@ msgid ""
 "line comments should be written as:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:257
-msgid "```ts /** This is a good single line JSDoc. */ ```"
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:254
+#, no-wrap
+msgid "/** This is a good single line JSDoc. */\n"
 msgstr ""
 
 #. type: Plain text
@@ -528,15 +502,13 @@ msgstr ""
 msgid "And not:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:265
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:260
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * This is a bad single line JSDoc.\n"
 " */\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -548,17 +520,15 @@ msgid ""
 "is 4 more than the first column of the comment. For example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:278
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:271
 #, no-wrap
 msgid ""
-"```ts\n"
 "/** A straight forward comment and an example:\n"
 " *\n"
 " *       import { foo } from \"deno\";\n"
 " *       foo(\"bar\");\n"
 " */\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -568,22 +538,27 @@ msgid ""
 "comment. If it needs further comments it is not a good example."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:283
-msgid "### Resolve linting problems using directives"
+#. type: Title ###
+#: docs/contributing/style_guide.md:282
+#, no-wrap
+msgid "Resolve linting problems using directives"
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/style_guide.md:287
+#, no-wrap
 msgid ""
-"Currently, the building process uses `dlint` to validate linting problems in "
-"the code. If the task requires code that is non-conformant to linter use "
-"`deno-lint-ignore <code>` directive to supress the warning."
+"Currently, the building process uses `dlint` to validate linting problems in the\n"
+"code. If the task requires code that is non-conformant to linter use\n"
+"`deno-lint-ignore <code>` directive to supress the warning.\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:292
-msgid "```typescript // deno-lint-ignore no-explicit-any let x: any; ```"
+#. type: Fenced code block (typescript)
+#: docs/contributing/style_guide.md:288
+#, no-wrap
+msgid ""
+"// deno-lint-ignore no-explicit-any\n"
+"let x: any;\n"
 msgstr ""
 
 #. type: Plain text
@@ -593,23 +568,25 @@ msgid ""
 "problems, but it should be used scarcely."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:297
-msgid "### Each module should come with a test module."
+#. type: Title ###
+#: docs/contributing/style_guide.md:296
+#, no-wrap
+msgid "Each module should come with a test module."
 msgstr ""
 
 #. type: Plain text
 #: docs/contributing/style_guide.md:302
 msgid ""
 "Every module with public functionality `foo.ts` should come with a test "
-"module `foo_test.ts`. A test for a `cli/js` module should go in "
-"`cli/js/tests` due to their different contexts, otherwise it should just be "
-"a sibling to the tested module."
+"module `foo_test.ts`. A test for a `cli/js` module should go in `cli/js/"
+"tests` due to their different contexts, otherwise it should just be a "
+"sibling to the tested module."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:304
-msgid "### Unit Tests should be explicit."
+#. type: Title ###
+#: docs/contributing/style_guide.md:303
+#, no-wrap
+msgid "Unit Tests should be explicit."
 msgstr ""
 
 #. type: Plain text
@@ -619,9 +596,10 @@ msgid ""
 "as its prompted throughout the test command. Like:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:311
-msgid "``` test myTestFunction ... ok ```"
+#. type: Fenced code block
+#: docs/contributing/style_guide.md:308
+#, no-wrap
+msgid "test myTestFunction ... ok\n"
 msgstr ""
 
 #. type: Plain text
@@ -629,27 +607,22 @@ msgstr ""
 msgid "Example of test:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:317
-msgid ""
-"```ts import { assertEquals } from "
-"\"https://deno.land/std@$STD_VERSION/testing/asserts.ts\"; import { foo } "
-"from \"./mod.ts\";"
-msgstr ""
-
-#. type: Plain text
-#: docs/contributing/style_guide.md:322
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:314
 #, no-wrap
 msgid ""
+"import { assertEquals } from \"https://deno.land/std@$STD_VERSION/testing/asserts.ts\";\n"
+"import { foo } from \"./mod.ts\";\n"
+"\n"
 "Deno.test(\"myTestFunction\", function () {\n"
 "  assertEquals(foo(), { bar: \"bar\" });\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:324
-msgid "### Top level functions should not use arrow syntax."
+#. type: Title ###
+#: docs/contributing/style_guide.md:323
+#, no-wrap
+msgid "Top level functions should not use arrow syntax."
 msgstr ""
 
 #. type: Plain text
@@ -664,15 +637,13 @@ msgstr ""
 msgid "Bad:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:335
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:330
 #, no-wrap
 msgid ""
-"```ts\n"
 "export const foo = (): string => {\n"
 "  return \"bar\";\n"
 "};\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -680,25 +651,25 @@ msgstr ""
 msgid "Good:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:343
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:338
 #, no-wrap
 msgid ""
-"```ts\n"
 "export function foo(): string {\n"
 "  return \"bar\";\n"
 "}\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:345
-msgid "### `std`"
+#. type: Title ###
+#: docs/contributing/style_guide.md:344
+#, no-wrap
+msgid "`std`"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:347
-msgid "#### Do not depend on external code."
+#. type: Title ####
+#: docs/contributing/style_guide.md:346
+#, no-wrap
+msgid "Do not depend on external code."
 msgstr ""
 
 #. type: Plain text
@@ -709,9 +680,10 @@ msgid ""
 "not include potentially unreviewed third party code."
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:353
-msgid "#### Document and maintain browser compatiblity."
+#. type: Title ####
+#: docs/contributing/style_guide.md:352
+#, no-wrap
+msgid "Document and maintain browser compatiblity."
 msgstr ""
 
 #. type: Plain text
@@ -721,9 +693,10 @@ msgid ""
 "top of the module:"
 msgstr ""
 
-#. type: Plain text
-#: docs/contributing/style_guide.md:360
-msgid "```ts /** This module is browser compatible. */ ```"
+#. type: Fenced code block (ts)
+#: docs/contributing/style_guide.md:357
+#, no-wrap
+msgid "/** This module is browser compatible. */\n"
 msgstr ""
 
 #. type: Plain text

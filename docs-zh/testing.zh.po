@@ -7,18 +7,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/testing.md:2
-msgid "# Testing"
+#. type: Title #
+#: docs/testing.md:1
+#, no-wrap
+msgid "Testing"
 msgstr ""
 
 #. type: Plain text
@@ -28,9 +29,10 @@ msgid ""
 "TypeScript code."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:7
-msgid "## Writing tests"
+#. type: Title ##
+#: docs/testing.md:6
+#, no-wrap
+msgid "Writing tests"
 msgstr ""
 
 #. type: Plain text
@@ -40,24 +42,17 @@ msgid ""
 "tested. There are two styles you can use."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:17
+#. type: Fenced code block (ts)
+#: docs/testing.md:11
 #, no-wrap
 msgid ""
-"```ts\n"
 "// Simple name and function, compact form, but not configurable\n"
 "Deno.test(\"hello world #1\", () => {\n"
 "  const x = 1 + 2;\n"
 "  assertEquals(x, 3);\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing.md:27
-#, no-wrap
-msgid ""
-"// Fully fledged test definition, longer form, but configurable (see "
-"below)\n"
+"\n"
+"// Fully fledged test definition, longer form, but configurable (see below)\n"
 "Deno.test({\n"
 "  name: \"hello world #2\",\n"
 "  fn: () => {\n"
@@ -65,95 +60,72 @@ msgid ""
 "    assertEquals(x, 3);\n"
 "  },\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:29
-msgid "## Assertions"
+#. type: Title ##
+#: docs/testing.md:28
+#, no-wrap
+msgid "Assertions"
 msgstr ""
 
 #. type: Plain text
 #: docs/testing.md:32
 msgid ""
-"There are some useful assertion utilities at "
-"https://deno.land/std@$STD_VERSION/testing#usage to make testing easier:"
+"There are some useful assertion utilities at https://deno.land/std@"
+"$STD_VERSION/testing#usage to make testing easier:"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:38
+#. type: Fenced code block (ts)
+#: docs/testing.md:33
 #, no-wrap
 msgid ""
-"```ts\n"
 "import {\n"
 "  assertArrayIncludes,\n"
 "  assertEquals,\n"
 "} from \"https://deno.land/std@$STD_VERSION/testing/asserts.ts\";\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing.md:45
-#, no-wrap
-msgid ""
+"\n"
 "Deno.test(\"hello world\", () => {\n"
 "  const x = 1 + 2;\n"
 "  assertEquals(x, 3);\n"
-"  assertArrayIncludes([1, 2, 3, 4, 5, 6], [3], \"Expected 3 to be in the "
-"array\");\n"
+"  assertArrayIncludes([1, 2, 3, 4, 5, 6], [3], \"Expected 3 to be in the array\");\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:47
-msgid "### Async functions"
+#. type: Title ###
+#: docs/testing.md:46
+#, no-wrap
+msgid "Async functions"
 msgstr ""
 
 #. type: Plain text
 #: docs/testing.md:50
 msgid ""
 "You can also test asynchronous code by passing a test function that returns "
-"a promise. For this you can use the `async` keyword when defining a "
-"function:"
+"a promise. For this you can use the `async` keyword when defining a function:"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:53
-msgid ""
-"```ts import { delay } from "
-"\"https://deno.land/std@$STD_VERSION/async/delay.ts\";"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing.md:56
+#. type: Fenced code block (ts)
+#: docs/testing.md:51
 #, no-wrap
 msgid ""
+"import { delay } from \"https://deno.land/std@$STD_VERSION/async/delay.ts\";\n"
+"\n"
 "Deno.test(\"async hello world\", async () => {\n"
 "  const x = 1 + 2;\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing.md:59
-#, no-wrap
-msgid ""
+"\n"
 "  // await some async task\n"
 "  await delay(100);\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing.md:65
-#, no-wrap
-msgid ""
+"\n"
 "  if (x !== 3) {\n"
 "    throw Error(\"x should be equal to 3\");\n"
 "  }\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:67
-msgid "### Resource and async op sanitizers"
+#. type: Title ###
+#: docs/testing.md:66
+#, no-wrap
+msgid "Resource and async op sanitizers"
 msgstr ""
 
 #. type: Plain text
@@ -176,18 +148,17 @@ msgstr ""
 #. type: Plain text
 #: docs/testing.md:81
 msgid ""
-"The same is true for async operation like interacting with the "
-"filesystem. The test runner checks that each operation you start in the test "
-"is completed before the end of the test. This is enabled by default for all "
+"The same is true for async operation like interacting with the filesystem. "
+"The test runner checks that each operation you start in the test is "
+"completed before the end of the test. This is enabled by default for all "
 "tests, but can be disabled by setting the `sanitizeOps` boolean to false in "
 "the test definition."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:92
+#. type: Fenced code block (ts)
+#: docs/testing.md:82
 #, no-wrap
 msgid ""
-"```ts\n"
 "Deno.test({\n"
 "  name: \"leaky test\",\n"
 "  fn() {\n"
@@ -196,12 +167,12 @@ msgid ""
 "  sanitizeResources: false,\n"
 "  sanitizeOps: false,\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:94
-msgid "## Running tests"
+#. type: Title ##
+#: docs/testing.md:93
+#, no-wrap
+msgid "Running tests"
 msgstr ""
 
 #. type: Plain text
@@ -209,26 +180,23 @@ msgstr ""
 msgid ""
 "To run the test, call `deno test` with the file that contains your test "
 "function. You can also omit the file name, in which case all tests in the "
-"current directory (recursively) that match the glob "
-"`{*_,*.,}test.{js,mjs,ts,jsx,tsx}` will be run. If you pass a directory, all "
-"files in the directory that match this glob will be run."
+"current directory (recursively) that match the glob `{*_,*.,}test.{js,mjs,ts,"
+"jsx,tsx}` will be run. If you pass a directory, all files in the directory "
+"that match this glob will be run."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:104
+#. type: Fenced code block (shell)
+#: docs/testing.md:101
+#, no-wrap
 msgid ""
-"```shell # Run all tests in the current directory and all sub-directories "
-"deno test"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing.md:107
-msgid "# Run all tests in the util directory deno test util/"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing.md:111
-msgid "# Run just my_test.ts deno test my_test.ts ```"
+"# Run all tests in the current directory and all sub-directories\n"
+"deno test\n"
+"\n"
+"# Run all tests in the util directory\n"
+"deno test util/\n"
+"\n"
+"# Run just my_test.ts\n"
+"deno test my_test.ts\n"
 msgstr ""
 
 #. type: Plain text
@@ -246,14 +214,16 @@ msgid ""
 "line help:"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:122
-msgid "```shell deno help test ```"
+#. type: Fenced code block (shell)
+#: docs/testing.md:119
+#, no-wrap
+msgid "deno help test\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:124
-msgid "## Filtering"
+#. type: Title ##
+#: docs/testing.md:123
+#, no-wrap
+msgid "Filtering"
 msgstr ""
 
 #. type: Plain text
@@ -261,9 +231,10 @@ msgstr ""
 msgid "There are a number of options to filter the tests you are running."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:128
-msgid "### Command line filtering"
+#. type: Title ###
+#: docs/testing.md:127
+#, no-wrap
+msgid "Command line filtering"
 msgstr ""
 
 #. type: Plain text
@@ -283,11 +254,13 @@ msgstr ""
 msgid "Assuming the following tests:"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:141
+#. type: Fenced code block (ts)
+#: docs/testing.md:136
+#, no-wrap
 msgid ""
-"```ts Deno.test({ name: \"my-test\", fn: myTest }); Deno.test({ name: "
-"\"test-1\", fn: test1 }); Deno.test({ name: \"test2\", fn: test2 }); ```"
+"Deno.test({ name: \"my-test\", fn: myTest });\n"
+"Deno.test({ name: \"test-1\", fn: test1 });\n"
+"Deno.test({ name: \"test2\", fn: test2 });\n"
 msgstr ""
 
 #. type: Plain text
@@ -297,9 +270,10 @@ msgid ""
 "\"test\"."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:148
-msgid "```shell deno test --filter \"test\" tests/ ```"
+#. type: Fenced code block (shell)
+#: docs/testing.md:145
+#, no-wrap
+msgid "deno test --filter \"test\" tests/\n"
 msgstr ""
 
 #. type: Plain text
@@ -309,9 +283,10 @@ msgid ""
 "second and third tests."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:155
-msgid "```shell deno test --filter \"/test-*\\d/\" tests/ ```"
+#. type: Fenced code block (shell)
+#: docs/testing.md:152
+#, no-wrap
+msgid "deno test --filter \"/test-*\\d/\" tests/\n"
 msgstr ""
 
 #. type: Plain text
@@ -321,9 +296,10 @@ msgid ""
 "forward-slashes like the JavaScript syntactic sugar for a REGEX._"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:160
-msgid "### Test definition filtering"
+#. type: Title ###
+#: docs/testing.md:159
+#, no-wrap
+msgid "Test definition filtering"
 msgstr ""
 
 #. type: Plain text
@@ -331,9 +307,10 @@ msgstr ""
 msgid "Within the tests themselves, you have two options for filtering."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:164
-msgid "#### Filtering out (Ignoring these tests)"
+#. type: Title ####
+#: docs/testing.md:163
+#, no-wrap
+msgid "Filtering out (Ignoring these tests)"
 msgstr ""
 
 #. type: Plain text
@@ -345,11 +322,10 @@ msgid ""
 "be skipped."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:178
+#. type: Fenced code block (ts)
+#: docs/testing.md:169
 #, no-wrap
 msgid ""
-"```ts\n"
 "Deno.test({\n"
 "  name: \"do macOS feature\",\n"
 "  ignore: Deno.build.os !== \"darwin\",\n"
@@ -357,32 +333,30 @@ msgid ""
 "    doMacOSFeature();\n"
 "  },\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:180
-msgid "#### Filtering in (Only run these tests)"
+#. type: Title ####
+#: docs/testing.md:179
+#, no-wrap
+msgid "Filtering in (Only run these tests)"
 msgstr ""
 
 #. type: Plain text
 #: docs/testing.md:188
 msgid ""
 "Sometimes you may be in the middle of a problem within a large test class "
-"and you would like to focus on just that test and ignore the rest for "
-"now. For this you can use the `only` option to tell the test framework to "
-"only run tests with this set to true. Multiple tests can set this "
-"option. While the test run will report on the success or failure of each "
-"test, the overall test run will always fail if any test is flagged with "
-"`only`, as this is a temporary measure only which disables nearly all of "
-"your tests."
+"and you would like to focus on just that test and ignore the rest for now. "
+"For this you can use the `only` option to tell the test framework to only "
+"run tests with this set to true. Multiple tests can set this option. While "
+"the test run will report on the success or failure of each test, the overall "
+"test run will always fail if any test is flagged with `only`, as this is a "
+"temporary measure only which disables nearly all of your tests."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:198
+#. type: Fenced code block (ts)
+#: docs/testing.md:189
 #, no-wrap
 msgid ""
-"```ts\n"
 "Deno.test({\n"
 "  name: \"Focus on this test only\",\n"
 "  only: true,\n"
@@ -390,12 +364,12 @@ msgid ""
 "    testComplicatedStuff();\n"
 "  },\n"
 "});\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:200
-msgid "## Failing fast"
+#. type: Title ##
+#: docs/testing.md:199
+#, no-wrap
+msgid "Failing fast"
 msgstr ""
 
 #. type: Plain text
@@ -405,14 +379,16 @@ msgid ""
 "failure, you can specify the `--failfast` flag when running the suite."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:207
-msgid "```shell deno test --failfast ```"
+#. type: Fenced code block (shell)
+#: docs/testing.md:204
+#, no-wrap
+msgid "deno test --failfast\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:209
-msgid "## Test coverage"
+#. type: Title ##
+#: docs/testing.md:208
+#, no-wrap
+msgid "Test coverage"
 msgstr ""
 
 #. type: Plain text
@@ -438,26 +414,21 @@ msgid ""
 "stdout. In the future there will be support for `lcov` output too."
 msgstr ""
 
-#. type: Plain text
-#: docs/testing.md:229
+#. type: Fenced code block
+#: docs/testing.md:221
+#, no-wrap
 msgid ""
-"``` $ git clone git@github.com:denosaurs/deno_brotli.git && cd deno_brotli $ "
-"deno test --coverage --unstable Debugger listening on "
-"ws://127.0.0.1:9229/ws/5a593019-d185-478b-a928-ebc33e5834be Check "
-"file:///home/deno/deno_brotli/$deno$test.ts running 2 tests test compress "
-"... ok (26ms)  test decompress ... ok (13ms)"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing.md:231
-msgid ""
-"test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out "
-"(40ms)"
-msgstr ""
-
-#. type: Plain text
-#: docs/testing.md:235
-msgid ""
-"test coverage: file:///home/deno/deno_brotli/mod.ts 100.000% "
-"file:///home/deno/deno_brotli/wasm.js 100.000% ```"
+"$ git clone git@github.com:denosaurs/deno_brotli.git && cd deno_brotli\n"
+"$ deno test --coverage --unstable\n"
+"Debugger listening on ws://127.0.0.1:9229/ws/5a593019-d185-478b-a928-ebc33e5834be\n"
+"Check file:///home/deno/deno_brotli/$deno$test.ts\n"
+"running 2 tests\n"
+"test compress ... ok (26ms)\n"
+"test decompress ... ok (13ms)\n"
+"\n"
+"test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out (40ms)\n"
+"\n"
+"test coverage:\n"
+"file:///home/deno/deno_brotli/mod.ts 100.000%\n"
+"file:///home/deno/deno_brotli/wasm.js 100.000%\n"
 msgstr ""

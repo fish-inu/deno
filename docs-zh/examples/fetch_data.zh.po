@@ -7,30 +7,32 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/fetch_data.md:2
-msgid "# Fetch data"
+#. type: Title #
+#: docs/examples/fetch_data.md:1
+#, no-wrap
+msgid "Fetch data"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/fetch_data.md:4
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/fetch_data.md:3
+#, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
 #: docs/examples/fetch_data.md:10
 msgid ""
-"Like browsers, Deno implements web standard APIs such as "
-"[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)."
+"Like browsers, Deno implements web standard APIs such as [fetch](https://"
+"developer.mozilla.org/en-US/docs/Web/API/Fetch_API)."
 msgstr ""
 
 #. type: Bullet: '- '
@@ -42,12 +44,14 @@ msgstr ""
 
 #. type: Bullet: '- '
 #: docs/examples/fetch_data.md:10
-msgid "See also: Deno's [permissions](../getting_started/permissions.md) model."
+msgid ""
+"See also: Deno's [permissions](../getting_started/permissions.md) model."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/fetch_data.md:12
-msgid "## Overview"
+#. type: Title ##
+#: docs/examples/fetch_data.md:11
+#, no-wrap
+msgid "Overview"
 msgstr ""
 
 #. type: Plain text
@@ -56,8 +60,8 @@ msgid ""
 "When building any sort of web application developers will usually need to "
 "retrieve data from somewhere else on the web. This works no differently in "
 "Deno than in any other JavaScript application, just call the the `fetch()` "
-"method.  For more information on fetch read the [MDN "
-"documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)."
+"method.  For more information on fetch read the [MDN documentation](https://"
+"developer.mozilla.org/en-US/docs/Web/API/Fetch_API)."
 msgstr ""
 
 #. type: Plain text
@@ -70,9 +74,10 @@ msgid ""
 "`deno run` command."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/fetch_data.md:26
-msgid "## Example"
+#. type: Title ##
+#: docs/examples/fetch_data.md:25
+#, no-wrap
+msgid "Example"
 msgstr ""
 
 #. type: Plain text
@@ -81,60 +86,36 @@ msgstr ""
 msgid "**Command:** `deno run --allow-net fetch.ts`\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/fetch_data.md:34
+#. type: Fenced code block (js)
+#: docs/examples/fetch_data.md:29
 #, no-wrap
 msgid ""
-"```js\n"
 "/**\n"
 " * Output: JSON Data\n"
 " */\n"
 "const json = fetch(\"https://api.github.com/users/denoland\");\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/fetch_data.md:40
-#, no-wrap
-msgid ""
+"\n"
 "json.then((response) => {\n"
 "  return response.json();\n"
 "}).then((jsonData) => {\n"
 "  console.log(jsonData);\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/fetch_data.md:45
-#, no-wrap
-msgid ""
+"\n"
 "/**\n"
 " * Output: HTML Data\n"
 " */\n"
 "const text = fetch(\"https://deno.land/\");\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/fetch_data.md:51
-#, no-wrap
-msgid ""
+"\n"
 "text.then((response) => {\n"
 "  return response.text();\n"
 "}).then((textData) => {\n"
 "  console.log(textData);\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/fetch_data.md:56
-#, no-wrap
-msgid ""
+"\n"
 "/**\n"
 " * Output: Error Message\n"
 " */\n"
 "const error = fetch(\"https://does.not.exist/\");\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/fetch_data.md:58
-msgid "error.catch((error) => console.log(error.message)); ```"
+"\n"
+"error.catch((error) => console.log(error.message));\n"
 msgstr ""

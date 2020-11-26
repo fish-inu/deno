@@ -7,18 +7,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples.md:2
-msgid "# Examples"
+#. type: Title #
+#: docs/examples.md:1
+#, no-wrap
+msgid "Examples"
 msgstr ""
 
 #. type: Plain text
@@ -28,34 +29,33 @@ msgid ""
 "more about the runtime."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples.md:7
-msgid "## Basic"
+#. type: Title ##
+#: docs/examples.md:6
+#, no-wrap
+msgid "Basic"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples.md:13
 msgid ""
-"- [Hello World](./examples/hello_world.md)  - [Import and Export "
-"Modules](./examples/import_export.md)  - [How to Manage "
-"Dependencies](./examples/manage_dependencies.md)  - [Fetch "
-"Data](./examples/fetch_data.md)  - [Read and Write "
-"Files](./examples/read_write_files.md)"
+"- [Hello World](./examples/hello_world.md)  - [Import and Export Modules](./"
+"examples/import_export.md)  - [How to Manage Dependencies](./examples/"
+"manage_dependencies.md)  - [Fetch Data](./examples/fetch_data.md)  - [Read "
+"and Write Files](./examples/read_write_files.md)"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples.md:15
-msgid "## Advanced"
+#. type: Title ##
+#: docs/examples.md:14
+#, no-wrap
+msgid "Advanced"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples.md:23
 msgid ""
-"- [Unix Cat](./examples/unix_cat.md)  - [File "
-"Server](./examples/file_server.md)  - [TCP Echo](./examples/tcp_echo.md)  - "
-"[Subprocess](./examples/subprocess.md)  - "
-"[Permissions](./examples/permissions.md)  - [OS "
-"Signals](./examples/os_signals.md)  - [File System "
-"Events](./examples/file_system_events.md)  - [Testing If "
-"Main](./examples/testing_if_main.md)"
+"- [Unix Cat](./examples/unix_cat.md)  - [File Server](./examples/file_server."
+"md)  - [TCP Echo](./examples/tcp_echo.md)  - [Subprocess](./examples/"
+"subprocess.md)  - [Permissions](./examples/permissions.md)  - [OS Signals](./"
+"examples/os_signals.md)  - [File System Events](./examples/"
+"file_system_events.md)  - [Testing If Main](./examples/testing_if_main.md)"
 msgstr ""

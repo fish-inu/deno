@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/tools/script_installer.md:2
-msgid "## Script installer"
+#. type: Title ##
+#: docs/tools/script_installer.md:1
+#, no-wrap
+msgid "Script installer"
 msgstr ""
 
 #. type: Plain text
@@ -48,17 +49,15 @@ msgstr ""
 msgid "Example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/script_installer.md:17
+#. type: Fenced code block (shell)
+#: docs/tools/script_installer.md:14
+#, no-wrap
 msgid ""
-"```shell $ deno install --allow-net --allow-read "
-"https://deno.land/std@$STD_VERSION/http/file_server.ts [1/1] Compiling "
-"https://deno.land/std@$STD_VERSION/http/file_server.ts"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/script_installer.md:21
-msgid "✅ Successfully installed file_server.  /Users/deno/.deno/bin/file_server ```"
+"$ deno install --allow-net --allow-read https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
+"[1/1] Compiling https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
+"\n"
+"✅ Successfully installed file_server.\n"
+"/Users/deno/.deno/bin/file_server\n"
 msgstr ""
 
 #. type: Plain text
@@ -66,11 +65,10 @@ msgstr ""
 msgid "To change the executable name, use `-n`/`--name`:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/script_installer.md:27
-msgid ""
-"```shell deno install --allow-net --allow-read -n serve "
-"https://deno.land/std@$STD_VERSION/http/file_server.ts ```"
+#. type: Fenced code block (shell)
+#: docs/tools/script_installer.md:24
+#, no-wrap
+msgid "deno install --allow-net --allow-read -n serve https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
 msgstr ""
 
 #. type: Plain text
@@ -103,11 +101,10 @@ msgstr ""
 msgid "To change the installation root, use `--root`:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/script_installer.md:42
-msgid ""
-"```shell deno install --allow-net --allow-read --root /usr/local "
-"https://deno.land/std@$STD_VERSION/http/file_server.ts ```"
+#. type: Fenced code block (shell)
+#: docs/tools/script_installer.md:39
+#, no-wrap
+msgid "deno install --allow-net --allow-read --root /usr/local https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
 msgstr ""
 
 #. type: Plain text
@@ -117,7 +114,8 @@ msgstr ""
 
 #. type: Plain text
 #: docs/tools/script_installer.md:48
-msgid "- `--root` option - `DENO_INSTALL_ROOT` environment variable - `$HOME/.deno`"
+msgid ""
+"- `--root` option - `DENO_INSTALL_ROOT` environment variable - `$HOME/.deno`"
 msgstr ""
 
 #. type: Plain text
@@ -125,9 +123,10 @@ msgstr ""
 msgid "These must be added to the path manually if required."
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/script_installer.md:54
-msgid "```shell echo 'export PATH=\"$HOME/.deno/bin:$PATH\"' >> ~/.bashrc ```"
+#. type: Fenced code block (shell)
+#: docs/tools/script_installer.md:51
+#, no-wrap
+msgid "echo 'export PATH=\"$HOME/.deno/bin:$PATH\"' >> ~/.bashrc\n"
 msgstr ""
 
 #. type: Plain text
@@ -137,11 +136,10 @@ msgid ""
 "installation time."
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/script_installer.md:61
-msgid ""
-"```shell deno install --allow-net --allow-read "
-"https://deno.land/std@$STD_VERSION/http/file_server.ts -p 8080 ```"
+#. type: Fenced code block (shell)
+#: docs/tools/script_installer.md:58
+#, no-wrap
+msgid "deno install --allow-net --allow-read https://deno.land/std@$STD_VERSION/http/file_server.ts -p 8080\n"
 msgstr ""
 
 #. type: Plain text
@@ -154,35 +152,28 @@ msgstr ""
 #. type: Plain text
 #: docs/tools/script_installer.md:67
 msgid ""
-"For good practice, use the "
-"[`import.meta.main`](../examples/testing_if_main.md)  idiom to specify the "
-"entry point in an executable script."
+"For good practice, use the [`import.meta.main`](../examples/testing_if_main."
+"md)  idiom to specify the entry point in an executable script."
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/script_installer.md:71
-msgid "<!-- dprint-ignore -->"
+#, no-wrap
+msgid "<!-- dprint-ignore -->\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/script_installer.md:77
+#. type: Fenced code block (ts)
+#: docs/tools/script_installer.md:72
 #, no-wrap
 msgid ""
-"```ts\n"
 "// https://example.com/awesome/cli.ts\n"
 "async function myAwesomeCli(): Promise<void> {\n"
 "  -- snip --\n"
 "}\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/script_installer.md:82
-#, no-wrap
-msgid ""
+"\n"
 "if (import.meta.main) {\n"
 "  myAwesomeCli();\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -192,12 +183,11 @@ msgid ""
 "an example installation command to your repository:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/script_installer.md:88
-msgid "```shell # Install using deno install"
-msgstr ""
-
-#. type: Plain text
-#: docs/tools/script_installer.md:90
-msgid "$ deno install -n awesome_cli https://example.com/awesome/cli.ts ```"
+#. type: Fenced code block (shell)
+#: docs/tools/script_installer.md:86
+#, no-wrap
+msgid ""
+"# Install using deno install\n"
+"\n"
+"$ deno install -n awesome_cli https://example.com/awesome/cli.ts\n"
 msgstr ""

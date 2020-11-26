@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/tools/dependency_inspector.md:2
-msgid "## Dependency Inspector"
+#. type: Title ##
+#: docs/tools/dependency_inspector.md:1
+#, no-wrap
+msgid "Dependency Inspector"
 msgstr ""
 
 #. type: Plain text
@@ -26,19 +27,16 @@ msgstr ""
 msgid "`deno info [URL]` will inspect ES module and all of its dependencies."
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/dependency_inspector.md:62
+#. type: Fenced code block (shell)
+#: docs/tools/dependency_inspector.md:5
 #, no-wrap
 msgid ""
-"```shell\n"
 "deno info https://deno.land/std@0.67.0/http/file_server.ts\n"
 "Download https://deno.land/std@0.67.0/http/file_server.ts\n"
 "...\n"
-"local: "
-"/home/deno/.cache/deno/deps/https/deno.land/f57792e36f2dbf28b14a75e2372a479c6392780d4712d76698d5031f943c0020\n"
+"local: /home/deno/.cache/deno/deps/https/deno.land/f57792e36f2dbf28b14a75e2372a479c6392780d4712d76698d5031f943c0020\n"
 "type: TypeScript\n"
-"compiled: "
-"/home/deno/.cache/deno/gen/https/deno.land/f57792e36f2dbf28b14a75e2372a479c6392780d4712d76698d5031f943c0020.js\n"
+"compiled: /home/deno/.cache/deno/gen/https/deno.land/f57792e36f2dbf28b14a75e2372a479c6392780d4712d76698d5031f943c0020.js\n"
 "deps: 23 unique (total 139.89KB)\n"
 "https://deno.land/std@0.67.0/http/file_server.ts (10.49KB)\n"
 "├─┬ https://deno.land/std@0.67.0/path/mod.ts (717B)\n"
@@ -88,7 +86,6 @@ msgid ""
 "├─┬ https://deno.land/std@0.67.0/flags/mod.ts (9.54KB)\n"
 "│ └── https://deno.land/std@0.67.0/_util/assert.ts *\n"
 "└── https://deno.land/std@0.67.0/_util/assert.ts *\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -96,9 +93,10 @@ msgstr ""
 msgid "Dependency inspector works with any local or remote ES modules."
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/dependency_inspector.md:66
-msgid "## Cache location"
+#. type: Title ##
+#: docs/tools/dependency_inspector.md:65
+#, no-wrap
+msgid "Cache location"
 msgstr ""
 
 #. type: Plain text
@@ -106,10 +104,12 @@ msgstr ""
 msgid "`deno info` can be used to display information about cache location:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/dependency_inspector.md:74
+#. type: Fenced code block (shell)
+#: docs/tools/dependency_inspector.md:69
+#, no-wrap
 msgid ""
-"```shell deno info DENO_DIR location: \"/Users/deno/Library/Caches/deno\" "
-"Remote modules cache: \"/Users/deno/Library/Caches/deno/deps\" TypeScript "
-"compiler cache: \"/Users/deno/Library/Caches/deno/gen\" ```"
+"deno info\n"
+"DENO_DIR location: \"/Users/deno/Library/Caches/deno\"\n"
+"Remote modules cache: \"/Users/deno/Library/Caches/deno/deps\"\n"
+"TypeScript compiler cache: \"/Users/deno/Library/Caches/deno/gen\"\n"
 msgstr ""

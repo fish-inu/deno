@@ -7,30 +7,33 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/os_signals.md:2
-msgid "# Handle OS Signals"
+#. type: Title #
+#: docs/examples/os_signals.md:1
+#, no-wrap
+msgid "Handle OS Signals"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/os_signals.md:5
+#, no-wrap
 msgid ""
-"> This program makes use of an unstable Deno feature. Learn more about > "
-"[unstable features](../runtime/stability.md)."
+"> This program makes use of an unstable Deno feature. Learn more about\n"
+"> [unstable features](../runtime/stability.md).\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:7
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/os_signals.md:6
+#, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
@@ -48,14 +51,14 @@ msgstr ""
 #. type: Bullet: '- '
 #: docs/examples/os_signals.md:14
 msgid ""
-"Use the `dispose()` function of the Deno.signal "
-"[SignalStream](https://doc.deno.land/builtin/unstable#Deno.SignalStream) to "
-"stop watching the signal."
+"Use the `dispose()` function of the Deno.signal [SignalStream](https://doc."
+"deno.land/builtin/unstable#Deno.SignalStream) to stop watching the signal."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:16
-msgid "## Async iterator example"
+#. type: Title ##
+#: docs/examples/os_signals.md:15
+#, no-wrap
+msgid "Async iterator example"
 msgstr ""
 
 #. type: Plain text
@@ -63,11 +66,10 @@ msgstr ""
 msgid "You can use `Deno.signal()` function for handling OS signals:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:29
+#. type: Fenced code block (ts)
+#: docs/examples/os_signals.md:19
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * async-iterator-signal.ts\n"
 " */\n"
@@ -76,22 +78,24 @@ msgid ""
 "  console.log(\"interrupted!\");\n"
 "  Deno.exit();\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
-#: docs/examples/os_signals.md:31 docs/examples/os_signals.md:51 docs/examples/os_signals.md:78
+#: docs/examples/os_signals.md:31 docs/examples/os_signals.md:51
+#: docs/examples/os_signals.md:78
 msgid "Run with:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:35
-msgid "```shell deno run --unstable async-iterator-signal.ts ```"
+#. type: Fenced code block (shell)
+#: docs/examples/os_signals.md:32
+#, no-wrap
+msgid "deno run --unstable async-iterator-signal.ts\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:37
-msgid "## Promise based example"
+#. type: Title ##
+#: docs/examples/os_signals.md:36
+#, no-wrap
+msgid "Promise based example"
 msgstr ""
 
 #. type: Plain text
@@ -99,11 +103,10 @@ msgstr ""
 msgid "`Deno.signal()` also works as a promise:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:49
+#. type: Fenced code block (ts)
+#: docs/examples/os_signals.md:40
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * promise-signal.ts\n"
 " */\n"
@@ -111,17 +114,18 @@ msgid ""
 "await Deno.signal(Deno.Signal.SIGINT);\n"
 "console.log(\"interrupted!\");\n"
 "Deno.exit();\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:55
-msgid "```shell deno run --unstable promise-signal.ts ```"
+#. type: Fenced code block (shell)
+#: docs/examples/os_signals.md:52
+#, no-wrap
+msgid "deno run --unstable promise-signal.ts\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:57
-msgid "## Stop watching signals"
+#. type: Title ##
+#: docs/examples/os_signals.md:56
+#, no-wrap
+msgid "Stop watching signals"
 msgstr ""
 
 #. type: Plain text
@@ -131,11 +135,10 @@ msgid ""
 "the signal object:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:70
+#. type: Fenced code block (ts)
+#: docs/examples/os_signals.md:61
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * dispose-signal.ts\n"
 " */\n"
@@ -144,22 +147,17 @@ msgid ""
 "  sig.dispose();\n"
 "  console.log(\"No longer watching SIGINT signal\");\n"
 "}, 5000);\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/examples/os_signals.md:76
-#, no-wrap
-msgid ""
+"\n"
 "console.log(\"Watching SIGINT signals\");\n"
 "for await (const _ of sig) {\n"
 "  console.log(\"interrupted\");\n"
 "}\n"
-"```\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/os_signals.md:82
-msgid "```shell deno run --unstable dispose-signal.ts ```"
+#. type: Fenced code block (shell)
+#: docs/examples/os_signals.md:79
+#, no-wrap
+msgid "deno run --unstable dispose-signal.ts\n"
 msgstr ""
 
 #. type: Plain text

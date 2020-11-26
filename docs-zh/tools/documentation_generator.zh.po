@@ -7,18 +7,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/tools/documentation_generator.md:2
-msgid "## Documentation Generator"
+#. type: Title ##
+#: docs/tools/documentation_generator.md:1
+#, no-wrap
+msgid "Documentation Generator"
 msgstr ""
 
 #. type: Plain text
@@ -33,11 +34,10 @@ msgstr ""
 msgid "For example, given a file `add.ts` with the contents:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/documentation_generator.md:19
+#. type: Fenced code block (ts)
+#: docs/tools/documentation_generator.md:8
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * Adds x and y.\n"
 " * @param {number} x\n"
@@ -47,7 +47,6 @@ msgid ""
 "export function add(x: number, y: number): number {\n"
 "  return x + y;\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -57,23 +56,19 @@ msgid ""
 "`stdout`:"
 msgstr ""
 
-#. type: Plain text
-#: docs/tools/documentation_generator.md:27
+#. type: Fenced code block (shell)
+#: docs/tools/documentation_generator.md:22
 #, no-wrap
 msgid ""
-"```shell\n"
 "deno doc add.ts\n"
 "function add(x: number, y: number): number\n"
-"  Adds x and y. @param {number} x @param {number} y @returns {number} Sum of "
-"x and y\n"
-"```\n"
+"  Adds x and y. @param {number} x @param {number} y @returns {number} Sum of x and y\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/tools/documentation_generator.md:31
 msgid ""
 "Use the `--json` flag to output the documentation in JSON format. This JSON "
-"format is consumed by the [deno doc "
-"website](https://github.com/denoland/doc_website) and is used to generate "
-"module documentation."
+"format is consumed by the [deno doc website](https://github.com/denoland/"
+"doc_website) and is used to generate module documentation."
 msgstr ""

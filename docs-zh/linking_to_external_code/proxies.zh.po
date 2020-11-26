@@ -7,23 +7,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/linking_to_external_code/proxies.md:2
-msgid "## Proxies"
+#. type: Title ##
+#: docs/linking_to_external_code/proxies.md:1
+#, no-wrap
+msgid "Proxies"
 msgstr ""
 
 #. type: Plain text
 #: docs/linking_to_external_code/proxies.md:4
-msgid "Deno supports proxies for module downloads and the Web standard `fetch` API."
+msgid ""
+"Deno supports proxies for module downloads and the Web standard `fetch` API."
 msgstr ""
 
 #. type: Plain text

@@ -7,30 +7,32 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/examples/tcp_echo.md:2
-msgid "# TCP echo server"
+#. type: Title #
+#: docs/examples/tcp_echo.md:1
+#, no-wrap
+msgid "TCP echo server"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/tcp_echo.md:4
-msgid "## Concepts"
+#. type: Title ##
+#: docs/examples/tcp_echo.md:3
+#, no-wrap
+msgid "Concepts"
 msgstr ""
 
 #. type: Bullet: '- '
 #: docs/examples/tcp_echo.md:9
 msgid ""
-"Listening for TCP port connections with "
-"[Deno.listen](https://doc.deno.land/builtin/stable#Deno.listen)."
+"Listening for TCP port connections with [Deno.listen](https://doc.deno.land/"
+"builtin/stable#Deno.listen)."
 msgstr ""
 
 #. type: Bullet: '- '
@@ -40,9 +42,10 @@ msgid ""
 "inbound data and redirect it to be outbound data."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/tcp_echo.md:11
-msgid "## Example"
+#. type: Title ##
+#: docs/examples/tcp_echo.md:10
+#, no-wrap
+msgid "Example"
 msgstr ""
 
 #. type: Plain text
@@ -52,11 +55,10 @@ msgid ""
 "returns to the client anything it sends."
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/tcp_echo.md:25
+#. type: Fenced code block (ts)
+#: docs/examples/tcp_echo.md:15
 #, no-wrap
 msgid ""
-"```ts\n"
 "/**\n"
 " * echo_server.ts\n"
 " */\n"
@@ -65,7 +67,6 @@ msgid ""
 "for await (const conn of listener) {\n"
 "  Deno.copy(conn, conn);\n"
 "}\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -73,23 +74,27 @@ msgstr ""
 msgid "Run with:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/tcp_echo.md:31
-msgid "```shell deno run --allow-net echo_server.ts ```"
+#. type: Fenced code block (shell)
+#: docs/examples/tcp_echo.md:28
+#, no-wrap
+msgid "deno run --allow-net echo_server.ts\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/examples/tcp_echo.md:36
 msgid ""
-"To test it, try sending data to it with "
-"[netcat](https://en.wikipedia.org/wiki/Netcat) (Linux/MacOS only). Below "
-"`'hello world'` is sent over the connection, which is then echoed back to "
-"the user:"
+"To test it, try sending data to it with [netcat](https://en.wikipedia.org/"
+"wiki/Netcat) (Linux/MacOS only). Below `'hello world'` is sent over the "
+"connection, which is then echoed back to the user:"
 msgstr ""
 
-#. type: Plain text
-#: docs/examples/tcp_echo.md:42
-msgid "```shell $ nc localhost 8080 hello world hello world ```"
+#. type: Fenced code block (shell)
+#: docs/examples/tcp_echo.md:37
+#, no-wrap
+msgid ""
+"$ nc localhost 8080\n"
+"hello world\n"
+"hello world\n"
 msgstr ""
 
 #. type: Plain text
