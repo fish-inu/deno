@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-27 15:13+0000\n"
-"Last-Translator: 莹莹小仙女 <translator@email.com>\n"
+"PO-Revision-Date: 2020-11-27 16:05+0000\n"
+"Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/command_line_interface/zh_Hans/>\n"
 "Language: zh\n"
@@ -30,12 +30,12 @@ msgid ""
 "Deno is a command line program. You should be familiar with some simple "
 "commands having followed the examples thus far and already understand the "
 "basics of shell usage."
-msgstr ""
+msgstr "Deno 是命令行程序，而从之前的示例中学习到现在，你应该熟悉了简单的命令，也有了 shell 基础。"
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:8
 msgid "There are multiple ways of viewing the main help text:"
-msgstr ""
+msgstr "查看主要帮助文档，有多种方法："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/command_line_interface.md:9
@@ -50,13 +50,13 @@ msgid ""
 "# Using the long flag -- outputs more detailed help text where available.\n"
 "deno --help\n"
 msgstr ""
-"# 使用说明命令\n"
+"# 使用子命令。\n"
 "deno help\n"
 "\n"
-"# 使用说明缩写命令符 --和以上子命令输出内容相同。\n"
+"# 使用短选项 -- 与上等同。\n"
 "deno -h\n"
 "\n"
-"# 使用说明完整命令符 -- 输出更加完整的使用说明。\n"
+"# 使用长选项 -- 相比较更加详细。\n"
 "deno --help\n"
 
 #. type: Plain text
