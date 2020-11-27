@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-27 08:30+0000\n"
+"PO-Revision-Date: 2020-11-27 16:05+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/first_steps/zh_Hans/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: docs/getting_started/first_steps.md:1
 #, no-wrap
 msgid "First steps"
-msgstr ""
+msgstr "初步了解"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:4
@@ -180,23 +180,27 @@ msgid ""
 "programs the permission to do certain 'privileged' actions, such as access "
 "the network."
 msgstr ""
+"该程序会抛出网络访问相关的错误，那么哪一步做错了？你可能会想起，入门章节有提到 Deno "
+"是默认设置下安全性高的运行时。因此你得显式授予权限来进行某些操作，比如访问网络。"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:71
 msgid "Try it out again with the correct permission flag:"
-msgstr ""
+msgstr "添加对应的权限标志，再试试："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/first_steps.md:72
 #, no-wrap
 msgid "deno run --allow-net=example.com https://deno.land/std@$STD_VERSION/examples/curl.ts https://example.com\n"
 msgstr ""
+"deno run --allow-net=example.com https://deno.land/std@$STD_VERSION/examples/"
+"curl.ts https://example.com\n"
 
 #. type: Title ###
 #: docs/getting_started/first_steps.md:76
 #, no-wrap
 msgid "Reading a file"
-msgstr ""
+msgstr "读取文件"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:81
@@ -206,20 +210,23 @@ msgid ""
 "[doc.deno.land](https://doc.deno.land/https/github.com/denoland/deno/"
 "releases/latest/download/lib.deno.d.ts)."
 msgstr ""
+"Deno 还有与网络无关的 API，你可以通过 `Deno` 这个全局命名空间来访问它们，也可以查看这些 API 的文档，参见 [doc.deno."
+"land](https://doc.deno.land/https/github.com/denoland/deno/releases/latest/"
+"download/lib.deno.d.ts) 。"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:84
 msgid ""
 "Filesystem APIs for example do not have a web standard form, so Deno "
 "provides its own API."
-msgstr ""
+msgstr "比如，网页标准中还没有 Filesystem API，因此 Deno 就提供了相应的 API。"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:87
 msgid ""
 "In this program each command-line argument is assumed to be a filename, the "
 "file is opened, and printed to stdout."
-msgstr ""
+msgstr "下面的程序中，每个参数都是文件名，传入命令行，之后打开文件，并打印到 stout。"
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/first_steps.md:88
@@ -232,6 +239,12 @@ msgid ""
 "  file.close();\n"
 "}\n"
 msgstr ""
+"const filenames = Deno.args;\n"
+"for (const filename of filenames) {\n"
+"  const file = await Deno.open(filename);\n"
+"  await Deno.copy(file, Deno.stdout);\n"
+"  file.close();\n"
+"}\n"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:101
@@ -241,25 +254,29 @@ msgid ""
 "read from the file, is written to stdout. This illustrates a general design "
 "goal for I/O streams in Deno."
 msgstr ""
+"Deno 中 I/O stream 的整体设计目标可以这么解释：其中，`copy()` 函数实现了 kernel→userspace→kernel "
+"copies。换句话说，内存用于读取文件数据，也用于将数据写入到 stdout。"
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/first_steps.md:104
 #, no-wrap
 msgid "deno run --allow-read https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd\n"
 msgstr ""
+"deno run --allow-read https://deno.land/std@$STD_VERSION/examples/cat.ts /"
+"etc/passwd\n"
 
 #. type: Title ###
 #: docs/getting_started/first_steps.md:108
 #, no-wrap
 msgid "TCP server"
-msgstr ""
+msgstr "TCP 服务器"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:112
 msgid ""
 "This is an example of a server which accepts connections on port 8080, and "
 "returns to the client anything it sends."
-msgstr ""
+msgstr "以下示例中，该服务器监听 8080 端口，客户端发送什么，服务端就返回什么。"
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/first_steps.md:113
@@ -273,6 +290,13 @@ msgid ""
 "  Deno.copy(conn, conn);\n"
 "}\n"
 msgstr ""
+"const hostname = \"0.0.0.0\";\n"
+"const port = 8080;\n"
+"const listener = Deno.listen({ hostname, port });\n"
+"console.log(`Listening on ${hostname}:${port}`);\n"
+"for await (const conn of listener) {\n"
+"  Deno.copy(conn, conn);\n"
+"}\n"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:125
@@ -280,18 +304,20 @@ msgid ""
 "For security reasons, Deno does not allow programs to access the network "
 "without explicit permission. To allow accessing the network, use a command-"
 "line flag:"
-msgstr ""
+msgstr "出于安全因素，如果没有显式授权，Deno 会禁止程序访问网络。因此，使用如下命令行标志来访问网络："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/first_steps.md:126
 #, no-wrap
 msgid "deno run --allow-net https://deno.land/std@$STD_VERSION/examples/echo_server.ts\n"
 msgstr ""
+"deno run --allow-net https://deno.land/std@$STD_VERSION/examples/echo_server."
+"ts\n"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:131
 msgid "To test it, try sending data to it with netcat:"
-msgstr ""
+msgstr "试一试用 netcat 向该端口发送数据来做个测试："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/first_steps.md:132
@@ -301,6 +327,9 @@ msgid ""
 "hello world\n"
 "hello world\n"
 msgstr ""
+"$ nc localhost 8080\n"
+"hello world\n"
+"hello world\n"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:141
@@ -309,16 +338,17 @@ msgid ""
 "unnecessary memory copies. It receives a packet from the kernel and sends it "
 "back, without further complexity."
 msgstr ""
+"和 `cat.ts` 示例一样，以上示例中 `copy()` 函数没有进行多余的内存拷贝，而是从内核接收数据包，再将其返回到内核，确保了逻辑的简化。"
 
 #. type: Title ###
 #: docs/getting_started/first_steps.md:142
 #, no-wrap
 msgid "More examples"
-msgstr ""
+msgstr "更多示例"
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:144
 msgid ""
 "You can find more examples, like an HTTP file server, in the `Examples` "
 "chapter."
-msgstr ""
+msgstr "在`示例`章节，你可以查到更多示例，其中包括 HTTP 文件服务器。"
