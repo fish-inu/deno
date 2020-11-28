@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-27 16:05+0000\n"
+"PO-Revision-Date: 2020-11-28 15:59+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/command_line_interface/zh_Hans/>\n"
@@ -66,6 +66,8 @@ msgid ""
 "those supported, such as `deno bundle`. To see subcommand-specific help for "
 "`bundle`, you can similarly run one of:"
 msgstr ""
+"Deno 的 CLI 基于子命令。上面示例会显示子命令列表，如 `deno bundle`。如果要查看与子命令相关的帮助信息，如 "
+"`bundle`，你可以运行以下命令的其中一行："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/command_line_interface.md:24
@@ -75,17 +77,20 @@ msgid ""
 "deno bundle -h\n"
 "deno bundle --help\n"
 msgstr ""
+"deno help bundle\n"
+"deno bundle -h\n"
+"deno bundle --help\n"
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:31
 msgid "Detailed guides to each subcommand can be found [here](../tools.md)."
-msgstr ""
+msgstr "前往[此处](../tools.md)查看各个子命令的详细指南。"
 
 #. type: Title ###
 #: docs/getting_started/command_line_interface.md:32
 #, no-wrap
 msgid "Script source"
-msgstr ""
+msgstr "脚本源"
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:37
@@ -93,7 +98,7 @@ msgid ""
 "Deno can grab the scripts from multiple sources, a filename, a url, and '-' "
 "to read the file from stdin. The last is useful for integration with other "
 "applications."
-msgstr ""
+msgstr "Deno 脚本存在多种形式，可以是文件名，也可以是 url。它还可以是 '-'，从 stdin 读取文件，可用于与其它应用整合。"
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/command_line_interface.md:38
@@ -103,6 +108,9 @@ msgid ""
 "deno run https://mydomain.com/main.ts\n"
 "cat main.ts | deno run -\n"
 msgstr ""
+"deno run main.ts\n"
+"deno run https://mydomain.com/main.ts\n"
+"cat main.ts | deno run -\n"
 
 #. type: Title ###
 #: docs/getting_started/command_line_interface.md:44
