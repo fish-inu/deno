@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-28 15:59+0000\n"
+"PO-Revision-Date: 2020-11-29 15:38+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/command_line_interface/zh_Hans/>\n"
@@ -116,20 +116,20 @@ msgstr ""
 #: docs/getting_started/command_line_interface.md:44
 #, no-wrap
 msgid "Script arguments"
-msgstr ""
+msgstr "脚本参数"
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:48
 msgid ""
 "Separately from the Deno runtime flags, you can pass user-space arguments to "
 "the script you are running by specifying them after the script name:"
-msgstr ""
+msgstr "除了 Deno 自带的标志，你还可以指定其它参数在脚本名之后，将它们传递到脚本中去："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/command_line_interface.md:49
 #, no-wrap
 msgid "deno run main.ts a b -c --quiet\n"
-msgstr ""
+msgstr "deno run main.ts a b -c --quiet\n"
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/command_line_interface.md:53
@@ -138,6 +138,8 @@ msgid ""
 "// main.ts\n"
 "console.log(Deno.args); // [ \"a\", \"b\", \"-c\", \"--quiet\" ]\n"
 msgstr ""
+"// main.ts\n"
+"console.log(Deno.args); // [ \"a\", \"b\", \"-c\", \"--quiet\" ]\n"
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:61
@@ -146,7 +148,7 @@ msgid ""
 "**Note that anything passed after the script name will be passed as a script\n"
 "argument and not consumed as a Deno runtime flag.** This leads to the following\n"
 "pitfall:\n"
-msgstr ""
+msgstr "**请注意，脚本名后面是参数，Deno 不会把它们当作是运行时标志。**这就会有以下隐患：\n"
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/command_line_interface.md:62
@@ -158,22 +160,27 @@ msgid ""
 "# Bad! --allow-net was passed to Deno.args, throws a net permission error.\n"
 "deno run net_client.ts --allow-net\n"
 msgstr ""
+"# 正确。我们给 net_client.ts 授予了网络权限。\n"
+"deno run --allow-net net_client.ts\n"
+"\n"
+"# 错误！我们将 --allow-net 传递给了 Deno.args，这会抛出网络权限错误。\n"
+"deno run net_client.ts --allow-net\n"
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:71
 msgid "Some see it as unconventional that:"
-msgstr ""
+msgstr "有人不习惯这样，觉得："
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:73
 #, no-wrap
 msgid "> a non-positional flag is parsed differently depending on its position.\n"
-msgstr ""
+msgstr "> 非位置参数竟然因位置不同而导致解析方式不同。\n"
 
 #. type: Plain text
 #: docs/getting_started/command_line_interface.md:75
 msgid "However:"
-msgstr ""
+msgstr "然而："
 
 #. type: Bullet: '1. '
 #: docs/getting_started/command_line_interface.md:84
