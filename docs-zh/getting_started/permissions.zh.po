@@ -3,24 +3,26 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-11-30 15:48+0000\n"
+"Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
+"Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
+"deno-docs/permissions/zh_Hans/>\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. type: Title ##
 #: docs/getting_started/permissions.md:1
 #, no-wrap
 msgid "Permissions"
-msgstr ""
+msgstr "权限"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:7
@@ -30,6 +32,8 @@ msgid ""
 "to security-sensitive areas or functions requires the use of permissions to "
 "be granted to a deno process on the command line."
 msgstr ""
+"Deno 在默认设置下安全性高，因此如果你不专门授予权限，那么相关模块就无法访问文件、网络或环境。有些资源或函数在安全方面需要谨慎对待，如果要访问它们，你"
+"得在命令行给程序授予相关权限。"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:11
@@ -37,43 +41,43 @@ msgid ""
 "For the following example, `mod.ts` has been granted read-only access to the "
 "file system. It cannot write to it, or perform any other security-sensitive "
 "functions."
-msgstr ""
+msgstr "比如以下示例授予了 `mod.ts` 对文件系统的只读权限，该程序无法写入文件，也无法运行其它在安全方面需要谨慎对待的功能。"
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/permissions.md:12
 #, no-wrap
 msgid "deno run --allow-read mod.ts\n"
-msgstr ""
+msgstr "deno run --allow-read mod.ts\n"
 
 #. type: Title ###
 #: docs/getting_started/permissions.md:16
 #, no-wrap
 msgid "Permissions list"
-msgstr ""
+msgstr "权限列表"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:19
 msgid "The following permissions are available:"
-msgstr ""
+msgstr "你可以使用以下权限："
 
 #. type: Bullet: '- '
 #: docs/getting_started/permissions.md:39
 msgid "**-A, --allow-all** Allow all permissions. This disables all security."
-msgstr ""
+msgstr "**-A, --allow-all** 授予所有权限，这会关闭所有安全策略。"
 
 #. type: Bullet: '- '
 #: docs/getting_started/permissions.md:39
 msgid ""
 "**--allow-env** Allow environment access for things like getting and setting "
 "of environment variables."
-msgstr ""
+msgstr "**--allow-env** 授予环境访问权限，可用于访问或配置环境变量。"
 
 #. type: Bullet: '- '
 #: docs/getting_started/permissions.md:39
 msgid ""
 "**--allow-hrtime** Allow high-resolution time measurement. High-resolution "
 "time can be used in timing attacks and fingerprinting."
-msgstr ""
+msgstr "**--allow-hrtime** 授予高解析度时间测量权限，高解析度时间可用于时序攻击和指纹采集。"
 
 #. type: Bullet: '- '
 #: docs/getting_started/permissions.md:39
@@ -82,13 +86,14 @@ msgid ""
 "optional, comma-separated list of domains to provide an allow-list of "
 "allowed domains."
 msgstr ""
+"**--allow-net=\\<allow-net\\>** 授予网络访问权限。你可以选择以逗号为分隔符提供一个白名单列表，指定程序可以访问的域名。"
 
 #. type: Bullet: '- '
 #: docs/getting_started/permissions.md:39
 msgid ""
 "**--allow-plugin** Allow loading plugins. Please note that --allow-plugin is "
 "an unstable feature."
-msgstr ""
+msgstr "**--allow-plugin** 授予插件加载权限。请注意，该功能不稳定。"
 
 #. type: Bullet: '- '
 #: docs/getting_started/permissions.md:39
@@ -97,6 +102,8 @@ msgid ""
 "specify an optional, comma-separated list of directories or files to provide "
 "a allow-list of allowed file system access."
 msgstr ""
+"**--allow-read=\\<allow-read\\>** "
+"授予文件系统读取权限。你可以选择以逗号为分隔符提供一个白名单列表，指定程序可以读取的文件夹或文件。"
 
 #. type: Bullet: '- '
 #: docs/getting_started/permissions.md:39
@@ -105,6 +112,7 @@ msgid ""
 "not run in a sandbox and therefore do not have the same security "
 "restrictions as the deno process. Therefore, use with caution."
 msgstr ""
+"**--allow-run** 授予子进程运行权限。请注意，子进程与 deno 进程不同，没有运行在沙盒环境中， 没有安全上的限制，请谨慎使用该功能。"
 
 #. type: Bullet: '- '
 #: docs/getting_started/permissions.md:39
@@ -113,19 +121,21 @@ msgid ""
 "specify an optional, comma-separated list of directories or files to provide "
 "a allow-list of allowed file system access."
 msgstr ""
+"**--allow-write=\\<allow-write\\>** "
+"授予文件系统写入权限。你可以选择以逗号为分隔符提供一个白名单列表，指定程序可以写入的文件夹或文件。"
 
 #. type: Title ###
 #: docs/getting_started/permissions.md:40
 #, no-wrap
 msgid "Permissions allow-list"
-msgstr ""
+msgstr "权限白名单"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:44
 msgid ""
 "Deno also allows you to control the granularity of some permissions with "
 "allow-lists."
-msgstr ""
+msgstr "Deno 让你能用白名单去调控一些权限的粒度。"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:48
@@ -133,7 +143,7 @@ msgid ""
 "This example restricts file system access by allow-listing only the `/usr` "
 "directory, however the execution fails as the process was attempting to "
 "access a file in the `/etc` directory:"
-msgstr ""
+msgstr "以下示例限制了文件系统访问，只允许读取 `/usr` 文件夹，不过该程序试图访问 `/etc` 文件夹，导致了代码最终运行失败："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/permissions.md:49
@@ -145,76 +155,85 @@ msgid ""
 "    at DenoError ($deno$/errors.ts:20:5)\n"
 "    ...\n"
 msgstr ""
+"$ deno run --allow-read=/usr https://deno.land/std@$STD_VERSION/examples/"
+"cat.ts /etc/passwd\n"
+"error: Uncaught PermissionDenied: read access to \"/etc/passwd\", run again "
+"with the --allow-read flag\n"
+"► $deno$/dispatch_json.ts:40:11\n"
+"    at DenoError ($deno$/errors.ts:20:5)\n"
+"    ...\n"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:58
 msgid ""
 "Try it out again with the correct permissions by allow-listing `/etc` "
 "instead:"
-msgstr ""
+msgstr "再试试授予正确权限，添加 `/etc` 到白名单："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/permissions.md:59
 #, no-wrap
 msgid "deno run --allow-read=/etc https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd\n"
 msgstr ""
+"deno run --allow-read=/etc https://deno.land/std@$STD_VERSION/examples/"
+"cat.ts /etc/passwd\n"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:64
 msgid "`--allow-write` works the same as `--allow-read`."
-msgstr ""
+msgstr "`--allow-write` 和 `--allow-read` 的作用机制相同。"
 
 #. type: Title ###
 #: docs/getting_started/permissions.md:65
 #, no-wrap
 msgid "Network access:"
-msgstr ""
+msgstr "网络访问权限："
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:68
 msgid "_fetch.ts_:"
-msgstr ""
+msgstr "_fetch.ts_:"
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/permissions.md:69
 #, no-wrap
 msgid "const result = await fetch(\"https://deno.land/\");\n"
-msgstr ""
+msgstr "const result = await fetch(\"https://deno.land/\");\n"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:74
 msgid "This is an example of how to allow-list hosts/urls:"
-msgstr ""
+msgstr "以下示例添加主机/url 到白名单："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/permissions.md:75
 #, no-wrap
 msgid "deno run --allow-net=github.com,deno.land fetch.ts\n"
-msgstr ""
+msgstr "deno run --allow-net=github.com,deno.land fetch.ts\n"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:81
 msgid ""
 "If `fetch.ts` tries to establish network connections to any other domain, "
 "the process will fail."
-msgstr ""
+msgstr "如果 `fetch.ts` 试图连接其它域名，程序会运行失败。"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:83
 msgid "Allow net calls to any host/url:"
-msgstr ""
+msgstr "以下示例准许访问任何主机/url："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/permissions.md:84
 #, no-wrap
 msgid "deno run --allow-net fetch.ts\n"
-msgstr ""
+msgstr "deno run --allow-net fetch.ts\n"
 
 #. type: Title ###
 #: docs/getting_started/permissions.md:88
 #, no-wrap
 msgid "Conference"
-msgstr ""
+msgstr "相关会议"
 
 #. type: Plain text
 #: docs/getting_started/permissions.md:92
@@ -222,3 +241,5 @@ msgid ""
 "Ryan Dahl. (September 25, 2020).  [The Deno security model](https://www."
 "youtube.com/watch?v=r5F6dekUmdE#t=34m57).  Speakeasy JS."
 msgstr ""
+"Ryan Dahl. (September 25, 2020).  [The Deno security model](https://www."
+"youtube.com/watch?v=r5F6dekUmdE#t=34m57).  Speakeasy JS."
