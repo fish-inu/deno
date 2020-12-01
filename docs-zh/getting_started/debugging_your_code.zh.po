@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: 2020-12-01 16:10+0000\n"
-"Last-Translator: 莹莹小仙女 <translator@email.com>\n"
+"Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/debugging_your_code/zh_Hans/>\n"
 "Language: zh\n"
@@ -35,7 +35,7 @@ msgstr "Deno支持[V8检查器协议]（https://v8.dev/docs/inspector）。"
 msgid ""
 "It's possible to debug Deno programs using Chrome Devtools or other clients "
 "that support the protocol (eg. VSCode)."
-msgstr "可以使用Chrome 开发工具或其他支持该协议的客户端（例如VSCode）来调试Deno程序。"
+msgstr "你可以使用 Chrome Devtools 或其它支持该协议的客户端（例如 VSCode）来调试 Deno 程序。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:10
