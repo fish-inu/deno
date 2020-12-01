@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-30 15:48+0000\n"
+"PO-Revision-Date: 2020-12-01 16:10+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/typescript/zh_Hans/>\n"
@@ -40,6 +40,8 @@ msgid ""
 "specified as files (including extensions) or fully qualified URL imports. "
 "Typescript modules can be directly imported. E.g."
 msgstr ""
+"Deno 支持 JavaScript 和 TypeScript，要求使用完全限定（fully "
+"qualified）模块名称，名称中要包括扩展名，指定的服务器也要给出正确的媒体类型。以下示例直接导入 TypeScript 模块："
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/typescript.md:12
@@ -48,12 +50,15 @@ msgid ""
 "import { Response } from \"https://deno.land/std@$STD_VERSION/http/server.ts\";\n"
 "import { queue } from \"./collections.ts\";\n"
 msgstr ""
+"import { Response } from \"https://deno.land/std@$STD_VERSION/http/server."
+"ts\";\n"
+"import { queue } from \"./collections.ts\";\n"
 
 #. type: Title ###
 #: docs/getting_started/typescript.md:17
 #, no-wrap
 msgid "`--no-check` option"
-msgstr ""
+msgstr "`--no-check` 标志"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:25
@@ -65,6 +70,9 @@ msgid ""
 "time to be as fast as possible (for example when restarting the program "
 "automatically with a file watcher)."
 msgstr ""
+"你可以对命令如 `deno run`、`deno test`、`deno cache` 或 `deno bundle` 指定 `--no-check` "
+"标志来关闭 TypeScript "
+"的类型检查，这大大缩短了程序启动的时间。该标志可用于以下情景：编辑器有类型检查的功能，而文件监听器会自动重启程序，此时你想尽可能缩短程序启动时间。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:39
@@ -84,6 +92,16 @@ msgid ""
 "will be enabled by default in the future. They are already the default in "
 "Deno 1.4 or above when using `--unstable`."
 msgstr ""
+"有了类型信息才能自动删除 type only import 或 export，而 `--no-check` 标志关闭了 TypeScript "
+"类型检查，因此无法进行该操作。为此，TypeScript 新增了 [`import type` 和 `export type` "
+"语法](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8"
+".html#type-only-imports-and-exports)。其中，导出 type：`export type { AnInterface } "
+"from \"./mod.ts\";`；导入 type：`import type { AnInterface } from \"./mod.ts\";`。"
+"你可以在 TypeScript option 中设置 `isolatedModules` 为 `true`，并设置 "
+"`importsNotUsedAsValues` 为 `error`，这样就能确保使用了 `import type` 和 `export "
+"type`。你可以从[标准库](https://github.com/denoland/deno/blob/$CLI_VERSION/std/"
+"tsconfig_test.json)查看相关示例 `tsconfig.json`。此外，我们以后会将这些配置设为默认，而如果你使用了 "
+"`--unstable` 标志，Deno 1.4 及以上版本就会默认启动这些配置。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:43
@@ -92,6 +110,8 @@ msgid ""
 "is not supported because it is type-directed. `--no-check` also does not "
 "support the legacy `import =` and `export =` syntax."
 msgstr ""
+"因为 `--no-check` 标志会导致失去类型信息，所以就无法支持 `const enum`，同时也不支持过时语法 `import =` 和 `"
+"export =`。"
 
 #. type: Title ###
 #: docs/getting_started/typescript.md:44
