@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-12-01 08:48+0000\n"
+"PO-Revision-Date: 2020-12-01 16:10+0000\n"
 "Last-Translator: 莹莹小仙女 <translator@email.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/debugging_your_code/zh_Hans/>\n"
@@ -50,13 +50,13 @@ msgid ""
 "The `--inspect` flag allows attaching the debugger at any point in time, "
 "while `--inspect-brk` will wait for the debugger to attach and will pause "
 "execution on the first line of code."
-msgstr ""
+msgstr "--inspect标志允许在任何时间点附加调试点，而--inspect-brk将等待调试点的附加并暂停第一行代码的执行。"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:15
 #, no-wrap
 msgid "Chrome Devtools"
-msgstr ""
+msgstr "Chrome 开发工具"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:20
@@ -65,11 +65,13 @@ msgid ""
 "[file_server.ts](https://deno.land/std@$STD_VERSION/http/file_server.ts) "
 "from `std`, a static file server."
 msgstr ""
+"让我们尝试使用Chrome 开发工具调试程序。为此，我们将使用静态文件服务器“ std”中的[file_server.ts]（https://deno."
+"land/std@$STD_VERSION/http/file_server.ts）。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:22
 msgid "Use the `--inspect-brk` flag to break execution on the first line:"
-msgstr ""
+msgstr "使用--inspect-brk标志来中断第一行的执行："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/debugging_your_code.md:23
@@ -81,27 +83,35 @@ msgid ""
 "Compile https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
 "...\n"
 msgstr ""
+"$ deno run --inspect-brk --allow-read --allow-net https://deno.land/std@$"
+"STD_VERSION/http/file_server.ts\n"
+"在ws监听调试://127.0.0.1:9229/ws/1e82c406-85a9-44ab-86b6-7341583480b1\n"
+"下载 https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
+"编译 https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
+"...\n"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:32
 msgid "Open `chrome://inspect` and click `Inspect` next to target:"
-msgstr ""
+msgstr "打开“ chrome：// inspect”，然后点击目标旁边的“检查”："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:34
+#, fuzzy
 msgid "![chrome://inspect](../images/debugger1.jpg)"
-msgstr ""
+msgstr "![chrome://inspect](../images/debugger1.jpg)"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:36
 msgid ""
 "It might take a few seconds after opening the Devtools to load all modules."
-msgstr ""
+msgstr "打开开发工具后可能需要几秒钟来加载所有模块。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:38
+#, fuzzy
 msgid "![Devtools opened](../images/debugger2.jpg)"
-msgstr ""
+msgstr "![Devtools opened](../images/debugger2.jpg)"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:43
@@ -111,6 +121,9 @@ msgid ""
 "is caused by the way ES modules are evaluated by V8 (`_constants.ts` is left-"
 "most, bottom-most dependency of `file_server.ts` so it is evaluated first)."
 msgstr ""
+"您可能会注意到，开发工具在“ _constants.ts”的第一行而不是“ file_server."
+"ts”的第一行暂停了运行。这是预期的行为，并且是由V8评估ES模块的方式引起的（`_constants.ts`是`file_server."
+"ts`的最左端，最底层依赖，因此首先对其进行评估）。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:47
@@ -118,12 +131,13 @@ msgid ""
 "At this point all source code is available in the Devtools, so let's open up "
 "`file_server.ts` and add a breakpoint there; go to \"Sources\" pane and "
 "expand the tree:"
-msgstr ""
+msgstr "现在所有的源代码都可以在开发工具中找到，所以让我们打开`file_server.ts`并在其中添加一个断点。转到“源”窗格并展开树："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:49
+#, fuzzy
 msgid "![Open file_server.ts](../images/debugger3.jpg)"
-msgstr ""
+msgstr "![Open file_server.ts](../images/debugger3.jpg)"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:54
@@ -133,16 +147,19 @@ msgid ""
 "case of `.ts` files it will be emitted JavaScript source), while the latter "
 "is a source map for the file._"
 msgstr ""
+"仔细查看，您会发现每个文件都有重复的条目；一份是正体写的，另一份是斜体的。前者是已编译的源文件（因此，在`."
+"ts`文件的情况下，它将被发送为JavaScript源代码），而后者是该文件的源映射。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:56
 msgid "Next, add a breakpoint in the `listenAndServe` method:"
-msgstr ""
+msgstr "接下来，在`listenAndServe`方法中添加一个断点："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:58
+#, fuzzy
 msgid "![Break in file_server.ts](../images/debugger4.jpg)"
-msgstr ""
+msgstr "![Break in file_server.ts](../images/debugger4.jpg)"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:62
@@ -150,7 +167,7 @@ msgid ""
 "As soon as we've added the breakpoint Devtools automatically opened up the "
 "source map file, which allows us step through the actual source code that "
 "includes types."
-msgstr ""
+msgstr "添加断点后，开发工具会自动打开源映射文件，这使我们可以逐步完成包含各种类型的真实源代码。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:66
@@ -158,50 +175,50 @@ msgid ""
 "Now that we have our breakpoints set, we can resume the execution of our "
 "script so that we might inspect an incoming request. Hit the Resume script "
 "execution button to do so. You might even need to hit it twice!"
-msgstr ""
+msgstr "现在我们已经设置了断点，我们可以继续运行脚本，以便我们可以检查传入的请求。点击恢复脚本执行按钮。您甚至可能需要点击两次！"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:69
 msgid ""
 "Once our script is running again, let's send a request and inspect it in "
 "Devtools:"
-msgstr ""
+msgstr "脚本再次运行后，让我们发送一个请求并在开发工具中对其进行检查："
 
 #. type: Fenced code block
 #: docs/getting_started/debugging_your_code.md:70
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "$ curl http://0.0.0.0:4507/\n"
-msgstr ""
+msgstr "$ curl http://0.0.0.0:4507/\n"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:75
 msgid "![Break in request handling](../images/debugger5.jpg)"
-msgstr ""
+msgstr "![中断请求处理](../images/debugger5.jpg)"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:78
 msgid ""
 "At this point we can introspect the contents of the request and go step-by-"
 "step to debug the code."
-msgstr ""
+msgstr "在这一点上，我们可以思考一下请求的内容，并逐步调试代码。"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:79
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "VSCode"
-msgstr ""
+msgstr "VSCode"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:82
 msgid "Deno can be debugged using VSCode."
-msgstr ""
+msgstr "可以使用VSCode调试Deno。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:85
 msgid ""
 "Official support via the plugin is being worked on - https://github.com/"
 "denoland/vscode_deno/issues/12"
-msgstr ""
+msgstr "可以通过插件提供官方支持-https://github.com/denoland/vscode_deno/issues/12"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:89
@@ -210,10 +227,12 @@ msgid ""
 "(https://code.visualstudio.com/docs/editor/debugging#_launch-"
 "configurations)  config:"
 msgstr ""
+"我们也可以通过手动提供[`launch.json`]（https://code.visualstudio.com/docs/editor/"
+"debugging#_launch-configurations）配置来增加调试点："
 
 #. type: Fenced code block (json)
 #: docs/getting_started/debugging_your_code.md:90
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "{\n"
 "  \"version\": \"0.2.0\",\n"
@@ -230,6 +249,20 @@ msgid ""
 "  ]\n"
 "}\n"
 msgstr ""
+"{\n"
+"  \"version\": \"0.2.0\",\n"
+"  \"configurations\": [\n"
+"    {\n"
+"      \"name\": \"Deno\",\n"
+"      \"type\": \"pwa-node\",\n"
+"      \"request\": \"launch\",\n"
+"      \"cwd\": \"${workspaceFolder}\",\n"
+"      \"runtimeExecutable\": \"deno\",\n"
+"      \"runtimeArgs\": [\"run\", \"--inspect-brk\", \"-A\", \"${file}\"],\n"
+"      \"attachSimplePort\": 9229\n"
+"    }\n"
+"  ]\n"
+"}\n"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:109
@@ -238,15 +271,17 @@ msgid ""
 "**NOTE**: This uses the file you have open as the entry point; replace `${file}`\n"
 "with a script name if you want a fixed entry point.\n"
 msgstr ""
+"**注意**: 这将使用你打开的文件作为入口点; replace `${file}`\n"
+"如果需要固定的入口点，请使用脚本名称。\n"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:111
 msgid "Let's try out debugging a local source file. Create `server.ts`:"
-msgstr ""
+msgstr "让我们尝试调试本地源文件。创建`server.ts`："
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/debugging_your_code.md:112
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "import { serve } from \"https://deno.land/std@$STD_VERSION/http/server.ts\";\n"
 "const server = serve({ port: 8000 });\n"
@@ -256,16 +291,25 @@ msgid ""
 "  req.respond({ body: \"Hello World\\n\" });\n"
 "}\n"
 msgstr ""
+"import { serve } from \"https://deno.land/std@$STD_VERSION/http/server.ts\";"
+"\n"
+"const server = serve({ port: 8000 });\n"
+"console.log(\"http://localhost:8000/\");\n"
+"\n"
+"for await (const req of server) {\n"
+"  req.respond({ body: \"Hello World\\n"
+"\" });\n"
+"}\n"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:123
 msgid "Then we can set a breakpoint, and run the created configuration:"
-msgstr ""
+msgstr "然后我们可以设置一个断点，并运行创建的配置："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:125
 msgid "![VSCode debugger](../images/debugger7.jpg)"
-msgstr ""
+msgstr "![VSCode 调试](../images/debugger7.jpg)"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:126
@@ -283,32 +327,37 @@ msgid ""
 "edit the run/debug configuration and modify the `Arguments` field with the\n"
 "required flags.\n"
 msgstr ""
+"您可以使用JetBrains IDE调试Deno，方法是右键单击所需的文件\n"
+"进行调试，然后选择“调试'Deno：<文件名>'”选项。这将创建\n"
+"没有设置权限标志的运行/调试配置。配置这些标志\n"
+"编辑运行/调试配置，并使用修改“参数”字段\n"
+"必需的标志。\n"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:134
 #, no-wrap
 msgid "Other"
-msgstr ""
+msgstr "另外"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:138
 msgid ""
 "Any client that implements the Devtools protocol should be able to connect "
 "to a Deno process."
-msgstr ""
+msgstr "任何实现Devtools协议的客户端都应该能够连接到Deno进程。"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:139
 #, no-wrap
 msgid "Limitations"
-msgstr ""
+msgstr "局限性"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:143
 msgid ""
 "Devtools support is still immature. There is some functionality that is "
 "known to be missing or buggy:"
-msgstr ""
+msgstr "Devtools支持仍不成熟。有一些已知的功能缺失或错误："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:145
