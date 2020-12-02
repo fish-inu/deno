@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-12-01 16:10+0000\n"
+"PO-Revision-Date: 2020-12-03 09:53+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/typescript/zh_Hans/>\n"
@@ -117,7 +117,7 @@ msgstr ""
 #: docs/getting_started/typescript.md:44
 #, no-wrap
 msgid "Using external type definitions"
-msgstr ""
+msgstr "使用类型声明文件"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:49
@@ -126,19 +126,20 @@ msgid ""
 "modules and the Node.js module resolution logic to apply types to JavaScript "
 "modules."
 msgstr ""
+"Deno 内置的 TypeScript 编译器依赖于无扩展名的模块和 Node.js 的模块解析算法来为 JavaScript 模块配置相应的类型声明。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:52
 msgid ""
 "In order to bridge this gap, Deno supports three ways of referencing type "
 "definition files without having to resort to \"magic\" resolution."
-msgstr ""
+msgstr "为了能直接配置类型声明，Deno 支持以下三种方法来指定类型声明文件，而无需采用 Node.js 的模块解析算法。"
 
 #. type: Title ####
 #: docs/getting_started/typescript.md:53
 #, no-wrap
 msgid "Compiler hint"
-msgstr ""
+msgstr "Compiler hint"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:63
@@ -152,6 +153,9 @@ msgid ""
 "if you had `foo.js`, but you know that alongside of it was `foo.d.ts` which "
 "was the types for the file, the code would look like this:"
 msgstr ""
+"如果你导入了 JavaScript 模块，也知道对应的类型声明文件路径，你就可以导入模块的同时指定类型声明文件，这种指定方式称为 compiler "
+"hint，它标记为 `@deno-types`，值为 TypeScript 编译器使用，用来提醒 Deno `.d.ts` 文件的路径以及对应导入的模块。"
+"以下示例演示了 `foo.js` 和对应的 `foo.d.ts`："
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/typescript.md:64
@@ -160,6 +164,8 @@ msgid ""
 "// @deno-types=\"./foo.d.ts\"\n"
 "import * as foo from \"./foo.js\";\n"
 msgstr ""
+"// @deno-types=\"./foo.d.ts\"\n"
+"import * as foo from \"./foo.js\";\n"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:72
@@ -168,6 +174,7 @@ msgid ""
 "the file needs to have an extension and is relative to the current module. "
 "Remote specifiers are also allowed."
 msgstr ""
+"@deno-types 的值遵守 Deno 的模块解析算法，换句话说，类型声明文件也得添加扩展名，路径相对于当前模块。此外，类型声明文件也可以从云端载入。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:78
