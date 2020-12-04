@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-12-03 09:53+0000\n"
+"PO-Revision-Date: 2020-12-05 15:28+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/typescript/zh_Hans/>\n"
@@ -154,8 +154,8 @@ msgid ""
 "was the types for the file, the code would look like this:"
 msgstr ""
 "如果你导入了 JavaScript 模块，也知道对应的类型声明文件路径，你就可以导入模块的同时指定类型声明文件，这种指定方式称为 compiler "
-"hint，它标记为 `@deno-types`，值为 TypeScript 编译器使用，用来提醒 Deno `.d.ts` 文件的路径以及对应导入的模块。"
-"以下示例演示了 `foo.js` 和对应的 `foo.d.ts`："
+"hint，它标记为 `@deno-types`，值为编译器所用，用来提醒 Deno `.d.ts` 文件的路径以及对应导入的模块。以下示例演示了 `foo"
+".js` 和对应的 `foo.d.ts`："
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/typescript.md:64
@@ -185,6 +185,9 @@ msgid ""
 "Deno compiler will load `./foo.d.ts` instead of `./foo.js`. Deno will still "
 "load `./foo.js` when it runs the program."
 msgstr ""
+"Compiler hint 会影响相邻之下的 `import` 或 `export...from` 语句，即编译器会载入 `@deno-types` "
+"的值，不载入语句指定的模块。如以上示例，Deno 编译器会载入 `./foo.d.ts`，不载入 `./foo.js`，不过 Deno 在运行时会载入 "
+"`./foo.js`。"
 
 #. type: Title ####
 #: docs/getting_started/typescript.md:79
