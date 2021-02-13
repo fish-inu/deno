@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-12-01 16:10+0000\n"
+"PO-Revision-Date: 2021-02-14 10:09+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/debugging_your_code/zh_Hans/>\n"
@@ -22,13 +22,13 @@ msgstr ""
 #: docs/getting_started/debugging_your_code.md:1
 #, no-wrap
 msgid "Debugging your code"
-msgstr "调试代码"
+msgstr "调试"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:4
 msgid ""
 "Deno supports the [V8 Inspector Protocol](https://v8.dev/docs/inspector)."
-msgstr "Deno支持[V8检查器协议]（https://v8.dev/docs/inspector）。"
+msgstr "Deno 支持[V8检查器协议](https://v8.dev/docs/inspector)。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:7
@@ -42,7 +42,7 @@ msgstr "你可以使用 Chrome Devtools 或其它支持该协议的客户端（�
 msgid ""
 "To activate debugging capabilities run Deno with the `--inspect` or `--"
 "inspect-brk` flags."
-msgstr "要激活调试功能，请使用`--inspect`或`--inspect-brk`标志运行Deno。"
+msgstr "你可以使用`--inspect`或`--inspect-brk` 参数来运行 Deno，这将激活调试功能。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:14
@@ -50,13 +50,13 @@ msgid ""
 "The `--inspect` flag allows attaching the debugger at any point in time, "
 "while `--inspect-brk` will wait for the debugger to attach and will pause "
 "execution on the first line of code."
-msgstr "--inspect标志允许在任何时间点附加调试点，而--inspect-brk将等待调试点的附加并暂停第一行代码的执行。"
+msgstr "`--inspect` 让你自定义断点位置，而 `--inspect-brk` 让断点在代码第一行就触发。"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:15
 #, no-wrap
 msgid "Chrome Devtools"
-msgstr "Chrome 开发工具"
+msgstr "Chrome Devtools"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:20
