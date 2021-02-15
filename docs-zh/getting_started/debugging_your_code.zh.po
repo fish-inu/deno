@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-14 10:09+0000\n"
+"PO-Revision-Date: 2021-02-16 13:38+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/debugging_your_code/zh_Hans/>\n"
@@ -65,8 +65,8 @@ msgid ""
 "[file_server.ts](https://deno.land/std@$STD_VERSION/http/file_server.ts) "
 "from `std`, a static file server."
 msgstr ""
-"让我们尝试使用Chrome 开发工具调试程序。为此，我们将使用静态文件服务器“ std”中的[file_server.ts]（https://deno."
-"land/std@$STD_VERSION/http/file_server.ts）。"
+"接下来使用 Chrome Devtools 来调试程序吧，以 [file_server.ts](https://deno.land/std@$"
+"STD_VERSION/http/file_server.ts)（一个静态文件服务器）为例。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:22
@@ -97,7 +97,6 @@ msgstr "打开“ chrome：// inspect”，然后点击目标旁边的“检查�
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:34
-#, fuzzy
 msgid "![chrome://inspect](../images/debugger1.jpg)"
 msgstr "![chrome://inspect](../images/debugger1.jpg)"
 
