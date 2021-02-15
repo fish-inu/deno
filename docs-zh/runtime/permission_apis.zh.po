@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,16 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:2
-msgid "## Permission APIs"
+#. type: Title ##
+#: docs/runtime/permission_apis.md:1
+#, no-wrap
+msgid "Permission APIs"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:5
+#, no-wrap
 msgid ""
-"> This API is unstable. Learn more about > [unstable "
-"features](../runtime/stability.md)."
+"> This API is unstable. Learn more about\n"
+"> [unstable features](../runtime/stability.md).\n"
 msgstr ""
 
 #. type: Plain text
@@ -44,21 +46,23 @@ msgid ""
 "with the permission system at runtime."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:14
-msgid "### Permission descriptors"
+#. type: Title ###
+#: docs/runtime/permission_apis.md:13
+#, no-wrap
+msgid "Permission descriptors"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:17
 msgid ""
-"On the CLI, read permission for `/foo/bar` is represented as "
-"`--allow-read=/foo/bar`. In runtime JS, it is represented as the following:"
+"On the CLI, read permission for `/foo/bar` is represented as `--allow-read=/"
+"foo/bar`. In runtime JS, it is represented as the following:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:21
-msgid "```ts const desc = { name: \"read\", path: \"/foo/bar\" } as const; ```"
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:18
+#, no-wrap
+msgid "const desc = { name: \"read\", path: \"/foo/bar\" } as const;\n"
 msgstr ""
 
 #. type: Plain text
@@ -66,42 +70,30 @@ msgstr ""
 msgid "Other examples:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:27
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:24
+#, no-wrap
 msgid ""
-"```ts // Global write permission.  const desc1 = { name: \"write\" } as "
-"const;"
+"// Global write permission.\n"
+"const desc1 = { name: \"write\" } as const;\n"
+"\n"
+"// Write permission to `$PWD/foo/bar`.\n"
+"const desc2 = { name: \"write\", path: \"foo/bar\" } as const;\n"
+"\n"
+"// Global net permission.\n"
+"const desc3 = { name: \"net\" } as const;\n"
+"\n"
+"// Net permission to 127.0.0.1:8000.\n"
+"const desc4 = { name: \"net\", url: \"127.0.0.1:8000\" } as const;\n"
+"\n"
+"// High-resolution time permission.\n"
+"const desc5 = { name: \"hrtime\" } as const;\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:30
-msgid ""
-"// Write permission to `$PWD/foo/bar`.  const desc2 = { name: \"write\", "
-"path: \"foo/bar\" } as const;"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:33
-msgid "// Global net permission.  const desc3 = { name: \"net\" } as const;"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:36
-msgid ""
-"// Net permission to 127.0.0.1:8000.  const desc4 = { name: \"net\", url: "
-"\"127.0.0.1:8000\" } as const;"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:40
-msgid ""
-"// High-resolution time permission.  const desc5 = { name: \"hrtime\" } as "
-"const; ```"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:42
-msgid "### Query permissions"
+#. type: Title ###
+#: docs/runtime/permission_apis.md:41
+#, no-wrap
+msgid "Query permissions"
 msgstr ""
 
 #. type: Plain text
@@ -109,53 +101,46 @@ msgstr ""
 msgid "Check, by descriptor, if a permission is granted or not."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:47 docs/runtime/permission_apis.md:131 docs/runtime/permission_apis.md:142 docs/runtime/permission_apis.md:179
-msgid "```ts // deno run --unstable --allow-read=/foo main.ts"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:51
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:45
+#, no-wrap
 msgid ""
-"const desc1 = { name: \"read\", path: \"/foo\" } as const; console.log(await "
-"Deno.permissions.query(desc1)); // PermissionStatus { state: \"granted\" }"
+"// deno run --unstable --allow-read=/foo main.ts\n"
+"\n"
+"const desc1 = { name: \"read\", path: \"/foo\" } as const;\n"
+"console.log(await Deno.permissions.query(desc1));\n"
+"// PermissionStatus { state: \"granted\" }\n"
+"\n"
+"const desc2 = { name: \"read\", path: \"/foo/bar\" } as const;\n"
+"console.log(await Deno.permissions.query(desc2));\n"
+"// PermissionStatus { state: \"granted\" }\n"
+"\n"
+"const desc3 = { name: \"read\", path: \"/bar\" } as const;\n"
+"console.log(await Deno.permissions.query(desc3));\n"
+"// PermissionStatus { state: \"prompt\" }\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:55
-msgid ""
-"const desc2 = { name: \"read\", path: \"/foo/bar\" } as const; "
-"console.log(await Deno.permissions.query(desc2)); // PermissionStatus { "
-"state: \"granted\" }"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:60
-msgid ""
-"const desc3 = { name: \"read\", path: \"/bar\" } as const; console.log(await "
-"Deno.permissions.query(desc3)); // PermissionStatus { state: \"prompt\" } "
-"```"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:62
-msgid "### Permission states"
+#. type: Title ###
+#: docs/runtime/permission_apis.md:61
+#, no-wrap
+msgid "Permission states"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:68
 msgid ""
-"A permission state can be either \"granted\", \"prompt\" or "
-"\"denied\". Permissions which have been granted from the CLI will query to "
-"`{ state: \"granted\" }`. Those which have not been granted query to `{ "
-"state: \"prompt\" }` by default, while `{ state: \"denied\" }` reserved for "
-"those which have been explicitly refused.  This will come up in [Request "
-"permissions](#request-permissions)."
+"A permission state can be either \"granted\", \"prompt\" or \"denied\". "
+"Permissions which have been granted from the CLI will query to `{ state: "
+"\"granted\" }`. Those which have not been granted query to `{ state: \"prompt"
+"\" }` by default, while `{ state: \"denied\" }` reserved for those which "
+"have been explicitly refused.  This will come up in [Request permissions]"
+"(#request-permissions)."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:70
-msgid "### Permission strength"
+#. type: Title ###
+#: docs/runtime/permission_apis.md:69
+#, no-wrap
+msgid "Permission strength"
 msgstr ""
 
 #. type: Plain text
@@ -169,9 +154,9 @@ msgstr ""
 #. type: Plain text
 #: docs/runtime/permission_apis.md:78
 msgid ""
-"We can also say that `desc1` is _[stronger "
-"than](https://www.w3.org/TR/permissions/#ref-for-permissiondescriptor-stronger-than)_ "
-"`desc2`. This means that for any set of CLI-granted permissions:"
+"We can also say that `desc1` is _[stronger than](https://www.w3.org/TR/"
+"permissions/#ref-for-permissiondescriptor-stronger-than)_ `desc2`. This "
+"means that for any set of CLI-granted permissions:"
 msgstr ""
 
 #. type: Bullet: '1. '
@@ -189,23 +174,23 @@ msgstr ""
 msgid "More examples:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:88
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:84
+#, no-wrap
 msgid ""
-"```ts const desc1 = { name: \"write\" } as const; // is stronger than const "
-"desc2 = { name: \"write\", path: \"/foo\" } as const;"
+"const desc1 = { name: \"write\" } as const;\n"
+"// is stronger than\n"
+"const desc2 = { name: \"write\", path: \"/foo\" } as const;\n"
+"\n"
+"const desc3 = { name: \"net\" } as const;\n"
+"// is stronger than\n"
+"const desc4 = { name: \"net\", url: \"127.0.0.1:8000\" } as const;\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:93
-msgid ""
-"const desc3 = { name: \"net\" } as const; // is stronger than const desc4 = "
-"{ name: \"net\", url: \"127.0.0.1:8000\" } as const; ```"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:95
-msgid "### Request permissions"
+#. type: Title ###
+#: docs/runtime/permission_apis.md:94
+#, no-wrap
+msgid "Request permissions"
 msgstr ""
 
 #. type: Plain text
@@ -213,27 +198,23 @@ msgstr ""
 msgid "Request an ungranted permission from the user via CLI prompt."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:100
-msgid "```ts // deno run --unstable main.ts"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:106
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:98
+#, no-wrap
 msgid ""
-"const desc1 = { name: \"read\", path: \"/foo\" } as const; const status1 = "
-"await Deno.permissions.request(desc1); // ⚠️ Deno requests read access to "
-"\"/foo\". Grant? [g/d (g = grant, d = deny)] g console.log(status1); // "
-"PermissionStatus { state: \"granted\" }"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:113
-msgid ""
-"const desc2 = { name: \"read\", path: \"/bar\" } as const; const status2 = "
-"await Deno.permissions.request(desc2); // ⚠️ Deno requests read access to "
-"\"/bar\". Grant? [g/d (g = grant, d = deny)] d console.log(status2); // "
-"PermissionStatus { state: \"denied\" } ```"
+"// deno run --unstable main.ts\n"
+"\n"
+"const desc1 = { name: \"read\", path: \"/foo\" } as const;\n"
+"const status1 = await Deno.permissions.request(desc1);\n"
+"// ⚠️ Deno requests read access to \"/foo\". Grant? [g/d (g = grant, d = deny)] g\n"
+"console.log(status1);\n"
+"// PermissionStatus { state: \"granted\" }\n"
+"\n"
+"const desc2 = { name: \"read\", path: \"/bar\" } as const;\n"
+"const status2 = await Deno.permissions.request(desc2);\n"
+"// ⚠️ Deno requests read access to \"/bar\". Grant? [g/d (g = grant, d = deny)] d\n"
+"console.log(status2);\n"
+"// PermissionStatus { state: \"denied\" }\n"
 msgstr ""
 
 #. type: Plain text
@@ -251,14 +232,15 @@ msgstr ""
 #: docs/runtime/permission_apis.md:124
 msgid ""
 "If the current permission state is already either \"granted\" or \"denied\", "
-"the request will behave like a query and just return the current "
-"status. This prevents prompts both for already granted permissions and "
-"previously denied requests."
+"the request will behave like a query and just return the current status. "
+"This prevents prompts both for already granted permissions and previously "
+"denied requests."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:126
-msgid "### Revoke permissions"
+#. type: Title ###
+#: docs/runtime/permission_apis.md:125
+#, no-wrap
+msgid "Revoke permissions"
 msgstr ""
 
 #. type: Plain text
@@ -266,12 +248,15 @@ msgstr ""
 msgid "Downgrade a permission from \"granted\" to \"prompt\"."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:136
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:129
+#, no-wrap
 msgid ""
-"const desc = { name: \"read\", path: \"/foo\" } as const; console.log(await "
-"Deno.permissions.revoke(desc)); // PermissionStatus { state: \"prompt\" } "
-"```"
+"// deno run --unstable --allow-read=/foo main.ts\n"
+"\n"
+"const desc = { name: \"read\", path: \"/foo\" } as const;\n"
+"console.log(await Deno.permissions.revoke(desc));\n"
+"// PermissionStatus { state: \"prompt\" }\n"
 msgstr ""
 
 #. type: Plain text
@@ -281,12 +266,15 @@ msgid ""
 "to one granted on the CLI?"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:147
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:140
+#, no-wrap
 msgid ""
-"const desc = { name: \"read\", path: \"/foo/bar\" } as const; "
-"console.log(await Deno.permissions.revoke(desc)); // PermissionStatus { "
-"state: \"granted\" } ```"
+"// deno run --unstable --allow-read=/foo main.ts\n"
+"\n"
+"const desc = { name: \"read\", path: \"/foo/bar\" } as const;\n"
+"console.log(await Deno.permissions.revoke(desc));\n"
+"// PermissionStatus { state: \"granted\" }\n"
 msgstr ""
 
 #. type: Plain text
@@ -298,20 +286,18 @@ msgstr ""
 #: docs/runtime/permission_apis.md:153
 msgid ""
 "To understand this behaviour, imagine that Deno stores an internal set of "
-"_explicitly granted permission descriptors_. Specifying "
-"`--allow-read=/foo,/bar` on the CLI initializes this set to:"
+"_explicitly granted permission descriptors_. Specifying `--allow-read=/foo,/"
+"bar` on the CLI initializes this set to:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:160
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:154
 #, no-wrap
 msgid ""
-"```ts\n"
 "[\n"
 "  { name: \"read\", path: \"/foo\" },\n"
 "  { name: \"read\", path: \"/bar\" },\n"
 "];\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -321,17 +307,15 @@ msgid ""
 "the set to:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:171
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:164
 #, no-wrap
 msgid ""
-"```ts\n"
 "[\n"
 "  { name: \"read\", path: \"/foo\" },\n"
 "  { name: \"read\", path: \"/bar\" },\n"
 "  { name: \"write\", path: \"/foo\" },\n"
 "];\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -344,24 +328,19 @@ msgid ""
 "than_ `desc`."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/permission_apis.md:183
+#. type: Fenced code block (ts)
+#: docs/runtime/permission_apis.md:177
+#, no-wrap
 msgid ""
-"const desc = { name: \"read\", path: \"/foo/bar\" } as const; "
-"console.log(await Deno.permissions.revoke(desc)); // Insufficient.  // "
-"PermissionStatus { state: \"granted\" }"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:186
-msgid ""
-"const strongDesc = { name: \"read\", path: \"/foo\" } as const; await "
-"Deno.permissions.revoke(strongDesc); // Good."
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/permission_apis.md:189
-msgid ""
-"console.log(await Deno.permissions.query(desc)); // PermissionStatus { "
-"state: \"prompt\" } ```"
+"// deno run --unstable --allow-read=/foo main.ts\n"
+"\n"
+"const desc = { name: \"read\", path: \"/foo/bar\" } as const;\n"
+"console.log(await Deno.permissions.revoke(desc)); // Insufficient.\n"
+"// PermissionStatus { state: \"granted\" }\n"
+"\n"
+"const strongDesc = { name: \"read\", path: \"/foo\" } as const;\n"
+"await Deno.permissions.revoke(strongDesc); // Good.\n"
+"\n"
+"console.log(await Deno.permissions.query(desc));\n"
+"// PermissionStatus { state: \"prompt\" }\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:2
-msgid "## Program lifecycle"
+#. type: Title ##
+#: docs/runtime/program_lifecycle.md:1
+#, no-wrap
+msgid "Program lifecycle"
 msgstr ""
 
 #. type: Plain text
@@ -31,9 +32,9 @@ msgstr ""
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:8
 msgid ""
-"Listeners for `load` events can be asynchronous and will be "
-"awaited. Listeners for `unload` events need to be synchronous. Both events "
-"cannot be cancelled."
+"Listeners for `load` events can be asynchronous and will be awaited. "
+"Listeners for `unload` events need to be synchronous. Both events cannot be "
+"cancelled."
 msgstr ""
 
 #. type: Plain text
@@ -47,51 +48,29 @@ msgstr ""
 msgid "**main.ts**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:15
-msgid "```ts import \"./imported.ts\";"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:19
+#. type: Fenced code block (ts)
+#: docs/runtime/program_lifecycle.md:13
 #, no-wrap
 msgid ""
+"import \"./imported.ts\";\n"
+"\n"
 "const handler = (e: Event): void => {\n"
 "  console.log(`got ${e.type} event in event handler (main)`);\n"
 "};\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:21
-msgid "window.addEventListener(\"load\", handler);"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:23
-msgid "window.addEventListener(\"unload\", handler);"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:27
-#, no-wrap
-msgid ""
+"\n"
+"window.addEventListener(\"load\", handler);\n"
+"\n"
+"window.addEventListener(\"unload\", handler);\n"
+"\n"
 "window.onload = (e: Event): void => {\n"
 "  console.log(`got ${e.type} event in onload function (main)`);\n"
 "};\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:31
-#, no-wrap
-msgid ""
+"\n"
 "window.onunload = (e: Event): void => {\n"
 "  console.log(`got ${e.type} event in onunload function (main)`);\n"
 "};\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:34
-msgid "console.log(\"log from main script\"); ```"
+"\n"
+"console.log(\"log from main script\");\n"
 msgstr ""
 
 #. type: Plain text
@@ -100,76 +79,63 @@ msgstr ""
 msgid "**imported.ts**\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:41
+#. type: Fenced code block (ts)
+#: docs/runtime/program_lifecycle.md:37
 #, no-wrap
 msgid ""
-"```ts\n"
 "const handler = (e: Event): void => {\n"
 "  console.log(`got ${e.type} event in event handler (imported)`);\n"
 "};\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:44
-msgid ""
-"window.addEventListener(\"load\", handler); "
-"window.addEventListener(\"unload\", handler);"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:48
-#, no-wrap
-msgid ""
+"\n"
+"window.addEventListener(\"load\", handler);\n"
+"window.addEventListener(\"unload\", handler);\n"
+"\n"
 "window.onload = (e: Event): void => {\n"
 "  console.log(`got ${e.type} event in onload function (imported)`);\n"
 "};\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:52
-#, no-wrap
-msgid ""
+"\n"
 "window.onunload = (e: Event): void => {\n"
 "  console.log(`got ${e.type} event in onunload function (imported)`);\n"
 "};\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:55
-msgid "console.log(\"log from imported script\"); ```"
+"\n"
+"console.log(\"log from imported script\");\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:59
 msgid ""
-"Note that you can use both `window.addEventListener` and "
-"`window.onload`/`window.onunload` to define handlers for events. There is a "
-"major difference between them, let's run the example:"
+"Note that you can use both `window.addEventListener` and `window.onload`/"
+"`window.onunload` to define handlers for events. There is a major difference "
+"between them, let's run the example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/program_lifecycle.md:71
+#. type: Fenced code block (shell)
+#: docs/runtime/program_lifecycle.md:60
+#, no-wrap
 msgid ""
-"```shell $ deno run main.ts log from imported script log from main script "
-"got load event in onload function (main)  got load event in event handler "
-"(imported)  got load event in event handler (main)  got unload event in "
-"onunload function (main)  got unload event in event handler (imported)  got "
-"unload event in event handler (main)  ```"
+"$ deno run main.ts\n"
+"log from imported script\n"
+"log from main script\n"
+"got load event in onload function (main)\n"
+"got load event in event handler (imported)\n"
+"got load event in event handler (main)\n"
+"got unload event in onunload function (main)\n"
+"got unload event in event handler (imported)\n"
+"got unload event in event handler (main)\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:75
 msgid ""
-"All listeners added using `window.addEventListener` were run, but "
-"`window.onload` and `window.onunload` defined in `main.ts` overrode handlers "
-"defined in `imported.ts`."
+"All listeners added using `window.addEventListener` were run, but `window."
+"onload` and `window.onunload` defined in `main.ts` overrode handlers defined "
+"in `imported.ts`."
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:78
 msgid ""
-"In other words, you can register multiple `window.addEventListener` "
-"`\"load\"` or `\"unload\"` events, but only the last loaded `window.onload` "
-"or `window.onunload` events will be executed."
+"In other words, you can register multiple `window.addEventListener` `\"load"
+"\"` or `\"unload\"` events, but only the last loaded `window.onload` or "
+"`window.onunload` events will be executed."
 msgstr ""

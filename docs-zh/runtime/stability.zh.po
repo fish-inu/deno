@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/runtime/stability.md:2
-msgid "## Stability"
+#. type: Title ##
+#: docs/runtime/stability.md:1
+#, no-wrap
+msgid "Stability"
 msgstr ""
 
 #. type: Plain text
@@ -36,9 +37,10 @@ msgid ""
 "behind the `--unstable` command line flag."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/stability.md:13
-msgid "```shell deno run --unstable mod_which_uses_unstable_stuff.ts ```"
+#. type: Fenced code block (shell)
+#: docs/runtime/stability.md:10
+#, no-wrap
+msgid "deno run --unstable mod_which_uses_unstable_stuff.ts\n"
 msgstr ""
 
 #. type: Plain text
@@ -54,8 +56,8 @@ msgstr ""
 #. type: Bullet: '- '
 #: docs/runtime/stability.md:21
 msgid ""
-"It adds the "
-"[`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.unstable.d.ts)  "
+"It adds the [`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw."
+"githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.unstable.d.ts)  "
 "file to the list of TypeScript definitions that are used for type checking.  "
 "This includes the output of `deno types`."
 msgstr ""
@@ -68,9 +70,10 @@ msgid ""
 "**not ready for production**."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/stability.md:27
-msgid "### Standard modules"
+#. type: Title ###
+#: docs/runtime/stability.md:26
+#, no-wrap
+msgid "Standard modules"
 msgstr ""
 
 #. type: Plain text

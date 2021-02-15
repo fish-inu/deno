@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-11-19 16:18+0800\n"
+"POT-Creation-Date: 2020-11-25 21:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,16 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:2
-msgid "## Compiler APIs"
+#. type: Title ##
+#: docs/runtime/compiler_apis.md:1
+#, no-wrap
+msgid "Compiler APIs"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:5
+#, no-wrap
 msgid ""
-"> This API is unstable. Learn more about > [unstable "
-"features](../runtime/stability.md)."
+"> This API is unstable. Learn more about\n"
+"> [unstable features](../runtime/stability.md).\n"
 msgstr ""
 
 #. type: Plain text
@@ -35,9 +37,10 @@ msgid ""
 "three methods in the `Deno` namespace that provide this access."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:10
-msgid "### `Deno.compile()`"
+#. type: Title ###
+#: docs/runtime/compiler_apis.md:9
+#, no-wrap
+msgid "`Deno.compile()`"
 msgstr ""
 
 #. type: Plain text
@@ -74,23 +77,17 @@ msgstr ""
 msgid "An example of providing sources:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:38
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:33
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [diagnostics, emitMap] = await Deno.compile(\"/foo.ts\", {\n"
-"  \"/foo.ts\": `import * as bar from "
-"\"./bar.ts\";\\nconsole.log(bar);\\n`,\n"
+"  \"/foo.ts\": `import * as bar from \"./bar.ts\";\\nconsole.log(bar);\\n`,\n"
 "  \"/bar.ts\": `export const bar = \"bar\";\\n`,\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:42
-msgid ""
-"assert(diagnostics == null); // ensuring no diagnostics are returned "
-"console.log(emitMap); ```"
+"\n"
+"assert(diagnostics == null); // ensuring no diagnostics are returned\n"
+"console.log(emitMap);\n"
 msgstr ""
 
 #. type: Plain text
@@ -107,15 +104,13 @@ msgid ""
 "you could do on the command line. So you could do something like this:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:54
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:49
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [diagnostics, emitMap] = await Deno.compile(\n"
 "  \"https://deno.land/std@$STD_VERSION/examples/welcome.ts\",\n"
 ");\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -123,9 +118,10 @@ msgstr ""
 msgid "In this case `emitMap` will contain a `console.log()` statement."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:58
-msgid "### `Deno.bundle()`"
+#. type: Title ###
+#: docs/runtime/compiler_apis.md:57
+#, no-wrap
+msgid "`Deno.bundle()`"
 msgstr ""
 
 #. type: Plain text
@@ -152,23 +148,17 @@ msgid ""
 "Deno."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:85
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:80
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [diagnostics, emit] = await Deno.bundle(\"/foo.ts\", {\n"
-"  \"/foo.ts\": `import * as bar from "
-"\"./bar.ts\";\\nconsole.log(bar);\\n`,\n"
+"  \"/foo.ts\": `import * as bar from \"./bar.ts\";\\nconsole.log(bar);\\n`,\n"
 "  \"/bar.ts\": `export const bar = \"bar\";\\n`,\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:89
-msgid ""
-"assert(diagnostics == null); // ensuring no diagnostics are returned "
-"console.log(emit); ```"
+"\n"
+"assert(diagnostics == null); // ensuring no diagnostics are returned\n"
+"console.log(emit);\n"
 msgstr ""
 
 #. type: Plain text
@@ -178,15 +168,13 @@ msgid ""
 "the output sources for both modules."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:101
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:96
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [diagnostics, emit] = await Deno.bundle(\n"
 "  \"https://deno.land/std@$STD_VERSION/http/server.ts\",\n"
 ");\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
@@ -197,9 +185,10 @@ msgid ""
 "module."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:106
-msgid "### `Deno.transpileOnly()`"
+#. type: Title ###
+#: docs/runtime/compiler_apis.md:105
+#, no-wrap
+msgid "`Deno.transpileOnly()`"
 msgstr ""
 
 #. type: Plain text
@@ -224,21 +213,16 @@ msgstr ""
 msgid "An example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:125
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:121
 #, no-wrap
 msgid ""
-"```ts\n"
 "const result = await Deno.transpileOnly({\n"
 "  \"/foo.ts\": `enum Foo { Foo, Bar, Baz };\\n`,\n"
 "});\n"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:129
-msgid ""
-"console.log(result[\"/foo.ts\"].source); "
-"console.log(result[\"/foo.ts\"].map); ```"
+"\n"
+"console.log(result[\"/foo.ts\"].source);\n"
+"console.log(result[\"/foo.ts\"].map);\n"
 msgstr ""
 
 #. type: Plain text
@@ -248,9 +232,10 @@ msgid ""
 "the enumerable, and the map to be defined."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:134
-msgid "### Referencing TypeScript library files"
+#. type: Title ###
+#: docs/runtime/compiler_apis.md:133
+#, no-wrap
+msgid "Referencing TypeScript library files"
 msgstr ""
 
 #. type: Plain text
@@ -259,8 +244,8 @@ msgid ""
 "When you use `deno run`, or other Deno commands which type check TypeScript, "
 "that code is evaluated against custom libraries which describe the "
 "environment that Deno supports. By default, the compiler runtime APIs which "
-"type check TypeScript also use these libraries (`Deno.compile()` and "
-"`Deno.bundle()`)."
+"type check TypeScript also use these libraries (`Deno.compile()` and `Deno."
+"bundle()`)."
 msgstr ""
 
 #. type: Plain text
@@ -273,11 +258,10 @@ msgid ""
 "TypeScript `\"dom\"` library:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:157
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:146
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [errors, emitted] = await Deno.compile(\n"
 "  \"main.ts\",\n"
 "  {\n"
@@ -287,16 +271,14 @@ msgid ""
 "    lib: [\"dom\", \"esnext\"],\n"
 "  },\n"
 ");\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:161
 msgid ""
 "For a list of all the libraries that TypeScript supports, see the [`lib` "
-"compiler "
-"option](https://www.typescriptlang.org/docs/handbook/compiler-options.html)  "
-"documentation."
+"compiler option](https://www.typescriptlang.org/docs/handbook/compiler-"
+"options.html)  documentation."
 msgstr ""
 
 #. type: Plain text
@@ -315,9 +297,10 @@ msgid ""
 "`es2020` or `esnext`)."
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:170
-msgid "#### Including the `Deno` namespace"
+#. type: Title ####
+#: docs/runtime/compiler_apis.md:169
+#, no-wrap
+msgid "Including the `Deno` namespace"
 msgstr ""
 
 #. type: Plain text
@@ -357,15 +340,14 @@ msgstr ""
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:185
 msgid ""
-"So to add the Deno namespace to a compilation, you would include the "
-"`deno.ns` lib in the array. For example:"
+"So to add the Deno namespace to a compilation, you would include the `deno."
+"ns` lib in the array. For example:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:197
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:186
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [errors, emitted] = await Deno.compile(\n"
 "  \"main.ts\",\n"
 "  {\n"
@@ -375,43 +357,40 @@ msgid ""
 "    lib: [\"dom\", \"esnext\", \"deno.ns\"],\n"
 "  },\n"
 ");\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:201
 #, no-wrap
 msgid ""
-"**Note** that the Deno namespace expects a runtime environment that is at "
-"least\n"
-"ES2018 or later. This means if you use a lib \"lower\" than ES2018 you will "
-"get\n"
+"**Note** that the Deno namespace expects a runtime environment that is at least\n"
+"ES2018 or later. This means if you use a lib \"lower\" than ES2018 you will get\n"
 "errors logged as part of the compilation.\n"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:203
-msgid "#### Using the triple slash reference"
+#. type: Title ####
+#: docs/runtime/compiler_apis.md:202
+#, no-wrap
+msgid "Using the triple slash reference"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:208
 msgid ""
 "You do not have to specify the `lib` in the compiler options. Deno also "
-"supports [the triple-slash reference to a "
-"lib](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html#-reference-lib-)  "
-"which can be embedded in the contents of the file. For example, if you have "
-"a `main.ts` like:"
+"supports [the triple-slash reference to a lib](https://www.typescriptlang."
+"org/docs/handbook/triple-slash-directives.html#-reference-lib-)  which can "
+"be embedded in the contents of the file. For example, if you have a `main."
+"ts` like:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:211
-msgid "```ts /// <reference lib=\"dom\" />"
-msgstr ""
-
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:214
-msgid "document.getElementById(\"foo\"); ```"
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:209
+#, no-wrap
+msgid ""
+"/// <reference lib=\"dom\" />\n"
+"\n"
+"document.getElementById(\"foo\");\n"
 msgstr ""
 
 #. type: Plain text
@@ -419,25 +398,20 @@ msgstr ""
 msgid "It would compile without errors like this:"
 msgstr ""
 
-#. type: Plain text
-#: docs/runtime/compiler_apis.md:222
+#. type: Fenced code block (ts)
+#: docs/runtime/compiler_apis.md:217
 #, no-wrap
 msgid ""
-"```ts\n"
 "const [errors, emitted] = await Deno.compile(\"./main.ts\", undefined, {\n"
 "  lib: [\"esnext\"],\n"
 "});\n"
-"```\n"
 msgstr ""
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:225
 #, no-wrap
 msgid ""
-"**Note** that the `dom` library conflicts with some of the default globals "
-"that\n"
-"are defined in the default type library for Deno. To avoid this, you need "
-"to\n"
-"specify a `lib` option in the compiler options to the runtime compiler "
-"APIs.\n"
+"**Note** that the `dom` library conflicts with some of the default globals that\n"
+"are defined in the default type library for Deno. To avoid this, you need to\n"
+"specify a `lib` option in the compiler options to the runtime compiler APIs.\n"
 msgstr ""
