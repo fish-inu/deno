@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-14 10:09+0000\n"
+"PO-Revision-Date: 2021-02-16 13:38+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/command_line_interface/zh_Hans/>\n"
@@ -67,7 +67,7 @@ msgid ""
 "`bundle`, you can similarly run one of:"
 msgstr ""
 "以上示例会显示子命令（如 `deno bundle`）。Deno CLI 由子命令构成，如果要查看某一子命令（如 `deno "
-"bundle`）的帮助信息，你可以运行以下命令的其中一行："
+"bundle`）的帮助文档，你可以运行以下命令的其中一行："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/command_line_interface.md:24
