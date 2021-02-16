@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-16 13:38+0000\n"
+"PO-Revision-Date: 2021-02-17 15:50+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/debugging_your_code/zh_Hans/>\n"
@@ -71,7 +71,7 @@ msgstr ""
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:22
 msgid "Use the `--inspect-brk` flag to break execution on the first line:"
-msgstr "使用--inspect-brk标志来中断第一行的执行："
+msgstr "首先使用 `--inspect-brk`，在第一行就触发断点："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/debugging_your_code.md:23
@@ -85,15 +85,16 @@ msgid ""
 msgstr ""
 "$ deno run --inspect-brk --allow-read --allow-net https://deno.land/std@$"
 "STD_VERSION/http/file_server.ts\n"
-"在ws监听调试://127.0.0.1:9229/ws/1e82c406-85a9-44ab-86b6-7341583480b1\n"
-"下载 https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
-"编译 https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
+"Debugger listening on ws://127.0.0.1:9229/ws/1e82c406-85a9-44ab-86b6-"
+"7341583480b1\n"
+"Download https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
+"Compile https://deno.land/std@$STD_VERSION/http/file_server.ts\n"
 "...\n"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:32
 msgid "Open `chrome://inspect` and click `Inspect` next to target:"
-msgstr "打开“ chrome：// inspect”，然后点击目标旁边的“检查”："
+msgstr "然后打开 `chrome://inspect`，点击位于 target 下方的 `Inspect`："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:34
@@ -104,7 +105,7 @@ msgstr "![chrome://inspect](../images/debugger1.jpg)"
 #: docs/getting_started/debugging_your_code.md:36
 msgid ""
 "It might take a few seconds after opening the Devtools to load all modules."
-msgstr "打开开发工具后可能需要几秒钟来加载所有模块。"
+msgstr "开启 Devtools 后，可能还需要几秒来载入所有模块。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:38
@@ -120,9 +121,8 @@ msgid ""
 "is caused by the way ES modules are evaluated by V8 (`_constants.ts` is left-"
 "most, bottom-most dependency of `file_server.ts` so it is evaluated first)."
 msgstr ""
-"您可能会注意到，开发工具在“ _constants.ts”的第一行而不是“ file_server."
-"ts”的第一行暂停了运行。这是预期的行为，并且是由V8评估ES模块的方式引起的（`_constants.ts`是`file_server."
-"ts`的最左端，最底层依赖，因此首先对其进行评估）。"
+"你或许会发现，Devtools 在第一行就触发断点，然而这发生在 `_constants.ts` 而非 `file_server.ts`。这并非意外，"
+"它由 V8 引擎运行 ES 模块的方式决定：因为 `_constants.ts` 作为依赖位于最底部，所以它先被执行。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:47
