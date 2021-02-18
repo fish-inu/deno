@@ -3,18 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-02-20 02:54+0000\n"
+"Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
+"Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
+"deno-docs/development_tools/zh_Hans/>\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. type: Title ##
 #: docs/contributing/development_tools.md:1
@@ -136,7 +138,7 @@ msgstr ""
 #. type: Plain text
 #: docs/contributing/development_tools.md:64
 msgid "To view the log with Web UI, generate JSON file of the log:"
-msgstr ""
+msgstr "如果你想用前端来可视化日志，你可以以 JSON 格式来生成日志："
 
 #. type: Fenced code block (sh)
 #: docs/contributing/development_tools.md:65
