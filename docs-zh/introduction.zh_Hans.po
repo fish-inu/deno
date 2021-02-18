@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-16 13:38+0000\n"
+"PO-Revision-Date: 2021-02-20 02:54+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/introduction/zh_Hans/>\n"
@@ -148,15 +148,15 @@ msgid ""
 "for it), ought to also be able to be run in a modern web browser without "
 "change."
 msgstr ""
-"与浏览器兼容：Deno 有一部分代码完全由 JavaScript 编写，这部分代码没有使用 "
-"`Deno` 命名空间，也没有对应的 feature test。它们在现代浏览器内也能运行。"
+"与浏览器兼容：Deno 有一部分代码完全由 JavaScript "
+"编写，这部分代码没有使用全局命名空间`Deno`，也没有对应的功能测试。它们在现代浏览器内能直接运行。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
 msgid ""
 "Provide built-in tooling like unit testing, code formatting, and linting to "
 "improve developer experience."
-msgstr "内置工具包括单元测试、代码格式化和代码校验，用于改善开发者体验。"
+msgstr "内置了一些工具，包括单元测试、代码格式化和代码校验，用于改善开发者体验。"
 
 #. type: Bullet: '- '
 #: docs/introduction.md:49
