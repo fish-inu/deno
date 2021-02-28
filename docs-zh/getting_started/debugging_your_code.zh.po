@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-17 15:50+0000\n"
+"PO-Revision-Date: 2021-03-02 06:42+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/debugging_your_code/zh_Hans/>\n"
@@ -130,11 +130,12 @@ msgid ""
 "At this point all source code is available in the Devtools, so let's open up "
 "`file_server.ts` and add a breakpoint there; go to \"Sources\" pane and "
 "expand the tree:"
-msgstr "现在所有的源代码都可以在开发工具中找到，所以让我们打开`file_server.ts`并在其中添加一个断点。转到“源”窗格并展开树："
+msgstr ""
+"目前为止，你可以从 Devtools 中找到源代码，那么请打开`file_server.ts`并在某处添加断点，之后前往 “Source” "
+"面板，展开文件树："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:49
-#, fuzzy
 msgid "![Open file_server.ts](../images/debugger3.jpg)"
 msgstr "![Open file_server.ts](../images/debugger3.jpg)"
 
@@ -146,8 +147,8 @@ msgid ""
 "case of `.ts` files it will be emitted JavaScript source), while the latter "
 "is a source map for the file._"
 msgstr ""
-"仔细查看，您会发现每个文件都有重复的条目；一份是正体写的，另一份是斜体的。前者是已编译的源文件（因此，在`."
-"ts`文件的情况下，它将被发送为JavaScript源代码），而后者是该文件的源映射。"
+"_你会发现文件名都重复了出现两次：一个文件名是正体，另一个文件名是斜体。前者是源码编译后生成的文件（`.ts`文件编译后生成 JavaScript "
+"代码），而后者是该文件的源映射。_"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:56
@@ -156,7 +157,6 @@ msgstr "接下来，在`listenAndServe`方法中添加一个断点："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:58
-#, fuzzy
 msgid "![Break in file_server.ts](../images/debugger4.jpg)"
 msgstr "![Break in file_server.ts](../images/debugger4.jpg)"
 
@@ -166,7 +166,7 @@ msgid ""
 "As soon as we've added the breakpoint Devtools automatically opened up the "
 "source map file, which allows us step through the actual source code that "
 "includes types."
-msgstr "添加断点后，开发工具会自动打开源映射文件，这使我们可以逐步完成包含各种类型的真实源代码。"
+msgstr "断点添加后，Devtools 会自动打开源映射文件，这样，我们就能单步调试源码。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:66
@@ -174,7 +174,8 @@ msgid ""
 "Now that we have our breakpoints set, we can resume the execution of our "
 "script so that we might inspect an incoming request. Hit the Resume script "
 "execution button to do so. You might even need to hit it twice!"
-msgstr "现在我们已经设置了断点，我们可以继续运行脚本，以便我们可以检查传入的请求。点击恢复脚本执行按钮。您甚至可能需要点击两次！"
+msgstr ""
+"设置断点后，你可以恢复脚本执行，这样就能查看等会儿发起的网络请求。请点击 Resume script execution 按钮（可能需要点击两次）。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:69
