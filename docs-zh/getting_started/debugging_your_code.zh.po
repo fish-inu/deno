@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-02 06:42+0000\n"
+"PO-Revision-Date: 2021-03-10 06:12+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/debugging_your_code/zh_Hans/>\n"
@@ -109,9 +109,8 @@ msgstr "开启 Devtools 后，可能还需要几秒来载入所有模块。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:38
-#, fuzzy
 msgid "![Devtools opened](../images/debugger2.jpg)"
-msgstr "![Devtools opened](../images/debugger2.jpg)"
+msgstr "![Devtools](../images/debugger2.jpg)"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:43
@@ -137,7 +136,7 @@ msgstr ""
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:49
 msgid "![Open file_server.ts](../images/debugger3.jpg)"
-msgstr "![Open file_server.ts](../images/debugger3.jpg)"
+msgstr "![打开 file_server.ts](../images/debugger3.jpg)"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:54
@@ -158,7 +157,7 @@ msgstr "接下来，在`listenAndServe`方法中添加一个断点："
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:58
 msgid "![Break in file_server.ts](../images/debugger4.jpg)"
-msgstr "![Break in file_server.ts](../images/debugger4.jpg)"
+msgstr "![暂停运行](../images/debugger4.jpg)"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:62
@@ -182,43 +181,43 @@ msgstr ""
 msgid ""
 "Once our script is running again, let's send a request and inspect it in "
 "Devtools:"
-msgstr "脚本再次运行后，让我们发送一个请求并在开发工具中对其进行检查："
+msgstr "脚本恢复运行后，我们来发起一个网络请求，并从 Devtools 查看该请求："
 
 #. type: Fenced code block
 #: docs/getting_started/debugging_your_code.md:70
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "$ curl http://0.0.0.0:4507/\n"
 msgstr "$ curl http://0.0.0.0:4507/\n"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:75
 msgid "![Break in request handling](../images/debugger5.jpg)"
-msgstr "![中断请求处理](../images/debugger5.jpg)"
+msgstr "![在网络请求处暂停运行](../images/debugger5.jpg)"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:78
 msgid ""
 "At this point we can introspect the contents of the request and go step-by-"
 "step to debug the code."
-msgstr "在这一点上，我们可以思考一下请求的内容，并逐步调试代码。"
+msgstr "现在，我们可以查看请求内容，一步一步来调试代码。"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:79
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "VSCode"
 msgstr "VSCode"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:82
 msgid "Deno can be debugged using VSCode."
-msgstr "可以使用VSCode调试Deno。"
+msgstr "你还可以使用 VSCode 来调试 Deno。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:85
 msgid ""
 "Official support via the plugin is being worked on - https://github.com/"
 "denoland/vscode_deno/issues/12"
-msgstr "可以通过插件提供官方支持-https://github.com/denoland/vscode_deno/issues/12"
+msgstr "相关插件正在开发 - https://github.com/denoland/vscode_deno/issues/12"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:89
@@ -227,12 +226,12 @@ msgid ""
 "(https://code.visualstudio.com/docs/editor/debugging#_launch-"
 "configurations)  config:"
 msgstr ""
-"我们也可以通过手动提供[`launch.json`]（https://code.visualstudio.com/docs/editor/"
-"debugging#_launch-configurations）配置来增加调试点："
+"你还可以编写配置文件[`launch.json`](https://code.visualstudio.com/docs/editor/debugging"
+"#_launch-configurations)来附加调试器："
 
 #. type: Fenced code block (json)
 #: docs/getting_started/debugging_your_code.md:90
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "{\n"
 "  \"version\": \"0.2.0\",\n"
@@ -270,18 +269,16 @@ msgstr ""
 msgid ""
 "**NOTE**: This uses the file you have open as the entry point; replace `${file}`\n"
 "with a script name if you want a fixed entry point.\n"
-msgstr ""
-"**注意**: 这将使用你打开的文件作为入口点; replace `${file}`\n"
-"如果需要固定的入口点，请使用脚本名称。\n"
+msgstr "**注意**：该配置指定入口为启动的文件。如果你想用固定入口，请将`${file}`替换为其它名称。\n"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:111
 msgid "Let's try out debugging a local source file. Create `server.ts`:"
-msgstr "让我们尝试调试本地源文件。创建`server.ts`："
+msgstr "现在，我们来调试一个源文件。首先创建`server.ts`："
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/debugging_your_code.md:112
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "import { serve } from \"https://deno.land/std@$STD_VERSION/http/server.ts\";\n"
 "const server = serve({ port: 8000 });\n"
@@ -304,12 +301,12 @@ msgstr ""
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:123
 msgid "Then we can set a breakpoint, and run the created configuration:"
-msgstr "然后我们可以设置一个断点，并运行创建的配置："
+msgstr "之后添加断点，选用上文的配置来调试代码："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:125
 msgid "![VSCode debugger](../images/debugger7.jpg)"
-msgstr "![VSCode 调试](../images/debugger7.jpg)"
+msgstr "![VSCode 调试器](../images/debugger7.jpg)"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:126
@@ -327,24 +324,21 @@ msgid ""
 "edit the run/debug configuration and modify the `Arguments` field with the\n"
 "required flags.\n"
 msgstr ""
-"您可以使用JetBrains IDE调试Deno，方法是右键单击所需的文件\n"
-"进行调试，然后选择“调试'Deno：<文件名>'”选项。这将创建\n"
-"没有设置权限标志的运行/调试配置。配置这些标志\n"
-"编辑运行/调试配置，并使用修改“参数”字段\n"
-"必需的标志。\n"
+"你可以从 JetBrains IDE 中右键源文件，选择`Debug 'Deno: <file name>'`选项来调试 Deno。默认情况下生成的 "
+"run/debug 配置尚未设置权限。如果你想设置权限，你可以编辑 run/debug 配置，向`Arguments`字段添加权限标志。\n"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:134
 #, no-wrap
 msgid "Other"
-msgstr "另外"
+msgstr "其它选项"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:138
 msgid ""
 "Any client that implements the Devtools protocol should be able to connect "
 "to a Deno process."
-msgstr "任何实现Devtools协议的客户端都应该能够连接到Deno进程。"
+msgstr "实现 Devtools 协议的客户端应该都能够附加到 Deno 进程。"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:139
@@ -357,11 +351,11 @@ msgstr "局限性"
 msgid ""
 "Devtools support is still immature. There is some functionality that is "
 "known to be missing or buggy:"
-msgstr "Devtools支持仍不成熟。有一些已知的功能缺失或错误："
+msgstr "Devtools 对 Deno 的支持仍不成熟，有一些缺失或有问题的功能："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:145
 msgid ""
 "- autocomplete in Devtools' console causes the Deno process to exit.  - "
 "profiling and memory dumps might not work correctly."
-msgstr ""
+msgstr "- Devtools 中控制台的自动补全功能会停止 Deno 进程。  - 性能分析和内存转储可能会出现问题。"
