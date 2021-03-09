@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-12-05 15:28+0000\n"
+"PO-Revision-Date: 2021-03-10 06:12+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/typescript/zh_Hans/>\n"
@@ -193,7 +193,7 @@ msgstr ""
 #: docs/getting_started/typescript.md:79
 #, no-wrap
 msgid "Triple-slash reference directive in JavaScript files"
-msgstr ""
+msgstr "三斜线指令"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:87
@@ -205,6 +205,7 @@ msgid ""
 "location of the type definition which happens to be alongside that file, "
 "your JavaScript module named `foo.js` might look like this:"
 msgstr ""
+"你可以在源码中使用三斜线指令向 Deno 指出模块或类型声明文件的位置。例如，在 JavaScript 模块`foo.js`中添加类型声明文件的位置："
 
 #. type: Fenced code block (js)
 #: docs/getting_started/typescript.md:88
@@ -213,6 +214,8 @@ msgid ""
 "/// <reference types=\"./foo.d.ts\" />\n"
 "export const foo = \"foo\";\n"
 msgstr ""
+"/// <reference types=\"./foo.d.ts\" />\n"
+"export const foo = \"foo\";\n"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:98
@@ -223,12 +226,14 @@ msgid ""
 "module, meaning the file needs to have an extension and is relative to the "
 "current file. Remote specifiers are also allowed."
 msgstr ""
+"虽然`foo.js`会在运行时载入，但编译器可以根据`foo.d.ts`来对`foo."
+"js`做类型检查。指令内值的解析与模块导入相同，即值应表明扩展名，路径应相对于当前文件。此外，值也接受云端文件。"
 
 #. type: Title ####
 #: docs/getting_started/typescript.md:99
 #, no-wrap
 msgid "X-TypeScript-Types custom header"
-msgstr ""
+msgstr "HTTP 头 X-TypeScript-Types"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:104
