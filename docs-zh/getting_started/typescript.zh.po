@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-10 06:12+0000\n"
+"PO-Revision-Date: 2021-03-12 03:33+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/typescript/zh_Hans/>\n"
@@ -26,7 +26,7 @@ msgstr "使用 TypeScript"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "<!-- TODO(lucacasonato): text on 'just import .ts' -->\n"
 msgstr "<!-- TODO(lucacasonato): text on 'just import .ts' -->\n"
 
@@ -242,7 +242,7 @@ msgid ""
 "want to inform Deno the location of the type definitions, you can use a "
 "custom HTTP header of `X-TypeScript-Types` to inform Deno of the location of "
 "that file."
-msgstr ""
+msgstr "你可以用 HTTP 头`X-TypeScript-Types`向 Deno 指出模块或类型声明文件的位置。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:109
@@ -251,13 +251,13 @@ msgid ""
 "above, it just means that the content of the JavaScript file itself does not "
 "need to be modified, and the location of the type definitions can be "
 "determined by the server itself."
-msgstr ""
+msgstr "它和上文的三斜线指令一样，区别是你不用再更改 JavaScript 文件，类型声明文件的位置也会由服务器来决定。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:111
 #, no-wrap
 msgid "**Not all type definitions are supported.**\n"
-msgstr ""
+msgstr "**注意：尚未支持所有类型声明文件。**\n"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:119
@@ -270,12 +270,15 @@ msgid ""
 "node_modules/@types/node/index.d.ts`. Since this depends on non-relative "
 "\"magical\" resolution, Deno cannot resolve this."
 msgstr ""
+"Deno 会用`compiler hint`来加载`.d.ts`文件，但是某些`.d.ts`文件存在 Deno 尚未支持的内容。具体来说，这些文件本来要按"
+"照模块解析策略从类型声明包加载或引用类型定义，但这会失败。举个例子：在指定类型定义的值为`node`的情况下，按理说它会解析为`./"
+"node_modules/@types/node/index.d.ts`，然而这种解析依赖于所谓的非相对自动解析，所以 Deno 无法成功解析路径。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:121
 #, no-wrap
 msgid "**Why not use the triple-slash type reference in TypeScript files?**\n"
-msgstr ""
+msgstr "**为什么不在 TypeScript 文件中使用三斜线指令？**\n"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:126
@@ -285,12 +288,14 @@ msgid ""
 "of the TypeScript compiler. Deno only looks for the directive in JavaScript "
 "(and JSX) files."
 msgstr ""
+"TypeScript 编译器支持用三斜线指令来引用类型定义，而 Deno 会与 TypeScript 编译器在该功能上产生冲突。因此，Deno 只支持在 "
+"JavaScript 文件使用三斜线指令。"
 
 #. type: Title ###
 #: docs/getting_started/typescript.md:127
 #, no-wrap
 msgid "Custom TypeScript Compiler Options"
-msgstr ""
+msgstr "配置 TypeScript 编译器"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:133
@@ -300,26 +305,28 @@ msgid ""
 "provide a way to support customization a configuration file such as "
 "`tsconfig.json` might be provided to Deno on program execution."
 msgstr ""
+"Deno 启用了 strict 模式来遵守 TypeScript "
+"的和合适标准：默认`strict`。然而，如果你想自定义配置，你可以在程序执行时将像`tsconfig.json`这样的配置文件传递给 Deno。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:136
 msgid ""
 "You need to explicitly tell Deno where to look for this configuration by "
 "setting the `-c` (or `--config`) argument when executing your application."
-msgstr ""
+msgstr "执行程序时，你得用`-c`或`--config`来向 Deno 显式指出配置文件的位置。"
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/typescript.md:137
 #, no-wrap
 msgid "deno run -c tsconfig.json mod.ts\n"
-msgstr ""
+msgstr "deno run -c tsconfig.json mod.ts\n"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:142
 msgid ""
 "Following are the currently allowed settings and their default values in "
 "Deno:"
-msgstr ""
+msgstr "Deno 目前支持以下配置，默认值如下："
 
 #. type: Fenced code block (json)
 #: docs/getting_started/typescript.md:143
@@ -362,6 +369,42 @@ msgid ""
 "  }\n"
 "}\n"
 msgstr ""
+"{\n"
+"  \"compilerOptions\": {\n"
+"    \"allowJs\": false,\n"
+"    \"allowUmdGlobalAccess\": false,\n"
+"    \"allowUnreachableCode\": false,\n"
+"    \"allowUnusedLabels\": false,\n"
+"    \"alwaysStrict\": true,\n"
+"    \"assumeChangesOnlyAffectDirectDependencies\": false,\n"
+"    \"checkJs\": false,\n"
+"    \"disableSizeLimit\": false,\n"
+"    \"generateCpuProfile\": \"profile.cpuprofile\",\n"
+"    \"jsx\": \"react\",\n"
+"    \"jsxFactory\": \"React.createElement\",\n"
+"    \"jsxFragmentFactory\": \"React.Fragment\",\n"
+"    \"lib\": [],\n"
+"    \"noFallthroughCasesInSwitch\": false,\n"
+"    \"noImplicitAny\": true,\n"
+"    \"noImplicitReturns\": true,\n"
+"    \"noImplicitThis\": true,\n"
+"    \"noImplicitUseStrict\": false,\n"
+"    \"noStrictGenericChecks\": false,\n"
+"    \"noUnusedLocals\": false,\n"
+"    \"noUnusedParameters\": false,\n"
+"    \"preserveConstEnums\": false,\n"
+"    \"removeComments\": false,\n"
+"    \"resolveJsonModule\": true,\n"
+"    \"strict\": true,\n"
+"    \"strictBindCallApply\": true,\n"
+"    \"strictFunctionTypes\": true,\n"
+"    \"strictNullChecks\": true,\n"
+"    \"strictPropertyInitialization\": true,\n"
+"    \"suppressExcessPropertyErrors\": false,\n"
+"    \"suppressImplicitAnyIndexErrors\": false,\n"
+"    \"useDefineForClassFields\": false\n"
+"  }\n"
+"}\n"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:184
@@ -370,6 +413,8 @@ msgid ""
 "[typescript docs](https://www.typescriptlang.org/docs/handbook/compiler-"
 "options.html)."
 msgstr ""
+"前往[typescript docx](https://www.typescriptlang.org/docs/handbook/compiler-"
+"options.html)去阅读相关文档和用例。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:186
@@ -378,3 +423,5 @@ msgid ""
 "**Note**: Any options not listed above are either not supported by Deno or are\n"
 "listed as deprecated/experimental in the TypeScript documentation.\n"
 msgstr ""
+"**注意**：上文未列出的选项要么 Deno 还尚未支持，要么在 TypeScript 文档中列为 deprecated 或 experimental。"
+"\n"
