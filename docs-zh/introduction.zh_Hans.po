@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-20 02:54+0000\n"
+"PO-Revision-Date: 2021-03-12 03:33+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/introduction/zh_Hans/>\n"
@@ -97,7 +97,6 @@ msgstr "Deno 是为现代程序员打造的脚本环境，目标是高效和安�
 
 #. type: Plain text
 #: docs/introduction.md:32
-#, fuzzy
 msgid ""
 "Deno will always be distributed as a single executable. Given a URL to a "
 "Deno program, it is runnable with nothing more than [the ~15 megabyte zipped "
@@ -105,8 +104,8 @@ msgid ""
 "takes on the role of both runtime and package manager. It uses a standard "
 "browser-compatible protocol for loading modules: URLs."
 msgstr ""
-"Deno 始终会以单个可执行程序的形式来发放。该程序仅仅约 15 兆即可运行。  Deno "
-"既是运行时又是软件包管理器，使用了浏览器兼容的标准协议，用于加载 URL 模块。"
+"Deno 始终会以单个可执行程序的形式来发布，它仅约 15 兆，可直接运行。  Deno 既是运行时又是软件包管理器，使用了浏览器兼容的标准协议来加载 "
+"URL 形式的模块。"
 
 #. type: Plain text
 #: docs/introduction.md:35
