@@ -3,31 +3,33 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-03-12 03:33+0000\n"
+"Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
+"Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
+"deno-docs/program_lifecycle/zh_Hans/>\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. type: Title ##
 #: docs/runtime/program_lifecycle.md:1
 #, no-wrap
 msgid "Program lifecycle"
-msgstr ""
+msgstr "生命周期"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:5
 msgid ""
 "Deno supports browser compatible lifecycle events: `load` and `unload`. You "
 "can use these events to provide setup and cleanup code in your program."
-msgstr ""
+msgstr "Deno 支持浏览器中的生命周期事件，如`load`和`unload`。你可以利用这些事件在程序中进行设置或清理工作。"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:8
@@ -35,18 +37,18 @@ msgid ""
 "Listeners for `load` events can be asynchronous and will be awaited. "
 "Listeners for `unload` events need to be synchronous. Both events cannot be "
 "cancelled."
-msgstr ""
+msgstr "`load`事件的监听器可能包括异步操作，而`unload`事件的监听器是同步的。两类事件都不可撤销。"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:10
 msgid "Example:"
-msgstr ""
+msgstr "示例："
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:12
 #, no-wrap
 msgid "**main.ts**\n"
-msgstr ""
+msgstr "**main.ts**\n"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/program_lifecycle.md:13
@@ -72,12 +74,31 @@ msgid ""
 "\n"
 "console.log(\"log from main script\");\n"
 msgstr ""
+"import \"./imported.ts\";\n"
+"\n"
+"const handler = (e: Event): void => {\n"
+"  console.log(`got ${e.type} event in event handler (main)`);\n"
+"};\n"
+"\n"
+"window.addEventListener(\"load\", handler);\n"
+"\n"
+"window.addEventListener(\"unload\", handler);\n"
+"\n"
+"window.onload = (e: Event): void => {\n"
+"  console.log(`got ${e.type} event in onload function (main)`);\n"
+"};\n"
+"\n"
+"window.onunload = (e: Event): void => {\n"
+"  console.log(`got ${e.type} event in onunload function (main)`);\n"
+"};\n"
+"\n"
+"console.log(\"log from main script\");\n"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:36
 #, no-wrap
 msgid "**imported.ts**\n"
-msgstr ""
+msgstr "**imported.ts**\n"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/program_lifecycle.md:37
@@ -100,6 +121,22 @@ msgid ""
 "\n"
 "console.log(\"log from imported script\");\n"
 msgstr ""
+"const handler = (e: Event): void => {\n"
+"  console.log(`got ${e.type} event in event handler (imported)`);\n"
+"};\n"
+"\n"
+"window.addEventListener(\"load\", handler);\n"
+"window.addEventListener(\"unload\", handler);\n"
+"\n"
+"window.onload = (e: Event): void => {\n"
+"  console.log(`got ${e.type} event in onload function (imported)`);\n"
+"};\n"
+"\n"
+"window.onunload = (e: Event): void => {\n"
+"  console.log(`got ${e.type} event in onunload function (imported)`);\n"
+"};\n"
+"\n"
+"console.log(\"log from imported script\");\n"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:59
@@ -108,6 +145,8 @@ msgid ""
 "`window.onunload` to define handlers for events. There is a major difference "
 "between them, let's run the example:"
 msgstr ""
+"注意，你可以使用`window.addEventListener`或`window.onload`/`window."
+"onunload`来定义事件处理器。前者与后者存在一个较大的差异，请看下例："
 
 #. type: Fenced code block (shell)
 #: docs/runtime/program_lifecycle.md:60
@@ -123,6 +162,15 @@ msgid ""
 "got unload event in event handler (imported)\n"
 "got unload event in event handler (main)\n"
 msgstr ""
+"$ deno run main.ts\n"
+"log from imported script\n"
+"log from main script\n"
+"got load event in onload function (main)\n"
+"got load event in event handler (imported)\n"
+"got load event in event handler (main)\n"
+"got unload event in onunload function (main)\n"
+"got unload event in event handler (imported)\n"
+"got unload event in event handler (main)\n"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:75
@@ -131,6 +179,8 @@ msgid ""
 "onload` and `window.onunload` defined in `main.ts` overrode handlers defined "
 "in `imported.ts`."
 msgstr ""
+"`main.ts`导入了`imported.ts`，其中，用`window.addEventListener`定义的监听器都会调用，而用`window."
+"onload`和`window.onunload`定义的监听器则会重写`imported.ts`内定义的对应监听器。"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:78
@@ -139,3 +189,5 @@ msgid ""
 "\"` or `\"unload\"` events, but only the last loaded `window.onload` or "
 "`window.onunload` events will be executed."
 msgstr ""
+"换句话说，你可以向`window.addEventListener`的`load`或`unload`事件注册多个监听器并调用它们，但是向`window."
+"onload`或`window.onload`注册多个监听器的话就只能调用对应的最后一个监听器。"
