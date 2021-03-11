@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-17 15:50+0000\n"
+"PO-Revision-Date: 2021-03-12 03:33+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/setup_your_environment/zh_Hans/>\n"
@@ -47,13 +47,10 @@ msgstr "以下环境变量用于设置 Deno："
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:13
-#, fuzzy
 msgid ""
 "`DENO_DIR` defaults to `$HOME/.cache/deno` but can be set to any path to "
 "control where generated and cached source code is written and read to."
-msgstr ""
-"`DENO_DIR` 默认值为 `$HOME/.cache/deno`。你还可以设置其它路径来指定源码读取和"
-"写入的位置。"
+msgstr "`DENO_DIR` 默认值为 `$HOME/.cache/deno`。你还可以设置其它路径来指定源码读取或写入的位置。"
 
 #. type: Plain text
 #: docs/getting_started/setup_your_environment.md:17
