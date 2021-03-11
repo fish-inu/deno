@@ -3,18 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-03-12 03:33+0000\n"
+"Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
+"Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
+"deno-docs/tcp_echo/zh_Hans/>\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. type: Title #
 #: docs/examples/tcp_echo.md:1
@@ -53,7 +55,7 @@ msgstr ""
 msgid ""
 "This is an example of a server which accepts connections on port 8080, and "
 "returns to the client anything it sends."
-msgstr ""
+msgstr "以下示例中，该服务器监听 8080 端口，客户端发送什么，服务端就返回什么。"
 
 #. type: Fenced code block (ts)
 #: docs/examples/tcp_echo.md:15
@@ -96,6 +98,9 @@ msgid ""
 "hello world\n"
 "hello world\n"
 msgstr ""
+"$ nc localhost 8080\n"
+"hello world\n"
+"hello world\n"
 
 #. type: Plain text
 #: docs/examples/tcp_echo.md:45
