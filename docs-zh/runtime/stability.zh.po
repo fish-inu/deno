@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-17 15:50+0000\n"
+"PO-Revision-Date: 2021-03-12 03:33+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/stability/zh_Hans/>\n"
@@ -22,14 +22,14 @@ msgstr ""
 #: docs/runtime/stability.md:1
 #, no-wrap
 msgid "Stability"
-msgstr ""
+msgstr "稳定性"
 
 #. type: Plain text
 #: docs/runtime/stability.md:5
 msgid ""
 "As of Deno 1.0.0, the `Deno` namespace APIs are stable. That means we will "
 "strive to make code working under 1.0.0 continue to work in future versions."
-msgstr ""
+msgstr "从 Deno 1.0.0 起，`Deno` API 保持稳定，因此 Deno 团队力求 1.0.0 以下的代码也能在以后的版本中运行。"
 
 #. type: Plain text
 #: docs/runtime/stability.md:9
@@ -37,23 +37,23 @@ msgid ""
 "However, not all of Deno's features are ready for production yet. Features "
 "which are not ready, because they are still in draft phase, are locked "
 "behind the `--unstable` command line flag."
-msgstr ""
+msgstr "但是，有些 Deno 功能还在初始阶段，还不能投入到生产环境中，需要用 `--unstable` 来启用。"
 
 #. type: Fenced code block (shell)
 #: docs/runtime/stability.md:10
 #, no-wrap
 msgid "deno run --unstable mod_which_uses_unstable_stuff.ts\n"
-msgstr ""
+msgstr "deno run --unstable mod_which_uses_unstable_stuff.ts\n"
 
 #. type: Plain text
 #: docs/runtime/stability.md:15
 msgid "Passing this flag does a few things:"
-msgstr ""
+msgstr "向 Deno 传递`--unstable`标志后，发生了以下事情："
 
 #. type: Bullet: '- '
 #: docs/runtime/stability.md:21
 msgid "It enables the use of unstable APIs during runtime."
-msgstr "启用尚未稳定的API，这些 API 可在运行时调用。"
+msgstr "启用尚未稳定的 API，这些 API 可在运行时调用。"
 
 #. type: Bullet: '- '
 #: docs/runtime/stability.md:21
@@ -63,6 +63,9 @@ msgid ""
 "file to the list of TypeScript definitions that are used for type checking.  "
 "This includes the output of `deno types`."
 msgstr ""
+"添加[`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw."
+"githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.unstable.d."
+"ts)至类型定义，用于类型检查。`deno types`的 stdout 也会包括该文件。"
 
 #. type: Plain text
 #: docs/runtime/stability.md:25
@@ -70,13 +73,13 @@ msgid ""
 "You should be aware that many unstable APIs have **not undergone a security "
 "review**, are likely to have **breaking API changes** in the future, and are "
 "**not ready for production**."
-msgstr ""
+msgstr "注意，许多不稳定的 API 还没有**安全检查**，可能在以后会出现**不兼容变更**，因此没有投入到**生产环境**中使用。"
 
 #. type: Title ###
 #: docs/runtime/stability.md:26
 #, no-wrap
 msgid "Standard modules"
-msgstr ""
+msgstr "标准模块"
 
 #. type: Plain text
 #: docs/runtime/stability.md:32
@@ -87,3 +90,6 @@ msgid ""
 "modules do not require the `--unstable` flag (unless the standard module "
 "itself makes use of an unstable Deno feature)."
 msgstr ""
+"Deno 的[标准模块](https://deno.land/std/) 尚未稳定。Deno 团队目前从 CLI "
+"中输出标准模块的版本号来表明不稳定性。注意，标准模块与`Deno`命名空间不同，除非某些标准模块使用了不稳定的 Deno "
+"功能，它们不需要用`--unstable`标志来启用。"
