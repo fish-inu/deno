@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-27 16:05+0000\n"
+"PO-Revision-Date: 2021-03-12 03:33+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/first_steps/zh_Hans/>\n"
@@ -96,13 +96,12 @@ msgstr "许多程序使用 HTTP 请求来从服务器中获取数据。我们接
 
 #. type: Plain text
 #: docs/getting_started/first_steps.md:37
-#, fuzzy
 msgid ""
 "Just like in the browser you can use the web standard [`fetch`](https://"
 "developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API to make HTTP calls:"
 msgstr ""
 "和浏览器一样，你可以在 Deno 中使用 [`fetch`](https://developer.mozilla.org/en-US/docs/Web/"
-"API/Fetch_API) API 来调用 HTTP："
+"API/Fetch_API) API 来发起 HTTP 请求："
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/first_steps.md:38
