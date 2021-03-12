@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-16 13:38+0000\n"
+"PO-Revision-Date: 2021-03-14 03:15+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/compiler_apis/zh_Hans/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: docs/runtime/compiler_apis.md:1
 #, no-wrap
 msgid "Compiler APIs"
-msgstr "Compiler APIs"
+msgstr "编译器 API"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:5
@@ -39,13 +39,13 @@ msgstr ""
 msgid ""
 "Deno supports runtime access to the built-in TypeScript compiler. There are "
 "three methods in the `Deno` namespace that provide this access."
-msgstr ""
+msgstr "`Deno` 有三个方法让你能在运行时访问内置 TypeScript 编译器。"
 
 #. type: Title ###
 #: docs/runtime/compiler_apis.md:9
 #, no-wrap
 msgid "`Deno.compile()`"
-msgstr ""
+msgstr "`Deno.compile()`"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:26
