@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-02-16 13:38+0000\n"
+"PO-Revision-Date: 2021-03-14 03:15+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/permission_apis/zh_Hans/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: docs/runtime/permission_apis.md:1
 #, no-wrap
 msgid "Permission APIs"
-msgstr ""
+msgstr "权限 API"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:5
@@ -41,20 +41,20 @@ msgid ""
 "code will often assume its own set of required permissions, but there is no "
 "guarantee during execution that the set of _granted_ permissions will align "
 "with this."
-msgstr ""
+msgstr "你可以从 CLI 运行`deno`的同时授予权限。Deno 用户代码通常会获取所需权限，但在运行时这些权限不一定等于_真正授予_的权限。"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:12
 msgid ""
 "In some cases, ensuring a fault-tolerant program requires a way to interact "
 "with the permission system at runtime."
-msgstr ""
+msgstr "有时，如果你想确保程序容错性高，就得想办法在运行时使用权限系统。"
 
 #. type: Title ###
 #: docs/runtime/permission_apis.md:13
 #, no-wrap
 msgid "Permission descriptors"
-msgstr ""
+msgstr "权限描述符"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:17
@@ -62,17 +62,18 @@ msgid ""
 "On the CLI, read permission for `/foo/bar` is represented as `--allow-read=/"
 "foo/bar`. In runtime JS, it is represented as the following:"
 msgstr ""
+"在 CLI 中，`/foo/bar`读取权限表示为`--allow-read=/foo/bar`。在运行时，`/foo/bar`读取权限表示为："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:18
 #, no-wrap
 msgid "const desc = { name: \"read\", path: \"/foo/bar\" } as const;\n"
-msgstr ""
+msgstr "const desc = { name: \"read\", path: \"/foo/bar\" } as const;\n"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:23
 msgid "Other examples:"
-msgstr ""
+msgstr "其它示例："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:24
@@ -93,17 +94,31 @@ msgid ""
 "// High-resolution time permission.\n"
 "const desc5 = { name: \"hrtime\" } as const;\n"
 msgstr ""
+"// 全局下可写入\n"
+"const desc1 = { name: \"write\" } as const;\n"
+"\n"
+"// 可写入`$PWD/foo/bar`\n"
+"const desc2 = { name: \"write\", path: \"foo/bar\" } as const;\n"
+"\n"
+"// 全局下可访问网络\n"
+"const desc3 = { name: \"net\" } as const;\n"
+"\n"
+"// 可访问 127.0.0.1:8000\n"
+"const desc4 = { name: \"net\", url: \"127.0.0.1:8000\" } as const;\n"
+"\n"
+"// 可获取高解析度时间\n"
+"const desc5 = { name: \"hrtime\" } as const;\n"
 
 #. type: Title ###
 #: docs/runtime/permission_apis.md:41
 #, no-wrap
 msgid "Query permissions"
-msgstr ""
+msgstr "权限查询"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:44
 msgid "Check, by descriptor, if a permission is granted or not."
-msgstr ""
+msgstr "你可以用描述符来查看权限的状态。"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:45
@@ -123,12 +138,25 @@ msgid ""
 "console.log(await Deno.permissions.query(desc3));\n"
 "// PermissionStatus { state: \"prompt\" }\n"
 msgstr ""
+"// deno run --unstable --allow-read=/foo main.ts\n"
+"\n"
+"const desc1 = { name: \"read\", path: \"/foo\" } as const;\n"
+"console.log(await Deno.permissions.query(desc1));\n"
+"// PermissionStatus { state: \"granted\" }\n"
+"\n"
+"const desc2 = { name: \"read\", path: \"/foo/bar\" } as const;\n"
+"console.log(await Deno.permissions.query(desc2));\n"
+"// PermissionStatus { state: \"granted\" }\n"
+"\n"
+"const desc3 = { name: \"read\", path: \"/bar\" } as const;\n"
+"console.log(await Deno.permissions.query(desc3));\n"
+"// PermissionStatus { state: \"prompt\" }\n"
 
 #. type: Title ###
 #: docs/runtime/permission_apis.md:61
 #, no-wrap
 msgid "Permission states"
-msgstr ""
+msgstr "权限状态"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:68
@@ -140,12 +168,15 @@ msgid ""
 "have been explicitly refused.  This will come up in [Request permissions]"
 "(#request-permissions)."
 msgstr ""
+"权限状态有下三种：已授予、未授予和拒绝。如果权限从 CLI 授予，则状态为`{ state: \"granted\" }`；如果权限还未授予，则状态为`{"
+" state: \"prompt\" }`；如果权限被显式拒绝，则状态为`{ state: \"denied\" }`。[权限请求](#request-"
+"permissions)会继续讨论该部分。"
 
 #. type: Title ###
 #: docs/runtime/permission_apis.md:69
 #, no-wrap
 msgid "Permission strength"
-msgstr ""
+msgstr "权限强度"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:74
@@ -154,6 +185,8 @@ msgid ""
 "permissions](#query-permissions) is that read access was granted to `/foo` "
 "and `/foo/bar` is within `/foo` so `/foo/bar` is allowed to be read."
 msgstr ""
+"你可以从[权限查询](#query-permissions)中第二个查询返回的结果中直观看出，因为读取权限授予至`/foo`，而`/foo/"
+"bar`属于`/foo`，因此`/foo/bar`也是可以访问的。"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:78
@@ -162,21 +195,27 @@ msgid ""
 "permissions/#ref-for-permissiondescriptor-stronger-than)_ `desc2`. This "
 "means that for any set of CLI-granted permissions:"
 msgstr ""
+"我们可以认为`desc1`_[强于](https://www.w3.org/TR/permissions/#ref-for-"
+"permissiondescriptor-stronger-than)_`desc2`，因此对任一 CLI 授予的权限来说："
 
 #. type: Bullet: '1. '
 #: docs/runtime/permission_apis.md:81
 msgid "If `desc1` queries to `{ state: \"granted\" }` then so must `desc2`."
 msgstr ""
+"如果`desc1`查询结果为`{ state: \"granted\" }`，那么`desc2`的查询结果必定是`{ state: \"granted\""
+" }`。"
 
 #. type: Bullet: '2. '
 #: docs/runtime/permission_apis.md:81
 msgid "If `desc2` queries to `{ state: \"denied\" }` then so must `desc1`."
 msgstr ""
+"如果`desc2`查询结果为`{ state: \"denied\" }`，那么`desc1`的查询结果必定是`{ state: \"denied\" "
+"}`。"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:83
 msgid "More examples:"
-msgstr ""
+msgstr "更多示例："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:84
@@ -190,17 +229,24 @@ msgid ""
 "// is stronger than\n"
 "const desc4 = { name: \"net\", url: \"127.0.0.1:8000\" } as const;\n"
 msgstr ""
+"const desc1 = { name: \"write\" } as const;\n"
+"// is stronger than\n"
+"const desc2 = { name: \"write\", path: \"/foo\" } as const;\n"
+"\n"
+"const desc3 = { name: \"net\" } as const;\n"
+"// is stronger than\n"
+"const desc4 = { name: \"net\", url: \"127.0.0.1:8000\" } as const;\n"
 
 #. type: Title ###
 #: docs/runtime/permission_apis.md:94
 #, no-wrap
 msgid "Request permissions"
-msgstr ""
+msgstr "权限请求"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:97
 msgid "Request an ungranted permission from the user via CLI prompt."
-msgstr ""
+msgstr "你可以用提示符来请求用户授予某个权限。"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:98
@@ -220,6 +266,21 @@ msgid ""
 "console.log(status2);\n"
 "// PermissionStatus { state: \"denied\" }\n"
 msgstr ""
+"// deno run --unstable main.ts\n"
+"\n"
+"const desc1 = { name: \"read\", path: \"/foo\" } as const;\n"
+"const status1 = await Deno.permissions.request(desc1);\n"
+"// ⚠️ Deno requests read access to \"/foo\". Grant? [g/d (g = grant, d = "
+"deny)] g\n"
+"console.log(status1);\n"
+"// PermissionStatus { state: \"granted\" }\n"
+"\n"
+"const desc2 = { name: \"read\", path: \"/bar\" } as const;\n"
+"const status2 = await Deno.permissions.request(desc2);\n"
+"// ⚠️ Deno requests read access to \"/bar\". Grant? [g/d (g = grant, d = "
+"deny)] d\n"
+"console.log(status2);\n"
+"// PermissionStatus { state: \"denied\" }\n"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:119
@@ -231,6 +292,8 @@ msgid ""
 "request for `desc2` was denied so its permission state is downgraded from "
 "\"prompt\" to \"denied\"."
 msgstr ""
+"如果权限未授予，用户终端会出现提示符提问是否授权。上例授予了`desc1`对应的权限，返回更新后的状态，这样就像在 CLI 传递了`--allow-"
+"read=/foo`。上例也拒绝了`desc2`对应的权限，状态从未授予变为拒绝。"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:124
@@ -239,18 +302,18 @@ msgid ""
 "the request will behave like a query and just return the current status. "
 "This prevents prompts both for already granted permissions and previously "
 "denied requests."
-msgstr ""
+msgstr "如果权限已授予或拒绝，那么请求操作就类似于查询操作，会返回权限当前状态，这确保了对于已授予或拒绝的权限，提示符不会再出现。"
 
 #. type: Title ###
 #: docs/runtime/permission_apis.md:125
 #, no-wrap
 msgid "Revoke permissions"
-msgstr ""
+msgstr "权限撤回"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:128
 msgid "Downgrade a permission from \"granted\" to \"prompt\"."
-msgstr ""
+msgstr "你可以将权限状态由授予变为未授予："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:129
@@ -262,13 +325,18 @@ msgid ""
 "console.log(await Deno.permissions.revoke(desc));\n"
 "// PermissionStatus { state: \"prompt\" }\n"
 msgstr ""
+"// deno run --unstable --allow-read=/foo main.ts\n"
+"\n"
+"const desc = { name: \"read\", path: \"/foo\" } as const;\n"
+"console.log(await Deno.permissions.revoke(desc));\n"
+"// PermissionStatus { state: \"prompt\" }\n"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:139
 msgid ""
 "However, what happens when you try to revoke a permission which is _partial_ "
 "to one granted on the CLI?"
-msgstr ""
+msgstr "然而，假设一个权限在 CLI 授予，另一个权限是该权限的一部分，如果你想撤回另一个权限，会产生什么结果？"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:140
@@ -280,11 +348,16 @@ msgid ""
 "console.log(await Deno.permissions.revoke(desc));\n"
 "// PermissionStatus { state: \"granted\" }\n"
 msgstr ""
+"// deno run --unstable --allow-read=/foo main.ts\n"
+"\n"
+"const desc = { name: \"read\", path: \"/foo/bar\" } as const;\n"
+"console.log(await Deno.permissions.revoke(desc));\n"
+"// PermissionStatus { state: \"granted\" }\n"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:149
 msgid "It was not revoked."
-msgstr ""
+msgstr "结果该权限没有撤回。"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:153
@@ -293,6 +366,8 @@ msgid ""
 "_explicitly granted permission descriptors_. Specifying `--allow-read=/foo,/"
 "bar` on the CLI initializes this set to:"
 msgstr ""
+"如果你想知道为什么会这样，你可以想象 Deno 内部存储了_显式授予的权限描述符_数组。如果你向 CLI 传递`--allow-"
+"read=/foo,/bar`，那么该数组初始化为："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:154
@@ -303,13 +378,17 @@ msgid ""
 "  { name: \"read\", path: \"/bar\" },\n"
 "];\n"
 msgstr ""
+"[\n"
+"  { name: \"read\", path: \"/foo\" },\n"
+"  { name: \"read\", path: \"/bar\" },\n"
+"];\n"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:163
 msgid ""
 "Granting a runtime request for `{ name: \"write\", path: \"/foo\" }` updates "
 "the set to:"
-msgstr ""
+msgstr "如果你在运行时发出`{ name: \"write\", path: \"/foo\" }`授权请求，这将会更新该数组为："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:164
@@ -321,6 +400,11 @@ msgid ""
 "  { name: \"write\", path: \"/foo\" },\n"
 "];\n"
 msgstr ""
+"[\n"
+"  { name: \"read\", path: \"/foo\" },\n"
+"  { name: \"read\", path: \"/bar\" },\n"
+"  { name: \"write\", path: \"/foo\" },\n"
+"];\n"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:176
@@ -331,6 +415,8 @@ msgid ""
 "than_ whichever _explicitly granted permission descriptor_ is _stronger "
 "than_ `desc`."
 msgstr ""
+"Deno 的权限撤回算法原理是，如果传递的参数（权限描述符）强度大于上文数组内的权限描述符，那么这些权限描述符才会删除。因此，如果你想确保`desc`对应"
+"的权限改为未授予的状态，那么得传递一个强度大于`desc`的参数。"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:177
@@ -348,3 +434,14 @@ msgid ""
 "console.log(await Deno.permissions.query(desc));\n"
 "// PermissionStatus { state: \"prompt\" }\n"
 msgstr ""
+"// deno run --unstable --allow-read=/foo main.ts\n"
+"\n"
+"const desc = { name: \"read\", path: \"/foo/bar\" } as const;\n"
+"console.log(await Deno.permissions.revoke(desc)); // 不行\n"
+"// PermissionStatus { state: \"granted\" }\n"
+"\n"
+"const strongDesc = { name: \"read\", path: \"/foo\" } as const;\n"
+"await Deno.permissions.revoke(strongDesc); // 可以\n"
+"\n"
+"console.log(await Deno.permissions.query(desc));\n"
+"// PermissionStatus { state: \"prompt\" }\n"
