@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-12 03:33+0000\n"
+"PO-Revision-Date: 2021-03-17 08:11+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/workers/zh_Hans/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: docs/runtime/workers.md:1
 #, no-wrap
 msgid "Workers"
-msgstr ""
+msgstr "Worker"
 
 #. type: Plain text
 #: docs/runtime/workers.md:5
@@ -30,13 +30,15 @@ msgid ""
 "Deno supports [`Web Worker API`](https://developer.mozilla.org/en-US/docs/"
 "Web/API/Worker/Worker)."
 msgstr ""
+"Deno 提供[`Web Worker API`](https://developer.mozilla.org/en-US/docs/Web/API/"
+"Worker/Worker)。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:8
 msgid ""
 "Workers can be used to run code on multiple threads. Each instance of "
 "`Worker` is run on a separate thread, dedicated only to that worker."
-msgstr ""
+msgstr "Worker 可用于多线程执行代码。每一个`Worker`在各自专用的线程上运行。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:11
@@ -44,6 +46,7 @@ msgid ""
 "Currently Deno supports only `module` type workers; thus it's essential to "
 "pass the `type: \"module\"` option when creating a new worker."
 msgstr ""
+"当前 Deno 只提供了`module`类型的 Worker，因此你必须传递`type: \"module\"`选项来生成 Worker 实例。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:16
@@ -52,6 +55,8 @@ msgid ""
 "deno/issues/5216) at the moment. You can instead use the `URL` contructor "
 "and `import.meta.url` to easily create a specifier for some nearby script."
 msgstr ""
+"Deno 暂时[无法解析](https://github.com/denoland/deno/issues/"
+"5216)模块的相对路径，不过你可以使用构造函数`URL`和`import.meta.url`来指定脚本路径。"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/workers.md:17
@@ -65,24 +70,33 @@ msgid ""
 "new Worker(new URL(\"worker.js\", import.meta.url).href, { type: \"classic\" });\n"
 "new Worker(\"./worker.js\", { type: \"module\" });\n"
 msgstr ""
+"// 可以\n"
+"new Worker(new URL(\"worker.js\", import.meta.url).href, { type: \"module\" "
+"});\n"
+"\n"
+"// 不可以\n"
+"new Worker(new URL(\"worker.js\", import.meta.url).href);\n"
+"new Worker(new URL(\"worker.js\", import.meta.url).href, { type: \"classic\" "
+"});\n"
+"new Worker(\"./worker.js\", { type: \"module\" });\n"
 
 #. type: Title ###
 #: docs/runtime/workers.md:27
 #, no-wrap
 msgid "Permissions"
-msgstr ""
+msgstr "权限"
 
 #. type: Plain text
 #: docs/runtime/workers.md:31
 msgid ""
 "Creating a new `Worker` instance is similar to a dynamic import; therefore "
 "Deno requires appropriate permission for this action."
-msgstr ""
+msgstr "Deno 需要授予相关权限来创建`Worker`示例（类似于动态导入）。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:33
 msgid "For workers using local modules; `--allow-read` permission is required:"
-msgstr ""
+msgstr "如果创建的 Worker 导入本地模块，那么需要授予`--allow-read`权限："
 
 #. type: Plain text
 #: docs/runtime/workers.md:35 docs/runtime/workers.md:58
@@ -95,12 +109,14 @@ msgstr "**main.ts**\n"
 #, no-wrap
 msgid "new Worker(new URL(\"worker.ts\", import.meta.url).href, { type: \"module\" });\n"
 msgstr ""
+"new Worker(new URL(\"worker.ts\", import.meta.url).href, { type: \"module\" "
+"});\n"
 
 #. type: Plain text
 #: docs/runtime/workers.md:41
 #, no-wrap
 msgid "**worker.ts**\n"
-msgstr ""
+msgstr "**worker.ts**\n"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/workers.md:42 docs/runtime/workers.md:65
@@ -109,6 +125,8 @@ msgid ""
 "console.log(\"hello world\");\n"
 "self.close();\n"
 msgstr ""
+"console.log(\"hello world\");\n"
+"self.close();\n"
 
 #. type: Fenced code block (shell)
 #: docs/runtime/workers.md:47
@@ -120,23 +138,29 @@ msgid ""
 "$ deno run --allow-read main.ts\n"
 "hello world\n"
 msgstr ""
+"$ deno run main.ts\n"
+"error: Uncaught PermissionDenied: read access to \"./worker.ts\", run again "
+"with the --allow-read flag\n"
+"\n"
+"$ deno run --allow-read main.ts\n"
+"hello world\n"
 
 #. type: Plain text
 #: docs/runtime/workers.md:56
 msgid "For workers using remote modules; `--allow-net` permission is required:"
-msgstr ""
+msgstr "如果创建的 Worker 导入云端模块，那么需要授予`--allow-net`权限："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/workers.md:59
 #, no-wrap
 msgid "new Worker(\"https://example.com/worker.ts\", { type: \"module\" });\n"
-msgstr ""
+msgstr "new Worker(\"https://example.com/worker.ts\", { type: \"module\" });\n"
 
 #. type: Plain text
 #: docs/runtime/workers.md:64
 #, no-wrap
 msgid "**worker.ts** (at https[]()://example.com/worker.ts)\n"
-msgstr ""
+msgstr "**worker.ts** (at https[]()://example.com/worker.ts)\n"
 
 #. type: Fenced code block (shell)
 #: docs/runtime/workers.md:70
@@ -148,12 +172,18 @@ msgid ""
 "$ deno run --allow-net main.ts\n"
 "hello world\n"
 msgstr ""
+"$ deno run main.ts\n"
+"error: Uncaught PermissionDenied: net access to \"https://example.com/worker."
+"ts\", run again with the --allow-net flag\n"
+"\n"
+"$ deno run --allow-net main.ts\n"
+"hello world\n"
 
 #. type: Title ###
 #: docs/runtime/workers.md:78
 #, no-wrap
 msgid "Using Deno in worker"
-msgstr ""
+msgstr "Worker 内运行 Deno"
 
 #. type: Plain text
 #: docs/runtime/workers.md:82
@@ -162,24 +192,26 @@ msgid ""
 "> This is an unstable Deno feature. Learn more about\n"
 "> [unstable features](./stability.md).\n"
 msgstr ""
+"> 该特性不稳定，参见\n"
+"> [稳定性](./stability.md)。\n"
 
 #. type: Plain text
 #: docs/runtime/workers.md:84
 msgid "By default the `Deno` namespace is not available in worker scope."
-msgstr ""
+msgstr "默认情况下，Worker 实例无法访问`Deno`命名空间。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:86
 msgid ""
 "To add the `Deno` namespace pass `deno: true` option when creating new "
 "worker:"
-msgstr ""
+msgstr "你可以在创建 Worker 实例时传递`deno:true`选项来添加`Deno`命名空间："
 
 #. type: Plain text
 #: docs/runtime/workers.md:88
 #, no-wrap
 msgid "**main.js**\n"
-msgstr ""
+msgstr "**main.js**\n"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/workers.md:89
@@ -191,12 +223,17 @@ msgid ""
 "});\n"
 "worker.postMessage({ filename: \"./log.txt\" });\n"
 msgstr ""
+"const worker = new Worker(new URL(\"worker.js\", import.meta.url).href, {\n"
+"  type: \"module\",\n"
+"  deno: true,\n"
+"});\n"
+"worker.postMessage({ filename: \"./log.txt\" });\n"
 
 #. type: Plain text
 #: docs/runtime/workers.md:98
 #, no-wrap
 msgid "**worker.js**\n"
-msgstr ""
+msgstr "**worker.js**\n"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/workers.md:99
@@ -209,18 +246,24 @@ msgid ""
 "  self.close();\n"
 "};\n"
 msgstr ""
+"self.onmessage = async (e) => {\n"
+"  const { filename } = e.data;\n"
+"  const text = await Deno.readTextFile(filename);\n"
+"  console.log(text);\n"
+"  self.close();\n"
+"};\n"
 
 #. type: Plain text
 #: docs/runtime/workers.md:109
 #, no-wrap
 msgid "**log.txt**\n"
-msgstr ""
+msgstr "**log.txt**\n"
 
 #. type: Fenced code block
 #: docs/runtime/workers.md:110
 #, no-wrap
 msgid "hello world\n"
-msgstr ""
+msgstr "hello world\n"
 
 #. type: Fenced code block (shell)
 #: docs/runtime/workers.md:114
@@ -229,15 +272,17 @@ msgid ""
 "$ deno run --allow-read --unstable main.js\n"
 "hello world\n"
 msgstr ""
+"$ deno run --allow-read --unstable main.js\n"
+"hello world\n"
 
 #. type: Plain text
 #: docs/runtime/workers.md:121
 msgid ""
 "When the `Deno` namespace is available in worker scope, the worker inherits "
 "its parent process' permissions (the ones specified using `--allow-*` flags)."
-msgstr ""
+msgstr "如果 Worker 实例启用了`Deno`命名空间，该实例会继承父进程的权限，即用`--allow-*`标志指定的权限。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:122
 msgid "We intend to make permissions configurable for workers."
-msgstr ""
+msgstr "这样做是为了让 Worker 也能配置权限。"
