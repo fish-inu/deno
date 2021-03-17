@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-14 03:15+0000\n"
+"PO-Revision-Date: 2021-03-17 08:11+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/compiler_apis/zh_Hans/>\n"
@@ -32,7 +32,7 @@ msgid ""
 "> [unstable features](../runtime/stability.md).\n"
 msgstr ""
 "> 该 API 不稳定，参见\n"
-"> [稳定性](../runtime/stability.md).\n"
+"> [稳定性](./stability.md)。\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:8
@@ -66,6 +66,13 @@ msgid ""
 "type `Deno.CompilerOptions`, which is a subset of the TypeScript compiler "
 "options containing the ones supported by Deno."
 msgstr ""
+"Deno.compile() 类似`deno cache`，它可以获取、缓存、编译代码，但不运行代码。Deno.compile() "
+"接受三个参数，即`rootName`、`sources`（可选）和`options`（可选）。`rootName` "
+"是用来生成最终程序的根模块，它类似于你向命令行（如`deno run --reload example.ts`）传递的模块名。`sources`是个 "
+"hash，其中键是模块名，值是源码。如果你向`sources`传递了参数，Deno 会解析 hash "
+"内的各个模块。如果你没有向`sources`传递参数，Deno 会按上文的命令行形式来解析模块。Deno "
+"会缓存传递的资源，已解析的资源可看作是动态导入，此外，如果它们位于本地或云端，你还需授予读取或网络访问权限。`options`的类型是`Deno."
+"CompilerOptions`，它是 TypeScript 编译器选项的子集，得到了 Deno 的支持。"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:30
@@ -75,11 +82,12 @@ msgid ""
 "is a map where the keys are the output filenames and the values are the "
 "content."
 msgstr ""
+"Deno.compile() 返回一个元组。其中，第一个元素是代码相关的诊断信息（如句法或类型错误），第二个元素是一个 map，键是文件名，值是代码。"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:32 docs/runtime/compiler_apis.md:79
 msgid "An example of providing sources:"
-msgstr ""
+msgstr "请看下例："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/compiler_apis.md:33
@@ -93,20 +101,30 @@ msgid ""
 "assert(diagnostics == null); // ensuring no diagnostics are returned\n"
 "console.log(emitMap);\n"
 msgstr ""
+"const [diagnostics, emitMap] = await Deno.compile(\"/foo.ts\", {\n"
+"  \"/foo.ts\": `import * as bar from \"./bar.ts\";\\n"
+"console.log(bar);\\n"
+"`,\n"
+"  \"/bar.ts\": `export const bar = \"bar\";\\n"
+"`,\n"
+"});\n"
+"\n"
+"assert(diagnostics == null); // 确保无诊断信息返回\n"
+"console.log(emitMap);\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:45
 msgid ""
 "We would expect map to contain 4 \"files\", named `/foo.js.map`, `/foo.js`, "
 "`/bar.js.map`, and `/bar.js`."
-msgstr ""
+msgstr "返回的 map 包括四个“文件”，即`/foo.js.map`、`/foo.js`、`/bar.js.map`和`/bar.js`。"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:48 docs/runtime/compiler_apis.md:95
 msgid ""
 "When not supplying resources, you can use local or remote modules, just like "
 "you could do on the command line. So you could do something like this:"
-msgstr ""
+msgstr "如果你不传递`sources`参数，你还可以用本地或云端模块，这跟向命令行传递模块差不多。因此，你可以这么写："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/compiler_apis.md:49
@@ -116,17 +134,20 @@ msgid ""
 "  \"https://deno.land/std@$STD_VERSION/examples/welcome.ts\",\n"
 ");\n"
 msgstr ""
+"const [diagnostics, emitMap] = await Deno.compile(\n"
+"  \"https://deno.land/std@$STD_VERSION/examples/welcome.ts\",\n"
+");\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:56
 msgid "In this case `emitMap` will contain a `console.log()` statement."
-msgstr ""
+msgstr "这种情况下，`emitMap`中会有一个`console.log()`语句。"
 
 #. type: Title ###
 #: docs/runtime/compiler_apis.md:57
 #, no-wrap
 msgid "`Deno.bundle()`"
-msgstr ""
+msgstr "`Deno.bundle()`"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:77
@@ -153,10 +174,12 @@ msgid ""
 msgstr ""
 "Deno.bundle() 类似`deno bundle`。它还类似`Deno.compile()`，不同之处在于后者返回 "
 "map，前者返回字符串，返回的字符串由根模块的源码和导入组成。Deno.bundle() "
-"有三个参数，即`rootName`，`sources`（可选）和`options`（可选）。`rootName` "
+"接受三个参数，即`rootName`，`sources`（可选）和`options`（可选）。`rootName` "
 "是用来生成最终程序的根模块，它类似于你向命令行（如`deno bundle example.ts`）传递的模块名。`sources`是个 "
-"hash，其中键是模块名，值是源码。如果你向`sources`传递了 hash，Deno 会解析 hash 内的各个模块，但不会将这些模块暴露在 "
-"Deno 命名空间之外。如果你没有向`sources`传递参数，Deno 会按上文的命令行形式来解析模块。"
+"hash，其中键是模块名，值是源码。如果你向`sources`传递了参数，Deno 会解析 hash "
+"内的各个模块。如果你没有向`sources`传递参数，Deno 会按上文的命令行形式来解析模块。Deno "
+"会缓存传递的资源，已解析的资源可看作是动态导入，此外，如果它们位于本地或云端，你还需授予读取或网络访问权限。`options`的类型是`Deno."
+"CompilerOptions`，它是 TypeScript 编译器选项的子集，得到了 Deno 的支持。"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/compiler_apis.md:80
@@ -170,13 +193,23 @@ msgid ""
 "assert(diagnostics == null); // ensuring no diagnostics are returned\n"
 "console.log(emit);\n"
 msgstr ""
+"const [diagnostics, emit] = await Deno.bundle(\"/foo.ts\", {\n"
+"  \"/foo.ts\": `import * as bar from \"./bar.ts\";\\n"
+"console.log(bar);\\n"
+"`,\n"
+"  \"/bar.ts\": `export const bar = \"bar\";\\n"
+"`,\n"
+"});\n"
+"\n"
+"assert(diagnostics == null); // 确保无诊断信息返回\n"
+"console.log(emit);\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:92
 msgid ""
 "We would expect `emit` to be the text for an ES module, which would contain "
 "the output sources for both modules."
-msgstr ""
+msgstr "`emit`是 ES 模块代码，整合了上例的两个模块。"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/compiler_apis.md:96
@@ -186,6 +219,9 @@ msgid ""
 "  \"https://deno.land/std@$STD_VERSION/http/server.ts\",\n"
 ");\n"
 msgstr ""
+"const [diagnostics, emit] = await Deno.bundle(\n"
+"  \"https://deno.land/std@$STD_VERSION/http/server.ts\",\n"
+");\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:104
@@ -193,13 +229,13 @@ msgid ""
 "In this case `emit` will be a self contained JavaScript ES module with all "
 "of its dependencies resolved and exporting the same exports as the source "
 "module."
-msgstr ""
+msgstr "这种情况下，`emit`是可直接运行的 ES 模块，其依赖都已解析，并且与源码的导出一致。"
 
 #. type: Title ###
 #: docs/runtime/compiler_apis.md:105
 #, no-wrap
 msgid "`Deno.transpileOnly()`"
-msgstr ""
+msgstr "`Deno.transpileOnly()`"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:118
@@ -217,11 +253,16 @@ msgid ""
 "property is the source map. Source maps are provided by default, but can be "
 "turned off via the `options` argument."
 msgstr ""
+"Deno.transpileOnly() 基于 TypeScript 函数`transpileModule()`，它从模块中删除类型，生成 "
+"JavaScript 代码，执行过程中没有类型检查和依赖解析。Deno.transpileOnly() 接受两个参数，第一个参数是个 "
+"hash，其中键是模块名，值是源码，其中，模块名用来对应源映射。第二个参数是`options`（可选），它的类型是`Deno."
+"CompilerOptions`。Deno.transpileOnly() 返回一个 map，键是模块名，值是一个对象，对象的键有`source`和`ma"
+"p`（可选），`source`是模块转译后的代码，`map`是对应的源映射。源映射会默认生成，你可以用`options`参数来停用它。"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:120
 msgid "An example:"
-msgstr ""
+msgstr "请看下例："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/compiler_apis.md:121
@@ -234,19 +275,26 @@ msgid ""
 "console.log(result[\"/foo.ts\"].source);\n"
 "console.log(result[\"/foo.ts\"].map);\n"
 msgstr ""
+"const result = await Deno.transpileOnly({\n"
+"  \"/foo.ts\": `enum Foo { Foo, Bar, Baz };\\n"
+"`,\n"
+"});\n"
+"\n"
+"console.log(result[\"/foo.ts\"].source);\n"
+"console.log(result[\"/foo.ts\"].map);\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:132
 msgid ""
 "We would expect the `enum` would be rewritten to an IIFE which constructs "
 "the enumerable, and the map to be defined."
-msgstr ""
+msgstr "上例中`enum`改写为 IIFE （立即调用函数表达式），并输出对应的原映射。"
 
 #. type: Title ###
 #: docs/runtime/compiler_apis.md:133
 #, no-wrap
 msgid "Referencing TypeScript library files"
-msgstr ""
+msgstr "引用 TypeScript 库"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:139
@@ -257,6 +305,8 @@ msgid ""
 "type check TypeScript also use these libraries (`Deno.compile()` and `Deno."
 "bundle()`)."
 msgstr ""
+"如果你运行`deno run`或其它做类型检查的 Deno 命令，代码的运行依赖 Deno 支持的环境（库）。`Deno.compile()`和`Deno"
+".bundle()`会做类型检查并使用这些库。"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:145
@@ -267,6 +317,9 @@ msgid ""
 "TypeScript code that is destined for the browser, you would want to use the "
 "TypeScript `\"dom\"` library:"
 msgstr ""
+"但如果你编译和打包 TypeScript，想将代码用于其它运行时环境，那么就需要重载默认库。为此，上文提到的 API "
+"中`options`支持`lib`属性。举个例子，如果你写了 TypeScript 代码，想将其用到浏览器中，你就得使用 TypeScript 的`"
+"\"dom\"`库："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/compiler_apis.md:146
@@ -282,6 +335,16 @@ msgid ""
 "  },\n"
 ");\n"
 msgstr ""
+"const [errors, emitted] = await Deno.compile(\n"
+"  \"main.ts\",\n"
+"  {\n"
+"    \"main.ts\": `document.getElementById(\"foo\");\\n"
+"`,\n"
+"  },\n"
+"  {\n"
+"    lib: [\"dom\", \"esnext\"],\n"
+"  },\n"
+");\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:161
@@ -290,12 +353,14 @@ msgid ""
 "compiler option](https://www.typescriptlang.org/docs/handbook/compiler-"
 "options.html)  documentation."
 msgstr ""
+"你可以前往[编译器选项 `lib`](https://www.typescriptlang.org/docs/handbook/compiler-"
+"options.html)来查看 TypeScript 支持的所有库。"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:163
 #, no-wrap
 msgid "**Don't forget to include the JavaScript library**\n"
-msgstr ""
+msgstr "**加入 JavaScript 库**\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:168
@@ -306,31 +371,33 @@ msgid ""
 "runtime (e.g.  `es5`, `es2015`, `es2016`, `es2017`, `es2018`, `es2019`, "
 "`es2020` or `esnext`)."
 msgstr ""
+"和 `tsc` 一样，如果你传递了编译器选项`lib`，它就会重载默认值。结果是必要的 JavaScript 库没有加入，因此你应该加入最符合目标运行时环"
+"境的库（如`es5`、`es2015`、`es2016`、`es2017`、`es2018`、`es2019`、`es2020`和`esnext`）。"
 
 #. type: Title ####
 #: docs/runtime/compiler_apis.md:169
 #, no-wrap
 msgid "Including the `Deno` namespace"
-msgstr ""
+msgstr "加入 `Deno` 命名空间"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:173
 msgid ""
 "In addition to the libraries that are provided by TypeScript, there are four "
 "libraries that are built into Deno that can be referenced:"
-msgstr ""
+msgstr "除了 TypeScript 提供的库，还有 Deno 内置的四个库："
 
 #. type: Bullet: '- '
 #: docs/runtime/compiler_apis.md:182
 msgid "`deno.ns` - Provides the `Deno` namespace."
-msgstr ""
+msgstr "`deno.ns` - 提供`Deno`命名空间。"
 
 #. type: Bullet: '- '
 #: docs/runtime/compiler_apis.md:182
 msgid ""
 "`deno.shared_globals` - Provides global interfaces and variables which Deno "
 "supports at runtime that are then exposed by the final runtime library."
-msgstr ""
+msgstr "`deno.shared_globals` - 提供 Deno 在运行时支持的全局接口和变量。"
 
 #. type: Bullet: '- '
 #: docs/runtime/compiler_apis.md:182
@@ -338,21 +405,21 @@ msgid ""
 "`deno.window` - Exposes the global variables plus the Deno namespace that "
 "are available in the Deno main worker and is the default for the runtime "
 "compiler APIs."
-msgstr ""
+msgstr "`deno.window` - 提供全局变量和 Deno 命名空间（如果你在运行时使用 compiler API，那么它会默认启用）。"
 
 #. type: Bullet: '- '
 #: docs/runtime/compiler_apis.md:182
 msgid ""
 "`deno.worker` - Exposes the global variables that are available in workers "
 "under Deno."
-msgstr ""
+msgstr "`deno.worker` - 提供 Deno 内 可从 worker 访问的全局变量。"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:185
 msgid ""
 "So to add the Deno namespace to a compilation, you would include the `deno."
 "ns` lib in the array. For example:"
-msgstr ""
+msgstr "因此，如果你想添加 Deno 命名空间至编译结果中，你得在`lib`数组内加入`deno.ns`。比如："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/compiler_apis.md:186
@@ -368,6 +435,16 @@ msgid ""
 "  },\n"
 ");\n"
 msgstr ""
+"const [errors, emitted] = await Deno.compile(\n"
+"  \"main.ts\",\n"
+"  {\n"
+"    \"main.ts\": `document.getElementById(\"foo\");\\n"
+"`,\n"
+"  },\n"
+"  {\n"
+"    lib: [\"dom\", \"esnext\", \"deno.ns\"],\n"
+"  },\n"
+");\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:201
@@ -376,13 +453,13 @@ msgid ""
 "**Note** that the Deno namespace expects a runtime environment that is at least\n"
 "ES2018 or later. This means if you use a lib \"lower\" than ES2018 you will get\n"
 "errors logged as part of the compilation.\n"
-msgstr ""
+msgstr "**注意** ，Deno 命名空间要求运行时环境至少是 ES2018，因此，如果你指定的库早于 ES2018，那么编译就会输出错误日志。\n"
 
 #. type: Title ####
 #: docs/runtime/compiler_apis.md:202
 #, no-wrap
 msgid "Using the triple slash reference"
-msgstr ""
+msgstr "使用三斜线指令"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:208
@@ -393,6 +470,8 @@ msgid ""
 "be embedded in the contents of the file. For example, if you have a `main."
 "ts` like:"
 msgstr ""
+"除了编译器选项`lib`，Deno 还提供了[三斜线指令](https://www.typescriptlang.org/docs/handbook/"
+"triple-slash-directives.html#-reference-lib-)来指定一个 lib 嵌入到源文件内。以`main.ts`为例："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/compiler_apis.md:209
@@ -402,11 +481,14 @@ msgid ""
 "\n"
 "document.getElementById(\"foo\");\n"
 msgstr ""
+"/// <reference lib=\"dom\" />\n"
+"\n"
+"document.getElementById(\"foo\");\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:216
 msgid "It would compile without errors like this:"
-msgstr ""
+msgstr "结果没有出现编译错误，类似下例："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/compiler_apis.md:217
@@ -416,6 +498,9 @@ msgid ""
 "  lib: [\"esnext\"],\n"
 "});\n"
 msgstr ""
+"const [errors, emitted] = await Deno.compile(\"./main.ts\", undefined, {\n"
+"  lib: [\"esnext\"],\n"
+"});\n"
 
 #. type: Plain text
 #: docs/runtime/compiler_apis.md:225
@@ -425,3 +510,5 @@ msgid ""
 "are defined in the default type library for Deno. To avoid this, you need to\n"
 "specify a `lib` option in the compiler options to the runtime compiler APIs.\n"
 msgstr ""
+"**注意**，`dom`库与 Deno 提供的默认类型库之间存在一些会产生冲突的全局变量。因此，你需要向运行时 compiler API "
+"的`options`参数中传递`lib`选项。\n"
