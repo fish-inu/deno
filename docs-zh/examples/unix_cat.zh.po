@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-12 03:33+0000\n"
+"PO-Revision-Date: 2021-03-19 13:41+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/unix_cat/zh_Hans/>\n"
@@ -22,19 +22,19 @@ msgstr ""
 #: docs/examples/unix_cat.md:1
 #, no-wrap
 msgid "An implementation of the unix \"cat\" program"
-msgstr ""
+msgstr "实现 unix cat 程序"
 
 #. type: Title ##
 #: docs/examples/unix_cat.md:3
 #, no-wrap
 msgid "Concepts"
-msgstr ""
+msgstr "概念"
 
 #. type: Bullet: '- '
 #: docs/examples/unix_cat.md:14
 msgid ""
 "Use the Deno runtime API to output the contents of a file to the console."
-msgstr ""
+msgstr "用 Deno 运行时 API 输出文件内容到面板。"
 
 #. type: Bullet: '- '
 #: docs/examples/unix_cat.md:14
