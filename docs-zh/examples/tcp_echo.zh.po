@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-12 03:33+0000\n"
+"PO-Revision-Date: 2021-03-19 13:41+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/tcp_echo/zh_Hans/>\n"
@@ -28,7 +28,7 @@ msgstr ""
 #: docs/examples/tcp_echo.md:3
 #, no-wrap
 msgid "Concepts"
-msgstr ""
+msgstr "概念"
 
 #. type: Bullet: '- '
 #: docs/examples/tcp_echo.md:9
