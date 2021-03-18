@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-17 08:11+0000\n"
+"PO-Revision-Date: 2021-03-19 13:41+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/permission_apis/zh_Hans/>\n"
@@ -41,7 +41,7 @@ msgid ""
 "code will often assume its own set of required permissions, but there is no "
 "guarantee during execution that the set of _granted_ permissions will align "
 "with this."
-msgstr "你可以从 CLI 运行`deno`的同时授予权限。Deno 用户代码通常会获取所需权限，但在运行时这些权限不一定等于_真正授予_的权限。"
+msgstr "你可以从 CLI 运行 `deno` 的同时授予权限。Deno 用户代码通常会获取所需权限，但在运行时这些权限不一定等于_真正授予_的权限。"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:12
@@ -62,7 +62,7 @@ msgid ""
 "On the CLI, read permission for `/foo/bar` is represented as `--allow-read=/"
 "foo/bar`. In runtime JS, it is represented as the following:"
 msgstr ""
-"在 CLI 中，`/foo/bar`读取权限表示为`--allow-read=/foo/bar`。在运行时，`/foo/bar`读取权限表示为："
+"在 CLI 中，`/foo/bar` 读取权限表示为 `--allow-read=/foo/bar`。在运行时，`/foo/bar` 读取权限表示为："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:18
@@ -97,7 +97,7 @@ msgstr ""
 "// 全局下可写入\n"
 "const desc1 = { name: \"write\" } as const;\n"
 "\n"
-"// 可写入`$PWD/foo/bar`\n"
+"// 可写入 `$PWD/foo/bar`\n"
 "const desc2 = { name: \"write\", path: \"foo/bar\" } as const;\n"
 "\n"
 "// 全局下可访问网络\n"
@@ -168,9 +168,9 @@ msgid ""
 "have been explicitly refused.  This will come up in [Request permissions]"
 "(#request-permissions)."
 msgstr ""
-"权限状态有下三种：已授予、未授予和拒绝。如果权限从 CLI 授予，则状态为`{ state: \"granted\" }`；如果权限还未授予，则状态为`{"
-" state: \"prompt\" }`；如果权限被显式拒绝，则状态为`{ state: \"denied\" }`。[权限请求](#request-"
-"permissions)会继续讨论该部分。"
+"权限状态有下三种：已授予、未授予和拒绝。如果权限从 CLI 授予，则状态为 `{ state: \"granted\" }`；如果权限还未授予，则状态为 "
+"`{ state: \"prompt\" }`；如果权限被显式拒绝，则状态为 `{ state: \"denied\" }`。[权限请求"
+"](#request-permissions) 会继续讨论该部分。"
 
 #. type: Title ###
 #: docs/runtime/permission_apis.md:69
@@ -185,8 +185,8 @@ msgid ""
 "permissions](#query-permissions) is that read access was granted to `/foo` "
 "and `/foo/bar` is within `/foo` so `/foo/bar` is allowed to be read."
 msgstr ""
-"你可以从[权限查询](#query-permissions)中第二个查询返回的结果中直观看出，因为读取权限授予至`/foo`，而`/foo/"
-"bar`属于`/foo`，因此`/foo/bar`也是可以访问的。"
+"你可以从 [权限查询](#query-permissions) 中第二个查询返回的结果中直观看出，因为读取权限授予至 `/foo`，而 `/foo/"
+"bar` 属于 `/foo`，因此 `/foo/bar` 也是可以访问的。"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:78
@@ -195,22 +195,22 @@ msgid ""
 "permissions/#ref-for-permissiondescriptor-stronger-than)_ `desc2`. This "
 "means that for any set of CLI-granted permissions:"
 msgstr ""
-"我们可以认为`desc1`_[强于](https://www.w3.org/TR/permissions/#ref-for-"
-"permissiondescriptor-stronger-than)_`desc2`，因此对任一 CLI 授予的权限来说："
+"我们可以认为 `desc1`_[强于](https://www.w3.org/TR/permissions/#ref-for-"
+"permissiondescriptor-stronger-than)_ `desc2`，因此对任一 CLI 授予的权限来说："
 
 #. type: Bullet: '1. '
 #: docs/runtime/permission_apis.md:81
 msgid "If `desc1` queries to `{ state: \"granted\" }` then so must `desc2`."
 msgstr ""
-"如果`desc1`查询结果为`{ state: \"granted\" }`，那么`desc2`的查询结果必定是`{ state: \"granted\""
-" }`。"
+"如果 `desc1` 查询结果为 `{ state: \"granted\" }`，那么 `desc2` 的查询结果必定是 `{ state: "
+"\"granted\" }`。"
 
 #. type: Bullet: '2. '
 #: docs/runtime/permission_apis.md:81
 msgid "If `desc2` queries to `{ state: \"denied\" }` then so must `desc1`."
 msgstr ""
-"如果`desc2`查询结果为`{ state: \"denied\" }`，那么`desc1`的查询结果必定是`{ state: \"denied\" "
-"}`。"
+"如果 `desc2` 查询结果为 `{ state: \"denied\" }`，那么 `desc1` 的查询结果必定是 `{ state: "
+"\"denied\" }`。"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:83
@@ -292,8 +292,8 @@ msgid ""
 "request for `desc2` was denied so its permission state is downgraded from "
 "\"prompt\" to \"denied\"."
 msgstr ""
-"如果权限未授予，用户终端会出现提示符提问是否授权。上例授予了`desc1`对应的权限，返回更新后的状态，这样就像在 CLI 传递了`--allow-"
-"read=/foo`。上例也拒绝了`desc2`对应的权限，状态从未授予变为拒绝。"
+"如果权限未授予，用户终端会出现提示符提问是否授权。上例授予了 `desc1` 对应的权限，返回更新后的状态，这样就像在 CLI 传递了 `--allow-"
+"read=/foo`。上例也拒绝了 `desc2` 对应的权限，状态从未授予变为拒绝。"
 
 #. type: Plain text
 #: docs/runtime/permission_apis.md:124
@@ -366,7 +366,7 @@ msgid ""
 "_explicitly granted permission descriptors_. Specifying `--allow-read=/foo,/"
 "bar` on the CLI initializes this set to:"
 msgstr ""
-"如果你想知道为什么会这样，你可以想象 Deno 内部存储了_显式授予的权限描述符_数组。如果你向 CLI 传递`--allow-"
+"如果你想知道为什么会这样，你可以想象 Deno 内部存储了_显式授予的权限描述符_数组。如果你向 CLI 传递 `--allow-"
 "read=/foo,/bar`，那么该数组初始化为："
 
 #. type: Fenced code block (ts)
@@ -388,7 +388,7 @@ msgstr ""
 msgid ""
 "Granting a runtime request for `{ name: \"write\", path: \"/foo\" }` updates "
 "the set to:"
-msgstr "如果你在运行时发出`{ name: \"write\", path: \"/foo\" }`授权请求，这将会更新该数组为："
+msgstr "如果你在运行时发出 `{ name: \"write\", path: \"/foo\" }` 授权请求，这将会更新该数组为："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:164
@@ -415,8 +415,8 @@ msgid ""
 "than_ whichever _explicitly granted permission descriptor_ is _stronger "
 "than_ `desc`."
 msgstr ""
-"Deno 的权限撤回算法原理是，如果传递的参数（权限描述符）强度大于上文数组内的权限描述符，那么这些权限描述符才会删除。因此，如果你想确保`desc`对应"
-"的权限改为未授予的状态，那么得传递一个强度大于`desc`的参数。"
+"Deno 的权限撤回算法原理是，如果传递的参数（权限描述符）强度大于上文数组内的权限描述符，那么这些权限描述符才会删除。因此，如果你想确保 `desc` "
+"对应的权限改为未授予的状态，那么得传递一个强度大于 `desc` 的参数。"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/permission_apis.md:177
