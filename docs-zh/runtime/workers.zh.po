@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-17 08:11+0000\n"
+"PO-Revision-Date: 2021-03-19 13:41+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/workers/zh_Hans/>\n"
@@ -38,7 +38,7 @@ msgstr ""
 msgid ""
 "Workers can be used to run code on multiple threads. Each instance of "
 "`Worker` is run on a separate thread, dedicated only to that worker."
-msgstr "Worker 可用于多线程执行代码。每一个`Worker`在各自专用的线程上运行。"
+msgstr "Worker 可用于多线程执行代码。每一个 `Worker` 在各自专用的线程上运行。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:11
@@ -46,7 +46,7 @@ msgid ""
 "Currently Deno supports only `module` type workers; thus it's essential to "
 "pass the `type: \"module\"` option when creating a new worker."
 msgstr ""
-"当前 Deno 只提供了`module`类型的 Worker，因此你必须传递`type: \"module\"`选项来生成 Worker 实例。"
+"当前 Deno 只提供了 `module` 类型的 Worker，因此你必须传递 `type: \"module\"` 选项来生成 Worker 实例。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:16
@@ -55,8 +55,8 @@ msgid ""
 "deno/issues/5216) at the moment. You can instead use the `URL` contructor "
 "and `import.meta.url` to easily create a specifier for some nearby script."
 msgstr ""
-"Deno 暂时[无法解析](https://github.com/denoland/deno/issues/"
-"5216)模块的相对路径，不过你可以使用构造函数`URL`和`import.meta.url`来指定脚本路径。"
+"Deno 暂时 [无法解析](https://github.com/denoland/deno/issues/5216) 模块的相对路径，"
+"不过你可以使用构造函数 `URL` 和 `import.meta.url` 来指定脚本路径。"
 
 #. type: Fenced code block (ts)
 #: docs/runtime/workers.md:17
@@ -91,12 +91,12 @@ msgstr "权限"
 msgid ""
 "Creating a new `Worker` instance is similar to a dynamic import; therefore "
 "Deno requires appropriate permission for this action."
-msgstr "Deno 需要授予相关权限来创建`Worker`示例（类似于动态导入）。"
+msgstr "Deno 需要授予相关权限来创建 `Worker` 示例（类似于动态导入）。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:33
 msgid "For workers using local modules; `--allow-read` permission is required:"
-msgstr "如果创建的 Worker 导入本地模块，那么需要授予`--allow-read`权限："
+msgstr "如果创建的 Worker 导入本地模块，那么需要授予 `--allow-read` 权限："
 
 #. type: Plain text
 #: docs/runtime/workers.md:35 docs/runtime/workers.md:58
@@ -148,7 +148,7 @@ msgstr ""
 #. type: Plain text
 #: docs/runtime/workers.md:56
 msgid "For workers using remote modules; `--allow-net` permission is required:"
-msgstr "如果创建的 Worker 导入云端模块，那么需要授予`--allow-net`权限："
+msgstr "如果创建的 Worker 导入云端模块，那么需要授予 `--allow-net` 权限："
 
 #. type: Fenced code block (ts)
 #: docs/runtime/workers.md:59
@@ -198,14 +198,14 @@ msgstr ""
 #. type: Plain text
 #: docs/runtime/workers.md:84
 msgid "By default the `Deno` namespace is not available in worker scope."
-msgstr "默认情况下，Worker 实例无法访问`Deno`命名空间。"
+msgstr "默认情况下，Worker 实例无法访问 `Deno` 命名空间。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:86
 msgid ""
 "To add the `Deno` namespace pass `deno: true` option when creating new "
 "worker:"
-msgstr "你可以在创建 Worker 实例时传递`deno:true`选项来添加`Deno`命名空间："
+msgstr "你可以在创建 Worker 实例时传递 `deno:true` 选项来添加 `Deno` 命名空间："
 
 #. type: Plain text
 #: docs/runtime/workers.md:88
@@ -280,7 +280,7 @@ msgstr ""
 msgid ""
 "When the `Deno` namespace is available in worker scope, the worker inherits "
 "its parent process' permissions (the ones specified using `--allow-*` flags)."
-msgstr "如果 Worker 实例启用了`Deno`命名空间，该实例会继承父进程的权限，即用`--allow-*`标志指定的权限。"
+msgstr "如果 Worker 实例启用了 `Deno` 命名空间，该实例会继承父进程的权限，即用 `--allow-*` 标志指定的权限。"
 
 #. type: Plain text
 #: docs/runtime/workers.md:122
