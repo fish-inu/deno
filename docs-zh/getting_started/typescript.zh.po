@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-12 03:33+0000\n"
+"PO-Revision-Date: 2021-03-19 13:41+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/typescript/zh_Hans/>\n"
@@ -98,9 +98,9 @@ msgstr ""
 ".html#type-only-imports-and-exports)。其中，导出 type：`export type { AnInterface } "
 "from \"./mod.ts\";`；导入 type：`import type { AnInterface } from \"./mod.ts\";`。"
 "你可以在 TypeScript option 中设置 `isolatedModules` 为 `true`，并设置 "
-"`importsNotUsedAsValues` 为 `error`，这样就能确保使用了 `import type` 和 `export "
-"type`。你可以从[标准库](https://github.com/denoland/deno/blob/$CLI_VERSION/std/"
-"tsconfig_test.json)查看相关示例 `tsconfig.json`。此外，我们以后会将这些配置设为默认，而如果你使用了 "
+"`importsNotUsedAsValues` 为 `error`，这样就能确保使用了 `import type` 和 `export type`。"
+"你可以从 [标准库](https://github.com/denoland/deno/blob/$CLI_VERSION/std/"
+"tsconfig_test.json) 查看相关示例 `tsconfig.json`。此外，我们以后会将这些配置设为默认，而如果你使用了 "
 "`--unstable` 标志，Deno 1.4 及以上版本就会默认启动这些配置。"
 
 #. type: Plain text
@@ -205,7 +205,7 @@ msgid ""
 "location of the type definition which happens to be alongside that file, "
 "your JavaScript module named `foo.js` might look like this:"
 msgstr ""
-"你可以在源码中使用三斜线指令向 Deno 指出模块或类型声明文件的位置。例如，在 JavaScript 模块`foo.js`中添加类型声明文件的位置："
+"你可以在源码中使用三斜线指令向 Deno 指出模块或类型声明文件的位置。例如，在 JavaScript 模块 `foo.js` 中添加类型声明文件的位置："
 
 #. type: Fenced code block (js)
 #: docs/getting_started/typescript.md:88
@@ -226,8 +226,8 @@ msgid ""
 "module, meaning the file needs to have an extension and is relative to the "
 "current file. Remote specifiers are also allowed."
 msgstr ""
-"虽然`foo.js`会在运行时载入，但编译器可以根据`foo.d.ts`来对`foo."
-"js`做类型检查。指令内值的解析与模块导入相同，即值应表明扩展名，路径应相对于当前文件。此外，值也接受云端文件。"
+"虽然 `foo.js` 会在运行时载入，但编译器可以根据 `foo.d.ts` 来对 `foo.js` "
+"做类型检查。指令内值的解析与模块导入相同，即值应表明扩展名，路径应相对于当前文件。此外，值也接受云端文件。"
 
 #. type: Title ####
 #: docs/getting_started/typescript.md:99
@@ -242,7 +242,7 @@ msgid ""
 "want to inform Deno the location of the type definitions, you can use a "
 "custom HTTP header of `X-TypeScript-Types` to inform Deno of the location of "
 "that file."
-msgstr "你可以用 HTTP 头`X-TypeScript-Types`向 Deno 指出模块或类型声明文件的位置。"
+msgstr "你可以用 HTTP 头 `X-TypeScript-Types` 向 Deno 指出模块或类型声明文件的位置。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:109
@@ -270,9 +270,10 @@ msgid ""
 "node_modules/@types/node/index.d.ts`. Since this depends on non-relative "
 "\"magical\" resolution, Deno cannot resolve this."
 msgstr ""
-"Deno 会用`compiler hint`来加载`.d.ts`文件，但是某些`.d.ts`文件存在 Deno 尚未支持的内容。具体来说，这些文件本来要按"
-"照模块解析策略从类型声明包加载或引用类型定义，但这会失败。举个例子：在指定类型定义的值为`node`的情况下，按理说它会解析为`./"
-"node_modules/@types/node/index.d.ts`，然而这种解析依赖于所谓的非相对自动解析，所以 Deno 无法成功解析路径。"
+"Deno 会用 `compiler hint` 来加载 `.d.ts` 文件，但是某些 `.d.ts` 文件存在 Deno "
+"尚未支持的内容。具体来说，这些文件本来要按照模块解析策略从类型声明包加载或引用类型定义，但这会失败。举个例子：在指定类型定义的值为 `node` "
+"的情况下，按理说它会解析为 `./node_modules/@types/node/index.d.ts`，然而这种解析依赖于所谓的非相对自动解析，所以 "
+"Deno 无法成功解析路径。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:121
@@ -305,15 +306,15 @@ msgid ""
 "provide a way to support customization a configuration file such as "
 "`tsconfig.json` might be provided to Deno on program execution."
 msgstr ""
-"Deno 启用了 strict 模式来遵守 TypeScript "
-"的和合适标准：默认`strict`。然而，如果你想自定义配置，你可以在程序执行时将像`tsconfig.json`这样的配置文件传递给 Deno。"
+"Deno 启用了 strict 模式来遵守 TypeScript 的和合适标准：默认 `strict`。然而，如果你想自定义配置，你可以在程序执行时将像 "
+"`tsconfig.json` 这样的配置文件传递给 Deno。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:136
 msgid ""
 "You need to explicitly tell Deno where to look for this configuration by "
 "setting the `-c` (or `--config`) argument when executing your application."
-msgstr "执行程序时，你得用`-c`或`--config`来向 Deno 显式指出配置文件的位置。"
+msgstr "执行程序时，你得用 `-c` 或 `--config` 来向 Deno 显式指出配置文件的位置。"
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/typescript.md:137
@@ -413,8 +414,8 @@ msgid ""
 "[typescript docs](https://www.typescriptlang.org/docs/handbook/compiler-"
 "options.html)."
 msgstr ""
-"前往[typescript docx](https://www.typescriptlang.org/docs/handbook/compiler-"
-"options.html)去阅读相关文档和用例。"
+"前往 [typescript docx](https://www.typescriptlang.org/docs/handbook/compiler-"
+"options.html) 去阅读相关文档和用例。"
 
 #. type: Plain text
 #: docs/getting_started/typescript.md:186
