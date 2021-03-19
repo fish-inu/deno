@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-12 03:33+0000\n"
+"PO-Revision-Date: 2021-03-20 15:51+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/webassembly/zh_Hans/>\n"
@@ -27,7 +27,7 @@ msgstr "使用 WebAssembly"
 #. type: Plain text
 #: docs/getting_started/webassembly.md:4
 msgid "Deno can execute [WebAssembly](https://webassembly.org/) binaries."
-msgstr "Deno 可以执行[WebAssembly](https://webassembly.org/)代码。"
+msgstr "Deno 可以执行 [WebAssembly](https://webassembly.org/) 代码。"
 
 #. type: Plain text
 #: docs/getting_started/webassembly.md:6
