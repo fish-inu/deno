@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-12 03:33+0000\n"
+"PO-Revision-Date: 2021-03-20 15:51+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/stability/zh_Hans/>\n"
@@ -48,7 +48,7 @@ msgstr "deno run --unstable mod_which_uses_unstable_stuff.ts\n"
 #. type: Plain text
 #: docs/runtime/stability.md:15
 msgid "Passing this flag does a few things:"
-msgstr "向 Deno 传递`--unstable`标志后，发生了以下事情："
+msgstr "向 Deno 传递 `--unstable` 标志后，发生了以下事情："
 
 #. type: Bullet: '- '
 #: docs/runtime/stability.md:21
@@ -63,9 +63,9 @@ msgid ""
 "file to the list of TypeScript definitions that are used for type checking.  "
 "This includes the output of `deno types`."
 msgstr ""
-"添加[`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw."
-"githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.unstable.d."
-"ts)至类型定义，用于类型检查。`deno types`的 stdout 也会包括该文件。"
+"添加 [`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw."
+"githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.unstable.d.ts) "
+"至类型定义，用于类型检查。`deno types` 的 stdout 也会包括该文件。"
 
 #. type: Plain text
 #: docs/runtime/stability.md:25
@@ -90,6 +90,6 @@ msgid ""
 "modules do not require the `--unstable` flag (unless the standard module "
 "itself makes use of an unstable Deno feature)."
 msgstr ""
-"Deno 的[标准模块](https://deno.land/std/) 尚未稳定。Deno 团队目前从 CLI "
-"中输出标准模块的版本号来表明不稳定性。注意，标准模块与`Deno`命名空间不同，除非某些标准模块使用了不稳定的 Deno "
-"功能，它们不需要用`--unstable`标志来启用。"
+"Deno 的 [标准模块](https://deno.land/std/) 尚未稳定。Deno 团队目前从 CLI "
+"中输出标准模块的版本号来表明不稳定性。注意，标准模块与 `Deno` 命名空间不同，除非某些标准模块使用了不稳定的 Deno 功能，它们不需要用 "
+"`--unstable` 标志来启用。"
