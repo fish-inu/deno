@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-10 06:12+0000\n"
+"PO-Revision-Date: 2021-03-19 13:41+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/debugging_your_code/zh_Hans/>\n"
@@ -28,7 +28,7 @@ msgstr "调试"
 #: docs/getting_started/debugging_your_code.md:4
 msgid ""
 "Deno supports the [V8 Inspector Protocol](https://v8.dev/docs/inspector)."
-msgstr "Deno 支持[V8检查器协议](https://v8.dev/docs/inspector)。"
+msgstr "Deno 支持 [V8 检查器协议](https://v8.dev/docs/inspector)。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:7
@@ -42,7 +42,7 @@ msgstr "你可以使用 Chrome Devtools 或其它支持该协议的客户端（�
 msgid ""
 "To activate debugging capabilities run Deno with the `--inspect` or `--"
 "inspect-brk` flags."
-msgstr "你可以使用`--inspect`或`--inspect-brk` 参数来运行 Deno，这将激活调试功能。"
+msgstr "你可以使用 `--inspect` 或 `--inspect-brk` 参数来运行 Deno，这将激活调试功能。"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:14
@@ -130,7 +130,7 @@ msgid ""
 "`file_server.ts` and add a breakpoint there; go to \"Sources\" pane and "
 "expand the tree:"
 msgstr ""
-"目前为止，你可以从 Devtools 中找到源代码，那么请打开`file_server.ts`并在某处添加断点，之后前往 “Source” "
+"目前为止，你可以从 Devtools 中找到源代码，那么请打开 `file_server.ts` 并在某处添加断点，之后前往 “Source” "
 "面板，展开文件树："
 
 #. type: Plain text
@@ -146,13 +146,13 @@ msgid ""
 "case of `.ts` files it will be emitted JavaScript source), while the latter "
 "is a source map for the file._"
 msgstr ""
-"_你会发现文件名都重复了出现两次：一个文件名是正体，另一个文件名是斜体。前者是源码编译后生成的文件（`.ts`文件编译后生成 JavaScript "
+"_你会发现文件名都重复了出现两次：一个文件名是正体，另一个文件名是斜体。前者是源码编译后生成的文件（`.ts` 文件编译后生成 JavaScript "
 "代码），而后者是该文件的源映射。_"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:56
 msgid "Next, add a breakpoint in the `listenAndServe` method:"
-msgstr "接下来，在`listenAndServe`方法中添加一个断点："
+msgstr "接下来，在 `listenAndServe` 方法中添加一个断点："
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:58
@@ -226,8 +226,8 @@ msgid ""
 "(https://code.visualstudio.com/docs/editor/debugging#_launch-"
 "configurations)  config:"
 msgstr ""
-"你还可以编写配置文件[`launch.json`](https://code.visualstudio.com/docs/editor/debugging"
-"#_launch-configurations)来附加调试器："
+"你还可以编写配置文件 [`launch.json`](https://code.visualstudio.com/docs/editor/"
+"debugging#_launch-configurations) 来附加调试器："
 
 #. type: Fenced code block (json)
 #: docs/getting_started/debugging_your_code.md:90
@@ -269,12 +269,12 @@ msgstr ""
 msgid ""
 "**NOTE**: This uses the file you have open as the entry point; replace `${file}`\n"
 "with a script name if you want a fixed entry point.\n"
-msgstr "**注意**：该配置指定入口为启动的文件。如果你想用固定入口，请将`${file}`替换为其它名称。\n"
+msgstr "**注意**：该配置指定入口为启动的文件。如果你想用固定入口，请将 `${file}` 替换为其它名称。\n"
 
 #. type: Plain text
 #: docs/getting_started/debugging_your_code.md:111
 msgid "Let's try out debugging a local source file. Create `server.ts`:"
-msgstr "现在，我们来调试一个源文件。首先创建`server.ts`："
+msgstr "现在，我们来调试一个源文件。首先创建 `server.ts`："
 
 #. type: Fenced code block (ts)
 #: docs/getting_started/debugging_your_code.md:112
@@ -324,8 +324,8 @@ msgid ""
 "edit the run/debug configuration and modify the `Arguments` field with the\n"
 "required flags.\n"
 msgstr ""
-"你可以从 JetBrains IDE 中右键源文件，选择`Debug 'Deno: <file name>'`选项来调试 Deno。默认情况下生成的 "
-"run/debug 配置尚未设置权限。如果你想设置权限，你可以编辑 run/debug 配置，向`Arguments`字段添加权限标志。\n"
+"你可以从 JetBrains IDE 中右键源文件，选择 `Debug 'Deno: <file name>'` 选项来调试 Deno。默认情况下生成的 "
+"run/debug 配置尚未设置权限。如果你想设置权限，你可以编辑 run/debug 配置，向 `Arguments` 字段添加权限标志。\n"
 
 #. type: Title ###
 #: docs/getting_started/debugging_your_code.md:134
