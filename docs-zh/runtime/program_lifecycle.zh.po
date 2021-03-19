@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-12 03:33+0000\n"
+"PO-Revision-Date: 2021-03-19 13:41+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/program_lifecycle/zh_Hans/>\n"
@@ -29,7 +29,7 @@ msgstr "生命周期"
 msgid ""
 "Deno supports browser compatible lifecycle events: `load` and `unload`. You "
 "can use these events to provide setup and cleanup code in your program."
-msgstr "Deno 支持浏览器中的生命周期事件，如`load`和`unload`。你可以利用这些事件在程序中进行设置或清理工作。"
+msgstr "Deno 支持浏览器中的生命周期事件，如 `load` 和 `unload`。你可以利用这些事件在程序中进行设置或清理工作。"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:8
@@ -37,7 +37,7 @@ msgid ""
 "Listeners for `load` events can be asynchronous and will be awaited. "
 "Listeners for `unload` events need to be synchronous. Both events cannot be "
 "cancelled."
-msgstr "`load`事件的监听器可能包括异步操作，而`unload`事件的监听器是同步的。两类事件都不可撤销。"
+msgstr "`load` 事件的监听器可能包括异步操作，而 `unload` 事件的监听器是同步的。两类事件都不可撤销。"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:10
@@ -145,8 +145,8 @@ msgid ""
 "`window.onunload` to define handlers for events. There is a major difference "
 "between them, let's run the example:"
 msgstr ""
-"注意，你可以使用`window.addEventListener`或`window.onload`/`window."
-"onunload`来定义事件处理器。前者与后者存在一个较大的差异，请看下例："
+"注意，你可以使用 `window.addEventListener` 或 `window.onload`/`window.onunload` "
+"来定义事件处理器。前者与后者存在一个较大的差异，请看下例："
 
 #. type: Fenced code block (shell)
 #: docs/runtime/program_lifecycle.md:60
@@ -179,8 +179,8 @@ msgid ""
 "onload` and `window.onunload` defined in `main.ts` overrode handlers defined "
 "in `imported.ts`."
 msgstr ""
-"`main.ts`导入了`imported.ts`，其中，用`window.addEventListener`定义的监听器都会调用，而用`window."
-"onload`和`window.onunload`定义的监听器则会重写`imported.ts`内定义的对应监听器。"
+"`main.ts` 导入了 `imported.ts`，其中，用 `window.addEventListener` 定义的监听器都会调用，而用 "
+"`window.onload` 和 `window.onunload` 定义的监听器则会重写 `imported.ts` 内定义的对应监听器。"
 
 #. type: Plain text
 #: docs/runtime/program_lifecycle.md:78
@@ -189,5 +189,5 @@ msgid ""
 "\"` or `\"unload\"` events, but only the last loaded `window.onload` or "
 "`window.onunload` events will be executed."
 msgstr ""
-"换句话说，你可以向`window.addEventListener`的`load`或`unload`事件注册多个监听器并调用它们，但是向`window."
-"onload`或`window.onload`注册多个监听器的话就只能调用对应的最后一个监听器。"
+"换句话说，你可以向 `window.addEventListener` 的 `load` 或 `unload` 事件注册多个监听器并调用它们，但是向 "
+"`window.onload` 或 `window.onload` 注册多个监听器的话就只能调用对应的最后一个监听器。"
