@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2020-11-30 15:48+0000\n"
+"PO-Revision-Date: 2021-03-20 15:51+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/permissions/zh_Hans/>\n"
@@ -203,7 +203,7 @@ msgstr "const result = await fetch(\"https://deno.land/\");\n"
 #. type: Plain text
 #: docs/getting_started/permissions.md:74
 msgid "This is an example of how to allow-list hosts/urls:"
-msgstr "以下示例添加主机/url 到白名单："
+msgstr "以下示例添加主机或 url 到白名单中："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/permissions.md:75
@@ -221,7 +221,7 @@ msgstr "如果 `fetch.ts` 试图连接其它域名，程序会运行失败。"
 #. type: Plain text
 #: docs/getting_started/permissions.md:83
 msgid "Allow net calls to any host/url:"
-msgstr "以下示例准许访问任何主机/url："
+msgstr "以下示例准许访问任何主机或 url："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/permissions.md:84
