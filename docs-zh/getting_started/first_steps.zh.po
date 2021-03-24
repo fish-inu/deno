@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-11-25 21:33+0800\n"
-"PO-Revision-Date: 2021-03-19 13:41+0000\n"
+"PO-Revision-Date: 2021-03-24 13:09+0000\n"
 "Last-Translator: Weblate Admin <weblate.admin@example.com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.example.com/projects/"
 "deno-docs/first_steps/zh_Hans/>\n"
@@ -303,7 +303,7 @@ msgid ""
 "For security reasons, Deno does not allow programs to access the network "
 "without explicit permission. To allow accessing the network, use a command-"
 "line flag:"
-msgstr "出于安全因素，如果没有显式授权，Deno 会禁止程序访问网络。因此，使用如下命令行标志来访问网络："
+msgstr "出于安全因素，如果没有显式授权，Deno 会禁止程序访问网络。因此，如果你想访问网络，你得传递像这样的命令行标志："
 
 #. type: Fenced code block (shell)
 #: docs/getting_started/first_steps.md:126
